@@ -1,7 +1,74 @@
-<div class="page-container">
-    <metabolomics-page-header></metabolomics-page-header>
+<!-- <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
+        @if(!!explanations){
+            @for(explanation of explanations; track explanation.id){
+                @if(!!explanation){
+                    <div class="section-header flex justify-end align-center mt-20px px-40px">
+                        <h4 class="white">{{explanation.title | translate}}</h4>
+                    </div>
+                    <p class="my-15px">
+                        {{explanation.general | translate}}
+                    </p>
+                    <hr>
+                    @for(metabolite of explanation.metabolites; track metabolite.id){
+                        <h4 class="my-15px">
+                            {{metabolite.name | translate}}
+                        </h4>
+                        <p>
+                            {{metabolite.base | translate}}
+                        </p>
+                        <div class="flex">
+                            <div class="arrow-conatiner flex justify-end align-start my-15px px-5px ml-30px">
+                                <img src="assets/img/arrow.svg" alt="" width="27">
+                            </div>
+                            <div class="my-15px">
+                                <p>
+                                {{metabolite.critic | translate}}
+                                </p>
+                            </div>           
+                        </div>
+                        <hr>
+                    }
+                }          
+            }   
+        }      
+<metabolomics-page-footer></metabolomics-page-footer> -->
+@for(page of pages; track page){
+    <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
     <div class="page-content">
+        @for(element of page; track element.id){
+        @if(element.type == 'general'){
+            <div class="pt-20px">
+                <div class="section-header flex justify-end align-center px-40px">
+                    <h4 class="white">{{element.title | translate}}</h4>
+                </div>
+            </div>
+            <p class="my-15px">
+                {{element.general | translate}}
+            </p>
+            <hr>
+        }
+        @if(element.type == 'metabolite'){
 
+                <h4 class="py-15px">
+                    {{element.name | translate}}
+                </h4>
+                <p>
+                    {{element.base | translate}}
+                </p>
+                <div class="flex">
+                    <div class="arrow-conatiner flex justify-end align-start my-15px px-5px ml-30px">
+                        <img src="assets/img/arrow.svg" alt="" width="27">
+                    </div>
+                    <div class="my-15px">
+                        <p>
+                        {{element.critic | translate}}
+                        </p>
+                    </div>           
+                </div>
+                <hr>
+        }
+      }
     </div>
     <metabolomics-page-footer></metabolomics-page-footer>
-</div>
+}
+<metabolomics-ending-page></metabolomics-ending-page>

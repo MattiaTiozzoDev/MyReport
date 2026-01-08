@@ -27,11 +27,14 @@ function createWindow() {
   Menu.setApplicationMenu(null);
 
   // Punta alla build di Angular
-  if (process.env.NODE_ENV === "development") {
-    win.loadURL("http://localhost:4200"); // Angular dev server
+  if (app.isPackaged) {
+    // ✅ PRODUZIONE (app.asar)
+    win.loadFile(path.join(__dirname, "dist/metabolomics/browser/index.html"));
     win.webContents.openDevTools();
   } else {
-    win.loadFile(path.join(__dirname, "dist/metabolomics/browser/index.html"));
+    // ✅ SVILUPPO
+    win.loadURL("http://localhost:4200");
+    win.webContents.openDevTools();
   }
 }
 

@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+  src: url('assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/assets/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+  src: url('assets/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/assets/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+  src: url('assets/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -175,4 +175,11 @@ h6{
   height: 692px;
   width: 100%;
   padding: 20px 40px;
+}
+
+.logo-valsambro-container{
+    height: 555px;
+    margin: 0 20px 0 20px;
+    background-image: url('assets/img/transparent-logo-valsambro.svg');
+    background-repeat: no-repeat;
 }

@@ -3,3 +3,39 @@
     width: 595px;
     height: 842px;
 }
+
+.page-content{
+  padding: 0px 40px;
+}
+
+.content-block {
+  display: block;
+}
+
+.section-header{
+    width: 595px !important;
+    height: 30px;
+    margin-left: -40px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+}
+
+h4{
+    font-size: 10px;
+    font-weight: 700;
+    color: #29AABC;
+}
+
+p{
+    font-size: 8px;
+    font-weight: 400;
+    color: #383838;
+}
+
+hr{
+    border: 0.5px solid #29abbc83;
+    background-color: #29abbc83;
+}
+
+.white{
+    color: white;
+}

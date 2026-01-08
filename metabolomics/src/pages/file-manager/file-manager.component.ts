@@ -27,6 +27,7 @@ export class FileManagerComponent implements OnDestroy {
   public dropLoadSubscription: Subscription | null;
 
   public loader = false;
+  public isDownloading = false;
   public numberOfCustomers = 0;
 
   constructor(
@@ -94,11 +95,15 @@ export class FileManagerComponent implements OnDestroy {
           this.outputFileName
         );
         this.loader = true;
+        this.isDownloading = true;
       } catch (err) {
         alert('Errore: ' + err);
       }
     }
-    this.loader = false;
+    this.isDownloading = false;
+    setTimeout(() => {
+      this.loader = false;
+    }, 3000);
   }
 
   ngOnDestroy(): void {

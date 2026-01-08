@@ -66,6 +66,7 @@
       "man": "uomo maggiore di 13 anni",
       "woman": "donna maggiore di 13 anni",
       "creatine": "µmoli/mmoli di creatinina",
+      "creatine_alt": "mg/dL di creatinina",
       "groups": {
         "0": {
           "sectionTitle": "Energia cellulare e Marker Mitocondriali",
@@ -127,6 +128,48 @@
     }
   },
   "exp": {
+    "generic": {
+      "glicolitico": {
+        "title": "Ciclo Glicolitico",
+        "text": "Processo nel quale i carboidrati vengono convertiti a prodotti fondamentali per la produzione energetica mediante il ciclo di Krebs. I carboidrati, che contengono glucosio, vengono scissi per formare piruvato e due molecole di ATP. A sua volta il piruvato viene convertito in lattato e Acetil-CoA per la produzione energetica."
+      },
+      "chetoni": {
+        "title": "Chetoni ed Ossidazione degli Acidi Grassi",
+        "text": "Gli acidi grassi sono metabolizzati per fornire energia dal processo di beta-ossidazione. Vengono quindi convertiti in Acetyl-CoA mediante l’azione della carnitina che permette l’entrata all’interno della membrana mitocondriale. Nel caso in cui la beta-ossidazione sia compromessa, i grassi vengono metabolizzati mediante un percorso alternativo chiamato omega-ossidazione. I corpi chetonici sono prodotti dal fegato e sono una fonte di energia in caso di assenza di glucosio. Solo una parte minima viene rilasciata nelle urine, la maggior parte deve essere ossidata in tessuti extraepatici con il consumo di ossigeno. "
+      },
+      "mitocondriali": {
+        "title": "Markers Mitocondriali",
+        "text": "I marcatori mitocondriali del ciclo di Krebs ( o TCA – degli acidi tricarbossilici), rappresentano quegli acidi organici che vengono generati dai mitocondri per la produzione di energia cellulare. Disfunzioni mitocondriali, patologie cognitive, diabete, tumore, patologie cardiovascolari, sindrome da fatica cronica, possono alterare il processo di produzione energetica. Lo studio dell’escrezione urinaria di acidi organici permette di individuare una finestra terapeutica per queste specifiche patologie in modo da correggere le disfunzioni mitocondriali individuate. Tali disfunzioni possono derivare da carenze nutrizionali, da tossine o polimorfismi genetici. Diversi sono gli enzimi che regolano le reazioni del ciclo di Krebs, catalizzate da cofattori quali ferro, niacina, magnesio, manganese, tiamina, riboflavina, acido pantotenico e acido lipoico. Esposizione ad agenti tossici o metalli possono interferire con la funzionalità mitocondriale."
+      },
+      "neurotrasmettitori": {
+        "title": "Metaboliti Neurotrasmettitori",
+        "text": "Questi acidi organici provengono dal metabolismo di sintesi e degradazione di neurotrasmettori. Alterazioni dei processi enzimatici regolati da cofattori nutrizionali , predisposizioni genetiche, tossine, malattie croniche e stress possono influenzare la loro presenza nelle urine. I neurotrasmettitori sono sintetizzati a partire da aminoacidi essenziali tramite vitamine e minerali. Di seguito analizziamo i metaboliti derivanti da fenilalanina , tirosina e triptofano."
+      },
+      "intestinale": {
+        "title": "Sovraccrescita Flora Batterica Intestinale",
+        "text": "Metaboliti derivanti da sovraccrescita della flora batterica intestinale autoctona o patogena, da funghi o lieviti che colonizzano il tratto gastrointestinale. Alcuni dei metaboliti derivano dalla fermentazione di fenoli alimentari e flavonoidi, quindi risultano derivati da un corretto e salutare introito di alimentari ricchi di antiossidanti (se non c’è associata disbiosi). Quando multipli marcatori sono elevati, questo riflette informazioni importanti riguardo la disbiosi o altre disfunzioni GI.  "
+      },
+      "ossalati": {
+        "title": "Metaboliti degli Ossalati",
+        "text": "Si tratta di metaboliti derivati da una iper produzione di ossalati, fonte primaria di calcoli renali."
+      },
+      "nutrizionali": {
+        "title": "Marker Nutrizionali",
+        "text": "Metaboliti derivanti dal metabolismo diretto o indiretto di vitamine, per lo più delle vitamina B. Le vitamine sono il fondamentale motore di molti processi enzimatici e la loro carenza potrebbe comportare malfunzionamenti metabolici anche importanti. "
+      },
+      "piramidina": {
+        "title": "Metaboliti della Piramidina associati al Metabolismo dei Folati",
+        "text": "Nel Dna e nell’Rna tre basi azotate (timina, uracile e citosina) sono definite pirimidine. Nel processo di replicazione del materiale genetico , l’acido folico ricopre un ruolo fondamentale nella biosintesi delle pirimidine ( e anche purine) . La presenza di uracile e timina nelle urine potrebbe quindi rappresentare un’indagine interessante per la ricerca di instabilità genomica causata da mancanza di acido folico o mutazioni genetiche."
+      },
+      "detossificazione": {
+        "title": "Indicatori di Detossificazione",
+        "text": "Sono metaboliti urinari che riflettono l’esposizione a tossine ambientali  oppure da una sovra-regolazione del processo di detossificazione in risposta a stimoli tossici. In caso di alti valori tra questi, si consiglia di individuare la provenienza della tossicità e agire con antiossidanti e supporto nutrizionale adeguato per detossificare il metabolismo."
+      },
+      "amminoacidi": {
+        "title": "Metaboliti degli Amminoacidi",
+        "text": "Misurazione di intermedi metabolici coinvolti del catabolismo proteico. Gli amminoacidi sono un importante mattone per la cellula e il corpo, la loro valutazione è importante per indagare deficienze alimentari o enzimatiche. "
+      }
+    },
     "piruvico": {
       "name": "Acido piruvico",
       "base": "L'acido piruvico e lattico sono prodotti dell'operazione centrale per la produzione di energia, la glicolisi, il processo catabolico del glucosio. Tale processo è regolato dalla presenza di zinco e vitamine del gruppo B . Il lattato viene processato a partire dal piruvato per ossidazione, entrando poi nel ciclo di produzione energetica in TCA in condizioni aerobiche. Il lattato può accumularsi se i cofattori PDC (Complesso Piruvato Deidrogenasi) sono insufficienti, se sono presenti polimorfismi strutturali o in caso di deficienza di CoQ10 creando un blocco nella fosforilazione ossidativa. La mancanza di ATP mitocondriale può indurre un forte aumento di lattato con contemporanea diminuzione di piruvato. Anche condizioni di anaerobiosi dovute a eccessivo sforzo fisico, resistenza insulinica, patologie polmonari o anemia possono indurre aumento lattato. Il piruvato può essere prodotto anche dal catabolismo amminoacidico ( alanina, serina, cistina, glicina, triptofano e treonina). Elevate concentrazioni di piruvato possono essere correlate a mancanza di cofattori nutrizionali (come vitamina B1,B2,B3,B7, magnesio e acido lipoico) per la sua conversione in Acetil-CoA e ossalacetato. Altre cause possono provenire da eccessivo introito di carboidrati.",

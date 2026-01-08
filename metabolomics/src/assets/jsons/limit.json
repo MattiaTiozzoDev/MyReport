@@ -743,7 +743,7 @@
   },
   {
     "id": 40,
-    "desc": "Indacano    (mg/dL)",
+    "desc": "Indacano",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 20,
@@ -1316,7 +1316,7 @@
   },
   {
     "id": 70,
-    "desc": "Creatinina (mg/dL)",
+    "desc": "Creatinina",
     "mYellInf": 40,
     "mSign": "-",
     "mYellSup": 278,

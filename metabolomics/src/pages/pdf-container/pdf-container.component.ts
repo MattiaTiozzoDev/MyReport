@@ -6,6 +6,8 @@ import { CustomersDataService } from '../../services/customers-data.service';
 import { forkJoin, Subscription } from 'rxjs';
 import { StaticDataService } from '../../services/static-data.service';
 import { ProfilePageComponent } from '../../components/pdf-pages/profile-page/profile-page.component';
+import { ExplanationPageComponent } from '../../components/pdf-pages/explanation-page/explanation-page.component';
+import { EndingPageComponent } from '../../components/pdf-pages/ending-page/ending-page.component';
 
 @Component({
   selector: 'metabolomics-pdf-container',
@@ -14,6 +16,8 @@ import { ProfilePageComponent } from '../../components/pdf-pages/profile-page/pr
     IndexPageComponent,
     TablePageComponent,
     ProfilePageComponent,
+    ExplanationPageComponent,
+    EndingPageComponent,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',

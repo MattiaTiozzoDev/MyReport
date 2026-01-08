@@ -7,30 +7,45 @@
     <button (click)="download()" class="green-bg blue bold mt-44px" [disabled]="!file || loader">
       {{ 'filemanager.downloadreports' | translate}}
     </button>
-    @if(loader){
-      <div class="download-border flex col justify-center align-center mt-20px py-5px">
-        <h3 class="white">{{ 'Download in corso...' | translate}}</h3>
-        <h4 class="white bold mt-10px">{{ 'File scaricati' | translate}}: {{customersDataService.customerIndex - 1}} su {{numberOfCustomers - 1}}</h4>
+  </div>
+   @if(!loader){
+    <div class="file-drop-zone" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" [class.drag-over]="isDragOver" [class.border-pulse]="!!file">
+      <div class="appear">
+        <input type="file" accept=".xlsm" hidden (change)="onFileSelected($event)" #fileInput/>
+        <img src="assets/img/read_file.svg" alt="" class="mt-62px">
+        @if(!file){
+            <h3 class="white mt-32px">{{ 'filemanager.dropdowntext' | translate}}</h3>
+            <h4 class="white or-text bold mt-10px">{{ 'filemanager.or' | translate}}</h4>
+
+        } 
+        @else {
+            <h3 class="white mt-32px">{{ 'filemanager.selectedfile' | translate}}:</h3>
+            <h4 class="white or-text bold mt-10px">{{ inputFileName }}</h4>
+        }
+        <button (click)="fileInput.click()" class="green-bg blue bold mt-10px">
+          {{ 'filemanager.selectfile' | translate}}
+        </button> 
       </div>
-    }
-  </div>
-
-  <div class="file-drop-zone" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" [class.drag-over]="isDragOver" [class.border-pulse]="!!file">
-    <input type="file" accept=".xlsm" hidden (change)="onFileSelected($event)" #fileInput/>
-    <img src="assets/img/read_file.svg" alt="" class="mt-62px">
-    @if(!file){
-        <h3 class="white mt-32px">{{ 'filemanager.dropdowntext' | translate}}</h3>
-        <h4 class="white or-text bold mt-10px">{{ 'filemanager.or' | translate}}</h4>
-
-    } 
-    @else {
-        <h3 class="white mt-32px">{{ 'filemanager.selectedfile' | translate}}:</h3>
-        <h4 class="white or-text bold mt-10px">{{ inputFileName }}</h4>
-    }
-    <button (click)="fileInput.click()" class="green-bg blue bold mt-10px">
-      {{ 'filemanager.selectfile' | translate}}
-    </button> 
-  </div>
+    </div>
+  }@else {
+      @if(isDownloading){
+        <div class="file-drop-zone drag-over border-pulse">
+          <div class="appear">
+            <img src="assets/img/is_downloading.svg" alt="" class="is-downloading mt-62px">
+            <h3 class="white mt-32px">{{ 'Download in corso...' | translate}}</h3>
+            <h4 class="white bold mt-10px">{{ 'File scaricati' | translate}}: {{customersDataService.customerIndex - 1}} su {{numberOfCustomers - 1}}</h4>    
+          </div>
+        </div>
+      }@else {
+        <div class="file-drop-zone drag-over border-pulse">
+          <div class="appear">
+              <img src="assets/img/download_completed.svg" alt="" class="download-completed mt-62px">
+              <h3 class="white mt-32px">{{ 'Download completato' | translate}}</h3>
+              <h4 class="white bold mt-10px">{{ 'I referti sono ora disponibili in cartella' | translate}}</h4>
+          </div>
+        </div>
+      }
+  }
 </div>
 
 
