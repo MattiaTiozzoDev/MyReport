@@ -1,4 +1,8 @@
 :host {
+
+}
+
+.header-container {
     height: 110px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
     display: flex;
@@ -7,9 +11,15 @@
     padding: 0 20px;
 }
 
+.header-container.homica {
+    background: linear-gradient(90deg, #6B4C99 0%, #141328 90%);
+}
+
 hr{
-    border: 0.5px solid #ffffffbd;
-    background-color: #ffffffbd;
+    height: 0.5px;
+    background: white;
+    margin: 1px 0;
+    border: none;
 }
 
 .w-140px{

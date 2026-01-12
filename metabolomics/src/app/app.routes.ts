@@ -10,7 +10,7 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'filemanager/:company',
+    path: 'filemanager/:tenant',
     component: FileManagerComponent,
   },
   {

@@ -16,7 +16,7 @@ function createWindow() {
     maxWidth: 1080,
     minHeight: 760,
     minWidth: 760,
-    icon: path.join(__dirname, "assets", "/img/icon.png"),
+    icon: path.join(__dirname, "assets", "/img/my_report_icon.svg"),
     webPreferences: {
       preload: path.join(__dirname, "electron.preload.js"),
       nodeIntegration: false,
@@ -29,7 +29,7 @@ function createWindow() {
   // Punta alla build di Angular
   if (app.isPackaged) {
     // ✅ PRODUZIONE (app.asar)
-    win.loadFile(path.join(__dirname, "dist/metabolomics/browser/index.html"));
+    win.loadFile(path.join(__dirname, "dist/my_report/browser/index.html"));
     win.webContents.openDevTools();
   } else {
     // ✅ SVILUPPO
@@ -46,10 +46,8 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   const finalHtml = buildPrintableHtml(htmlContent);
 
   const pdfWin = new BrowserWindow({
-    show: false,
-    webPreferences: {
-      sandbox: false,
-    },
+    show: false, // temporaneo per debug
+    webPreferences: { sandbox: false, devTools: false },
   });
 
   await pdfWin.loadURL(
@@ -80,14 +78,14 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   });
 
   fs.writeFileSync(pdfPath, pdfData);
-  pdfWin.close();
+  //pdfWin.close();
 
   return pdfPath;
 });
 
 function buildPrintableHtml(bodyHtml) {
   const assetBaseUrl = `http://localhost:${assetPort}`;
-  const distRoot = path.join(__dirname, "dist/metabolomics/browser");
+  const distRoot = path.join(__dirname, "dist/my_report/browser");
   const styles = getAngularStyles(distRoot);
 
   const cssLink = `${assetBaseUrl}/${styles[0]}`;

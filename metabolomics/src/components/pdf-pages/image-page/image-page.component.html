@@ -1,0 +1,10 @@
+<div class="page-container no-img">
+    <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
+    <div class="page-content">
+        <div class="section-header flex justify-end align-center mt-20px mb-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+            <h4 class="white">{{title | translate}}</h4>
+        </div>
+        <ng-content ></ng-content>
+    </div>
+    <metabolomics-page-footer></metabolomics-page-footer>
+</div>

@@ -1,5 +1,5 @@
 <div class="bar-container flex align-center" BarBackgroundDirective [yellInf]="data?.yellInf" [grInf]="data?.grInf" [grSup]="data?.grSup" [yellSup]="data?.yellSup">
-    <div class="circle" BarPointerDirective [yellInf]="data?.yellInf" [yellSup]="data?.yellSup" [value]="data?.value">
+    <div class="circle"  [ngClass]="{'homica': tenant === TenantType.HOMICA}" BarPointerDirective [yellInf]="data?.yellInf" [yellSup]="data?.yellSup" [value]="data?.value">
 
     </div>
 </div>

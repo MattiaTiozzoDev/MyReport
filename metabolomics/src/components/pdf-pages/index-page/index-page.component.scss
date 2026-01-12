@@ -5,8 +5,14 @@
 }
 
 hr{
-    border: 0.75px solid #29abbc83;
-    background-color: #29abbc83;
+    height: 0.5px;
+    background: #29abbc83;
+    margin: 1px 0;
+    border: none;
+}
+
+hr.homica{
+    background: #6B4C99;
 }
 
 .cf-container {

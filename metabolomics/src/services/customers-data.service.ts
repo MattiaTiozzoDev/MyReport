@@ -12,22 +12,27 @@ export class CustomersDataService {
   public customerDataSubject: Subject<CustomerData> =
     new Subject<CustomerData>();
   public $customerData = this.customerDataSubject.asObservable();
-  public customerIndex = 1;
+  public customerIndex = 0;
 
   constructor(private staticDataService: StaticDataService) {}
 
   setCustomer() {
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
-    this.customerIndex++;
   }
 
   getCustomer(): Customer {
     return this.customersData[this.customerIndex]?.customer;
   }
 
+  public changeCustomer() {
+    this.customerIndex++;
+  }
+
   public setData(data: any): void {
     this.customersData = data
-      .filter((el) => el['__EMPTY'])
+      .filter(
+        (el) => el['__EMPTY_3'] && [1, 2, 3].includes(Number(el['__EMPTY_3']))
+      )
       .map((element: any) => this.mapData(element));
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
   }
@@ -38,13 +43,13 @@ export class CustomersDataService {
         accDate: data['__EMPTY'],
         orderId: data['__EMPTY_1'],
         fiscalCode: data['__EMPTY_2'],
-        type: data['__EMPTY_3'],
+        type: Number(data['__EMPTY_3']),
         available: data['__EMPTY_4'],
         name: data['__EMPTY_6'],
         accNumber: data['__EMPTY_7'],
         refDate: data['__EMPTY_8'],
       },
-      values: this.mapValues(data, data['__EMPTY_3']),
+      values: this.mapValues(data, Number(data['__EMPTY_3'])),
     };
   }
 
@@ -52,6 +57,7 @@ export class CustomersDataService {
     let values = [];
     Object.keys(data).forEach((key) => {
       if (!key.startsWith('__EMPTY_')) {
+        if (key == '__EMPTY_3') data[key] = Number(data[key]);
         var limit = this.getLimits(key, type);
         values.push({
           id: key,

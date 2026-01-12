@@ -7,7 +7,7 @@ export type Customer = {
   accDate: string;
   orderId: string;
   fiscalCode: string;
-  type: string;
+  type: number;
   available: string;
   name: string;
   accNumber: string;

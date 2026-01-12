@@ -1,12 +1,37 @@
-<div class="page-container">
-    <div class="logo-valsambro-container flex col justify-end">
+<div class="page-container " [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+    <div class="logo-container flex col justify-end" [ngClass]="{'homica-container': tenant === TenantType.HOMICA}">
         
-    </div>
-    
-    <div class="flex justify-end mx-20px my-100px">
-        <div class="flex col align-end gap-5px">
+    </div>    
+    <div class="flex justify-end mx-20px my-100px ">
+        @if(tenant === TenantType.HOMICA){
+            <div class="flex col align-end gap-5px">
             <div class="flex align-center gap-10px">
-                <h6 class="small-text light-blue">Val Sambro Laboratorio Analisi</h6>
+                <h6 class="small-text white" >Homica Health</h6>
+                <img src="assets/img/facebook_w_icon.svg" alt="">
+            </div>
+            <div class="flex align-center gap-10px">
+                <h6 class="small-text white">HOMICA HEALTH</h6>
+                <img src="assets/img/youtube_w_icon.svg" alt="">
+            </div>
+            <div class="flex align-center gap-10px">
+                <h6 class="small-text white">Homica Health</h6>
+                <img src="assets/img/linkedin_w_icon.svg" alt="">
+            </div>
+            <div class="flex align-end align-center">
+                <h6 class="small-text white mr-70px">Viale Bianca Maria 22, 20129, Milano</h6>
+                <h6 class="small-text white mr-70px">+39 3927195162</h6>
+                <h6 class="small-text white mr-80px">info@homicahealth.com</h6>
+                 <div class="flex align-center gap-10px">
+                    <h6 class="small-text white">homicahealth</h6>
+                    <img src="assets/img/instagram_w_icon.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        }@else {
+            <div class="flex col align-end gap-5px">
+            <div class="flex align-center gap-10px">
+                <h6 class="small-text light-blue" >Val Sambro Laboratorio Analisi</h6>
                 <img src="assets/img/facebook_icon.svg" alt="">
             </div>
             <div class="flex align-center gap-10px">
@@ -27,5 +52,6 @@
                 </div>
             </div>
         </div>
+        }
     </div>
 </div>

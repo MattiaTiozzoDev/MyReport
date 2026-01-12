@@ -1,29 +1,52 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { PageHeader } from '../../shared/page-header/page-header.component';
 import { PageFooter } from '../../shared/page-footer/page-footer';
 import { TranslatePipe } from '@ngx-translate/core';
 import { METABOLOMICS_EXPLANATIONS } from '../../../configs/metabolomics-explanations';
-import { ExplanationService } from './explanation';
+import { ExplanationService } from '../../../services/explanation.service';
 import { EndingPageComponent } from '../ending-page/ending-page.component';
+import { TenantType } from '../../../enums/tenant.enum';
+import { TenantService } from '../../../services/tenant.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'metabolomics-explanation-page',
-  imports: [PageHeader, PageFooter, TranslatePipe, EndingPageComponent],
+  imports: [
+    PageHeader,
+    PageFooter,
+    TranslatePipe,
+    EndingPageComponent,
+    NgClass,
+  ],
   templateUrl: './explanation-page.component.html',
   styleUrl: './explanation-page.component.scss',
 })
-export class ExplanationPageComponent implements OnChanges {
+export class ExplanationPageComponent implements OnChanges, OnInit {
+  public tenant: TenantType;
+  public TenantType = TenantType;
   public explanations: any = [];
   public pages: any = [];
 
   @Input() profile: any;
   @Input() customer: any;
 
-  constructor(private explanationService: ExplanationService) {}
+  constructor(
+    private explanationService: ExplanationService,
+    public tenantService: TenantService
+  ) {}
+
+  ngOnInit(): void {
+    this.tenant = this.tenantService.tenant;
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['profile'] && changes['profile'].currentValue) {
-      console.log(changes['profile'].currentValue);
       this.setExplanations(changes['profile'].currentValue);
     }
   }
@@ -47,16 +70,11 @@ export class ExplanationPageComponent implements OnChanges {
       });
     });
     metabolites.sort((m1, m2) => m1.id - m2.id);
-    console.log('metabolites');
-    console.log(metabolites);
     this.explanations = this.groupMetabolitesByExplanation(
       METABOLOMICS_EXPLANATIONS,
       metabolites
     ).filter((el) => el);
-    console.log('explanations');
-    console.log(this.explanations);
     this.pages = this.explanationService.paginate(this.explanations);
-    console.log(this.pages);
   }
 
   private parseRange(range: string): [number, number] {

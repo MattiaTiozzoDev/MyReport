@@ -2,18 +2,19 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import * as XLSX from 'xlsx';
 import { JsonFile } from '../types/files.type';
-import { StaticDataService } from './static-data.service';
+import { ToastService } from './toast.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FileReaderService {
-  constructor() {}
+  constructor(private toastService: ToastService) {}
 
   generateJSON(event: Event): Observable<JsonFile> {
     return new Observable((observer) => {
       const input = event.target as HTMLInputElement;
       if (!input.files?.length) {
+        this.toastService.showMessage('error', 'Nessun file selezionato');
         observer.error('Nessun file selezionato');
         return;
       }
@@ -48,7 +49,7 @@ export class FileReaderService {
   generateJSONFromDrop(file: File): Observable<JsonFile> {
     return new Observable((observer) => {
       if (!file) {
-        // correggiamo la logica
+        this.toastService.showMessage('error', 'Nessun file selezionato');
         observer.error('Nessun file selezionato');
         return;
       }

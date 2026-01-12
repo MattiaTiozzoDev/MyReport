@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "metabolomics": {
+    "my_report": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -60,10 +60,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "metabolomics:build:production"
+              "buildTarget": "my_report:build:production"
             },
             "development": {
-              "buildTarget": "metabolomics:build:development"
+              "buildTarget": "my_report:build:development"
             }
           },
           "defaultConfiguration": "development"

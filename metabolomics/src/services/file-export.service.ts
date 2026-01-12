@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { ToastService } from './toast.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PdfService {
+  constructor(private toastService: ToastService) {}
   /**
    * Esporta HTML in PDF tramite Electron
    * @param htmlContent stringa HTML completa
@@ -18,9 +20,10 @@ export class PdfService {
         htmlContent,
         fileName,
       });
-      console.log('PDF salvato in:', filePath);
+      this.toastService.showMessage('success', 'PDF salvato in: ' + filePath);
       return filePath;
     } catch (error) {
+      this.toastService.showMessage('error', 'Errore generazione PDF...');
       console.error('Errore generazione PDF:', error);
       throw error;
     }

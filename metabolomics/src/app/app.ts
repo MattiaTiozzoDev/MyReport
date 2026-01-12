@@ -6,10 +6,11 @@ import { NavbarComponent } from '../components/shared/navbar/navbar.component';
 import { FooterComponent } from '../components/shared/footer/footer.component';
 import { CustomersDataService } from '../services/customers-data.service';
 import { forkJoin, take } from 'rxjs';
+import { ToastComponent } from '../components/shared/toast/toast.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, ToastComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -31,7 +32,6 @@ export class App implements OnInit, OnDestroy {
     })
       .pipe()
       .subscribe(({ example }) => {
-        console.log(example);
         this.customersDataService.setData(example);
       });
   }

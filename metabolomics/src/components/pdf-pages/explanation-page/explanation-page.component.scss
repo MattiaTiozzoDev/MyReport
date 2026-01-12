@@ -19,10 +19,18 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
 }
 
+.section-header.homica{
+    background: linear-gradient(90deg, #6B4C99 0%, #141328 90%);
+}
+
 h4{
     font-size: 10px;
     font-weight: 700;
     color: #29AABC;
+}
+
+h4.homica{
+    color: #6B4C99;
 }
 
 p{
@@ -32,8 +40,14 @@ p{
 }
 
 hr{
-    border: 0.5px solid #29abbc83;
-    background-color: #29abbc83;
+    height: 0.5px;
+    background: #29abbc83;
+    margin: 1px 0;
+    border: none;
+}
+
+hr.homica{
+    background: #6B4C99;
 }
 
 .white{

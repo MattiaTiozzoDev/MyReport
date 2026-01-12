@@ -8,6 +8,8 @@ import { StaticDataService } from '../../services/static-data.service';
 import { ProfilePageComponent } from '../../components/pdf-pages/profile-page/profile-page.component';
 import { ExplanationPageComponent } from '../../components/pdf-pages/explanation-page/explanation-page.component';
 import { EndingPageComponent } from '../../components/pdf-pages/ending-page/ending-page.component';
+import { ImagePageComponent } from '../../components/pdf-pages/image-page/image-page.component';
+import { TenantService } from '../../services/tenant.service';
 
 @Component({
   selector: 'metabolomics-pdf-container',
@@ -17,7 +19,7 @@ import { EndingPageComponent } from '../../components/pdf-pages/ending-page/endi
     TablePageComponent,
     ProfilePageComponent,
     ExplanationPageComponent,
-    EndingPageComponent,
+    ImagePageComponent,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',
@@ -26,13 +28,16 @@ export class PdfContainerComponent implements OnInit {
   public customer: any;
   public explanations: any;
   public profile: any;
+  public tenant: any;
 
   constructor(
     private readonly staticDataService: StaticDataService,
-    private customersDataService: CustomersDataService
+    private customersDataService: CustomersDataService,
+    public tenantService: TenantService
   ) {}
 
   ngOnInit(): void {
+    this.tenant = this.tenantService.tenant ?? 'valsambro';
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
@@ -48,7 +53,6 @@ export class PdfContainerComponent implements OnInit {
       this.customer = { ...data.customer };
       if (this.explanations) {
         this.setProfile(data.values);
-        console.log(this.profile);
       }
     });
   }

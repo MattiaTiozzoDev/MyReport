@@ -1,0 +1,13 @@
+
+@if(type == 'success'){
+    <div class="toast-container success flex align-center" [ngClass]="{'show': show}">
+        <img class="px-10px cursor-pointer" src="assets/img/success_icon.svg" alt="" (click)="hide()">
+        <h4 class="text-success ">{{message}}</h4>
+    </div>
+}@else{
+    <div class="toast-container error flex align-center" [ngClass]="{'show': show}">
+        <img class="px-10px cursor-pointer" src="assets/img/error_icon.svg" alt="" (click)="hide()">
+        <h4 class="text-error ">{{message}}</h4>
+    </div>
+}   
+

@@ -13,16 +13,29 @@ import { MetabolomicsTableService } from '../../../services/metabolomics-table.s
 import { Subscription, tap } from 'rxjs';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CustomersDataService } from '../../../services/customers-data.service';
+import { DateTransformPipe } from '../../../pipes/date-transform.pipe';
+import { TenantService } from '../../../services/tenant.service';
+import { TenantType } from '../../../enums/tenant.enum';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'metabolomics-table-page',
-  imports: [PageHeader, PageFooter, MetabolomicsTableComponent, TranslatePipe],
+  imports: [
+    PageHeader,
+    PageFooter,
+    MetabolomicsTableComponent,
+    TranslatePipe,
+    DateTransformPipe,
+    NgClass,
+  ],
   templateUrl: './table-page.component.html',
   styleUrl: './table-page.component.scss',
 })
 export class TablePageComponent implements OnInit, OnDestroy {
   public tables: any;
   public tablesSubscription: Subscription;
+  public tenant: TenantType;
+  public TenantType = TenantType;
 
   @Input() pageId: number;
 
@@ -30,9 +43,13 @@ export class TablePageComponent implements OnInit, OnDestroy {
 
   @Input() customer: any;
 
-  constructor(private metabolomicsTableService: MetabolomicsTableService) {}
+  constructor(
+    private metabolomicsTableService: MetabolomicsTableService,
+    public tenantService: TenantService
+  ) {}
 
   ngOnInit(): void {
+    this.tenant = this.tenantService.tenant;
     this.tablesSubscription = this.metabolomicsTableService
       .getTablesFromPageId(this.pageId)
       .pipe(

@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FileReaderService } from '../../services/file-reader.service';
 import { PdfService } from '../../services/file-export.service';
 import { Subscription, take } from 'rxjs';
@@ -10,15 +10,25 @@ import { PdfContainerComponent } from '../pdf-container/pdf-container.component'
 import { FooterComponent } from '../../components/shared/footer/footer.component';
 import { NavbarComponent } from '../../components/shared/navbar/navbar.component';
 import { CustomersDataService } from '../../services/customers-data.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TenantService } from '../../services/tenant.service';
+import { TenantType } from '../../enums/tenant.enum';
+import { ToastService } from '../../services/toast.service';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'metabolomics-file-manager',
-  imports: [TranslateModule, TranslatePipe, PdfContainerComponent],
+  imports: [
+    TranslateModule,
+    TranslatePipe,
+    PdfContainerComponent,
+    TitleCasePipe,
+  ],
   templateUrl: './file-manager.component.html',
   styleUrl: './file-manager.component.scss',
 })
-export class FileManagerComponent implements OnDestroy {
-  public company: string = 'Val Sambro';
+export class FileManagerComponent implements OnInit, OnDestroy {
+  public company: string;
   public file: any;
   public inputFileName: string;
   public outputFileName = 'output.pdf';
@@ -33,8 +43,17 @@ export class FileManagerComponent implements OnDestroy {
   constructor(
     private readonly fileReaderService: FileReaderService,
     private pdfService: PdfService,
-    public customersDataService: CustomersDataService
+    public customersDataService: CustomersDataService,
+    private route: ActivatedRoute,
+    private tenantService: TenantService,
+    private toastService: ToastService
   ) {}
+
+  ngOnInit(): void {
+    let tenant = this.route.snapshot.paramMap.get('tenant');
+    this.tenantService.tenant = TenantType[tenant];
+    this.company = this.tenantService.tenant;
+  }
 
   onFileSelected(event: Event) {
     this.loadSubscription = this.fileReaderService
@@ -86,9 +105,10 @@ export class FileManagerComponent implements OnDestroy {
 
   async download() {
     this.numberOfCustomers = this.customersDataService.customersData.length;
-    for (let i = 1; i < this.numberOfCustomers - 1; i++) {
+    for (let i = 0; i < this.numberOfCustomers; i++) {
       this.customersDataService.setCustomer();
       this.setOutputFileName();
+      this.customersDataService.changeCustomer();
       try {
         const path = await this.pdfService.exportElementById(
           'pdf-section',
@@ -97,7 +117,7 @@ export class FileManagerComponent implements OnDestroy {
         this.loader = true;
         this.isDownloading = true;
       } catch (err) {
-        alert('Errore: ' + err);
+        console.error('Errore durante il download: ', err);
       }
     }
     this.isDownloading = false;

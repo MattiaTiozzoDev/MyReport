@@ -2,9 +2,13 @@
     display: block;
     width: 595px;
     height: 842px;
-    padding-top: 85px;
     background: linear-gradient(180deg, #29AABC 0%, rgba(255, 255, 255, 0) 100%);
 }
+
+.homica{
+    background: linear-gradient(180deg, #141328 0%, #6B4B99 100%);
+}
+
 
 .page-container::before {
     content: "";
@@ -19,6 +23,12 @@
 }
 
 .page-container{
+    padding-top: 85px;
+    height: 100%;
+}
+
+.page-container.homica{
+    padding-top: 25px;
     height: 100%;
 }
 

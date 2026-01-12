@@ -1,8 +1,14 @@
-:host {
-    height: 40px;
+
+
+.footer-container{
+    height: 40.5px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 0 20px;
+}
+
+.footer-container.homica{
+    background: linear-gradient(90deg, #6B4C99 0%, #141428 89.9%);
 }

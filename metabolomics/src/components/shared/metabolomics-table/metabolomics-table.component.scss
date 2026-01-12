@@ -8,13 +8,25 @@
     background-color: #29AABC;
 }
 
+.table-header.homica{
+    background-color: #6B4C99;
+}
+
 .note-container{
     height: 10px;
     background-color: #29AABC;
 }
 
+.note-container.homica{
+    background-color: #6B4C99;
+}
+
 .note{
     font-size: 7px;
+}
+
+.w-14{
+    width: 14%;
 }
 
 .red{
@@ -29,7 +41,7 @@
     width: 12px;
     height: 12px;
     font-size: 8px;
-    background-color: #29AABC;
+    background-color: #6B4C99;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -37,8 +49,16 @@
     color: white;
 }
 
+.circle.homica{
+    background-color: #6B4C99;
+}
+
 .row-id{
     background-color: #29AABC;
+}
+
+.row-id.homica{
+    background-color: #6B4C99;
 }
 
 .red-circle{
@@ -60,6 +80,12 @@
 }
 
 hr{
-    border: 0.5px solid #29abbc83;
-    background-color: #29abbc83;
+    height: 0.5px;
+    background: #29abbc83;
+    margin: 1px 0;
+    border: none;
+}
+
+hr.homica{
+    background: #6B4C99;
 }

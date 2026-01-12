@@ -1,35 +1,42 @@
-<img src="assets/img/Logo_Valsambro.svg" alt="" height="67px" width="95px">
-<div class="flex col gap-10px">
-    <div class="flex row justify-between gap-20px">
-        <div class="flex col w-140px">
-            <div class="flex w-100 justify-between">
-                <h5 class="white-transparent pb-4px">{{ 'pageheader.acceptation' | translate }}:</h5>
-                <h5 class="white-transparent pb-4px">{{ customer?.accNumber }}</h5>
+<div class="header-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+    @if(tenant === TenantType.HOMICA){
+        <img src="assets/img/homica_logo.svg" alt="" height="67px" width="95px">
+    }@else {
+        <img src="assets/img/Logo_Valsambro.svg" alt="" height="67px" width="95px">
+    }
+    <div class="flex col gap-10px">
+        <div class="flex row justify-between gap-20px">
+            <div class="flex col w-140px">
+                <div class="flex w-100 justify-between">
+                    <h5 class="white pb-4px">{{ 'pageheader.acceptation' | translate }}:</h5>
+                    <h5 class="white pb-4px">{{ customer?.accNumber }}</h5>
+                </div>
+                <hr>
             </div>
-            <hr>
+            <div class="flex col w-140px">
+                <div class="flex w-100 justify-between">
+                    <h5 class="white pb-4px">{{ 'pageheader.code' | translate }}:</h5>
+                    <h5 class="white pb-4px">{{ customer?.orderId }}</h5>
+                </div>
+                <hr>
+            </div>
         </div>
-        <div class="flex col w-140px">
-            <div class="flex w-100 justify-between">
-                <h5 class="white-transparent pb-4px">{{ 'pageheader.code' | translate }}:</h5>
-                <h5 class="white-transparent pb-4px">{{ customer?.orderId }}</h5>
+        <div class="flex row justify-between">
+            <div class="flex col w-140px">
+                <div class="flex w-100 justify-between">
+                    <h5 class="white pb-4px">{{ 'pageheader.accdate' | translate }}:</h5>
+                    <h5 class="white pb-4px">{{ customer?.accDate | dateTransform}}</h5>
+                </div>
+                <hr>
             </div>
-            <hr>
-        </div>
-    </div>
-    <div class="flex row justify-between">
-        <div class="flex col w-140px">
-            <div class="flex w-100 justify-between">
-                <h5 class="white-transparent pb-4px">{{ 'pageheader.accdate' | translate }}:</h5>
-                <h5 class="white-transparent pb-4px">{{ customer?.accDate }}</h5>
+            <div class="flex col w-140px">
+                <div class="flex w-100 justify-between">
+                    <h5 class="white pb-4px">{{ 'pageheader.refdate' | translate }}:</h5>
+                    <h5 class="white pb-4px">{{ customer?.refDate | dateTransform }}</h5>
+                </div>
+                <hr>
             </div>
-            <hr>
-        </div>
-        <div class="flex col w-140px">
-            <div class="flex w-100 justify-between">
-                <h5 class="white-transparent pb-4px">{{ 'pageheader.refdate' | translate }}:</h5>
-                <h5 class="white-transparent pb-4px">{{ customer?.refDate }}</h5>
-            </div>
-            <hr>
         </div>
     </div>
 </div>
+

@@ -1,6 +1,6 @@
 <div>
-    <h6 class="bold light-blue mt-15px mb-5px">{{data?.title | translate}}</h6>
-    <div class="table-header flex align-center px-20px mb-1px">
+    <h6 class="bold mt-15px mb-5px"[ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{data?.title | translate}}</h6>
+    <div class="table-header flex align-center px-20px mb-1px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
         <div class="w-25">
             <h5 class="white">{{'pdfpages.metabolomicstable.columns.markers'| translate}} <br> {{'pdfpages.metabolomicstable.columns.markers2'| translate}}</h5>
         </div>
@@ -21,13 +21,13 @@
     <div class="table-body w-100 flex col px-10px">
         @for(row of data.rows; track row.id){
             @if(row.note){
-                <div class="note-container flex align-center px-10px">
+                <div class="note-container flex align-center px-10px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
                     <h6 class="white note">{{row.note | translate}}</h6>
                 </div>
             }
             <div class="table-row flex align-center px-10px py-2px">
                 <div class="w-25 flex align-center">
-                    <div class="circle row-id mr-5px">{{row.id}}</div>
+                    <div class="circle row-id mr-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">{{row.id}}</div>
                     <h5 [ngClass]="{ 'red bold': row.value < row.yellInf || row.value > row.yellSup }">{{row?.desc | translate}}</h5>
                 </div>
                 <div class="w-15">
@@ -44,20 +44,32 @@
                             <h5 class="bold white">H</h5>
                         </div>
                     }
-                    <h5 [ngClass]="{ 'red bold': row.value < row.yellInf || row.value > row.yellSup }">{{row.value? row.value : "N.D."}}</h5>
-                </div>
-                <div class="w-15">
+                <h5 [ngClass]="{ 'red bold': row.value < row.yellInf || row.value > row.yellSup }">{{row.value | roundedValue:row.yellSup}}</h5>  
+                </div>             
                     @if(row.id == 40 || row.id == 70){
-                        <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt'| translate}}</h5>
+                        <div class="w-14">
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt'| translate}}</h5>
+                        </div>
+                    }@else if(row.id == 18){
+                        <div class="w-14">
+                            <h5 class="small"></h5>
+                        </div>
+                    }@else if(row.id == 21 || row.id == 22 || row.id == 23 || row.id == 28){
+                        <div class="w-15">
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt_2'| translate}}</h5>
+                        </div>
                     }@else {
-                        <h5 class="small">{{'pdfpages.metabolomicstable.creatine'| translate}}</h5>
+                        <div class="w-15">
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine'| translate}}</h5>
+                        </div>
+                    }
+                <div class="w-30"  [ngClass]="{'ml-5px': row.id == 40 || row.id == 70 }">
+                    @if(!!row.value){
+                        <metabolomics-bar [data]="row"></metabolomics-bar>
                     }
                 </div>
-                <div class="w-30">
-                    <metabolomics-bar [data]="row"></metabolomics-bar>
-                </div>
             </div>
-            <hr class="w-100">
+            <hr class="w-100" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
         }
     </div>
 </div>

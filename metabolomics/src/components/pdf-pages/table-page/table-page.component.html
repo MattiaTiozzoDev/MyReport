@@ -1,13 +1,13 @@
-<div class="page-container">
+<div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
     <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
-    <div class="page-content">
+    <div class="page-content" >
         @if(pageId === 0){
-            <h2 class="mt-10px dark-blue">{{"pdfpages.metabolomicstable.tablepage.title" | translate}}</h2>
-            <h4 class="mt-5px light-blue">{{"pdfpages.metabolomicstable.tablepage.subtitle" | translate}}</h4>
+            <h2 class="mt-10px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.metabolomicstable.tablepage.title" | translate}}</h2>
+            <h4 class="mt-5px" [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.metabolomicstable.tablepage.subtitle" | translate}}</h4>
         }
         @for(table of tables; track table.groupId){
             @if(!!table.sectionTitle){
-                <div class="section-header flex justify-end align-center mt-20px px-40px">
+                <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
                     <h4 class="white">{{table.sectionTitle | translate}}</h4>
                 </div>
             }
@@ -18,7 +18,7 @@
                 <h6 >Metodologia: LC/Spettrometria di Massa Tandem</h6>
                 <h6>*Per questi metaboliti l’eccesso nelle urine individua una carenza della vitamina / molecola di riferimento</h6>
                 <h6 class="mt-15px">Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche</h6>
-                <h6 class="mt-15px">Firmato digitalmente dal dott Alberto Santini il: {{customer?.refDate}}</h6>
+                <h6 class="mt-15px">Firmato digitalmente dal dott Alberto Santini il: {{customer?.refDate | dateTransform}}</h6>
             </div>        
         }
     </div>

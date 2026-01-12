@@ -7,7 +7,9 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+    src: url('assets/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+       url('assets/fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+       url('assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15,7 +17,9 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('assets/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+    src: url('assets/fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+       url('assets/fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+       url('assets/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -23,7 +27,9 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('assets/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+    src: url('assets/fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+       url('assets/fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+       url('assets/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -62,6 +68,10 @@ html, body {
   color: #024F84;
 }
 
+.dark-purple{
+  color: #141428;
+}
+
 .green-bg {
   background-color: col.$secondary;
 }
@@ -76,6 +86,10 @@ html, body {
 
 .light-blue {
   color: #29AABC;
+}
+
+.light-purple {
+  color: #6B4C99;
 }
 
 .white-transparent{
@@ -107,6 +121,10 @@ html, body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .display-none{
@@ -171,15 +189,31 @@ h6{
   pointer-events: none;
 }
 
+.page-container.homica::before {
+  background-position: top 70% right 0; /* es: top left, 50% 20% */
+  background-size: 430px 576px; /* oppure cover */
+  background-image: url("assets/img/pdf_page_background_homica.svg");
+}
+
+.page-container.no-img::before {
+  background-image: none;
+}
+
 .page-content{
   height: 692px;
   width: 100%;
   padding: 20px 40px;
 }
 
-.logo-valsambro-container{
+.logo-container{
     height: 555px;
     margin: 0 20px 0 20px;
     background-image: url('assets/img/transparent-logo-valsambro.svg');
     background-repeat: no-repeat;
 }
+
+.logo-container.homica-container{
+    height: 610px;
+    background-image: none;
+}
+

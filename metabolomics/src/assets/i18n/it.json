@@ -67,6 +67,7 @@
       "woman": "donna maggiore di 13 anni",
       "creatine": "µmoli/mmoli di creatinina",
       "creatine_alt": "mg/dL di creatinina",
+      "creatine_alt_2": "nmoli/mmoli di creatinina",
       "groups": {
         "0": {
           "sectionTitle": "Energia cellulare e Marker Mitocondriali",
@@ -516,10 +517,10 @@
     },
 
     "3idrossi3metilglutarico": {
-      "name": "Acido 3-idrossi-3-metilglutarico",
-      "base": "L’acido 3-idrossi-3-metilglutarico (HMG) è un intermedio nel processo di degradazione della leucina, ma anche un precursore metabolico del colesterolo e del CoQ10. Il 3-idrossi-3-metilglutaril-CoA viene solitamente convertito in acetil-CoA e acetoacetato dall'enzima 3-idrossi-3-metiglutaril-CoA liasi ma in caso di inefficienza enzimatica non avviene tale conversione con accumulo di HMG che comporta tossicità mitocondriale.  L'enzima HMG-CoA liasi ha un ruolo importante anche nella formazione del corpo chetonico 3-idrossibutirrico. HMG è un metabolita con azione ipolipidemizzante e inibisce la sintesi di colesterolo.  Farmaci che interferiscono con l’enzima HMG-CoA liasi inducono elevati livelli di HMG e conseguenti bassi livelli di colesterolo e CoQ10.",
-      "hight": "Valori al di sopra del range di riferimento possono essere riscontrati in pazienti che assumono statine e riso rosso fermentato, per il quale si consiglia integrazione di CoQ10. Deficit dell'enzima HMG-CoA liasi possono elevare i livelli di HMG, comportando carenza di CoQ10 e disordini nello sviluppo e cardiomiopatie.",
-      "low": "La carenza non vede associazioni cliniche rilevanti"
+      "name": "Acido 3-idrossi-3-metilglutarico (HMG)",
+      "base": "L’acido 3-idrossi-3-metilglutarico (HMG) rappresenta un intermedio chiave nella degradazione della leucina e funge da precursore metabolico per la sintesi di colesterolo, CoQ10 e 3-idrossibutirrato. Il 3-idrossi-3-metilglutaril-CoA può essere trasformato in acetil-CoA e acetoacetato a opera dell’enzima 3-idrossi-3-metilglutaril-CoA liasi, portando così alla formazione del corpo chetonico 3-idrossibutirrato, specialmente in condizioni di digiuno o ipoglicemia. In presenza di deficit enzimatici, questa conversione risulta inefficace, determinando un accumulo di HMG che può causare tossicità mitocondriale. Alcuni farmaci che interferiscono con l’attività della HMG-CoA liasi possono innalzare i livelli di HMG. Inoltre, l’HMG agisce come attivatore dell’enzima HMG-CoA reduttasi, responsabile della sintesi di acido mevalonico, precursore di colesterolo e CoQ10. Le statine e il riso rosso fermentato svolgono un ruolo inibitorio sulla HMG-CoA reduttasi, riducendo quindi la sintesi sia del colesterolo sia del CoQ10, mentre la risposta insulinica ne stimola l’attività.",
+      "hight": "Valori elevati di acido 3-idrossi-3-metilglutarico (HMG) nelle urine possono essere indicativi di un'alterazione nel metabolismo della leucina, oppure di un blocco del ciclo mitocondriale a livello dell'enzima aconitasi, che può essere causato da una carenza di glutatione o ferro, oppure dalla presenza di metalli pesanti come alluminio, mercurio, arsenico e stagno. In alcuni casi, valori superiori al range di riferimento possono essere riscontrati in pazienti che assumono statine o riso rosso fermentato, poiché questi inibiscono l'enzima HMG-CoA reduttasi, con conseguente necessità di valutare l'integrazione di CoQ10. Deficit degli enzimi HMG-CoA liasi o reduttasi possono inoltre elevare i livelli di HMG, comportando carenza di CoQ10 e possibili disordini nello sviluppo o cardiomiopatie.",
+      "low": "Una carenza di acido 3-idrossi-3-metilglutarico (HMG) nelle urine può indicare un ridotto apporto o una ridotta degradazione della leucina, oppure un'alterazione nel metabolismo energetico mitocondriale. Livelli bassi potrebbero riflettere un'insufficiente disponibilità di substrati per la sintesi di colesterolo, CoQ10 e corpi chetonici, condizioni che possono verificarsi in caso di diete particolarmente restrittive, deficit nutrizionali o alterazioni enzimatiche. In presenza di carenza, è opportuno valutare lo stato nutrizionale generale del paziente, l'apporto di amminoacidi essenziali e di cofattori vitaminici coinvolti nel metabolismo della leucina e dei corpi chetonici, come le vitamine del gruppo B e l'acido lipoico. In alcuni casi, la carenza può essere secondaria a patologie che compromettono l'assorbimento intestinale o la funzione epatica."
     },
 
     "uracile": {

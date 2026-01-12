@@ -1,5 +1,5 @@
 export enum CustomerType {
-  CHILD = 'child',
-  MAN = 'man',
-  WOMAN = 'woman',
+  CHILD = 3,
+  MAN = 1,
+  WOMAN = 2,
 }

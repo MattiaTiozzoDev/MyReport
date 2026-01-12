@@ -11,6 +11,10 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
 }
 
+.section-header.homica{
+    background: linear-gradient(90deg, #6B4C99 0%, #141428 90%);
+}
+
 h5{
     font-size: 8px;
     font-weight: 400;
@@ -32,6 +36,10 @@ h6.white{
     background: #29AABC;
 }
 
+.table-header.homica{
+    background: #6B4C99;
+}
+
 .metabolites-table{
     width: 250px;
     height: 365px;
@@ -41,5 +49,12 @@ h6.white{
     border-top-left-radius: 15px;
     background: #024F8433;
 }
+
+.metabolites-table.homica{
+   background: #6B4C9933;
+
+}
+
+
 
 

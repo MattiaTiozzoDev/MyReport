@@ -1,7 +1,7 @@
 <div class="pt-30px px-60px flex justify-between">
   <div class="w-385px">
     <h1 class="green">My Report</h1>
-    <h3 class="green mt-33px">{{ company }}</h3>
+    <h3 class="green mt-33px">{{ company | titlecase}}</h3>
     <h4 class="white mt-16px">{{ 'filemanager.exp1' | translate }}</h4>
     <h4 class="white mt-19px">{{ 'filemanager.exp2' | translate }}</h4>
     <button (click)="download()" class="green-bg blue bold mt-44px" [disabled]="!file || loader">
@@ -33,7 +33,7 @@
           <div class="appear">
             <img src="assets/img/is_downloading.svg" alt="" class="is-downloading mt-62px">
             <h3 class="white mt-32px">{{ 'Download in corso...' | translate}}</h3>
-            <h4 class="white bold mt-10px">{{ 'File scaricati' | translate}}: {{customersDataService.customerIndex - 1}} su {{numberOfCustomers - 1}}</h4>    
+            <h4 class="white bold mt-10px">{{ 'File scaricati' | translate}}: {{customersDataService.customerIndex }} su {{numberOfCustomers }}</h4>    
           </div>
         </div>
       }@else {

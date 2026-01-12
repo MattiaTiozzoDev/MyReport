@@ -14,7 +14,7 @@ async function startAssetServer() {
 
   const app = express();
 
-  const distRoot = path.join(__dirname, "dist/metabolomics/browser");
+  const distRoot = path.join(__dirname, "dist/my_report/browser");
 
   app.use("/assets", express.static(`${distRoot}/assets`));
 
