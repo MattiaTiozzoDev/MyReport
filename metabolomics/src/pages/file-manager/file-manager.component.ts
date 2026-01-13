@@ -29,6 +29,7 @@ import { TitleCasePipe } from '@angular/common';
 })
 export class FileManagerComponent implements OnInit, OnDestroy {
   public company: string;
+  public tenantType = TenantType;
   public file: any;
   public inputFileName: string;
   public outputFileName = 'output.pdf';
@@ -99,8 +100,12 @@ export class FileManagerComponent implements OnInit, OnDestroy {
 
   private setOutputFileName() {
     let customer = this.customersDataService.getCustomer();
-    this.outputFileName =
-      customer.accNumber + '-' + customer.name.replace(' ', '_') + '.pdf';
+    if (this.company == this.tenantType.VALSAMBRO) {
+      this.outputFileName = `${customer.name.replace(' ', '_')}_METABO.pdf`;
+    } else {
+      let year = customer.accDate.split('_')[2];
+      this.outputFileName = `HO_${customer.type}_01_${customer.accNumber}_${year}.pdf`;
+    }
   }
 
   async download() {

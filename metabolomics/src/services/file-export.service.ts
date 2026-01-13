@@ -20,10 +20,12 @@ export class PdfService {
         htmlContent,
         fileName,
       });
-      this.toastService.showMessage('success', 'PDF salvato in: ' + filePath);
       return filePath;
     } catch (error) {
-      this.toastService.showMessage('error', 'Errore generazione PDF...');
+      this.toastService.showMessage(
+        'error',
+        'Errore generazione PDF, file già esistente'
+      );
       console.error('Errore generazione PDF:', error);
       throw error;
     }

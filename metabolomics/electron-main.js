@@ -46,7 +46,7 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   const finalHtml = buildPrintableHtml(htmlContent);
 
   const pdfWin = new BrowserWindow({
-    show: false, // temporaneo per debug
+    show: false,
     webPreferences: { sandbox: false, devTools: false },
   });
 
@@ -78,7 +78,7 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   });
 
   fs.writeFileSync(pdfPath, pdfData);
-  //pdfWin.close();
+  pdfWin.close();
 
   return pdfPath;
 });
@@ -87,6 +87,7 @@ function buildPrintableHtml(bodyHtml) {
   const assetBaseUrl = `http://localhost:${assetPort}`;
   const distRoot = path.join(__dirname, "dist/my_report/browser");
   const styles = getAngularStyles(distRoot);
+  console.log(assetBaseUrl);
 
   const cssLink = `${assetBaseUrl}/${styles[0]}`;
   return `
