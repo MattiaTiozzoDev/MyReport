@@ -15,7 +15,7 @@
         </div>
         <div class="w-30">
             <h5 class="white">{{'pdfpages.metabolomicstable.columns.pop'| translate}}</h5>
-            <h5 class="white">{{type |translate}}</h5>
+            <h5 class="white">{{typeText |translate}}</h5>
         </div>
     </div>
     <div class="table-body w-100 flex col px-10px">
@@ -47,11 +47,12 @@
                 <h5 [ngClass]="{ 'red bold': row.value < row.yellInf || row.value > row.yellSup }">{{row.value | roundedValue:row.yellSup}}</h5>  
                 </div>             
                     @if(row.id == 40 || row.id == 70){
-                        <div class="w-14">
+                        <div class="w-15">
                             <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt'| translate}}</h5>
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_cre'| translate}}</h5>
                         </div>
                     }@else if(row.id == 18){
-                        <div class="w-14">
+                        <div class="w-15">
                             <h5 class="small"></h5>
                         </div>
                     }@else if(row.id == 21 || row.id == 22 || row.id == 23 || row.id == 28){
@@ -63,10 +64,8 @@
                             <h5 class="small">{{'pdfpages.metabolomicstable.creatine'| translate}}</h5>
                         </div>
                     }
-                <div class="w-30"  [ngClass]="{'ml-5px': row.id == 40 || row.id == 70 }">
-                    @if(!!row.value){
-                        <metabolomics-bar [data]="row"></metabolomics-bar>
-                    }
+                <div class="w-30">
+                    <metabolomics-bar [data]="row"></metabolomics-bar>
                 </div>
             </div>
             <hr class="w-100" [ngClass]="{'homica': tenant === TenantType.HOMICA}">

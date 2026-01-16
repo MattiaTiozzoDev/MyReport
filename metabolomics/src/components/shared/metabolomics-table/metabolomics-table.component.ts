@@ -26,9 +26,10 @@ export class MetabolomicsTableComponent implements OnChanges, OnInit {
   public customerType = CustomerType;
   public tenant: TenantType;
   public TenantType = TenantType;
+  public typeText: string;
 
   @Input() data: any;
-  @Input() type: string;
+  @Input() type: number;
 
   constructor(public tenantService: TenantService) {}
 
@@ -45,13 +46,13 @@ export class MetabolomicsTableComponent implements OnChanges, OnInit {
   private setType(type) {
     switch (type) {
       case this.customerType.CHILD:
-        this.type = 'pdfpages.metabolomicstable.child';
+        this.typeText = 'pdfpages.metabolomicstable.child';
         break;
       case this.customerType.MAN:
-        this.type = 'pdfpages.metabolomicstable.man';
+        this.typeText = 'pdfpages.metabolomicstable.man';
         break;
       case this.customerType.WOMAN:
-        this.type = 'pdfpages.metabolomicstable.woman';
+        this.typeText = 'pdfpages.metabolomicstable.woman';
         break;
     }
   }

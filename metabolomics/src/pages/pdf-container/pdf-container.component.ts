@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnDestroy, OnInit } from '@angular/core';
 import { PresentationPageComponent } from '../../components/pdf-pages/presentation-page/presentation-page.component';
 import { IndexPageComponent } from '../../components/pdf-pages/index-page/index-page.component';
 import { TablePageComponent } from '../../components/pdf-pages/table-page/table-page.component';
@@ -42,12 +42,10 @@ export class PdfContainerComponent implements OnInit {
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
       example: this.staticDataService.loadExample(),
-    })
-      .pipe()
-      .subscribe(({ example, explanations }) => {
-        this.explanations = explanations;
-        this.customersDataService.setData(example);
-      });
+    }).subscribe(({ example, explanations }) => {
+      this.explanations = explanations;
+      this.customersDataService.setData(example);
+    });
 
     this.customersDataService.$customerData.subscribe((data) => {
       this.customer = { ...data.customer };

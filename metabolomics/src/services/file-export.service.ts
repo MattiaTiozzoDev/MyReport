@@ -31,6 +31,19 @@ export class PdfService {
     }
   }
 
+  async openExportFolder(): Promise<string> {
+    if (!(window as any).electronAPI?.openExportFolder) {
+      throw new Error('Electron API non disponibile');
+    }
+    try {
+      const filePath = await (window as any).electronAPI.openExportFolder();
+      return filePath;
+    } catch (error) {
+      console.error('Errore generazione PDF:', error);
+      throw error;
+    }
+  }
+
   /**
    * Esporta il contenuto di un elemento HTML (anche nascosto)
    * @param elementId id dell'elemento

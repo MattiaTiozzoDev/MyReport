@@ -27,8 +27,8 @@ export class FileReaderService {
           const arrayBuffer = reader.result as ArrayBuffer;
           const workbook = XLSX.read(arrayBuffer, { type: 'array' });
 
-          const sheetName = workbook.SheetNames[0];
-          const sheet = workbook.Sheets[sheetName];
+          //const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets['Calcoli'];
 
           const fileName = file.name;
           const json = XLSX.utils.sheet_to_json(sheet, { defval: null });
@@ -61,8 +61,8 @@ export class FileReaderService {
           const arrayBuffer = reader.result as ArrayBuffer;
           const workbook = XLSX.read(arrayBuffer, { type: 'array' });
 
-          const sheetName = workbook.SheetNames[0];
-          const sheet = workbook.Sheets[sheetName];
+          //const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets['Calcoli'];
 
           const fileName = file.name;
           const json = XLSX.utils.sheet_to_json(sheet, { defval: null });

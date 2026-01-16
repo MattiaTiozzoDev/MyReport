@@ -17,9 +17,9 @@ export class ToastComponent implements OnInit {
 
   ngOnInit(): void {
     this.toastService.$show.subscribe((res) => {
-      this.type = res.type;
+      this.type = res?.type ?? 'error';
       this.show = res.show;
-      this.message = res.message;
+      this.message = res?.message ?? '';
     });
   }
 

@@ -1,5 +1,5 @@
 <div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
-    <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
+    <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content">
         <h2 class="mt-10px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.title" | translate}}</h2>
         <h4 class="mt-5px " [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.subtitle" | translate}}</h4>
@@ -18,7 +18,7 @@
                     <h6 class="white bold">{{"pdfpages.profilepage.hight" | translate}}</h6>
                 </div>
                 @for(hight of profile?.hight; track hight.id){
-                    <h6 class="bold mb-5px">{{hight.name |translate }}</h6>
+                    <h6 class="bold mb-5px">{{hight.id}}. {{hight.name |translate }}</h6>
                 }
             </div>
             <div class="metabolites-table flex col align-center" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
@@ -26,7 +26,7 @@
                     <h6 class="white bold">{{"pdfpages.profilepage.low" | translate}}</h6>
                 </div>
                 @for(low of profile?.low; track low.id){
-                    <h6 class="bold mb-5px">{{low.name |translate }}</h6>
+                    <h6 class="bold mb-5px">{{low.id}}. {{low.name |translate }}</h6>
                 }
             </div>
         </div>

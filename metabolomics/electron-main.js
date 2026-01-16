@@ -30,13 +30,26 @@ function createWindow() {
   if (app.isPackaged) {
     // ✅ PRODUZIONE (app.asar)
     win.loadFile(path.join(__dirname, "dist/my_report/browser/index.html"));
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
   } else {
     // ✅ SVILUPPO
     win.loadURL("http://localhost:4200");
     win.webContents.openDevTools();
   }
 }
+
+ipcMain.handle("opend-export-folder", async (event, payload) => {
+  const result = await dialog.showOpenDialog({
+    properties: ["openDirectory"],
+  });
+
+  if (result.canceled || !result.filePaths.length) {
+    pdfWin.close();
+    throw new Error("Salvataggio annullato");
+  }
+
+  filePaths = result.filePaths;
+});
 
 // --- Qui inserisci l'handler IPC ---
 ipcMain.handle("export-pdf", async (event, payload) => {
@@ -54,20 +67,6 @@ ipcMain.handle("export-pdf", async (event, payload) => {
     `data:text/html;charset=utf-8,${encodeURIComponent(finalHtml)}`
   );
 
-  // 🔒 Dialog aperto SOLO la prima volta
-  if (!filePaths) {
-    const result = await dialog.showOpenDialog({
-      properties: ["openDirectory"],
-    });
-
-    if (result.canceled || !result.filePaths.length) {
-      pdfWin.close();
-      throw new Error("Salvataggio annullato");
-    }
-
-    filePaths = result.filePaths; // ← ora è valorizzata
-  }
-
   const pdfPath = path.join(filePaths[0], fileName);
 
   const pdfData = await pdfWin.webContents.printToPDF({
@@ -78,7 +77,7 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   });
 
   fs.writeFileSync(pdfPath, pdfData);
-  pdfWin.close();
+  //pdfWin.close();
 
   return pdfPath;
 });
@@ -87,7 +86,6 @@ function buildPrintableHtml(bodyHtml) {
   const assetBaseUrl = `http://localhost:${assetPort}`;
   const distRoot = path.join(__dirname, "dist/my_report/browser");
   const styles = getAngularStyles(distRoot);
-  console.log(assetBaseUrl);
 
   const cssLink = `${assetBaseUrl}/${styles[0]}`;
   return `
@@ -103,7 +101,7 @@ function buildPrintableHtml(bodyHtml) {
           }
 
           body {
-            zoom: 1.3333333;
+            zoom: 1.33333333333333333333333333333333333333333333333;
           }
         </style>
     </head>

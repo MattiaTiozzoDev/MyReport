@@ -18,11 +18,17 @@ export class PageHeader implements OnInit {
   public tenant: TenantType;
   public TenantType = TenantType;
 
-  @Input() customer: Customer;
+  public customer: Customer;
 
-  constructor(public tenantService: TenantService) {}
+  constructor(
+    public tenantService: TenantService,
+    private customerService: CustomersDataService
+  ) {}
 
   ngOnInit(): void {
     this.tenant = this.tenantService.tenant;
+    this.customerService.$customerData.subscribe(
+      (data) => (this.customer = data.customer)
+    );
   }
 }

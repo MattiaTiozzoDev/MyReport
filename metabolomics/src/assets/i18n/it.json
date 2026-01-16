@@ -66,7 +66,8 @@
       "man": "uomo maggiore di 13 anni",
       "woman": "donna maggiore di 13 anni",
       "creatine": "µmoli/mmoli di creatinina",
-      "creatine_alt": "mg/dL di creatinina",
+      "creatine_alt": "mg/dL di",
+      "creatine_cre": "creatinina",
       "creatine_alt_2": "nmoli/mmoli di creatinina",
       "groups": {
         "0": {
@@ -301,7 +302,7 @@
     },
 
     "nacetil5idrossitriptamina": {
-      "name": "N-acetil-5-idrossitriptamina",
+      "name": "N-Acetilserotonina",
       "base": "N-acetil-5-idrossitriptamina, conosciuta anche come N-acetilserotonina, è un composto organico intermedio nella sintesi della melatonina a partire dalla serotonina. Si forma attraverso l’acetilazione della serotonina, un processo catalizzato dall’enzima serotonina N-acetiltransferasi, soprattutto nella ghiandola pineale. Studi recenti suggeriscono che la N-acetilserotonina possieda proprietà antiossidanti, contribuendo a proteggere le cellule dallo stress ossidativo. Svolge inoltre un ruolo importante nel sistema nervoso grazie a effetti neuroprotettivi, alla partecipazione nella modulazione delle funzioni cognitive e della plasticità sinaptica. In sintesi, la N-acetil-5-idrossitriptamina è una molecola centrale nel metabolismo del triptofano, ponte biochimico tra serotonina e melatonina, e potenzialmente coinvolta in vari processi che influenzano il benessere del sistema nervoso e la qualità del sonno.",
       "hight": "Valori urinari aumentati di N-acetil-5-idrossitriptamina possono essere indicativi di una maggiore conversione della serotonina in melatonina, fenomeno che può verificarsi in condizioni di iperattività della ghiandola pineale o in risposta a particolari stimoli ambientali, come l’esposizione prolungata al buio. Tale incremento può riflettersi in una tendenza dell’organismo a favorire i processi di adattamento al ritmo circadiano e a sostenere la qualità del sonno. In ambito clinico, livelli elevati di N-acetilserotonina nelle urine potrebbero suggerire una risposta biologica volta a migliorare la regolazione neuroendocrina e la difesa dallo stress ossidativo, pur rendendo opportune ulteriori indagini per comprendere eventuali implicazioni sul benessere generale e sulle funzioni neuropsichiche.",
       "low": "Valori urinari ridotti di N-acetil-5-idrossitriptamina possono essere indicativi di una diminuzione della conversione della serotonina in melatonina, suggerendo un possibile deficit nella sintesi di quest’ultima. Tale condizione potrebbe riflettersi in disturbi del ritmo sonno-veglia, alterazioni della qualità del sonno o una ridotta capacità dell’organismo di adattarsi ai cambiamenti ambientali. In ambito clinico, la rilevazione di livelli bassi di N-acetilserotonina nelle urine può rappresentare un segnale di squilibrio nel metabolismo del triptofano, rendendo opportuna una valutazione approfondita delle vie biochimiche coinvolte e delle possibili conseguenze sul benessere neuropsichico e generale."

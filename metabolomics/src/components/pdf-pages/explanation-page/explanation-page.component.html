@@ -1,8 +1,8 @@
-@for(page of pages; track page){
+@for(page of pages; track $index){
     <div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
-    <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
+    <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content">
-        @for(element of page; track element.id){
+        @for(element of page; track $index){
         @if(element.type == 'general'){
             <div class="pt-20px">
                 <div class="section-header flex justify-end align-center px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
@@ -15,10 +15,12 @@
             <hr [ngClass]="{'homica': tenant === TenantType.HOMICA}">
         }
         @if(element.type == 'metabolite'){
-
-                <h4 class="py-15px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
-                    {{element.name | translate}}
-                </h4>
+                <div class="flex align-center">
+                    <div class="circle row-id mr-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">{{element.id}}</div>
+                    <h4 class="py-15px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+                        {{element.name | translate}}
+                    </h4>
+                </div>               
                 <p>
                     {{element.base | translate}}
                 </p>

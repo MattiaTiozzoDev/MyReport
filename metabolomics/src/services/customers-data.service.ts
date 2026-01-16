@@ -24,8 +24,9 @@ export class CustomersDataService {
     return this.customersData[this.customerIndex]?.customer;
   }
 
-  public changeCustomer() {
-    this.customerIndex++;
+  public changeCustomer(index) {
+    this.customerIndex = index;
+    this.customerDataSubject.next(this.customersData[this.customerIndex]);
   }
 
   public setData(data: any): void {

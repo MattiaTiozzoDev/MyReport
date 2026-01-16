@@ -1,5 +1,5 @@
 <div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
-    <metabolomics-page-header [customer]="customer"></metabolomics-page-header>
+    <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content" >
         @if(pageId === 0){
             <h2 class="mt-10px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.metabolomicstable.tablepage.title" | translate}}</h2>
@@ -14,7 +14,7 @@
             <metabolomics-table [data]="table" [type]="customer?.type"></metabolomics-table>       
         }
         @if(pageId === 4){  
-            <div class="flex col mt-45px">
+            <div class="flex col mt-25px">
                 <h6 >Metodologia: LC/Spettrometria di Massa Tandem</h6>
                 <h6>*Per questi metaboliti l’eccesso nelle urine individua una carenza della vitamina / molecola di riferimento</h6>
                 <h6 class="mt-15px">Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche</h6>

@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { FileReaderService } from '../../services/file-reader.service';
 import { PdfService } from '../../services/file-export.service';
-import { Subscription, take } from 'rxjs';
+import { firstValueFrom, Subscription, take } from 'rxjs';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { StaticDataService } from '../../services/static-data.service';
 import { IndexPageComponent } from '../../components/pdf-pages/index-page/index-page.component';
@@ -47,7 +47,8 @@ export class FileManagerComponent implements OnInit, OnDestroy {
     public customersDataService: CustomersDataService,
     private route: ActivatedRoute,
     private tenantService: TenantService,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private zone: NgZone
   ) {}
 
   ngOnInit(): void {
@@ -98,37 +99,49 @@ export class FileManagerComponent implements OnInit, OnDestroy {
       });
   }
 
-  private setOutputFileName() {
-    let customer = this.customersDataService.getCustomer();
-    if (this.company == this.tenantType.VALSAMBRO) {
-      this.outputFileName = `${customer.name.replace(' ', '_')}_METABO.pdf`;
-    } else {
-      let year = customer.accDate.split('_')[2];
-      this.outputFileName = `HO_${customer.type}_01_${customer.accNumber}_${year}.pdf`;
-    }
-  }
-
   async download() {
+    let path: any;
+    try {
+      path = await this.pdfService.openExportFolder();
+      this.loader = true;
+      this.isDownloading = true;
+    } catch (err) {
+      console.error('Errore durante il download: ', err);
+    }
     this.numberOfCustomers = this.customersDataService.customersData.length;
     for (let i = 0; i < this.numberOfCustomers; i++) {
-      this.customersDataService.setCustomer();
-      this.setOutputFileName();
-      this.customersDataService.changeCustomer();
       try {
-        const path = await this.pdfService.exportElementById(
+        this.customersDataService.setCustomer();
+        this.setOutputFileName();
+        let customer = this.customersDataService.getCustomer();
+        await firstValueFrom(this.zone.onStable);
+        const filePath = await this.pdfService.exportElementById(
           'pdf-section',
           this.outputFileName
         );
-        this.loader = true;
-        this.isDownloading = true;
+        if (i + 1 < this.numberOfCustomers) {
+          this.customersDataService.changeCustomer(i + 1);
+        } else {
+          this.customersDataService.changeCustomer(0);
+        }
       } catch (err) {
         console.error('Errore durante il download: ', err);
       }
     }
     this.isDownloading = false;
+    this.file = null;
     setTimeout(() => {
       this.loader = false;
     }, 3000);
+  }
+
+  private setOutputFileName() {
+    let customer = this.customersDataService.getCustomer();
+    if (this.company == this.tenantType.VALSAMBRO) {
+      this.outputFileName = `${customer.name.replace(' ', '_')}_METABO.pdf`;
+    } else {
+      this.outputFileName = `${customer.orderId}.pdf`;
+    }
   }
 
   ngOnDestroy(): void {

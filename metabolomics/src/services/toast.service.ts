@@ -16,4 +16,10 @@ export class ToastService {
       message,
     });
   }
+
+  public close() {
+    this.subject.next({
+      show: false,
+    });
+  }
 }
