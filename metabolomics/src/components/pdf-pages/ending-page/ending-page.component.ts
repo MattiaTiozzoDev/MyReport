@@ -6,7 +6,7 @@ import { TenantService } from '../../../services/tenant.service';
 
 @Component({
   selector: 'metabolomics-ending-page',
-  imports: [TranslatePipe, NgClass],
+  imports: [NgClass],
   templateUrl: './ending-page.component.html',
   styleUrl: './ending-page.component.scss',
 })
