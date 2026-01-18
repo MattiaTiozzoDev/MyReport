@@ -49,6 +49,7 @@ ipcMain.handle("opend-export-folder", async (event, payload) => {
   }
 
   filePaths = result.filePaths;
+  return filePaths;
 });
 
 // --- Qui inserisci l'handler IPC ---
@@ -64,7 +65,7 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   });
 
   await pdfWin.loadURL(
-    `data:text/html;charset=utf-8,${encodeURIComponent(finalHtml)}`
+    `data:text/html;charset=utf-8,${encodeURIComponent(finalHtml)}`,
   );
 
   const pdfPath = path.join(filePaths[0], fileName);
@@ -77,7 +78,7 @@ ipcMain.handle("export-pdf", async (event, payload) => {
   });
 
   fs.writeFileSync(pdfPath, pdfData);
-  //pdfWin.close();
+  pdfWin.close();
 
   return pdfPath;
 });

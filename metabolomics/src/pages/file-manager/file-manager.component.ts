@@ -16,6 +16,12 @@ import { TenantType } from '../../enums/tenant.enum';
 import { ToastService } from '../../services/toast.service';
 import { TitleCasePipe } from '@angular/common';
 
+const EXCELL_TYPE = ['xlsx', 'xlsm', 'xls', 'csv'];
+
+const HOMICA_FILENAME = ['HO_METABO'];
+
+const VALSAMBRO_FILENAME = ['METABO'];
+
 @Component({
   selector: 'metabolomics-file-manager',
   imports: [
@@ -31,6 +37,7 @@ export class FileManagerComponent implements OnInit, OnDestroy {
   public company: string;
   public tenantType = TenantType;
   public file: any;
+  public folderPath: string = '';
   public inputFileName: string;
   public outputFileName = 'output.pdf';
   public isDragOver: boolean = false;
@@ -48,7 +55,7 @@ export class FileManagerComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private tenantService: TenantService,
     private toastService: ToastService,
-    private zone: NgZone
+    private zone: NgZone,
   ) {}
 
   ngOnInit(): void {
@@ -62,6 +69,9 @@ export class FileManagerComponent implements OnInit, OnDestroy {
       .generateJSON(event)
       .pipe()
       .subscribe((data) => {
+        if (!this.isCorrectFilename(data.fileName)) {
+          return;
+        }
         this.file = data.json;
         this.inputFileName = data.fileName;
         this.customersDataService.setData(this.file);
@@ -93,6 +103,9 @@ export class FileManagerComponent implements OnInit, OnDestroy {
       .generateJSONFromDrop(file)
       .pipe()
       .subscribe((data) => {
+        if (!this.isCorrectFilename(data.fileName)) {
+          return;
+        }
         this.file = data.json;
         this.inputFileName = data.fileName;
         this.customersDataService.setData(this.file);
@@ -100,9 +113,8 @@ export class FileManagerComponent implements OnInit, OnDestroy {
   }
 
   async download() {
-    let path: any;
     try {
-      path = await this.pdfService.openExportFolder();
+      this.folderPath = await this.pdfService.openExportFolder();
       this.loader = true;
       this.isDownloading = true;
     } catch (err) {
@@ -117,7 +129,7 @@ export class FileManagerComponent implements OnInit, OnDestroy {
         await firstValueFrom(this.zone.onStable);
         const filePath = await this.pdfService.exportElementById(
           'pdf-section',
-          this.outputFileName
+          this.outputFileName,
         );
         if (i + 1 < this.numberOfCustomers) {
           this.customersDataService.changeCustomer(i + 1);
@@ -128,10 +140,19 @@ export class FileManagerComponent implements OnInit, OnDestroy {
         console.error('Errore durante il download: ', err);
       }
     }
+    if (this.numberOfCustomers > 0) {
+      this.toastService.showMessage(
+        'success',
+        `I file sono stati salvati in ${this.folderPath}`,
+      );
+    } else {
+      this.toastService.showMessage('error', 'Nessun cliente da processare.');
+    }
     this.isDownloading = false;
     this.file = null;
     setTimeout(() => {
       this.loader = false;
+      this.toastService.close();
     }, 3000);
   }
 
@@ -142,6 +163,61 @@ export class FileManagerComponent implements OnInit, OnDestroy {
     } else {
       this.outputFileName = `${customer.orderId}.pdf`;
     }
+  }
+
+  isCorrectFilename(fileName: string): boolean {
+    if (!this.isExcellType(fileName)) {
+      this.toastService.showMessage(
+        'error',
+        'Tipo di file non valido. Carica un file Excel.',
+      );
+      return false;
+    } else if (!this.isCorrectName(fileName)) {
+      this.toastService.showMessage(
+        'error',
+        'Nome del file non valido. Verifica il nome del file e riprova.',
+      );
+      return false;
+    } else if (!this.isCorrectTentant(fileName)) {
+      this.toastService.showMessage(
+        'error',
+        'Il file caricato non corrisponde al cliente selezionato. Verifica e riprova.',
+      );
+      return false;
+    }
+    return true;
+  }
+
+  private getFileName(fileName: string): string {
+    const NAME = fileName.split('.')[0];
+    return NAME;
+  }
+
+  private isExcellType(fileName: string): boolean {
+    const extension = fileName.split('.').pop()?.toLowerCase();
+    return EXCELL_TYPE.includes(extension || '');
+  }
+
+  private isCorrectName(fileName: string): boolean {
+    const name = this.getFileName(fileName);
+    return (
+      HOMICA_FILENAME.some((prefix) => name.startsWith(prefix)) ||
+      VALSAMBRO_FILENAME.some((prefix) => name.startsWith(prefix))
+    );
+  }
+
+  private isCorrectTentant(fileName: string): boolean {
+    const base = this.getFileName(fileName);
+
+    if (this.company === this.tenantType.VALSAMBRO) {
+      return VALSAMBRO_FILENAME.some((prefix) => base.startsWith(prefix));
+    }
+
+    if (this.company === this.tenantType.HOMICA) {
+      return HOMICA_FILENAME.some((prefix) => base.startsWith(prefix));
+    }
+
+    return false;
   }
 
   ngOnDestroy(): void {

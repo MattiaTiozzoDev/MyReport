@@ -25,10 +25,10 @@ export class MetabolomicsTableService implements OnInit {
           .map((table) => {
             return {
               ...table,
-              rows: this.getRows(table.metaIds, data.values),
+              rows: this.getRows(table.metaIds, data?.values),
             };
           });
-      })
+      }),
     );
   }
 

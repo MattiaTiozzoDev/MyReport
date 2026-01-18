@@ -33,7 +33,7 @@ export class PdfContainerComponent implements OnInit {
   constructor(
     private readonly staticDataService: StaticDataService,
     private customersDataService: CustomersDataService,
-    public tenantService: TenantService
+    public tenantService: TenantService,
   ) {}
 
   ngOnInit(): void {
@@ -48,7 +48,7 @@ export class PdfContainerComponent implements OnInit {
     });
 
     this.customersDataService.$customerData.subscribe((data) => {
-      this.customer = { ...data.customer };
+      this.customer = { ...data?.customer };
       if (this.explanations) {
         this.setProfile(data.values);
       }
@@ -61,7 +61,7 @@ export class PdfContainerComponent implements OnInit {
     let profile = this.customersDataService.getProfileMetabolites(values);
     profile.hight.forEach((h) => {
       var explanation = this.explanations.find(
-        (e) => Number(e.id) === Number(h)
+        (e) => Number(e.id) === Number(h),
       );
       if (explanation) {
         hight.push(explanation);
@@ -69,7 +69,7 @@ export class PdfContainerComponent implements OnInit {
     });
     profile.low.forEach((l) => {
       var explanation = this.explanations.find(
-        (e) => Number(e.id) === Number(l)
+        (e) => Number(e.id) === Number(l),
       );
       if (explanation) {
         low.push(explanation);

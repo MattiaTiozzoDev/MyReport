@@ -28,16 +28,18 @@ export class ProfilePageComponent implements OnInit, OnChanges {
   constructor(public tenantService: TenantService) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!!changes && !!changes['profile']) {
+    if (
+      !!changes &&
+      !!changes['profile'] &&
+      !!changes['profile'].currentValue
+    ) {
       this.smallText =
         changes['profile'].currentValue.low.length > 17 ||
         changes['profile'].currentValue.hight.length > 17;
-      debugger;
     }
   }
 
   ngOnInit(): void {
     this.tenant = this.tenantService.tenant;
-    console.log(this.profile);
   }
 }
