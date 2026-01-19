@@ -33,17 +33,18 @@
     },
     "indexpage": {
       "title": "Indice",
-      "subtitle1": "Analisi degli Acidi Organici Urinari",
+      "subtitle1": "Analisi degli Acidi Organici",
       "subtitle2": "Profilo Metabolomico",
       "index1": "Energia cellulare e Marker mitocondriali",
       "index2": "Neurotrasmettitori",
       "index3": "Crescita microbica intestinale",
       "index4": "Metaboliti degli Ossalati",
       "index5": "Marker nutrizionali",
+      "index5b": "Metaboliti della Pirimidina associati al Metabolismo dei Folati",
       "index6": "Metaboliti di detossificazione",
       "index7": "Metaboliti degli Amminoacidi",
-      "index8": "Energia cellulare e Marker mitocondriali",
-      "index9": "Neurotrasmettitori",
+      "index8": "Panoramica delle alterazioni del profilo metabolomico",
+      "index9": "Spiegazione dei metaboliti alterati",
       "fiscalcode": "Codice fiscale:"
     },
     "metabolomicstable": {
