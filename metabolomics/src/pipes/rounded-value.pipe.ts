@@ -13,6 +13,6 @@ export class RoundedValuePipe implements PipeTransform {
   transform(value: number, reference: number | string): number | string {
     if (value == null || reference == null) return 'N.D';
     const decimals = 2;
-    return Number(Number(value).toFixed(decimals));
+    return Number(value).toFixed(decimals);
   }
 }

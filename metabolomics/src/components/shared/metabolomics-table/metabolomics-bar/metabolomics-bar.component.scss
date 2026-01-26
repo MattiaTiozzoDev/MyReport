@@ -5,16 +5,15 @@
     // background: linear-gradient(90deg, #E62138 0%, #FBD500 48.08%, #0B9667 98.56%);
 }
 
-.circle {
-    width: 8px;
-    height: 8px;
+.pointer {
+    width: 7px;
+    height: 7px;
     margin-left: 30px;
-    background: #29AABC;
+    background: #ffffff;
     border: 0.75px solid #024F84;
-    border-radius: 50%;
+    transform: rotate(45deg);
 }
 
-.circle.homica {
-    background: #6B4C99;
+.pointer.homica {
     border: 0.75px solid #43305f;
 }

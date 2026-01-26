@@ -1,5 +1,5 @@
 <div class="bar-container flex align-center" BarBackgroundDirective [yellInf]="data?.yellInf" [grInf]="data?.grInf" [grSup]="data?.grSup" [yellSup]="data?.yellSup">
     @if(data.value != undefined || data.value != null ){
-        <div class="circle"  [ngClass]="{'homica': tenant === TenantType.HOMICA}" BarPointerDirective [yellInf]="data?.yellInf" [yellSup]="data?.yellSup" [value]="data?.value"></div>
+        <div class="pointer"  [ngClass]="{'homica': tenant === TenantType.HOMICA}" BarPointerDirective [yellInf]="data?.yellInf" [yellSup]="data?.yellSup" [value]="data?.value"></div>
     }
 </div>

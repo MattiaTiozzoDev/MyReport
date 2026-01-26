@@ -32,9 +32,9 @@
                 </div>
                 <div class="w-15 flex align-center justify-between">
                     <div class="w-60 flex align-center justify-between">
-                        <h5 class="w-30 text-center">{{row.yellInf == 0 ? '   ' : row.yellInf}}</h5>
+                        <h5 class="w-30 text-center">{{row.yellInf == 0 ? '   ' : row.yellInf | roundedValue:row.yellSup}}</h5>
                         <h5 class="w-10 text-center">{{row.sign}} </h5>
-                        <h5 class="w-30 text-center">{{row.yellSup}} </h5>
+                        <h5 class="w-30 text-center">{{row.yellSup | roundedValue:row.yellSup}}</h5>
                     </div>
                 </div>
                 <div class="w-15 flex align-center">

@@ -15,7 +15,10 @@ export class BarPointerDirective implements OnChanges {
   @Input() yellInf: number = 0; // valore minimo dell'intervallo
   @Input() yellSup: number = 100; // valore massimo dell'intervallo
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+  ) {}
 
   ngOnChanges() {
     const startMargin = 5; // margine sinistro minimo (%)
@@ -23,9 +26,9 @@ export class BarPointerDirective implements OnChanges {
     let margin: number;
 
     if (this.value <= this.yellInf) {
-      margin = 0;
+      margin = 1;
     } else if (this.value >= this.yellSup) {
-      margin = 95;
+      margin = 94;
     } else {
       margin =
         startMargin +
@@ -36,7 +39,7 @@ export class BarPointerDirective implements OnChanges {
     this.renderer.setStyle(
       this.el.nativeElement,
       'margin-left',
-      `calc(${margin}%`
+      `calc(${margin}%`,
     );
   }
 }
