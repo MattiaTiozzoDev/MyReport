@@ -5,11 +5,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { CustomersDataService } from '../../../services/customers-data.service';
 import { TenantType } from '../../../enums/tenant.enum';
 import { TenantService } from '../../../services/tenant.service';
-import { NgClass } from '@angular/common';
+import { NgClass, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'metabolomics-index-page',
-  imports: [PageHeader, PageFooter, TranslatePipe, NgClass],
+  imports: [PageHeader, PageFooter, TranslatePipe, NgClass, UpperCasePipe],
   templateUrl: './index-page.component.html',
   styleUrl: './index-page.component.scss',
 })

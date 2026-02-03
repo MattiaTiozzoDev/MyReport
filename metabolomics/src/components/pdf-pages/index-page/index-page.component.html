@@ -66,9 +66,10 @@
             </div> 
             <hr class="w-80 mt-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">  
         </div>
-        @if(customer?.fiscalCode && tenant === TenantType.VALSAMBRO){
-            <div class="cf-container flex align-center px-15px mt-100px">
-                <h5 class="white">{{ 'pdfpages.indexpage.fiscalcode' | translate }} {{customer?.fiscalCode}} </h5>
+        @if((customer?.fiscalCode || customer?.name) && tenant === TenantType.VALSAMBRO){
+            <div class="cf-container flex align-center justify-between px-15px mt-100px">
+                <h5 class="white">{{customer?.name}} </h5>
+                <h5 class="white">{{ 'pdfpages.indexpage.fiscalcode' | translate }} {{customer?.fiscalCode | uppercase}} </h5>
             </div>
         }
     </div>
