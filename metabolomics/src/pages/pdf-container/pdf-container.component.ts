@@ -61,6 +61,9 @@ export class PdfContainerComponent implements OnInit {
     });
 
     this.customersDataService.$customerData.subscribe((data) => {
+      this.fileType = null;
+      this.tenant = this.tenantService.tenant ?? 'valsambro';
+      this.fileType = this.fileTypeService.fileType;
       this.customer = { ...data?.customer };
       if (this.explanations && this.fileType === FileType.METABO) {
         this.setMetaboProfile(data.values);

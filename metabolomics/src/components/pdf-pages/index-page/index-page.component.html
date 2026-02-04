@@ -5,14 +5,14 @@
         @for(section of indexesArray; track section){
             <div class="w-100 flex justify-between mt-20px">
                 <h4 class="bold " [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{ section.sectionTitle | translate }}</h4>
-                <h6>pag {{section.page}}</h6>           
+                <h6 class="black">pag {{section.page}}</h6>           
             </div>
             <hr class="mt-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
             <div class="w-100 flex col align-end">
                 @for(index of section.indexes; track index){
                     <div class="w-80 flex justify-between mt-20px">
-                        <h4>{{ index.title |  translate }}</h4>
-                        <h6>pag {{index.page}}</h6>   
+                        <h4 class="black">{{ index.title |  translate }}</h4>
+                        <h6 class="black">pag {{index.page}}</h6>   
                     </div> 
                     <hr class="w-80 mt-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}"> 
                 }
