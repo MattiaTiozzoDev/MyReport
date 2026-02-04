@@ -6,6 +6,12 @@ import { CustomersDataService } from '../../../services/customers-data.service';
 import { TenantType } from '../../../enums/tenant.enum';
 import { TenantService } from '../../../services/tenant.service';
 import { NgClass, UpperCasePipe } from '@angular/common';
+import { FileTypeService } from '../../../services/file-type.service';
+import { FileType } from '../../../enums/file-type.enum';
+import {
+  METABO_INDEXES_ARRAY,
+  ISTAMINA_INDEXES_ARRAY,
+} from '../../../configs/indexes.arrays';
 
 @Component({
   selector: 'metabolomics-index-page',
@@ -17,9 +23,24 @@ export class IndexPageComponent implements OnInit {
   @Input() customer: any;
   public tenant: TenantType;
   public TenantType = TenantType;
-  constructor(public tenantService: TenantService) {}
+  public fileType: FileType;
+  public indexesArray: any[] = [];
+
+  constructor(
+    public tenantService: TenantService,
+    public fileTypeService: FileTypeService,
+  ) {}
 
   ngOnInit(): void {
     this.tenant = this.tenantService.tenant;
+    this.fileType = this.fileTypeService.fileType;
+    switch (this.fileType) {
+      case FileType.METABO:
+        this.indexesArray = METABO_INDEXES_ARRAY;
+        break;
+      case FileType.ISTFEC:
+        this.indexesArray = ISTAMINA_INDEXES_ARRAY;
+        break;
+    }
   }
 }

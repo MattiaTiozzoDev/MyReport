@@ -1,0 +1,103 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{ 'pdfpages.istfecresultpage.title' | translate }}</h2> 
+        <h4 class=" mt-3px light-blue subtitle">{{ 'pdfpages.istfecresultpage.subtitle' | translate }}</h4> 
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.istfecresultpage.sectiontitle1' | translate}}</h4>
+            </div>
+        </div>
+        <p class="my-15px">
+            {{'pdfpages.istfecresultpage.text1' | translate}} 
+        </p>
+        <p class="my-15px">
+            {{'pdfpages.istfecresultpage.text2' | translate}} 
+        </p>
+         <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.istfecresultpage.sectiontitle2' | translate}}</h4>
+            </div>
+        </div>
+        <div class="table-header flex align-center justify-between px-15px mt-25px" >
+            <h5 class="w-20 white">{{'pdfpages.istfecresultpage.table.exam' | translate}}</h5>
+            <h5 class="w-20 white">{{'pdfpages.istfecresultpage.table.result' | translate}}</h5>
+            <h5 class="w-20 white">{{'pdfpages.istfecresultpage.table.unit' | translate}}</h5>
+            <h5 class="w-20 white">{{'pdfpages.istfecresultpage.table.reference' | translate}}</h5>
+        </div>
+        <div class="flex align-center justify-between px-15px mt-5px" >
+            <h5 class="w-20 black">{{'pdfpages.istfecresultpage.table.istamina' | translate}}</h5>
+            <div class="w-20 black">
+                <div class="result flex justify-center align-center" 
+                [ngClass]="{
+                    'light-blue-bg': result < 600,
+                    'yellow-bg': result >= 600 && result < 900,                     
+                    'orange-bg': result >= 900 && result < 1500,
+                    'red-bg': result >= 1500}">
+                    {{result}}
+                </div>
+            </div>
+            <h5 class="w-20 black">μg/g</h5>
+            <h5 class="w-20 black">< 600</h5>
+        </div>
+        <hr>
+        <div class="h-200px">
+            @if(result >= 600 && result < 900){
+                <h4 class="light-blue bold pt-30px">
+                    {{'pdfpages.istfecresultpage.results.medium.title' | translate}}
+                </h4>
+                <p class="pt-15px">
+                    {{'pdfpages.istfecresultpage.results.common.text1' | translate}}
+                    <span class="yellow bold">{{'pdfpages.istfecresultpage.results.common.text1b' | translate}}</span>
+                    {{'pdfpages.istfecresultpage.results.common.text2' | translate}}
+                    <span class="yellow bold">{{'pdfpages.istfecresultpage.results.medium.bold' | translate}}</span> 
+                    {{'pdfpages.istfecresultpage.results.common.text3' | translate}}
+                </p>
+                <br>
+                <p>
+                    {{'pdfpages.istfecresultpage.results.medium.text' | translate}}
+                </p>
+            }
+            @if(result >= 900 && result < 1500){
+                <h4 class="light-blue bold pt-30px">
+                    {{'pdfpages.istfecresultpage.results.high.title' | translate}}
+                </h4>
+                <p class="pt-15px">
+                    {{'pdfpages.istfecresultpage.results.common.text1' | translate}}
+                    <span class="orange bold">{{'pdfpages.istfecresultpage.results.common.text1b' | translate}}</span>
+                    {{'pdfpages.istfecresultpage.results.common.text2' | translate}}
+                    <span class="orange bold">{{'pdfpages.istfecresultpage.results.high.bold' | translate}}</span> 
+                    {{'pdfpages.istfecresultpage.results.common.text3' | translate}}
+                </p>
+                <br>
+                <p>
+                    {{'pdfpages.istfecresultpage.results.high.text' | translate}}
+                </p>
+            }
+            @if(result >= 1500){
+                <h4 class="light-blue bold pt-30px">
+                    {{'pdfpages.istfecresultpage.results.veryhigh.title' | translate}}
+                </h4>
+                <p class="pt-15px">
+                    {{'pdfpages.istfecresultpage.results.common.text1' | translate}}
+                    <span class="red bold">{{'pdfpages.istfecresultpage.results.common.text1b' | translate}}</span>
+                    {{'pdfpages.istfecresultpage.results.common.text2' | translate}}
+                    <span class="red bold">{{'pdfpages.istfecresultpage.results.veryhigh.bold' | translate}}</span> 
+                    {{'pdfpages.istfecresultpage.results.common.text3' | translate}}
+                </p>
+                <br>
+                <p>
+                    {{'pdfpages.istfecresultpage.results.veryhigh.text' | translate}}
+                </p>
+            }
+        </div>
+        <h5 class="small-text">
+            Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche
+        </h5>
+        <br>
+        <h5 class="small-text">
+            Firmato digitalmente dal dott Alberto Santini il: {{ refDate | dateTransform}}
+        </h5>
+    </div>
+    <metabolomics-page-footer></metabolomics-page-footer>
+</div>

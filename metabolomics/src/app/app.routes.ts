@@ -6,12 +6,8 @@ import { PdfContainerComponent } from '../pages/pdf-container/pdf-container.comp
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'filemanager/:tenant',
     component: FileManagerComponent,
+    pathMatch: 'full',
   },
   {
     path: 'pdf-container',

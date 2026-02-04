@@ -15,12 +15,12 @@ import { TenantService } from '../../services/tenant.service';
 import { TenantType } from '../../enums/tenant.enum';
 import { ToastService } from '../../services/toast.service';
 import { TitleCasePipe } from '@angular/common';
-
-const EXCELL_TYPE = ['xlsx', 'xlsm', 'xls', 'csv'];
-
-const HOMICA_FILENAME = ['HO_METABO'];
-
-const VALSAMBRO_FILENAME = ['METABO'];
+import { FileType } from '../../enums/file-type.enum';
+import {
+  VALSAMBRO_FILENAME,
+  HOMICA_FILENAME,
+  EXCELL_TYPE,
+} from '../../configs/constants.utils';
 
 @Component({
   selector: 'metabolomics-file-manager',
@@ -33,7 +33,7 @@ const VALSAMBRO_FILENAME = ['METABO'];
   templateUrl: './file-manager.component.html',
   styleUrl: './file-manager.component.scss',
 })
-export class FileManagerComponent implements OnInit, OnDestroy {
+export class FileManagerComponent implements OnDestroy {
   public company: string;
   public tenantType = TenantType;
   public file: any;
@@ -47,6 +47,7 @@ export class FileManagerComponent implements OnInit, OnDestroy {
   public loader = false;
   public isDownloading = false;
   public numberOfCustomers = 0;
+  fileTypeService: any;
 
   constructor(
     private readonly fileReaderService: FileReaderService,
@@ -58,20 +59,11 @@ export class FileManagerComponent implements OnInit, OnDestroy {
     private zone: NgZone,
   ) {}
 
-  ngOnInit(): void {
-    let tenant = this.route.snapshot.paramMap.get('tenant');
-    this.tenantService.tenant = TenantType[tenant];
-    this.company = this.tenantService.tenant;
-  }
-
   onFileSelected(event: Event) {
     this.loadSubscription = this.fileReaderService
       .generateJSON(event)
       .pipe()
       .subscribe((data) => {
-        if (!this.isCorrectFilename(data.fileName)) {
-          return;
-        }
         this.file = data.json;
         this.inputFileName = data.fileName;
         this.customersDataService.setData(this.file);
@@ -103,9 +95,6 @@ export class FileManagerComponent implements OnInit, OnDestroy {
       .generateJSONFromDrop(file)
       .pipe()
       .subscribe((data) => {
-        if (!this.isCorrectFilename(data.fileName)) {
-          return;
-        }
         this.file = data.json;
         this.inputFileName = data.fileName;
         this.customersDataService.setData(this.file);
@@ -163,61 +152,6 @@ export class FileManagerComponent implements OnInit, OnDestroy {
     } else {
       this.outputFileName = `${customer.orderId}.pdf`;
     }
-  }
-
-  isCorrectFilename(fileName: string): boolean {
-    if (!this.isExcellType(fileName)) {
-      this.toastService.showMessage(
-        'error',
-        'Tipo di file non valido. Carica un file Excel.',
-      );
-      return false;
-    } else if (!this.isCorrectName(fileName)) {
-      this.toastService.showMessage(
-        'error',
-        'Nome del file non valido. Verifica il nome del file e riprova.',
-      );
-      return false;
-    } else if (!this.isCorrectTentant(fileName)) {
-      this.toastService.showMessage(
-        'error',
-        'Il file caricato non corrisponde al cliente selezionato. Verifica e riprova.',
-      );
-      return false;
-    }
-    return true;
-  }
-
-  private getFileName(fileName: string): string {
-    const NAME = fileName.split('.')[0];
-    return NAME;
-  }
-
-  private isExcellType(fileName: string): boolean {
-    const extension = fileName.split('.').pop()?.toLowerCase();
-    return EXCELL_TYPE.includes(extension || '');
-  }
-
-  private isCorrectName(fileName: string): boolean {
-    const name = this.getFileName(fileName);
-    return (
-      HOMICA_FILENAME.some((prefix) => name.startsWith(prefix)) ||
-      VALSAMBRO_FILENAME.some((prefix) => name.startsWith(prefix))
-    );
-  }
-
-  private isCorrectTentant(fileName: string): boolean {
-    const base = this.getFileName(fileName);
-
-    if (this.company === this.tenantType.VALSAMBRO) {
-      return VALSAMBRO_FILENAME.some((prefix) => base.startsWith(prefix));
-    }
-
-    if (this.company === this.tenantType.HOMICA) {
-      return HOMICA_FILENAME.some((prefix) => base.startsWith(prefix));
-    }
-
-    return false;
   }
 
   ngOnDestroy(): void {

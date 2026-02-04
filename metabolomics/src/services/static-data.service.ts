@@ -16,7 +16,7 @@ export class StaticDataService {
     return this.http.get<Limit[]>('assets/jsons/limit.json').pipe(
       tap((data) => {
         this.limit = data;
-      })
+      }),
     );
   }
 
@@ -24,15 +24,27 @@ export class StaticDataService {
     return this.http.get<Explanations[]>('assets/jsons/explanations.json').pipe(
       tap((data) => {
         this.explanations = data;
-      })
+      }),
     );
   }
 
-  loadExample(): Observable<Explanations[]> {
-    return this.http.get<Explanations[]>('assets/jsons/example.json').pipe(
-      tap((data) => {
-        this.example = data;
-      })
-    );
+  loadMetabolitesExample(): Observable<Explanations[]> {
+    return this.http
+      .get<Explanations[]>('assets/jsons/metaboliti.example.json')
+      .pipe(
+        tap((data) => {
+          this.example = data;
+        }),
+      );
+  }
+
+  loadIstaminaExample(): Observable<Explanations[]> {
+    return this.http
+      .get<Explanations[]>('assets/jsons/istamina.example.json')
+      .pipe(
+        tap((data) => {
+          this.example = data;
+        }),
+      );
   }
 }

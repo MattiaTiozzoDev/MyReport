@@ -18,7 +18,7 @@ export class App implements OnInit, OnDestroy {
   constructor(
     private translate: TranslateService,
     private readonly staticDataService: StaticDataService,
-    private customersDataService: CustomersDataService
+    private customersDataService: CustomersDataService,
   ) {
     this.translate.setFallbackLang('it');
     this.translate.use('it');
@@ -28,7 +28,7 @@ export class App implements OnInit, OnDestroy {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadExample(),
+      example: this.staticDataService.loadIstaminaExample(),
     })
       .pipe()
       .subscribe(({ example }) => {

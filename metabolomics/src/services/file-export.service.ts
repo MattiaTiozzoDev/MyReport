@@ -24,7 +24,7 @@ export class PdfService {
     } catch (error) {
       this.toastService.showMessage(
         'error',
-        'Errore generazione PDF, file già esistente'
+        'Errore generazione PDF, file già esistente',
       );
       console.error('Errore generazione PDF:', error);
       throw error;
@@ -50,7 +50,7 @@ export class PdfService {
    */
   async exportElementById(
     elementId: string,
-    fileName: string
+    fileName: string,
   ): Promise<string> {
     const element = document.getElementById(elementId);
     if (!element) throw new Error(`Elemento con id "${elementId}" non trovato`);
@@ -65,7 +65,7 @@ export class PdfService {
       allStyles += style.outerHTML;
     });
 
-    // Costruisci l'HTML completo da passare a Electron
+    // Costruisce l'HTML completo da passare a Electron
     const fullHtml = `
     <html>
       <head>

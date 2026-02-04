@@ -3,6 +3,7 @@ import { StaticDataService } from './static-data.service';
 import { CustomerType } from '../enums/customerType.enum';
 import { Customer, CustomerData, MappedValue } from '../types/customers.type';
 import { Subject } from 'rxjs';
+import { FileTypeService } from './file-type.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,13 +15,16 @@ export class CustomersDataService {
   public $customerData = this.customerDataSubject.asObservable();
   public customerIndex = 0;
 
-  constructor(private staticDataService: StaticDataService) {}
+  constructor(
+    private staticDataService: StaticDataService,
+    private fileTypeService: FileTypeService,
+  ) {}
 
-  setCustomer() {
+  public setCustomer() {
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
   }
 
-  getCustomer(): Customer {
+  public getCustomer(): Customer {
     return this.customersData[this.customerIndex]?.customer;
   }
 
@@ -30,15 +34,23 @@ export class CustomersDataService {
   }
 
   public setData(data: any): void {
-    this.customersData = data
-      .filter(
-        (el) => el['__EMPTY_3'] && [1, 2, 3].includes(Number(el['__EMPTY_3']))
-      )
-      .map((element: any) => this.mapData(element));
+    const fileType = this.fileTypeService.fileType;
+    if (fileType === 'METABO') {
+      this.customersData = data
+        .filter(
+          (el) =>
+            el['__EMPTY_3'] && [1, 2, 3].includes(Number(el['__EMPTY_3'])),
+        )
+        .map((element: any) => this.mapMetaboData(element));
+    } else if (fileType === 'ISTFEC') {
+      this.customersData = data
+        .filter((el) => el['__EMPTY_20'] && el['__EMPTY_20'] !== 'ISTAMINA')
+        .map((element: any) => this.mapIstaminaData(element));
+    }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
   }
 
-  private mapData(data): CustomerData {
+  private mapMetaboData(data): CustomerData {
     return {
       customer: {
         accDate: data['__EMPTY'],
@@ -72,7 +84,7 @@ export class CustomersDataService {
 
   private getLimits(id, type): Partial<MappedValue> {
     var limit = this.staticDataService.limit.find(
-      (lim) => lim.id === Number(id)
+      (lim) => lim.id === Number(id),
     );
     switch (type) {
       case CustomerType.CHILD:
@@ -122,5 +134,21 @@ export class CustomersDataService {
       }
     });
     return { hight, low };
+  }
+
+  private mapIstaminaData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['__EMPTY'],
+        orderId: data['__EMPTY_1'],
+        fiscalCode: data['__EMPTY_2'],
+        type: Number(data['__EMPTY_3']),
+        available: data['__EMPTY_4'],
+        name: data['__EMPTY_6'],
+        accNumber: data['__EMPTY_7'],
+        refDate: data['__EMPTY_8'],
+      },
+      result: data['__EMPTY_20'],
+    };
   }
 }

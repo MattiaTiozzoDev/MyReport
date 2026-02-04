@@ -1,6 +1,7 @@
 <metabolomics-presentation-page></metabolomics-presentation-page>
 <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
-<metabolomics-table-page [pageId]="0" [customer]="customer"></metabolomics-table-page>
+@if(fileType === fileTypeEnum.METABO) {
+    <metabolomics-table-page [pageId]="0" [customer]="customer"></metabolomics-table-page>
 <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'">
     <img class="image-container" src="{{'assets/img/ciclo_energia_cellulare_' +  tenant + '.svg'}}" alt="">
 </metabolomics-image-page>
@@ -22,3 +23,13 @@
 </metabolomics-image-page>
 <metabolomics-profile-page [profile]="profile" [customer]="customer"></metabolomics-profile-page>
 <metabolomics-explanation-page [profile]="profile" [customer]="customer"></metabolomics-explanation-page>
+} 
+@if(fileType === fileTypeEnum.ISTFEC) {
+   <istfec-introduction-page></istfec-introduction-page>
+   <istfec-explanation-page></istfec-explanation-page>
+   <metabolomics-image-page [customer]="customer" [title]="'Effetti biologici dell’istamina e recettori coinvolti'">
+        <img class="image-container pt-10px" src="{{'assets/img/effetti_biologici_istamina.svg'}}" alt="">
+    </metabolomics-image-page>
+    <istfec-result-page></istfec-result-page>
+   <metabolomics-ending-page></metabolomics-ending-page>
+}

@@ -33,18 +33,31 @@
     },
     "indexpage": {
       "title": "Indice",
-      "subtitle1": "Analisi degli Acidi Organici",
-      "subtitle2": "Profilo Metabolomico",
-      "index1": "Energia cellulare e Marker Mitocondriali",
-      "index2": "Neurotrasmettitori",
-      "index3": "Crescita Microbica intestinale",
-      "index4": "Metaboliti degli Ossalati",
-      "index5": "Marker nutrizionali",
-      "index5b": "Metaboliti della Pirimidina associati al Metabolismo dei Folati",
-      "index6": "Indicatori di Detossificazione",
-      "index7": "Metaboliti degli Amminoacidi",
-      "index8": "Panoramica delle alterazioni del profilo metabolomico",
-      "index9": "Spiegazione dei metaboliti alterati",
+      "metabo": {
+        "subtitle1": "Analisi degli Acidi Organici",
+        "subtitle2": "Profilo Metabolomico",
+        "index1": "Energia cellulare e Marker Mitocondriali",
+        "index2": "Neurotrasmettitori",
+        "index3": "Crescita Microbica intestinale",
+        "index4": "Metaboliti degli Ossalati",
+        "index5": "Marker nutrizionali",
+        "index5b": "Metaboliti della Pirimidina associati al Metabolismo dei Folati",
+        "index6": "Indicatori di Detossificazione",
+        "index7": "Metaboliti degli Amminoacidi",
+        "index8": "Panoramica delle alterazioni del profilo metabolomico",
+        "index9": "Spiegazione dei metaboliti alterati"
+      },
+      "istamina": {
+        "subtitle1": "Ruolo biologico e significato clinico",
+        "subtitle2": "Valutazione del risultato analitico",
+        "index1": "Cos’è l’istamina fecale",
+        "index2": "Connessione tra istamina e microbiota",
+        "index3": "Fattori che influiscono il livello di istamina nelle feci",
+        "index4": "Implicazioni di un livello alterato di istamina",
+        "index5": "Effetti biologici dell’istamina e recettori coinvolti",
+        "index6": "Come interpretare il test",
+        "index7": "Livello di istamina fecale rilevato"
+      },
       "fiscalcode": "Codice fiscale:"
     },
     "metabolomicstable": {
@@ -128,6 +141,73 @@
       "sectiontitle2": "Il profilo del paziente evidenzia degli squilibri",
       "hight": "Metaboliti in eccesso",
       "low": "Metaboliti in difetto"
+    },
+    "istfecintroductionpage": {
+      "title": "Istamina fecale",
+      "subtitle": "Ruolo biologico e significato clinico",
+      "sectiontitle1": "Cos’è l’istamina fecale",
+      "text1": "Il test valuta la concentrazione di istamina presente nelle feci.",
+      "text2": "L’istamina è un’ammina biogena ad elevata attività biologica, coinvolta nella regolazione della risposta immunitaria, infiammatoria e gastrointestinale.",
+      "text3": "La determinazione dell’istamina fecale consente di analizzare la dinamica intestinale dell’istamina, rappresentando un marker funzionale dello stato della mucosa intestinale e dell’interazione tra microbiota e sistema immunitario locale. ",
+      "text4": "Questo parametro fornisce indicazioni sul corretto equilibrio tra produzione, regolazione e inattivazione dell’istamina a livello enterico."
+    },
+    "istfecexplanationpage": {
+      "sectiontitle1": "Connessione tra istamina e microbiota",
+      "text1": "A livello intestinale, l’istamina può derivare sia da una produzione endogena sia dall’attività metabolica del microbiota.",
+      "text2": "Alcuni batteri intestinali sono in grado di produrre istamina a partire dall’istidina attraverso specifici enzimi.",
+      "text3": "In condizioni fisiologiche, questa produzione è bilanciata da meccanismi di controllo che ne limitano l’accumulo.",
+      "text4": "Alterazioni della composizione del microbiota (disbiosi) possono favorire un aumento della produzione di istamina biologicamente attiva, contribuendo a una stimolazione persistente della risposta immunitaria locale e a una compromissione della funzionalità della barriera intestinale.",
+      "sectiontitle2": "Fattori che influiscono il livello di istamina nelle feci",
+      "text5": "I livelli di istamina fecale possono essere influenzati da diversi fattori:",
+      "fact1": "Dieta",
+      "text6": "La dieta, in particolare il consumo di alimenti ricchi di istamina o in grado di favorirne il rilascio.",
+      "fact2": "Equilibrio del microbiota intestinale",
+      "text7": "L’ equilibrio del microbiota intestinale può modulare la produzione di istamina.",
+      "fact3": "Farmaci",
+      "text8": "Farmaci, come antibiotici e antiacidi, in grado di alterare il microbiota e i meccanismi di regolazione intestinale.",
+      "text9": "Questi elementi possono contribuire, singolarmente o in associazione, alla variazione dei livelli di istamina rilevati.",
+      "sectiontitle3": "Implicazioni di un livello alterato di istamina",
+      "text10": "Un’alterazione dei livelli di istamina fecale può essere associata a una serie di manifestazioni cliniche che coinvolgono diversi sistemi dell’organismo.",
+      "text11": "L’istamina esercita i propri effetti attraverso l’attivazione di specifici recettori istaminergici, distribuiti a livello gastrointestinale, cutaneo, cardiovascolare, respiratorio e nervoso.",
+      "text12": "Valori elevati di istamina intestinale possono contribuire a disturbi gastrointestinali funzionali, reazioni pseudo-allergiche, alterazioni della risposta immunitaria e sintomi correlati all’asse intestino–cervello, quali cefalea, disturbi del sonno e alterazioni dell’umore."
+    },
+    "istfecresultpage": {
+      "title": "Istamina fecale",
+      "subtitle": "Valutazione del risultato analitico",
+      "sectiontitle1": "Come interpretare il test",
+      "text1": "Il valore di istamina fecale fornisce un’indicazione sul modo in cui l’intestino gestisce la produzione e la regolazione dell’istamina. Un risultato compreso all’interno dell’intervallo di riferimento suggerisce un equilibrio funzionale dei meccanismi intestinali coinvolti nel metabolismo dell’istamina, indicando una corretta interazione tra microbiota, mucosa intestinale e sistema immunitario locale.",
+      "text2": "Un aumento dei livelli di istamina fecale può riflettere una maggiore produzione di istamina a livello intestinale. Questa condizione è frequentemente associata a squilibri del microbiota, a un’iperattivazione della risposta immunitaria della mucosa o a una ridotta capacità di inattivazione dell’istamina. In tali situazioni, l’istamina può esercitare una stimolazione persistente dei recettori intestinali, contribuendo alla comparsa di sintomi gastrointestinali o sistemici.",
+      "sectiontitle2": "Livello di istamina fecale rilevato",
+      "table": {
+        "exam": "Esame",
+        "result": "Valore Paziente",
+        "unit": "Unità di Misura",
+        "reference": "Valore di Riferimento",
+        "istamina": "Istamina fecale"
+      },
+      "results": {
+        "common": {
+          "text1": "Il valore di",
+          "text1b": "Istamina fecale",
+          "text2": "rilevato risulta",
+          "text3": "all’intervallo di riferimento."
+        },
+        "medium": {
+          "title": "Valore lievemente elevato",
+          "bold": "lievemente superiore",
+          "text": "Questo dato suggerisce una possibile iniziale alterazione dell’equilibrio intestinale dell’istamina, da interpretare nel contesto clinico complessivo del paziente."
+        },
+        "high": {
+          "title": "Valore moderatamente elevato",
+          "bold": "moderatamente superiore",
+          "text": "Tale condizione può essere indicativa di una maggiore produzione intestinale di istamina o di una ridotta capacità di regolazione, e merita un’integrazione con la valutazione clinica e con altri marker funzionali."
+        },
+        "veryhigh": {
+          "title": "Valore marcatamente elevato",
+          "bold": "significativamente superiore",
+          "text": "Questo risultato è compatibile con una marcata alterazione della dinamica intestinale dell’istamina e richiede un’attenta valutazione clinica per definirne le possibili cause e implicazioni."
+        }
+      }
     }
   },
   "exp": {
