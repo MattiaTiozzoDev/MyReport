@@ -21,6 +21,7 @@ import {
   HOMICA_FILENAME,
   EXCELL_TYPE,
 } from '../../configs/constants.utils';
+import { FileTypeService } from '../../services/file-type.service';
 
 @Component({
   selector: 'metabolomics-file-manager',
@@ -47,7 +48,6 @@ export class FileManagerComponent implements OnDestroy {
   public loader = false;
   public isDownloading = false;
   public numberOfCustomers = 0;
-  fileTypeService: any;
 
   constructor(
     private readonly fileReaderService: FileReaderService,
@@ -55,6 +55,7 @@ export class FileManagerComponent implements OnDestroy {
     public customersDataService: CustomersDataService,
     private route: ActivatedRoute,
     private tenantService: TenantService,
+    private fileTypeService: FileTypeService,
     private toastService: ToastService,
     private zone: NgZone,
   ) {}
@@ -147,8 +148,8 @@ export class FileManagerComponent implements OnDestroy {
 
   private setOutputFileName() {
     let customer = this.customersDataService.getCustomer();
-    if (this.company == this.tenantType.VALSAMBRO) {
-      this.outputFileName = `${customer.name.replace(' ', '_')}_METABO.pdf`;
+    if (this.tenantService.tenant == this.tenantType.VALSAMBRO) {
+      this.outputFileName = `${customer.name.replace(' ', '_')}_${this.fileTypeService.fileType}.pdf`;
     } else {
       this.outputFileName = `${customer.orderId}.pdf`;
     }
