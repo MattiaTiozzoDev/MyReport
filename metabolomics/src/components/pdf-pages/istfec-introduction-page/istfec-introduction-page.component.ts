@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PageFooter } from '../../shared/page-footer/page-footer';
 import { PageHeader } from '../../shared/page-header/page-header.component';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -9,4 +9,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './istfec-introduction-page.component.html',
   styleUrl: './istfec-introduction-page.component.scss',
 })
-export class IstfecIntroductionPageComponent {}
+export class IstfecIntroductionPageComponent {
+  @Input() page: string;
+}

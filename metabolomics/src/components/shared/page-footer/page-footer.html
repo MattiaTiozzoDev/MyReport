@@ -1,9 +1,5 @@
 <div class="footer-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
-    @if(tenant === TenantType.HOMICA){
-        <h5 class="white">homicahealth.com</h5>
-    }@else {
-        <h5 class="white">www.valsambro.it</h5>
-    }
+        <h5 class="white">{{page}}</h5>
 </div>
 
 

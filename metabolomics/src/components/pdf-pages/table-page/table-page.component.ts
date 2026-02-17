@@ -43,9 +43,11 @@ export class TablePageComponent implements OnInit, OnDestroy {
 
   @Input() customer: any;
 
+  @Input() page: string;
+
   constructor(
     private metabolomicsTableService: MetabolomicsTableService,
-    public tenantService: TenantService
+    public tenantService: TenantService,
   ) {}
 
   ngOnInit(): void {
@@ -55,7 +57,7 @@ export class TablePageComponent implements OnInit, OnDestroy {
       .pipe(
         tap((tables) => {
           this.tables = tables;
-        })
+        }),
       )
       .subscribe();
   }

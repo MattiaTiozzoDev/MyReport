@@ -35,17 +35,17 @@ export class CustomersDataService {
 
   public setData(data: any): void {
     const fileType = this.fileTypeService.fileType;
+    const filteredData = data.filter(
+      (el) => el['__EMPTY_3'] && [1, 2, 3].includes(Number(el['__EMPTY_3'])),
+    );
     if (fileType === 'METABO') {
-      this.customersData = data
-        .filter(
-          (el) =>
-            el['__EMPTY_3'] && [1, 2, 3].includes(Number(el['__EMPTY_3'])),
-        )
-        .map((element: any) => this.mapMetaboData(element));
+      this.customersData = filteredData.map((element: any) =>
+        this.mapMetaboData(element),
+      );
     } else if (fileType === 'ISTFEC') {
-      this.customersData = data
-        .filter((el) => el['__EMPTY_20'] && el['__EMPTY_20'] !== 'ISTAMINA')
-        .map((element: any) => this.mapIstaminaData(element));
+      this.customersData = filteredData.map((element: any) =>
+        this.mapIstaminaData(element),
+      );
     }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
   }

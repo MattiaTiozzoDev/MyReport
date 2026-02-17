@@ -33,12 +33,13 @@ export class ExplanationPageComponent implements OnChanges, OnInit {
   public explanations: any = [];
   public pages: any = [];
 
+  @Input() page: string;
   @Input() profile: any;
   @Input() customer: any;
 
   constructor(
     private explanationService: ExplanationService,
-    public tenantService: TenantService
+    public tenantService: TenantService,
   ) {}
 
   ngOnInit(): void {
@@ -72,7 +73,7 @@ export class ExplanationPageComponent implements OnChanges, OnInit {
     metabolites.sort((m1, m2) => m1.id - m2.id);
     this.explanations = this.groupMetabolitesByExplanation(
       METABOLOMICS_EXPLANATIONS,
-      metabolites
+      metabolites,
     ).filter((el) => el);
     this.pages = this.explanationService.paginate(this.explanations);
   }
@@ -84,13 +85,13 @@ export class ExplanationPageComponent implements OnChanges, OnInit {
 
   public groupMetabolitesByExplanation(
     explanations: any[],
-    metabolites: any[]
+    metabolites: any[],
   ): any[] {
     return explanations.map((exp) => {
       const [min, max] = this.parseRange(exp.metaIds);
 
       const matchedMetabolites = metabolites.filter(
-        (m) => m.id >= min && m.id <= max
+        (m) => m.id >= min && m.id <= max,
       );
 
       if (matchedMetabolites.length === 0) {

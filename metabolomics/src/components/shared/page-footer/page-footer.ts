@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TenantType } from '../../../enums/tenant.enum';
 import { TenantService } from '../../../services/tenant.service';
 import { NgClass } from '@angular/common';
@@ -10,6 +10,8 @@ import { NgClass } from '@angular/common';
   styleUrl: './page-footer.scss',
 })
 export class PageFooter implements OnInit {
+  @Input() page: string | number;
+
   public tenant: TenantType;
   public TenantType = TenantType;
 

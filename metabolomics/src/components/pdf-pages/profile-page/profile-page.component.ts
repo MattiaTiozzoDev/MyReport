@@ -22,8 +22,10 @@ export class ProfilePageComponent implements OnInit, OnChanges {
   public tenant: TenantType;
   public TenantType = TenantType;
   public smallText = false;
+  public hideHeaders = false;
   @Input() profile: any;
   @Input() customer: any;
+  @Input() page: string;
 
   constructor(public tenantService: TenantService) {}
 
@@ -36,6 +38,10 @@ export class ProfilePageComponent implements OnInit, OnChanges {
       this.smallText =
         changes['profile'].currentValue.low.length > 17 ||
         changes['profile'].currentValue.hight.length > 17;
+
+      this.hideHeaders =
+        changes['profile'].currentValue.low.length > 33 ||
+        changes['profile'].currentValue.hight.length > 33;
     }
   }
 

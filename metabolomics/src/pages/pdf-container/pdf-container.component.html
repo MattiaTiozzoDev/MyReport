@@ -2,63 +2,63 @@
 @if(fileType === fileTypeEnum.METABO && tenant === 'valsambro') {
     <metabolomics-presentation-page></metabolomics-presentation-page>
     <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
-    <metabolomics-table-page [pageId]="0" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'">
+    <metabolomics-table-page [pageId]="0" [customer]="customer" [page]="'03'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'" [page]="'04'">
         <img class="image-container" src="{{'assets/img/ciclo_energia_cellulare_' +  tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="1" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Pathway dei Neurotrasmettitori'">
+    <metabolomics-table-page [pageId]="1" [customer]="customer" [page]="'05'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Pathway dei Neurotrasmettitori'" [page]="'06'">
         <img class="image-container" src="{{'assets/img/pathway_neurotrasmettitori_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="2" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'">
-        <img class="image-container" src="{{'assets/img/metaboliti_intestinali_' + tenant + '.svg'}}" alt="">
+    <metabolomics-table-page [pageId]="2" [customer]="customer" [page]="'07'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'" [page]="'08'">
+        <img class="image-container" src="{{'assets/img/metaboliti_intestinali_' + tenant + '.svg'}}" alt="" >
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="3" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Ruolo centrale del 3-HMG CoA nella risposta glicemica, digiuno e statine'">
+    <metabolomics-table-page [pageId]="3" [customer]="customer" [page]="'09'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Ruolo centrale del 3-HMG CoA nella risposta glicemica, digiuno e statine'" [page]="'10'">
         <img class="image-container glicemia" src="{{'assets/img/risposta_glicemica_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="4" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Pathway della Metilazione e della Detossificazione'">
+    <metabolomics-table-page [pageId]="4" [customer]="customer" [page]="'11'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Pathway della Metilazione e della Detossificazione'" [page]="'12'">
         <img class="image-container" src="{{'assets/img/pathway_metilazione_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-profile-page [profile]="profile" [customer]="customer"></metabolomics-profile-page>
+    <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'13'"></metabolomics-profile-page>
     <metabolomics-explanation-page [profile]="profile" [customer]="customer"></metabolomics-explanation-page>
 } 
 @if(fileType === fileTypeEnum.METABO && tenant === 'homica') {
     <metabolomics-presentation-page></metabolomics-presentation-page>
     <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
-    <metabolomics-table-page [pageId]="0" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'">
+    <metabolomics-table-page [pageId]="0" [customer]="customer" [page]="'03'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'" [page]="'04'">
         <img class="image-container" src="{{'assets/img/ciclo_energia_cellulare_' +  tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="1" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Pathway dei Neurotrasmettitori'">
+    <metabolomics-table-page [pageId]="1" [customer]="customer" [page]="'05'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Pathway dei Neurotrasmettitori'" [page]="'06'">
         <img class="image-container" src="{{'assets/img/pathway_neurotrasmettitori_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="2" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'">
+    <metabolomics-table-page [pageId]="2" [customer]="customer" [page]="'07'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'" [page]="'08'">
         <img class="image-container" src="{{'assets/img/metaboliti_intestinali_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="3" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Ruolo centrale del 3-HMG CoA nella risposta glicemica, digiuno e statine'">
+    <metabolomics-table-page [pageId]="3" [customer]="customer" [page]="'09'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Ruolo centrale del 3-HMG CoA nella risposta glicemica, digiuno e statine'" [page]="'10'">
         <img class="image-container glicemia" src="{{'assets/img/risposta_glicemica_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="4" [customer]="customer"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Pathway della Metilazione e della Detossificazione'">
+    <metabolomics-table-page [pageId]="4" [customer]="customer" [page]="'11'"></metabolomics-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Pathway della Metilazione e della Detossificazione'" [page]="'12'">
         <img class="image-container" src="{{'assets/img/pathway_metilazione_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
-    <metabolomics-profile-page [profile]="profile" [customer]="customer"></metabolomics-profile-page>
+    <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'13'"></metabolomics-profile-page>
     <metabolomics-explanation-page [profile]="profile" [customer]="customer"></metabolomics-explanation-page>
 } 
 @if(fileType === fileTypeEnum.ISTFEC) {
     <metabolomics-presentation-page></metabolomics-presentation-page>
     <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
-   <istfec-introduction-page></istfec-introduction-page>
-   <istfec-explanation-page></istfec-explanation-page>
-   <metabolomics-image-page [customer]="customer" [title]="'Effetti biologici dell’istamina e recettori coinvolti'">
+    <istfec-introduction-page [page]="'03'"></istfec-introduction-page>
+    <istfec-explanation-page [page]="'04'"></istfec-explanation-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Effetti biologici dell’istamina e recettori coinvolti'" [page]="'05'">
         <img class="image-container pt-10px" src="{{'assets/img/effetti_biologici_istamina.svg'}}" alt="">
     </metabolomics-image-page>
-    <istfec-result-page></istfec-result-page>
-   <metabolomics-ending-page></metabolomics-ending-page>
+    <istfec-result-page [page]="'06'"></istfec-result-page>
+    <metabolomics-ending-page></metabolomics-ending-page>
 }

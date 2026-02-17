@@ -1,8 +1,8 @@
-@for(page of pages; track $index){
+@for(expPage of pages; track $index){
     <div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
     <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content">
-        @for(element of page; track $index){
+        @for(element of expPage; track $index){
         @if(element.type == 'general'){
             <div class="pt-20px">
                 <div class="section-header flex justify-end align-center px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
@@ -42,7 +42,7 @@
         }
       }
     </div>
-    <metabolomics-page-footer></metabolomics-page-footer>
+    <metabolomics-page-footer [page]="$index + 14"></metabolomics-page-footer>
     </div>
 }
 <metabolomics-ending-page></metabolomics-ending-page>

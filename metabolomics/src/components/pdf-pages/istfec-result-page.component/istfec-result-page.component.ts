@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PageFooter } from '../../shared/page-footer/page-footer';
 import { PageHeader } from '../../shared/page-header/page-header.component';
@@ -15,6 +15,7 @@ import { NgClass } from '@angular/common';
 export class IstfecResultPageComponent implements OnInit {
   public result: number | undefined;
   public refDate: string | undefined;
+  @Input() page: string;
 
   constructor(private customerDataService: CustomersDataService) {}
 

@@ -17,6 +17,7 @@ export class ImagePageComponent implements OnInit {
   public TenantType = TenantType;
   @Input() customer: any;
   @Input() title: any;
+  @Input() page: string;
 
   constructor(public tenantService: TenantService) {}
 

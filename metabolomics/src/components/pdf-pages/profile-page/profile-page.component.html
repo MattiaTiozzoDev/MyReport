@@ -3,37 +3,37 @@
     <div class="page-content">
         <h2 class="mt-10px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.title" | translate}}</h2>
         <h4 class="mt-5px " [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.subtitle" | translate}}</h4>
-        <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+        <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA, 'hide': hideHeaders}">
             <h4 class="white">{{"pdfpages.profilepage.sectiontitle1" | translate}}</h4>
         </div>
         <div class="flex align-center mt-20px">
             <h5>{{"pdfpages.profilepage.text" | translate}}</h5>
         </div>
-        <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+        <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA, 'hide': hideHeaders}">
             <h4 class="white">{{"pdfpages.profilepage.sectiontitle2" | translate}}</h4>
         </div>
         <div class="flex justify-between mt-20px">
-            <div class="metabolites-table flex col align-center" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+            <div class="metabolites-table flex col align-center" [ngClass]="{'homica': tenant === TenantType.HOMICA, 'long': hideHeaders }">
                 <div class="table-header flex justify-center align-center mb-20px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
                     <h6 class="white bold">{{"pdfpages.profilepage.hight" | translate}}</h6>
                 </div>
                 @for(hight of profile?.hight; track hight.id){
-                    <h6 class="bold mb-5px" [ngClass]="{'small-text mb-2px': smallText }">
+                    <h6 class="bold mb-5px" [ngClass]="{'small-text mb-2px': smallText, 'mini-text': hideHeaders }">
                         {{hight.id}}. {{hight.name |translate }}
                     </h6>
                 }
             </div>
-            <div class="metabolites-table flex col align-center" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+            <div class="metabolites-table flex col align-center" [ngClass]="{'homica': tenant === TenantType.HOMICA, 'long': hideHeaders}">
                 <div class="table-header flex justify-center align-center mb-20px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
                     <h6 class="white bold">{{"pdfpages.profilepage.low" | translate}}</h6>
                 </div>
                 @for(low of profile?.low; track low.id){
-                    <h6 class="bold mb-5px" [ngClass]="{'small-text': smallText }">
+                    <h6 class="bold mb-5px" [ngClass]="{'small-text': smallText, 'mini-text': hideHeaders  }">
                         {{low.id}}. {{low.name |translate }}
                     </h6>
                 }
             </div>
         </div>
     </div>
-    <metabolomics-page-footer></metabolomics-page-footer>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
 </div>

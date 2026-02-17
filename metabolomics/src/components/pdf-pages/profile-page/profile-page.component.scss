@@ -4,6 +4,10 @@
     height: 842px;
 }
 
+.hide{
+    display: none;
+}
+
 .section-header{
     width: 595px !important;
     height: 30px;
@@ -26,6 +30,10 @@ h5{
     color: #333333;
     margin-bottom: 0 !important;
     font-weight: bold;
+}
+
+.mini-text{
+    font-size:7px;
 }
 
 h6{
@@ -55,6 +63,10 @@ h6.white{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     background: #024F8433;
+}
+
+.metabolites-table.long{
+    height: 500px;
 }
 
 .metabolites-table.homica{
