@@ -1,0 +1,67 @@
+
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <div class="pt-10px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{ table.sectionTitle | translate}}</h4>
+            </div>
+        </div>
+        <gutsys-table [elements]="table?.elementsIds" [title]="table?.title" [tableId]="pageId"></gutsys-table>
+        <p class="pt-20px">
+            {{ table.text1a | translate}}
+            <strong class="light-blue">{{ table.text1 | translate}} </strong>
+            {{ table.text2 | translate}} <br><br>
+            {{ table.text3 | translate}}<br><br>
+            @if (table.text4){
+                {{ table.text4 | translate}}
+            }
+        </p>
+        @if(pageId == 0 || pageId == 1 || pageId == 2 ){
+            <div class="legenda flex justify-between py-10px px-20px">
+                <div class="w-15">
+                        <h5 class="dark-blue bold">Legenda</h5>
+                </div>
+                <div class="w-40 flex col">
+                        <h5 class="grey-text">A: u.f.c. all'interno dei limiti (< 10 <sup>2</sup> gr/feci)</h5>
+                        <h5 class="grey-text mt-3px">C: u.f.c.mediamente superiore ai limiti (10<sup>3</sup>-10<sup>4</sup> gr/feci)</h5>
+                </div>
+                <div class="w-40">
+                        <h5 class="grey-text">B: u.f.c. lievemente superiore ai limiti (10<sup>2</sup>-10<sup>3</sup> gr/feci)</h5>
+                        <h5 class="grey-text mt-3px">D: u.f.c. nettamente superiore ai limiti (> 10<sup>4</sup> gr/feci)</h5>
+                </div>
+            </div>
+        }
+        @if( pageId == 3 ){
+            <div class="legenda flex justify-between py-10px px-20px">
+                <div class="w-15">
+                        <h5 class="dark-blue bold">Legenda</h5>
+                </div>
+                <div class="w-40 flex col">
+                        <h5 class="grey-text">A: u.f.c. nettamente inferiore ai limiti (< 10<sup>9</sup> gr/feci)</h5>
+                        <h5 class="grey-text mt-3px">C: u.f.c. mediamente superiore ai limiti (10<sup>10</sup> - 10<sup>11</sup> gr/feci)</h5>
+                </div>
+                <div class="w-40">
+                        <h5 class="grey-text">B: u.f.c. lievemente inferiore ai limiti (10<sup>9</sup> - 10<sup>10</sup> gr/feci)</h5>
+                        <h5 class="grey-text mt-3px">D: u.f.c. nettamente superiore ai limiti (> 10<sup>11</sup> gr/feci)</h5>
+                </div>
+            </div>
+        }
+        @if( pageId == 4 ){
+            <div class="legenda flex justify-between py-10px px-20px">
+                <div class="w-15">
+                        <h5 class="dark-blue bold">Legenda</h5>
+                </div>
+                <div class="w-40 flex col">
+                        <h5 class="grey-text">A: u.f.c. all'interno dei limiti (bifidi>10<sup>4</sup>; lacto >10<sup>5</sup>)</h5>
+                        <h5 class="grey-text mt-3px">C: u.f.c. nettamente inferiore ai limiti (bifidi < 10<sup>3</sup>; lacto < 10<sup>4</sup>)</h5>
+                </div>
+                <div class="w-40">
+                        <h5 class="grey-text">B: u.f.c. lievemente inferiore (bifidi fino 10<sup>3</sup>; lacto fino 10<sup>4</sup>)</h5>
+                </div>
+            </div>
+        }
+        <h5 class="grey-text bottom-text">Metodo rilevamento microbiologico : Colturale / Molecolare</h5>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

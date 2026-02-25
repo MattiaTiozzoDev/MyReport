@@ -62,3 +62,23 @@
     <istfec-result-page [page]="'06'"></istfec-result-page>
     <metabolomics-ending-page></metabolomics-ending-page>
 }
+
+@if(fileType === fileTypeEnum.GUTSYS) {
+    <metabolomics-presentation-page></metabolomics-presentation-page>
+    <metabolomics-index-page [customer]="customer" [type]="customer?.type"></metabolomics-index-page>
+    <gutsys-introduction-page [page]="'03'"></gutsys-introduction-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'" [page]="'04'">
+        <img class="image-container" src="{{'assets/img/metaboliti_intestinali_valsambro.svg'}}" alt="" >
+    </metabolomics-image-page>
+    <gutsys-caracteristic-page [page]="'05'"></gutsys-caracteristic-page>
+    <gutsys-table-page [pageId]="0" [page]="'06'"></gutsys-table-page>
+    <gutsys-table-page [pageId]="1" [page]="'07'"></gutsys-table-page>
+    <gutsys-table-page [pageId]="2" [page]="'08'"></gutsys-table-page>
+    <gutsys-table-page [pageId]="3" [page]="'09'"></gutsys-table-page>
+    <gutsys-table-page [pageId]="4" [page]="'10'"></gutsys-table-page>
+    <gutsys-parasite-page [page]="'11'" [ngClass]="{'hide': customer?.type == 1}"></gutsys-parasite-page>
+    <gutsys-aroma-page [page]="customer?.type == 2 || customer?.type == 3 ? '12' : '11'"></gutsys-aroma-page>
+    <gutsys-fungus-page [page]="'13'" [ngClass]="{'hide': customer?.type == 1|| customer?.type == 2}"></gutsys-fungus-page>
+    <gutsys-indication-page [page]="customer?.type != 1 ? customer?.type == 3 ? '14' : '13' : '12'" [date]="customer?.refDate"></gutsys-indication-page>
+    <metabolomics-ending-page></metabolomics-ending-page>
+}

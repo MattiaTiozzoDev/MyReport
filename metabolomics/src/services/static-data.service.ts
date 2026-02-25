@@ -47,4 +47,14 @@ export class StaticDataService {
         }),
       );
   }
+
+  loadGutSysExample(): Observable<Explanations[]> {
+    return this.http
+      .get<Explanations[]>('assets/jsons/gutsys.example.json')
+      .pipe(
+        tap((data) => {
+          this.example = data;
+        }),
+      );
+  }
 }

@@ -1,0 +1,16 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{ 'pdfpages.gutsysfunguspage.title' | translate }}<sup>®</sup></h2> 
+        <h4 class=" mt-3px light-blue subtitle">{{ 'pdfpages.gutsysfunguspage.subtitle' | translate }}</h4> 
+        <div class="flex justify-between pt-20px">
+            <div class="w-45">
+                <gutsys-parasite-table [rows]="group1" [defaultIdStart]="83"></gutsys-parasite-table>
+            </div>
+            <div class="w-45">
+                <gutsys-parasite-table [rows]="group2" [defaultIdStart]="83"></gutsys-parasite-table>
+            </div>
+        </div>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

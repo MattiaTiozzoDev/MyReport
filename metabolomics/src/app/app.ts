@@ -28,7 +28,7 @@ export class App implements OnInit, OnDestroy {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIstaminaExample(),
+      example: this.staticDataService.loadGutSysExample(),
     })
       .pipe()
       .subscribe(({ example }) => {

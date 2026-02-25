@@ -11,7 +11,7 @@
             <div class="w-100 flex col align-end">
                 @for(index of section.indexes; track index){
                     <div class="w-80 flex justify-between mt-20px">
-                        <h4 class="black">{{ index.title |  translate }}</h4>
+                        <h6 class="black">{{ index.title |  translate }}</h6>
                         <h6 class="black">pag {{index.page}}</h6>   
                     </div> 
                     <hr class="w-80 mt-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}"> 
@@ -19,7 +19,7 @@
             </div>
         }
         @if((customer?.fiscalCode || customer?.name) && tenant === TenantType.VALSAMBRO){
-            <div class="cf-container flex align-center justify-between px-15px" [ngClass]="{'mt-100px': fileType === 'METABO', 'mt-200px': fileType === 'ISTFEC' }">
+            <div class="cf-container flex align-center justify-between px-15px" [ngClass]="{'mt-100px': fileType === 'METABO', 'mt-200px': fileType === 'ISTFEC', 'mt-70px': fileType === 'GUTSYS' }">
                 <h5 class="white">{{customer?.name}} </h5>
                 <h5 class="white">{{ 'pdfpages.indexpage.fiscalcode' | translate }} {{customer?.fiscalCode | uppercase}} </h5>
             </div>

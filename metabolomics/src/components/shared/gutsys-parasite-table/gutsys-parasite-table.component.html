@@ -1,0 +1,41 @@
+<div class="flex justify-between align-center par-header w-100">
+    <div class="px-10px">
+        <h5 class="white">{{'pdfpages.gutsysparasitestable.header1' | translate}}</h5>
+    </div>
+    <div class="flex w-30 justify-between">
+        <div class="flex justify-center align-center w-50">
+            <h5 class="white">{{'pdfpages.gutsysparasitestable.header2' | translate}}</h5>
+        </div>
+        <div class="flex justify-center align-center w-50">         
+           <h5 class="white">{{'pdfpages.gutsysparasitestable.header3' | translate}}</h5>
+        </div>
+    </div>
+</div>
+ <div class="flex col">
+    @for(row of rows; track row.id){
+        <div class="flex justify-between">
+            <div class="flex align-center w-70 border-bottom border-left  py-5px px-10px">
+                @if(row.id){
+                    <div class="circle row-id mr-5px">{{row.id - defaultIdStart}}</div>
+                    <h4 class="name" [ngClass]="{'small-name': row.id == 40 || row.id == 112}">{{ row.name ? row.name : '-' }}</h4>
+                }
+                @else {
+                    <h4 class="white">-</h4>
+                }
+                
+            </div>
+            <div class="flex w-30 justify-between">
+                <div class="flex justify-center align-center border-bottom border-left w-50">
+                    @if(row.value == 'A'){
+                        <div class=" pointer"></div>
+                    }
+                </div>
+                <div class="flex justify-center align-center border-bottom border-left border-right w-50">
+                     @if(row.value == 'P'){
+                        <div class=" pointer"></div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

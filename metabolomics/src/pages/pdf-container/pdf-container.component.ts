@@ -15,10 +15,19 @@ import { FileType } from '../../enums/file-type.enum';
 import { IstfecIntroductionPageComponent } from '../../components/pdf-pages/istfec-introduction-page/istfec-introduction-page.component';
 import { IstfecExplanationPageComponent } from '../../components/pdf-pages/istfec-explanation-page/istfec-explanation-page.component';
 import { IstfecResultPageComponent } from '../../components/pdf-pages/istfec-result-page.component/istfec-result-page.component';
+import { GutsysIntroductionPageComponent } from '../../components/pdf-pages/gutsys-introduction-page/gutsys-introduction-page.component';
+import { GutsysCaracteristicPageComponent } from '../../components/pdf-pages/gutsys-caracteristic-page/gutsys-caracteristic-page.component';
+import { GutsysTablePageComponent } from '../../components/pdf-pages/gutsys-table-page/gutsys-table-page.component';
+import { GutsysParasitePage } from '../../components/pdf-pages/gutsys-parasite-page/gutsys-parasite-page';
+import { GutsysAromaPage } from '../../components/pdf-pages/gutsys-aroma-page/gutsys-aroma-page';
+import { GutsysFungusPage } from '../../components/pdf-pages/gutsys-fungus-page/gutsys-fungus-page';
+import { GutsysIndicationPage } from '../../components/pdf-pages/gutsys-indication-page/gutsys-indication-page';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'metabolomics-pdf-container',
   imports: [
+    NgClass,
     PresentationPageComponent,
     IndexPageComponent,
     TablePageComponent,
@@ -29,6 +38,13 @@ import { IstfecResultPageComponent } from '../../components/pdf-pages/istfec-res
     EndingPageComponent,
     IstfecExplanationPageComponent,
     IstfecResultPageComponent,
+    GutsysIntroductionPageComponent,
+    GutsysCaracteristicPageComponent,
+    GutsysTablePageComponent,
+    GutsysParasitePage,
+    GutsysAromaPage,
+    GutsysFungusPage,
+    GutsysIndicationPage,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',
@@ -54,7 +70,7 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIstaminaExample(),
+      example: this.staticDataService.loadGutSysExample(),
     }).subscribe(({ example, explanations }) => {
       this.explanations = explanations;
       this.customersDataService.setData(example);

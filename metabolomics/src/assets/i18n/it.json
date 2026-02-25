@@ -1,4 +1,7 @@
 {
+  "common": {
+    "register": "®"
+  },
   "home": {
     "selectcompany": "Seleziona l’azienda per cui desideri generare il report",
     "selectcompanyexp1": "Ogni azienda utilizza un modello di impaginazione e uno stile grafico dedicato. ",
@@ -57,6 +60,21 @@
         "index5": "Effetti biologici dell’istamina e recettori coinvolti",
         "index6": "Come interpretare il test",
         "index7": "Livello di istamina fecale rilevato"
+      },
+      "gutsys": {
+        "subtitle1": "Diagnostica completa del Microbiota intestinale",
+        "subtitle2": "Caratteristiche del campione fecale e risultati microbiologici",
+        "subtitle3": "Esami microbiologici complementari",
+        "index1": "Cos’è il Microbiota intestinale",
+        "index2": "Metaboliti intestinali e implicazioni sistemiche",
+        "index3": "Caratteristiche delle feci",
+        "index4": "Flora patogena/ transiente",
+        "index5": "Flora immunomodulante",
+        "index6": "Flora di protezione",
+        "index7": "Parassitologo",
+        "index8": "Aromatogramma",
+        "index9": "Identificazione molecolare delle specie di funghi",
+        "index10": "Indicazioni per l’interpretazione del referto"
       },
       "fiscalcode": "Codice fiscale:"
     },
@@ -208,6 +226,126 @@
           "text": "Questo risultato è compatibile con una marcata alterazione della dinamica intestinale dell’istamina e richiede un’attenta valutazione clinica per definirne le possibili cause e implicazioni."
         }
       }
+    },
+    "gutsysintroductionpage": {
+      "title": "Gut Screening",
+      "subtitle": "Diagnostica completa del Microbiota intestinale",
+      "sectiontitle1": "Cos’è il Microbiota intestinale",
+      "sectiontitle2": "Perchè il Gut Screening è un test unico?",
+      "sectiontitle3": "Infezioni intestinali a bassa carica",
+      "text1": "Il microbiota intestinale è l’insieme dei batteri, funghi, parassiti e virus che abitano nel nostro intestino. L’equilibrio di questa comunità assai complessa di microorganismi, con caratteristiche di unicità per ogni individuo, è di primaria importanza per il mantenimento o il recupero del benessere psico-fisico della persona.",
+      "text2": "Consideriamo, in estrema sintesi, che al microbiota intestinale si devono la protezione della mucosa intestinale, la naturale regolazione delle difese immunitarie, la regolazione del metabolismo e l’equilibrio dell’asse intestino-cervello.",
+      "text3a": "Il ",
+      "text3": " integra metodiche di coltura microbiologica e analisi molecolare, consentendo l’identificazione precisa e quantitativa dei microrganismi e, attraverso l’esame colturale, la valutazione della loro vitalità e la possibilità di testare interventi mirati. Questa analisi offre una fotografia reale e dinamica dello stato intestinale, utile per definire strategie terapeutiche personalizzate. La presenza dell’aromatogramma completa ulteriormente il quadro informativo, rendendo il Gut Screening uno strumento rilevante della medicina di precisione e permettendo interventi più mirati rispetto ai test convenzionali.",
+      "text4": "Le informazioni ricavabili da questa analisi riguardano:",
+      "text5": "Squilibrio batterico o disbiosi",
+      "text6": "Presenza di batteri/funghi potenzialmente patogeni",
+      "text7": "Presenza di parassiti intestinali",
+      "text8": "Presenza di batteri appartenenti alla flora di protezione",
+      "text9": "Modulazione della terapia probiotica e integrativa",
+      "text10": "La presenza di microrganismi potenzialmente patogeni anche in basse concentrazioni, pur rimanendo al di sotto delle soglie cliniche di infezione acuta, può contribuire nel tempo all’alterazione dell’equilibrio del microbiota intestinale. Questa condizione può favorire uno stato di infiammazione cronica di basso grado, interferire con l’integrità della barriera intestinale e determinare una stimolazione persistente del sistema immunitario. L’azione prolungata di metaboliti microbici ed endotossine può sostenere fenomeni di disbiosi e aumentare la permeabilità intestinale, contribuendo al mantenimento di un’attivazione immunitaria cronica e rappresentando un possibile fattore di predisposizione a disturbi funzionali e condizioni infiammatorie a lungo termine."
+    },
+    "gutsyscaracteristicpage": {
+      "title": "Gut Screening",
+      "subtitle": "Caratteristiche del campione fecale e risultati microbiologici",
+      "sectiontitle1": "Caratteristiche delle feci",
+      "sectiontitle2": "Flora patogena/ transiente",
+      "header1": "pH",
+      "header2": "Consistenza",
+      "header3": "Colore",
+      "text1": "L’osservazione delle caratteristiche fisiche del ",
+      "text2": "campione fecale",
+      "text3": ", quali pH, consistenza e colore, rappresenta un primo elemento di valutazione dello stato funzionale dell’ambiente intestinale.",
+      "text4": "Questi parametri forniscono indicazioni utili sull’andamento dei processi digestivi, sull’equilibrio delle attività fermentative e putrefattive e sull’attività metabolica complessiva del microbiota intestinale.",
+      "text5": "Variazioni dei valori osservati possono essere influenzate da diversi fattori, tra cui abitudini alimentari, tempi di transito intestinale, stato di idratazione, composizione del microbiota e funzionalità della mucosa intestinale.",
+      "text6": "La valutazione integrata di tali caratteristiche, insieme ai risultati microbiologici e agli altri parametri analizzati nel Gut Screening, consente di ottenere una visione più completa dello stato dell’ecosistema intestinale e di supportare una corretta interpretazione clinica dei risultati del paziente."
+    },
+    "gutsysTables": {
+      "tableHeader1": "Nome",
+      "tableHeader2": "Valore",
+      "tableHeader3": "Nei limiti",
+      "tableHeader4": "Lievemente superiore",
+      "tableHeader5": "Mediamente superiore",
+      "tableHeader6": "Nettamente superiore",
+      "tableHeader7": "Lievemente inferiore",
+      "tableHeader8": "Nettamente inferiore",
+      "0": {
+        "sectionTitle": "Flora patogena/ transiente",
+        "title": "Batteri",
+        "text1a": "I",
+        "text1": " batteri ",
+        "text2": "patogeni o transitori possono essere presenti nell’intestino in basse quantità senza determinare effetti clinici rilevanti. Tuttavia, un loro aumento può alterare l’equilibrio del microbiota residente, favorendo uno stato di disbiosi. In queste condizioni, alcuni batteri possono produrre metaboliti potenzialmente irritativi o pro-infiammatori, interferendo con la normale funzionalità intestinale.",
+        "text3": "La proliferazione batterica può essere influenzata da diversi fattori, tra cui alterazioni dell’alimentazione, stress prolungato, terapie antibiotiche o una compromissione della barriera intestinale. Un’eccessiva presenza di batteri patogeni o transitori può riflettersi in disturbi digestivi e contribuire a un’alterazione della risposta immunitaria locale.",
+        "text4": "I valori rilevati devono essere interpretati nel contesto clinico complessivo del paziente e in relazione agli altri parametri del Gut Analysis."
+      },
+      "1": {
+        "sectionTitle": "Flora patogena/ transiente",
+        "title": "Funghi",
+        "text1a": "I",
+        "text1": " funghi",
+        "text2": " intestinali rappresentano una componente opportunistica del microbiota e tendono a proliferare in presenza di condizioni ambientali favorevoli. In condizioni fisiologiche sono mantenuti sotto controllo dall’equilibrio del microbiota batterico; tuttavia, un loro aumento può contribuire a uno stato di disbiosi intestinale.",
+        "text3": "La crescita fungina può essere favorita da terapie antibiotiche, eccesso di zuccheri nella dieta, stress o una ridotta competizione da parte dei batteri benefici. Un’alterazione della flora fungina può essere associata a disturbi intestinali e a una maggiore sensibilità della mucosa."
+      },
+      "2": {
+        "sectionTitle": "Flora patogena/ transiente",
+        "title": "Flora saprofita / proteolitica",
+        "text1a": "La",
+        "text1": " flora saprofita e proteolitica ",
+        "text2": " comprende microrganismi che, pur svolgendo normalmente un ruolo nella degradazione delle proteine e dei residui organici nel lume intestinale, possono comportarsi come patogeni opportunisti in condizioni di squilibrio. In caso di sovracrescita, questi batteri possono diventare problematici, producendo metaboliti tossici (come ammoniaca, indoli, fenoli e ammine) che possono danneggiare la mucosa intestinale, aumentare la permeabilità intestinale e contribuire a processi infiammatori locali e sistemici.",
+        "text3": "La proliferazione eccessiva di questa flora può essere favorita da un’alimentazione scorretta o non adatta per ripristinare l’eubiosi di questo microbiota, ridotta o accelerata motilità intestinale, compromissione della barriera intestinale o carenza di batteri benefici che normalmente ne limitano la crescita. Alcuni di questi microrganismi, pur essendo commensali in condizioni fisiologiche, hanno un riconosciuto potenziale patogeno e possono essere responsabili di infezioni opportunistiche, soprattutto in presenza di immunodeficienza o alterazioni della barriera mucosale."
+      },
+      "3": {
+        "sectionTitle": "Flora immunomodulante",
+        "title": "Flora immunomodulante",
+        "text1a": "La",
+        "text1": " flora immunomodulante",
+        "text2": " comprende microrganismi che partecipano alla regolazione della risposta immunitaria intestinale e al mantenimento della tolleranza immunologica. Questa componente del microbiota contribuisce al corretto dialogo tra microbiota, mucosa intestinale e sistema immunitario.",
+        "text3": "Un’alterazione della flora immunomodulante può riflettersi in una modulazione inefficiente della risposta immunitaria locale, favorendo stati di iper-reattività o infiammazione di basso grado. Tale squilibrio può essere associato a una ridotta capacità di adattamento dell’intestino agli stimoli esterni."
+      },
+      "4": {
+        "sectionTitle": "Flora di protezione",
+        "title": "Flora di protezione",
+        "text1a": "La",
+        "text1": " flora di protezione ",
+        "text2": "è costituita da microrganismi benefici che svolgono un ruolo fondamentale nel mantenimento dell’equilibrio intestinale. Essa contribuisce alla difesa contro la colonizzazione di microrganismi potenzialmente patogeni e al supporto dell’integrità della barriera intestinale.",
+        "text3": "Una riduzione della flora di protezione può aumentare la vulnerabilità dell’ecosistema intestinale, predisponendo a fenomeni di disbiosi e favorendo l’insorgenza di alterazioni funzionali dell’intestino. Questo squilibrio può riflettere una ridotta resilienza del microbiota."
+      }
+    },
+    "gutsysparasitespage": {
+      "title": "Gut Screening",
+      "subtitle": "Esami microbiologici complementari",
+      "sectiontitle1": "Parassitologo",
+      "sectiontitle2": "Identificazione molecolare delle seguenti specie di parassiti",
+      "header1": "Microrganismo identificato",
+      "header2": "Positivo",
+      "header3": "Negativo",
+      "text1": "L’",
+      "text2": "esame parassitologico ",
+      "text3": " viene eseguito sulle feci ed è volto a rilevare l’eventuale presenza di parassiti (che non possono essere rilevati nella coprocoltura). La Parassitologia riveste un ruolo importante per via delle molteplici infezioni-infestazioni i cui agenti eziologici sono rappresentati da alcuni parassiti che effettuano una parte del loro ciclo biologico nell'uomo. Noi eseguiamo ricerche su nove tipi di parassiti anche non comuni, potendo quindi fornire un'indicazione per un trattamento antiparassitario più completo."
+    },
+    "gutsysparasitestable": {
+      "header1": "Nome",
+      "header2": "Assenza",
+      "header3": "Presenza"
+    },
+    "gutsysaromapage": {
+      "sectiontitle1": "Aromatogramma",
+      "table1title": "Micogramma",
+      "table2title": "Aromatogramma",
+      "table3title": "Antibiogramma",
+      "text1": "L’",
+      "text2": "aromatogramma",
+      "text3": " è un test microbiologico complementare che valuta, in vitro, la sensibilità dei microrganismi isolati dal campione fecale nei confronti di specifiche sostanze aromatiche naturali, quali gli oli essenziali. L’esame ha esclusivamente finalità microbiologiche e non rappresenta una prova allergologica né una valutazione di tolleranza individuale alle sostanze testate.",
+      "text4": "I risultati forniscono indicazioni utili per orientare eventuali strategie di modulazione mirata del microbiota intestinale; per una maggiore efficacia dell’intervento, le indicazioni operative si basano sull’impiego degli stessi oli essenziali valutati nel test, selezionati in funzione della risposta microbiologica osservata. L’interpretazione dei risultati deve essere integrata con il quadro microbiologico complessivo e con la valutazione clinica del paziente."
+    },
+    "gutsysfunguspage": {
+      "title": "Gut Funghi ",
+      "subtitle": "Identificazione molecolare delle specie di funghi"
+    },
+    "gutsysindicationpage": {
+      "sectiontitle1": "Indicazioni per l’interpretazione del referto",
+      "text1": "I referti fin qui esposti sono da intendersi come informazioni utili al medico o professionista abilitato per valutare eventuali terapie o approfondimenti del caso e NON costituiscono né sostituiscono, in alcun modo, Diagnosi Clinica.",
+      "text2": "Anche gli eventuali suggerimenti ed esempi di Integratori sono da intendersi a titolo esemplificativo e ad esclusivo beneficio del medico, che dovrà valutarne l’eventuale uso, inserendoli nell’ambito anamnestico/diagnostico/terapeutico del paziente."
     }
   },
   "exp": {

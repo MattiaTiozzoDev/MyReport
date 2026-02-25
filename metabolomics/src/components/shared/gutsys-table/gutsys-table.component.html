@@ -1,0 +1,95 @@
+<h4 class="light-blue bold mt-20px">{{ title | translate}}</h4>
+<div class="table-header mt-10px flex align-center pl-10px">
+    <div class="w-34">
+        <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader1' | translate}}</h5>
+    </div>
+    <div class="w-15">
+        <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader2' | translate}}</h5>
+    </div>
+    @if(tableId == 0 || tableId == 1 || tableId == 2  ){
+        <div class="w-51 flex justify-between ">
+            <div class="w-50px pt-4px">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader3' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center ">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader4' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center text-center">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader5' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center text-center">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader6' | translate}}</h5>
+            </div>
+        </div>
+    }
+     @if( tableId == 3  ){
+        <div class="w-51 flex justify-between ">
+            <div class="w-50px pt-4px">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader3' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center ">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader7' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center text-center">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader5' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center text-center">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader6' | translate}}</h5>
+            </div>
+        </div>
+    }
+    @if( tableId == 4  ){
+        <div class="w-51 flex justify-between ">
+            <div class="w-50px pt-4px">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader3' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center ">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader7' | translate}}</h5>
+            </div>
+            <div class="w-50px flex justify-center text-center">
+                <h5 class="white">{{ 'pdfpages.gutsysTables.tableHeader8' | translate}}</h5>
+            </div>
+        </div>
+    }
+    
+</div>
+@for(row of rows; track row.id){
+    <div class="flex px-10px py-3px align-center">
+        <div class="w-35 flex">
+            <div class="circle row-id mr-5px">{{row.id}}</div>
+            <h4 class="name" [ngClass]="{'small-name': row.id == 4}">{{ row.name }}</h4>
+        </div>
+        <div class="w-15 ">
+            <h6 class="light-blue bold">{{ row.value }}</h6>
+        </div>
+        <div class="w-48 ml-4px">
+            <div class="container-graphic">
+                @if( tableId != 4  ){
+                <div class="pointer" [ngClass]="{
+                    'ml-3px': row.value == 'A',
+                    'ml-77px': row.value == 'B',
+                    'ml-151px': row.value == 'C',
+                    'ml-225px': row.value == 'D'
+                    }"></div>
+                }
+                @if( tableId == 4  ){
+                    <div class="pointer" [ngClass]="{
+                    'ml-3px': row.value == 'A',
+                    'ml-115px': row.value == 'B',
+                    'ml-225px': row.value == 'C'
+                    }"></div>
+                }
+            </div>
+            <div class="flex w-100 justify-between px-5px">
+                <span class="text-val">A</span>
+                <span class="text-val">B</span>
+                <span class="text-val">C</span>
+                @if( tableId != 4  ){
+                    <span class="text-val">D</span>
+                }
+            </div>
+        </div>
+    </div>
+    <hr>
+
+}

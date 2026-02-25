@@ -1,0 +1,14 @@
+<div class="flex justify-between align-center par-header w-100 pl-10px">
+  <h5 class="white">{{title}}</h5>
+</div>
+@for(row of rows; track row.id){
+    <div class="flex justify-between align-center w-100 px-10px py-3px">
+        <h5 class="grey">{{row.name}}</h5>
+        <div class="flex align-center w-25">
+            @for(square of getSquares(row.value); track square){
+                <div class="square ml-2px"></div>
+            }
+        </div>
+    </div>
+    <hr>
+}

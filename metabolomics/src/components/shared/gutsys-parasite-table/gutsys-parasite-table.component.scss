@@ -1,0 +1,58 @@
+.par-header{
+    background-color: #29AABC;
+    border-radius: 5px 5px 0 0;
+    height: 20px;
+}
+
+h5{
+    font-weight: 500;
+    font-size: 6px;
+}
+
+.border{
+    border: #29AABC83 0.5px solid;
+}
+
+.border-bottom{
+    border-bottom: #29AABC83 0.5px solid;
+}
+
+.border-left{
+    border-left: #29AABC83 0.5px solid;
+}
+
+.border-right{
+    border-right: #29AABC83 0.5px solid;
+}
+
+.pointer {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border: 0.75px solid #024F84;
+    transform: rotate(45deg);
+}
+
+.circle{
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+    background-color: #29AABC;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.name{
+    font-size: 8px;
+    font-weight: 500;
+    color: #383838;
+}
+
+.small-name{
+    font-size: 6px;
+    font-weight: 500;
+    color: #383838;
+}

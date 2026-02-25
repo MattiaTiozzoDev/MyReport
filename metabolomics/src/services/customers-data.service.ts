@@ -4,6 +4,7 @@ import { CustomerType } from '../enums/customerType.enum';
 import { Customer, CustomerData, MappedValue } from '../types/customers.type';
 import { Subject } from 'rxjs';
 import { FileTypeService } from './file-type.service';
+import { GUTSYS_NAMES } from '../configs/gutsys-names';
 
 @Injectable({
   providedIn: 'root',
@@ -45,6 +46,10 @@ export class CustomersDataService {
     } else if (fileType === 'ISTFEC') {
       this.customersData = filteredData.map((element: any) =>
         this.mapIstaminaData(element),
+      );
+    } else if (fileType === 'GUTSYS') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapGutsysData(element),
       );
     }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
@@ -150,5 +155,36 @@ export class CustomersDataService {
       },
       result: data['__EMPTY_20'],
     };
+  }
+
+  private mapGutsysData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['__EMPTY'],
+        orderId: data['__EMPTY_1'],
+        fiscalCode: data['__EMPTY_2'],
+        type: Number(data['__EMPTY_3']),
+        available: data['__EMPTY_4'],
+        name: data['__EMPTY_6'],
+        accNumber: data['__EMPTY_7'],
+        refDate: data['__EMPTY_8'],
+      },
+      values: this.mapGutsysValues(data),
+    };
+  }
+
+  private mapGutsysValues(data) {
+    let values = [];
+    Object.keys(data).forEach((key) => {
+      if (!key.startsWith('__EMPTY_')) {
+        if (key == '__EMPTY_3') data[key] = Number(data[key]);
+        values.push({
+          id: key,
+          value: data[key],
+          name: GUTSYS_NAMES[key] ? GUTSYS_NAMES[key] : '',
+        });
+      }
+    });
+    return values;
   }
 }

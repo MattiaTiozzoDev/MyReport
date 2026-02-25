@@ -1,0 +1,48 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.gutsysaromapage.sectiontitle1' | translate}}</h4>
+            </div>
+        </div>
+        <p class="my-15px">
+            {{'pdfpages.gutsysaromapage.text1' | translate}}
+            <strong class="light-blue">{{'pdfpages.gutsysaromapage.text2' | translate}}</strong>
+            {{'pdfpages.gutsysaromapage.text3' | translate}}<br><br>
+            {{'pdfpages.gutsysaromapage.text4' | translate}}<br><br>
+        </p>
+        <div class="flex justify-between">
+            <div class="w-32">
+                <gutsys-aroma-table [title]="'pdfpages.gutsysaromapage.table1title' | translate" [rows]="group1"></gutsys-aroma-table>
+            </div>
+            <div class="w-32">
+                <gutsys-aroma-table [title]="'pdfpages.gutsysaromapage.table2title' | translate" [rows]="group2"></gutsys-aroma-table>
+            </div>
+            <div class="w-32">
+                <gutsys-aroma-table [title]="'pdfpages.gutsysaromapage.table3title' | translate" [rows]="group3"></gutsys-aroma-table>
+            </div>
+        </div>
+         <div class="legenda flex justify-between align-center py-10px px-20px">
+                <h5 class="dark-blue bold">Legenda</h5>
+                <div class=" flex ">
+                        <div class="square mx-1px "></div>
+                        <div class="square mx-1px "></div>
+                        <div class="square mx-1px "></div>
+                        <h5 class="grey-text mx-3px ">Sensibile</h5>                       
+                </div>
+                 <div class=" flex ">
+                        <div class="square mx-1px "></div>
+                        <div class="square mx-1px "></div>
+                        <h5 class="grey-text mx-3px ">Medio sensibile</h5>                       
+                </div>
+                 <div class=" flex ">
+                        <div class="square mx-1px "></div>
+                        <h5 class="grey-text mx-3px ">Lieve sensibile</h5>                       
+                </div>
+                <h5 class="grey-text mx-3px ">Sensibilità = Efficacia</h5>  
+            </div>
+             <h5 class="grey-text bottom-text">N.B.: Sono stati testati olii essenziali aromatoil bio-logica srl. <br>Si suggerisce l’uso degli stessi nella terapia per garantire la massima efficacia della metodica.</h5>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

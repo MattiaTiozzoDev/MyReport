@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { PageHeader } from '../../shared/page-header/page-header.component';
 import { PageFooter } from '../../shared/page-footer/page-footer';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -11,6 +17,9 @@ import { FileType } from '../../../enums/file-type.enum';
 import {
   METABO_INDEXES_ARRAY,
   ISTAMINA_INDEXES_ARRAY,
+  GUTSYS_INDEXES_ARRAY_3,
+  GUTSYS_INDEXES_ARRAY_2,
+  GUTSYS_INDEXES_ARRAY_1,
 } from '../../../configs/indexes.arrays';
 
 @Component({
@@ -19,8 +28,9 @@ import {
   templateUrl: './index-page.component.html',
   styleUrl: './index-page.component.scss',
 })
-export class IndexPageComponent implements OnInit {
+export class IndexPageComponent implements OnInit, OnChanges {
   @Input() customer: any;
+  @Input() type: number;
   public tenant: TenantType;
   public TenantType = TenantType;
   public fileType: FileType;
@@ -41,6 +51,31 @@ export class IndexPageComponent implements OnInit {
       case FileType.ISTFEC:
         this.indexesArray = ISTAMINA_INDEXES_ARRAY;
         break;
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (
+      changes['type'] &&
+      changes['type'].currentValue &&
+      this.fileTypeService.fileType === FileType.GUTSYS
+    ) {
+      this.indexesArray = this.getGutsysIndexesArray(
+        changes['type'].currentValue,
+      );
+    }
+  }
+
+  public getGutsysIndexesArray(type) {
+    switch (type) {
+      case 1:
+        return GUTSYS_INDEXES_ARRAY_1;
+      case 2:
+        return GUTSYS_INDEXES_ARRAY_2;
+      case 3:
+        return GUTSYS_INDEXES_ARRAY_3;
+      default:
+        return [];
     }
   }
 }

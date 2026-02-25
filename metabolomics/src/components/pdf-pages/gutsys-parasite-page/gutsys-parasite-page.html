@@ -1,0 +1,54 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{ 'pdfpages.gutsysparasitespage.title' | translate }}<sup>®</sup></h2> 
+        <h4 class=" mt-3px light-blue subtitle">{{ 'pdfpages.gutsysparasitespage.subtitle' | translate }}</h4> 
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.gutsysparasitespage.sectiontitle1' | translate}}</h4>
+            </div>
+        </div>
+        <p class="my-15px">
+            {{'pdfpages.gutsysparasitespage.text1' | translate}}
+            <strong class="light-blue">{{'pdfpages.gutsysparasitespage.text2' | translate}}</strong>
+            {{'pdfpages.gutsysparasitespage.text3' | translate}}<br><br>
+        </p>
+        @if(parasites.length > 0){
+            <div class="flex justify-between align-center car-header w-100 px-10px">
+            <div>
+                <h5 class="white">{{'pdfpages.gutsysparasitespage.header1' | translate}}</h5>
+            </div>
+             <div class="flex w-20 justify-between">
+                <h5 class="white">{{'pdfpages.gutsysparasitespage.header2' | translate}}</h5>
+                <h5 class="white">{{'pdfpages.gutsysparasitespage.header3' | translate}}</h5>
+            </div>
+            </div>
+            @for(parasite of parasites; track parasite.id){
+                <div class="flex justify-between align-center w-100 px-10px">
+                <div>
+                    <h6 class="grey">{{parasite.name}}</h6>
+                </div>
+                <div class="flex w-20 justify-between pl-8px py-10px">
+                    <div class="pointer "></div>
+                </div>
+                </div>
+                <hr>
+            }
+            
+        }   
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.gutsysparasitespage.sectiontitle2' | translate}}</h4>
+            </div>
+        </div>
+        <div class="flex justify-between pt-20px">
+            <div class="w-45">
+                <gutsys-parasite-table [rows]="group1" [defaultIdStart]="32"></gutsys-parasite-table>
+            </div>
+            <div class="w-45">
+                <gutsys-parasite-table [rows]="group2" [defaultIdStart]="32"></gutsys-parasite-table>
+            </div>
+        </div>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

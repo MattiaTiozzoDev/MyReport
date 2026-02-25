@@ -95,3 +95,174 @@ export const ISTAMINA_INDEXES_ARRAY = [
     ],
   },
 ];
+
+export const GUTSYS_INDEXES_ARRAY_3 = [
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index2',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle2',
+    page: '05',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index3',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index4',
+        page: '06',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index5',
+        page: '09',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index6',
+        page: '10',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle3',
+    page: '11',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index7',
+        page: '11',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index8',
+        page: '12',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index9',
+        page: '13',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index10',
+        page: '14',
+      },
+    ],
+  },
+];
+
+export const GUTSYS_INDEXES_ARRAY_2 = [
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index2',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle2',
+    page: '05',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index3',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index4',
+        page: '06',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index5',
+        page: '09',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index6',
+        page: '10',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle3',
+    page: '11',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index7',
+        page: '11',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index8',
+        page: '12',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index10',
+        page: '13',
+      },
+    ],
+  },
+];
+
+export const GUTSYS_INDEXES_ARRAY_1 = [
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index2',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle2',
+    page: '05',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index3',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index4',
+        page: '06',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index5',
+        page: '09',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index6',
+        page: '10',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle3',
+    page: '11',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index7',
+        page: '11',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index10',
+        page: '12',
+      },
+    ],
+  },
+];
