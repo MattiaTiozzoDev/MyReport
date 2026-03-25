@@ -32,9 +32,9 @@
                 [ngClass]="{
                     'light-blue-bg': result < 600,
                     'yellow-bg': result >= 600 && result < 900,                     
-                    'orange-bg': result >= 900 && result < 1500,
-                    'red-bg': result >= 1500}">
-                    {{result}}
+                    'orange-bg': result >= 900 && result < 15000,
+                    'red-bg': result >= 15000}">
+                    {{result >= 15000 ? '>15000' : result}}
                 </div>
             </div>
             <h5 class="w-20 black">μg/g</h5>
@@ -58,7 +58,7 @@
                     {{'pdfpages.istfecresultpage.results.medium.text' | translate}}
                 </p>
             }
-            @if(result >= 900 && result < 1500){
+            @if(result >= 900 && result < 15000){
                 <h4 class="light-blue bold pt-30px">
                     {{'pdfpages.istfecresultpage.results.high.title' | translate}}
                 </h4>
@@ -74,7 +74,7 @@
                     {{'pdfpages.istfecresultpage.results.high.text' | translate}}
                 </p>
             }
-            @if(result >= 1500){
+            @if(result >= 15000){
                 <h4 class="light-blue bold pt-30px">
                     {{'pdfpages.istfecresultpage.results.veryhigh.title' | translate}}
                 </h4>

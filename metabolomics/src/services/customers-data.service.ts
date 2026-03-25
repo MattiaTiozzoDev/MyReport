@@ -85,7 +85,7 @@ export class CustomersDataService {
         var limit = this.getLimits(key, type);
         values.push({
           id: key,
-          value: data[key],
+          value: this.parseDecimal(data[key]),
           ...limit,
         });
       }

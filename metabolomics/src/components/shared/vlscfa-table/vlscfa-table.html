@@ -41,11 +41,11 @@
                 <div class="w-15 flex align-center justify-between">
                     @if(row.id == 10){
                        <div class="w-100 flex col">
-                        <h5 class="py-2px">< {{row.inf}}</h5>
+                        <h5 class="py-2px">< {{row.inf | roundedValue:row.sup}}</h5>
                         <h5 class="pt-0px pb-4px">range ottimale</h5>
-                        <h5 class="py-2px">{{row.inf}} - {{row.sup}}</h5>
+                        <h5 class="py-2px">{{row.inf | roundedValue:row.sup }} - {{row.sup | roundedValue:row.sup}}</h5>
                         <h5 class="pt-0px pb-4px">disbiosi moderata</h5>
-                        <h5 class="py-2px">> {{row.sup}}</h5>
+                        <h5 class="py-2px">> {{row.sup | roundedValue:row.sup}}</h5>
                         <h5 class="pt-0px pb-3px">disbiosi grave</h5>
                     </div>
                     }@else {

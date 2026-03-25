@@ -78,7 +78,7 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadVlscfaExample(),
+      example: this.staticDataService.loadIstaminaExample(),
     }).subscribe(({ example, explanations }) => {
       this.explanations =
         this.fileType === FileType.METABO

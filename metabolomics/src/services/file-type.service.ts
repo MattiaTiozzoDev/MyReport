@@ -5,7 +5,7 @@ import { FileType } from '../enums/file-type.enum';
   providedIn: 'root',
 })
 export class FileTypeService {
-  private type: FileType = FileType.VLSCFA;
+  private type: FileType = FileType.ISTFEC;
 
   get fileType(): FileType {
     return this.type;
