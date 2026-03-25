@@ -5,6 +5,8 @@ import { Customer, CustomerData, MappedValue } from '../types/customers.type';
 import { Subject } from 'rxjs';
 import { FileTypeService } from './file-type.service';
 import { GUTSYS_NAMES } from '../configs/gutsys-names';
+import { VLSCFA_NAMES } from '../configs/vlscfa-names';
+import { VLSCFA_LIMITS } from '../configs/vlascfa-limits';
 
 @Injectable({
   providedIn: 'root',
@@ -50,6 +52,10 @@ export class CustomersDataService {
     } else if (fileType === 'GUTSYS') {
       this.customersData = filteredData.map((element: any) =>
         this.mapGutsysData(element),
+      );
+    } else if (fileType === 'VLSCFA') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapVlscfaData(element),
       );
     }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
@@ -141,6 +147,20 @@ export class CustomersDataService {
     return { hight, low };
   }
 
+  public getProfilevlscfa(values) {
+    let hight = [];
+    let low = [];
+    values.forEach((el) => {
+      if (el.value < el.inf) {
+        low.push(el.id);
+      }
+      if (el.value > el.sup) {
+        hight.push(el.id);
+      }
+    });
+    return { hight, low };
+  }
+
   private mapIstaminaData(data): CustomerData {
     return {
       customer: {
@@ -186,5 +206,65 @@ export class CustomersDataService {
       }
     });
     return values;
+  }
+
+  private mapVlscfaData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['__EMPTY'],
+        orderId: data['__EMPTY_1'],
+        fiscalCode: data['__EMPTY_2'],
+        type: Number(data['__EMPTY_3']),
+        available: data['__EMPTY_4'],
+        name: data['__EMPTY_6'],
+        accNumber: data['__EMPTY_7'],
+        refDate: data['__EMPTY_8'],
+      },
+      values: this.mapVlscfaValues(data),
+    };
+  }
+
+  private mapVlscfaValues(data) {
+    let values = [];
+    let population = Number(data['__EMPTY_3']);
+    Object.keys(data).forEach((key) => {
+      if (!key.startsWith('__EMPTY_')) {
+        if (key == '19') {
+          values.push({
+            id: key,
+            value: this.parseDecimal(this.mapNullValVlscfa(data[key], key)),
+            name: VLSCFA_NAMES[key] ? VLSCFA_NAMES[key] : '',
+            inf: VLSCFA_LIMITS[key]?.['inf' + population],
+            sup: VLSCFA_LIMITS[key]?.['sup' + population],
+          });
+        } else {
+          values.push({
+            id: key,
+            value: this.parseDecimal(this.mapNullValVlscfa(data[key], key)),
+            name: VLSCFA_NAMES[key] ? VLSCFA_NAMES[key] : '',
+            inf: VLSCFA_LIMITS[key]?.inf,
+            sup: VLSCFA_LIMITS[key]?.sup,
+          });
+        }
+      }
+    });
+    return values;
+  }
+
+  mapNullValVlscfa(val, id) {
+    if (val) return val;
+    if (id == '17' || id == '18') return 0.01;
+    return 0.1;
+  }
+
+  private parseDecimal(value) {
+    if (typeof value !== 'string') return value;
+
+    const normalized = value.replace(',', '.');
+    const number = parseFloat(normalized);
+
+    if (isNaN(number)) return NaN;
+
+    return Math.round(number * 100) / 100;
   }
 }

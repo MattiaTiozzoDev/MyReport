@@ -1,0 +1,35 @@
+:host {
+    display: block;
+    width: 595px;
+    height: 842px;
+}
+
+.section-header{
+    width: 595px !important;
+    height: 30px;
+    margin-left: -40px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+}
+
+h6{
+    font-size: 7px;
+}
+
+.pos-abs{
+    position:absolute;
+    bottom: 80px
+}
+
+.legenda{
+    margin-top: 20px;
+    width: 502px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #E5E4E4;
+}
+
+.grey-text{
+   color: #383838;
+   font-size: 6px;
+   font-weight: 400;
+}

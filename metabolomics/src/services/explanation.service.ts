@@ -29,11 +29,13 @@ export class ExplanationService {
   private flatItems(explanations) {
     let flatItems = [];
     explanations?.forEach((element) => {
-      flatItems.push({
-        ...element,
-        type: 'general',
-        height: this.getGeneralHeight(element.general),
-      });
+      if (element.general) {
+        flatItems.push({
+          ...element,
+          type: 'general',
+          height: this.getGeneralHeight(element.general),
+        });
+      }
       element?.metabolites?.forEach((el) => {
         flatItems.push({
           ...el,

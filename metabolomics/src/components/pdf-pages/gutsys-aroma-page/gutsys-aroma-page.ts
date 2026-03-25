@@ -17,6 +17,7 @@ export class GutsysAromaPage {
   public group1: any[] = [];
   public group2: any[] = [];
   public group3: any[] = [];
+  public addedText: string = null;
 
   @Input() page: string;
 
@@ -33,6 +34,7 @@ export class GutsysAromaPage {
       this.group3 = data.values.filter(
         (el) => Number(el.id) >= 72 && Number(el.id) <= 79,
       );
+      this.addedText = data.values.find((el) => el.id === '125')?.value ?? null;
     });
   }
 

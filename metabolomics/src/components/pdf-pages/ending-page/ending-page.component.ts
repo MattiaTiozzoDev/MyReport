@@ -5,7 +5,7 @@ import { NgClass } from '@angular/common';
 import { TenantService } from '../../../services/tenant.service';
 
 @Component({
-  selector: 'metabolomics-ending-page',
+  selector: 'ending-page',
   imports: [NgClass],
   templateUrl: './ending-page.component.html',
   styleUrl: './ending-page.component.scss',

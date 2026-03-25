@@ -26,6 +26,7 @@ export class ProfilePageComponent implements OnInit, OnChanges {
   @Input() profile: any;
   @Input() customer: any;
   @Input() page: string;
+  @Input() reportType: any;
 
   constructor(public tenantService: TenantService) {}
 

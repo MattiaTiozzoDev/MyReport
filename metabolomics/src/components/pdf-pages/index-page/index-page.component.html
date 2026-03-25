@@ -19,7 +19,7 @@
             </div>
         }
         @if((customer?.fiscalCode || customer?.name) && tenant === TenantType.VALSAMBRO){
-            <div class="cf-container flex align-center justify-between px-15px" [ngClass]="{'mt-100px': fileType === 'METABO', 'mt-200px': fileType === 'ISTFEC', 'mt-70px': fileType === 'GUTSYS' }">
+            <div class="cf-container flex align-center justify-between px-15px pos-abs" >
                 <h5 class="white">{{customer?.name}} </h5>
                 <h5 class="white">{{ 'pdfpages.indexpage.fiscalcode' | translate }} {{customer?.fiscalCode | uppercase}} </h5>
             </div>

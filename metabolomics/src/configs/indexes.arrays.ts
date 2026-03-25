@@ -266,3 +266,60 @@ export const GUTSYS_INDEXES_ARRAY_1 = [
     ],
   },
 ];
+
+export const VLSCFA_INDEXES_ARRAY = [
+  {
+    sectionTitle: 'pdfpages.indexpage.vlscfa.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.vlscfa.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.vlscfa.index2',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.vlscfa.index3',
+        page: '04',
+      },
+      {
+        title: 'pdfpages.indexpage.vlscfa.index4',
+        page: '04',
+      },
+      {
+        title: 'pdfpages.indexpage.vlscfa.index5',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.vlscfa.subtitle2',
+    page: '05',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.vlscfa.index6',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.vlscfa.index7',
+        page: '06',
+      },
+      {
+        title: 'pdfpages.indexpage.vlscfa.index8',
+        page: '07',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.vlscfa.subtitle3',
+    page: '08',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.vlscfa.index9',
+        page: '08',
+      },
+    ],
+  },
+];

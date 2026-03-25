@@ -57,4 +57,14 @@ export class StaticDataService {
         }),
       );
   }
+
+  loadVlscfaExample(): Observable<Explanations[]> {
+    return this.http
+      .get<Explanations[]>('assets/jsons/vlscfa.example.json')
+      .pipe(
+        tap((data) => {
+          this.example = data;
+        }),
+      );
+  }
 }

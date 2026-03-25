@@ -1,7 +1,7 @@
 
 @if(fileType === fileTypeEnum.METABO && tenant === 'valsambro') {
-    <metabolomics-presentation-page></metabolomics-presentation-page>
-    <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer"></index-page>
     <metabolomics-table-page [pageId]="0" [customer]="customer" [page]="'03'"></metabolomics-table-page>
     <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'" [page]="'04'">
         <img class="image-container" src="{{'assets/img/ciclo_energia_cellulare_' +  tenant + '.svg'}}" alt="">
@@ -23,11 +23,11 @@
         <img class="image-container" src="{{'assets/img/pathway_metilazione_' + tenant + '.svg'}}" alt="">
     </metabolomics-image-page>
     <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'13'"></metabolomics-profile-page>
-    <metabolomics-explanation-page [profile]="profile" [customer]="customer"></metabolomics-explanation-page>
+    <metabolomics-explanation-page [profile]="profile" [customer]="customer" [basicIndex]="14"></metabolomics-explanation-page>
 } 
 @if(fileType === fileTypeEnum.METABO && tenant === 'homica') {
-    <metabolomics-presentation-page></metabolomics-presentation-page>
-    <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer"></index-page>
     <metabolomics-table-page [pageId]="0" [customer]="customer" [page]="'03'"></metabolomics-table-page>
     <metabolomics-image-page [customer]="customer" [title]="'Ciclo dell’acido citrico e dell’energia cellulare'" [page]="'04'">
         <img class="image-container" src="{{'assets/img/ciclo_energia_cellulare_' +  tenant + '.svg'}}" alt="">
@@ -52,20 +52,20 @@
     <metabolomics-explanation-page [profile]="profile" [customer]="customer"></metabolomics-explanation-page>
 } 
 @if(fileType === fileTypeEnum.ISTFEC) {
-    <metabolomics-presentation-page></metabolomics-presentation-page>
-    <metabolomics-index-page [customer]="customer"></metabolomics-index-page>
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer"></index-page>
     <istfec-introduction-page [page]="'03'"></istfec-introduction-page>
     <istfec-explanation-page [page]="'04'"></istfec-explanation-page>
     <metabolomics-image-page [customer]="customer" [title]="'Effetti biologici dell’istamina e recettori coinvolti'" [page]="'05'">
         <img class="image-container pt-10px" src="{{'assets/img/effetti_biologici_istamina.svg'}}" alt="">
     </metabolomics-image-page>
     <istfec-result-page [page]="'06'"></istfec-result-page>
-    <metabolomics-ending-page></metabolomics-ending-page>
+    <ending-page></ending-page>
 }
 
 @if(fileType === fileTypeEnum.GUTSYS) {
-    <metabolomics-presentation-page></metabolomics-presentation-page>
-    <metabolomics-index-page [customer]="customer" [type]="customer?.type"></metabolomics-index-page>
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer" [type]="customer?.type"></index-page>
     <gutsys-introduction-page [page]="'03'"></gutsys-introduction-page>
     <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'" [page]="'04'">
         <img class="image-container" src="{{'assets/img/metaboliti_intestinali_valsambro.svg'}}" alt="" >
@@ -80,5 +80,19 @@
     <gutsys-aroma-page [page]="customer?.type == 2 || customer?.type == 3 ? '12' : '11'"></gutsys-aroma-page>
     <gutsys-fungus-page [page]="'13'" [ngClass]="{'hide': customer?.type == 1|| customer?.type == 2}"></gutsys-fungus-page>
     <gutsys-indication-page [page]="customer?.type != 1 ? customer?.type == 3 ? '14' : '13' : '12'" [date]="customer?.refDate"></gutsys-indication-page>
-    <metabolomics-ending-page></metabolomics-ending-page>
+    <ending-page></ending-page>
+}
+
+@if(fileType === fileTypeEnum.VLSCFA) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer" [type]="customer?.type"></index-page>
+    <vlscfa-intro-1-page [page]="'03'"></vlscfa-intro-1-page>
+    <vlscfa-intro-2-page [page]="'04'"></vlscfa-intro-2-page>
+    <vlscfa-table-page [pageId]="0" [customer]="customer" [page]="'05'"></vlscfa-table-page>
+    <vlscfa-table-page [pageId]="1" [customer]="customer" [page]="'06'"></vlscfa-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Metaboliti intestinali e implicazioni sistemiche'" [page]="'07'">
+        <img class="image-container" src="{{'assets/img/vlscfa_graph.svg'}}" alt="" >
+    </metabolomics-image-page>
+    <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'08'" [reportType]="'vlscfa'"></metabolomics-profile-page>
+    <metabolomics-explanation-page [profile]="profile" [customer]="customer" [basicIndex]="9"></metabolomics-explanation-page>
 }

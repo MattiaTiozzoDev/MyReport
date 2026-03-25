@@ -23,6 +23,11 @@ import { GutsysAromaPage } from '../../components/pdf-pages/gutsys-aroma-page/gu
 import { GutsysFungusPage } from '../../components/pdf-pages/gutsys-fungus-page/gutsys-fungus-page';
 import { GutsysIndicationPage } from '../../components/pdf-pages/gutsys-indication-page/gutsys-indication-page';
 import { NgClass } from '@angular/common';
+import { VlscfaIntro1Page } from '../../components/pdf-pages/vlscfa-intro-1-page/vlscfa-intro-1-page';
+import { VlscfaIntro2Page } from '../../components/pdf-pages/vlscfa-intro-2-page/vlscfa-intro-2-page';
+import { VlscfaTablePage } from '../../components/pdf-pages/vlscfa-table-page/vlscfa-table-page';
+import { VLSCFA_ELEMENTS_EXP } from '../../configs/vlscfa-explanations';
+import { METABO_ELEMENTS_EXP } from '../../configs/metabolomics-explanations';
 
 @Component({
   selector: 'metabolomics-pdf-container',
@@ -45,6 +50,9 @@ import { NgClass } from '@angular/common';
     GutsysAromaPage,
     GutsysFungusPage,
     GutsysIndicationPage,
+    VlscfaIntro1Page,
+    VlscfaIntro2Page,
+    VlscfaTablePage,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',
@@ -70,9 +78,12 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadGutSysExample(),
+      example: this.staticDataService.loadVlscfaExample(),
     }).subscribe(({ example, explanations }) => {
-      this.explanations = explanations;
+      this.explanations =
+        this.fileType === FileType.METABO
+          ? METABO_ELEMENTS_EXP
+          : VLSCFA_ELEMENTS_EXP;
       this.customersDataService.setData(example);
     });
 
@@ -81,16 +92,22 @@ export class PdfContainerComponent implements OnInit {
       this.tenant = this.tenantService.tenant ?? 'valsambro';
       this.fileType = this.fileTypeService.fileType;
       this.customer = { ...data?.customer };
-      if (this.explanations && this.fileType === FileType.METABO) {
-        this.setMetaboProfile(data.values);
+      if (
+        this.explanations &&
+        (this.fileType === FileType.METABO || this.fileType === FileType.VLSCFA)
+      ) {
+        this.setProfile(data.values);
       }
     });
   }
 
-  private setMetaboProfile(values) {
+  private setProfile(values) {
     let hight = [];
     let low = [];
-    let profile = this.customersDataService.getProfileMetabolites(values);
+    let profile =
+      this.fileType === FileType.METABO
+        ? this.customersDataService.getProfileMetabolites(values)
+        : this.customersDataService.getProfilevlscfa(values);
     profile.hight.forEach((h) => {
       var explanation = this.explanations.find(
         (e) => Number(e.id) === Number(h),

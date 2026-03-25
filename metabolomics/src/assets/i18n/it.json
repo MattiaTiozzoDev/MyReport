@@ -76,6 +76,20 @@
         "index9": "Identificazione molecolare delle specie di funghi",
         "index10": "Indicazioni per l’interpretazione del referto"
       },
+      "vlscfa": {
+        "subtitle1": "Metaboliti del microbiota",
+        "subtitle2": "Analisi Completa della Disbiosi Intestinale",
+        "subtitle3": "Profilo Microbiomico",
+        "index1": "Introduzione",
+        "index2": "Fonti Alimentari e funzioni degli SCFAs",
+        "index3": "Fonti Alimentari e funzioni degli MCFAs",
+        "index4": "Fonti Alimentari e funzioni degli BSCFAs",
+        "index5": "Metaboliti derivanti da sovracrescita microbica intestinale e disbiosi",
+        "index6": "Acidi grassi a catena corta, media e ramificata (SCFA, MCFA, BSCFA)",
+        "index7": "Composti organici derivanti da sovracrescita microbica intestinale (disbiosi)",
+        "index8": "Metaboliti intestinali e implicazioni sistemiche",
+        "index9": "Spiegazione dei metaboliti alterati"
+      },
       "fiscalcode": "Codice fiscale:"
     },
     "metabolomicstable": {
@@ -154,8 +168,10 @@
     "profilepage": {
       "title": "Profilo Metabolomico",
       "subtitle": "La risoluzione dei problemi legati agli effetti epigenetici",
+      "subtitlevlscfa": "Valutazione funzionale dei metaboliti del microbiota",
       "sectiontitle1": "Introduzione sul profilo Metabolomico",
       "text": "Il test analizza gli acidi organici presenti nei metaboliti urinari. Queste biomolecole sono considerate dei veri markers funzionali, in grado di rilevare alterazioni dovute a carenze nutrizionali e vitaminiche, esposizione a tossici, metabolismo dei neurotrasmetitori, disfunzioni mitocondriali (ciclo di krebs), stress ossidativo, sovracrescita di batteri e funghi, livello degli ossalati. La presenza di questi markers funzionali è intimamente correlata a molte patologie cronico-degenerative e diviene il fulcro della loro diagnostica, consentendo di attuare una proposta terapeutica unica nella sua personalizzazione.",
+      "textvlscfa": "Di seguito sono riportati i metaboliti del microbiota intestinale che presentano valori in eccesso o in difetto rispetto agli intervalli di riferimento. L’analisi di queste variazioni consente di individuare eventuali alterazioni dell’attività metabolica del microbiota e possibili condizioni di disbiosi funzionale. Per ciascun parametro evidenziato vengono inoltre fornite indicazioni descrittive utili alla comprensione del significato biologico dei valori rilevati e del loro possibile impatto sull’equilibrio dell’ecosistema intestinale.",
       "sectiontitle2": "Il profilo del paziente evidenzia degli squilibri",
       "hight": "Metaboliti in eccesso",
       "low": "Metaboliti in difetto"
@@ -346,6 +362,40 @@
       "sectiontitle1": "Indicazioni per l’interpretazione del referto",
       "text1": "I referti fin qui esposti sono da intendersi come informazioni utili al medico o professionista abilitato per valutare eventuali terapie o approfondimenti del caso e NON costituiscono né sostituiscono, in alcun modo, Diagnosi Clinica.",
       "text2": "Anche gli eventuali suggerimenti ed esempi di Integratori sono da intendersi a titolo esemplificativo e ad esclusivo beneficio del medico, che dovrà valutarne l’eventuale uso, inserendoli nell’ambito anamnestico/diagnostico/terapeutico del paziente."
+    },
+    "vlscfaintroductionpage": {
+      "title": "Metaboliti del microbiota",
+      "subtitle": "Acidi Grassi a catena corta, media , ramificata e composti organici",
+      "sectiontitle1": "Introduzione",
+      "sectiontitle2": "Fonti Alimentari e funzioni degli SCFAs",
+      "sectiontitle3": "Fonti Alimentari e funzioni degli MCFAs",
+      "sectiontitle4": "Fonti Alimentari e funzioni degli BSCFAs",
+      "sectiontitle5": "Infezioni intestinali a bassa carica",
+      "text1": "Il test dei ",
+      "text2": "metaboliti del microbiota ",
+      "text3": "rappresenta uno strumento innovativo per esplorare la salute intestinale attraverso l'analisi delle sostanze prodotte dai microrganismi che popolano il nostro tratto gastrointestinale. Questi metaboliti, come gli acidi grassi a catena corta, media e ramificata, nonché gli acidi organici, offrono preziose informazioni sulla composizione e l'attività del microbiota, permettendo di valutare l'efficienza della fermentazione delle fibre alimentari, la presenza di batteri benefici, l’integrità della barriera intestinale ed eventuale sovracrescita microbica (SIBO) . Grazie a questo test, è possibile individuare eventuali squilibri o disfunzioni che possono influire sul benessere generale, fornendo una base scientifica per interventi personalizzati volti a migliorare la salute dell’intestino e, di conseguenza, di tutto l’organismo.",
+      "text4": "Gli SCFAs (Short-Chain Fatty Acids, acidi grassi a corta catena ) non provengono direttamente dagli alimenti ma sono prodotti quasi esclusivamente dalla fermentazione delle fibre alimentari da parte dei batteri del colon. Le fonti alimentari dirette sono infatti molto limitate, mentre la produzione endogena dipende dalla qualità e quantità di fibre ingerite.",
+      "text5": "Gli SCFA derivano soprattutto dalla fermentazione di fibre solubili ( pectine, frutto-oligosaccaridi (FOS), galatto-oligosaccaridi (GOS)) , amido resistente e altri carboidrati non digeribili. Questi composti si trovano particolarmente in legumi (lenticchie, ceci, fagioli), cereali integrali (avena, orzo, segale) ,frutta (mele, pere, banane non troppo mature), verdure ricche di fibre (carciofi, cipolle, porri, topinambur) , semi (lino, chia), tuberi raffreddati (patate o riso cotti e poi raffreddati → ricchi di amido resistente). Inoltre alcuni ceppi probiotici (soprattutto Lactobacillus ed Enterococcus) possono aumentare la produzione di SCFA modulando il microbiota, anche in assenza di patologia.  Gli acidi grassi a catena corta sono una importante fonte energetica, sia per l’epitelio intestinale che per il fegato, dove vengono veicolati direttamente dall’intestino attraverso la vena porta. A livello epatico, vengono rapidamente trasferiti nei mitocondri dell’epatocita indipendentemente dal sistema di trasporto della carnitina, rendendo più rapida la produzione di energia attraverso la beta-ossidazione e/o il ciclo di Krebs. Gli SCFAs  svolgono un ruolo importante nell'asse intestino-cervello, regolando i processi del sistema nervoso centrale, a esempio l'interazione cellula-cellula, la sintesi e il rilascio dei neurotrasmettitori, l'attivazione della microglia, la funzione mitocondriale e regolano la risposta antinfiammatoria. ",
+      "text6": "Gli MCFAs (Medium Chain Fatty Acid, acidi grassi a media catena ) si trovano principalmente nell'olio di cocco, nell'olio di palma e nel latte materno, oltre che nei prodotti derivati dal latte come burro e formaggi. Questi acidi grassi vengono rapidamente assorbiti dall'intestino e trasportati al fegato, dove sono utilizzati come fonte energetica immediata, senza necessità di essere immagazzinati come grasso. I MCFAs svolgono inoltre un'importante funzione antibatterica: contribuiscono a creare un ambiente acido che ostacola la proliferazione di patogeni e stimolano la risposta immunitaria attraverso l'attivazione dei recettori GPR, favorendo la migrazione di cellule immunitarie e la produzione di citochine pro-infiammatorie. Oltre all'effetto energetico e immuno-modulante, i MCFAs sono particolarmente utili nelle diete che richiedono un rapido apporto di energia, come nel caso di atleti o persone con difficoltà di assorbimento, e hanno un ruolo fondamentale nella nutrizione infantile grazie alla loro presenza nel latte materno.",
+      "text7": "Gli BSCFA  (Branched Short-Chain Fatty Acids, acidi grassi a corta catena ramificata ) sono metaboliti prodotti principalmente dalla fermentazione batterica delle proteine nell'intestino. I BSCFA non si trovano direttamente in grandi quantità negli alimenti, ma derivano dal metabolismo di specifici aminoacidi a catena ramificata (leucina, isoleucina, valina) contenuti nelle proteine. Pertanto, le fonti alimentari che ne favoriscono la produzione sono gli alimenti ricchi di proteine ( carne, pesce, uova e latticini) e alimenti fermentati. I BSCFA esercitano un’azione di inibizione sulla lipolisi e sulla lipogenesi nel tessuto adiposo, contribuiscono alla riduzione dei livelli di glicemia e insulinemia, e favoriscono la sintesi del peptide pancreatico PYY (Peptide YY), riconosciuto come l’ormone della sazietà. Questi effetti conferiscono ai BSCFA una potenziale rilevanza nella gestione metabolica dell’obesità e del diabete mellito di tipo 2.",
+      "text8": "A completamento del quadro generale intestinale sono state inserite altre molecole : acidi organici, cresoli e indacano . Questi metaboliti sono marker utili per identificare la sovracrescita batterica intestinale (SIBO), poiché la loro concentrazione nelle urine può aumentare quando vi è un alterato equilibrio della microflora (disbiosi). Questi derivano prettamente dalla fermentazione di carboidrati e proteine da parte di batteri opportunisti e la loro presenza indica un'attività microbica eccessiva o anomala, che può contribuire a sintomi come gonfiore, dolori addominali e disturbi dell'alvo.",
+      "text9": "La funzione di questi marker è quella di fornire un'indicazione precoce di disbiosi e sovracrescita batterica, consentendo un intervento mirato sulla dieta e sulla modulazione del microbiota, completando il quadro dello stato intestinale . Inoltre, il monitoraggio di questi acidi organici può aiutare a valutare l'efficacia dei trattamenti e prevenire complicanze metaboliche e infiammatorie associate a squilibri intestinali"
+    },
+    "vlscfatable": {
+      "title": "Metaboliti del microbiota",
+      "subtitle": "Analisi Completa della Disbiosi Intestinale",
+      "note17": "I seguenti sono isomeri del p-cresolo , di derivazione non esclusivamente microbica",
+      "note19": "Indicatore per normalizzazione il valore analitico",
+      "groups": {
+        "0": {
+          "sectiontitle1": "Acidi grassi a catena corta, media e ramificata",
+          "sectiontitle2": "(SCFA, MCFA, BSCFA)"
+        },
+        "1": {
+          "sectiontitle1": "Composti organici derivanti da sovracrescita",
+          "sectiontitle2": "microbica intestinale (disbiosi)"
+        }
+      }
     }
   },
   "exp": {
@@ -832,6 +882,116 @@
       "base": "",
       "hight": "La creatinina viene comunemente calcolata per la valutazione degli analiti urinari. La sua escrezione è influenzata dal muscolo scheletrico e stato corporeo. L’introito di proteine alimentari contenenti arginina e glicina ( precursori della creatinina) e supplementazione di creatinina stessa possono aumentarne i livelli. Anche lo stato di idratazione gioca un ruolo importante. L’eccesso di creatinina può evidenziare anche una disfunzione renale.",
       "low": "La creatinina viene comunemente calcolata per la valutazione degli analiti urinari. La sua escrezione è influenzata dal muscolo scheletrico e stato corporeo. Il suo deficit viene solitamente correlato a una massa muscolare troppo scarsa. Un valore basso potrebbe anche indicare un aumento della velocità di filtrazione glomerulare (eGFR)."
+    },
+    "vlscfa": {
+      "1": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "bla bla",
+        "hight": "hight",
+        "low": "low"
+      },
+      "2": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "3": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "4": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "5": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "6": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "7": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "8": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "9": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "10": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "11": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "12": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "13": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "14": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "15": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "16": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "17": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "18": {
+        "name": "Acido 2,5-furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      }
     }
   }
 }

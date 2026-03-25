@@ -2,12 +2,20 @@
     <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content">
         <h2 class="mt-10px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.title" | translate}}</h2>
-        <h4 class="mt-5px " [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.subtitle" | translate}}</h4>
+        @if(reportType == 'vlscfa'){
+            <h4 class="mt-5px light-blue">{{"pdfpages.profilepage.subtitlevlscfa" | translate}}</h4>
+        }@else {
+            <h4 class="mt-5px " [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.profilepage.subtitle" | translate}}</h4>
+        }
         <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA, 'hide': hideHeaders}">
             <h4 class="white">{{"pdfpages.profilepage.sectiontitle1" | translate}}</h4>
         </div>
         <div class="flex align-center mt-20px">
-            <h5>{{"pdfpages.profilepage.text" | translate}}</h5>
+            @if(reportType == 'vlscfa'){
+                <h5>{{"pdfpages.profilepage.textvlscfa" | translate}}</h5>
+            }@else {
+                <h5>{{"pdfpages.profilepage.text" | translate}}</h5>
+            }
         </div>
         <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA, 'hide': hideHeaders}">
             <h4 class="white">{{"pdfpages.profilepage.sectiontitle2" | translate}}</h4>

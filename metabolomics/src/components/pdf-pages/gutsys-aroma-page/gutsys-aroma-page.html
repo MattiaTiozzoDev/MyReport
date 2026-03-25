@@ -15,6 +15,11 @@
         <div class="flex justify-between">
             <div class="w-32">
                 <gutsys-aroma-table [title]="'pdfpages.gutsysaromapage.table1title' | translate" [rows]="group1"></gutsys-aroma-table>
+                @if(addedText){
+                    <div class="par-header mt-20px">
+                        <h6 class="white text-center">{{addedText}}</h6>
+                    </div>
+                }
             </div>
             <div class="w-32">
                 <gutsys-aroma-table [title]="'pdfpages.gutsysaromapage.table2title' | translate" [rows]="group2"></gutsys-aroma-table>

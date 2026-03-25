@@ -20,10 +20,11 @@ import {
   GUTSYS_INDEXES_ARRAY_3,
   GUTSYS_INDEXES_ARRAY_2,
   GUTSYS_INDEXES_ARRAY_1,
+  VLSCFA_INDEXES_ARRAY,
 } from '../../../configs/indexes.arrays';
 
 @Component({
-  selector: 'metabolomics-index-page',
+  selector: 'index-page',
   imports: [PageHeader, PageFooter, TranslatePipe, NgClass, UpperCasePipe],
   templateUrl: './index-page.component.html',
   styleUrl: './index-page.component.scss',
@@ -50,6 +51,9 @@ export class IndexPageComponent implements OnInit, OnChanges {
         break;
       case FileType.ISTFEC:
         this.indexesArray = ISTAMINA_INDEXES_ARRAY;
+        break;
+      case FileType.VLSCFA:
+        this.indexesArray = VLSCFA_INDEXES_ARRAY;
         break;
     }
   }
