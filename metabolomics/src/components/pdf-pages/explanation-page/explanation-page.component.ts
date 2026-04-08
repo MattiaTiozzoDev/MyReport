@@ -55,6 +55,7 @@ export class ExplanationPageComponent implements OnChanges, OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['profile'] && changes['profile'].currentValue) {
+      this.fileType = this.fileTypeService.fileType;
       this.setExplanations(changes['profile'].currentValue);
     }
   }

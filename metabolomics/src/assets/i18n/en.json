@@ -1,278 +1,1088 @@
 {
+  "common": {
+    "register": "®"
+  },
   "home": {
-    "dropdownText": "Trascina qui il file XLSM oppure clicca per selezionarlo",
-    "selectedFile": "File selezionato",
-    "selectFile": "seleziona file"
+    "selectcompany": "Seleziona l’azienda per cui desideri generare il report",
+    "selectcompanyexp1": "Ogni azienda utilizza un modello di impaginazione e uno stile grafico dedicato. ",
+    "selectcompanyexp2": "Seleziona l’azienda corretta per procedere con l’esportazione del referto.",
+    "selectvalsambro": "Seleziona per realizzare refertistica Val Sambro",
+    "selecthomica": "Seleziona per realizzare refertistica Homica Health"
+  },
+  "filemanager": {
+    "exp1": "Carica il file Excel trascinandolo nel box oppure selezionandolo dal tuo computer.",
+    "exp2": "Una volta completata l’elaborazione, i referti saranno disponibili per il download in formato PDF.",
+    "dropdowntext": "Rilascia qui il file",
+    "selectedfile": "File selezionato",
+    "selectfile": "Seleziona file",
+    "downloadreports": "Scarica referti",
+    "or": "o"
+  },
+  "footer": {
+    "text": "My Report @2025. Reallizato da Mattia Tiozzo e Dario Uderzo. Tutti i diritti riservati.",
+    "version": "Versione"
+  },
+  "pageheader": {
+    "acceptation": "Accession No.",
+    "code": "Order Code",
+    "accdate": "Acceptance Date",
+    "refdate": "Report Date"
+  },
+  "pdfpages": {
+    "presentation": {
+      "METABO": "Metabolomic Profile of Organic Acids",
+      "GUTSYS": "Istamina Fecale",
+      "ISTFEC": "Gut Screening®",
+      "VLSCFA": "Metaboliti del microbiota",
+      "title": "Precision diagnostics for personalized health",
+      "subtitle": "Our reports are based on the integration of advanced diagnostic technologies and validated scientific methodologies, with the aim of providing accurate and reliable data to support personalized clinical assessments.",
+      "director": "Medical Director:"
+    },
+    "indexpage": {
+      "title": "Index",
+      "metabo": {
+        "subtitle1": "Organic Acids Analysis",
+        "subtitle2": "Metabolomic Profile",
+        "index1": "Cellular Energy and Mitochondrial Markers",
+        "index2": "Neurotransmitters",
+        "index3": "Intestinal Microbial Overgrowth",
+        "index4": "Oxalate Metabolites",
+        "index5": "Nutritional Markers",
+        "index5b": "Pyrimidine Metabolites Associated with Folate Metabolism",
+        "index6": "Detoxification Indicators",
+        "index7": "Amino Acid Metabolites",
+        "index8": "Overview of Alterations in the Metabolomic Profile",
+        "index9": "Explanation of Altered Metabolites"
+      },
+      "istamina": {
+        "subtitle1": "Ruolo biologico e significato clinico",
+        "subtitle2": "Valutazione del risultato analitico",
+        "index1": "Cos’è l’istamina fecale",
+        "index2": "Connessione tra istamina e microbiota",
+        "index3": "Fattori che influiscono il livello di istamina nelle feci",
+        "index4": "Implicazioni di un livello alterato di istamina",
+        "index5": "Effetti biologici dell’istamina e recettori coinvolti",
+        "index6": "Come interpretare il test",
+        "index7": "Livello di istamina fecale rilevato"
+      },
+      "gutsys": {
+        "subtitle1": "Diagnostica completa del Microbiota intestinale",
+        "subtitle2": "Caratteristiche del campione fecale e risultati microbiologici",
+        "subtitle3": "Esami microbiologici complementari",
+        "index1": "Cos’è il Microbiota intestinale",
+        "index2": "Metaboliti intestinali e implicazioni sistemiche",
+        "index3": "Caratteristiche delle feci",
+        "index4": "Flora patogena/ transiente",
+        "index5": "Flora immunomodulante",
+        "index6": "Flora di protezione",
+        "index7": "Parassitologico",
+        "index8": "Aromatogramma",
+        "index9": "Identificazione molecolare delle specie di funghi",
+        "index10": "Indicazioni per l’interpretazione del referto"
+      },
+      "vlscfa": {
+        "subtitle1": "Metaboliti del microbiota",
+        "subtitle2": "Analisi Completa della Disbiosi Intestinale",
+        "subtitle3": "Profilo Microbiomico",
+        "index1": "Introduzione",
+        "index2": "Fonti Alimentari e funzioni degli SCFAs",
+        "index3": "Fonti Alimentari e funzioni degli MCFAs",
+        "index4": "Fonti Alimentari e funzioni degli BSCFAs",
+        "index5": "Metaboliti derivanti da sovracrescita microbica intestinale e disbiosi",
+        "index6": "Acidi grassi a catena corta, media e ramificata (SCFA, MCFA, BSCFA)",
+        "index7": "Composti organici derivanti da sovracrescita microbica intestinale (disbiosi)",
+        "index8": "Metaboliti intestinali e implicazioni sistemiche",
+        "index9": "Spiegazione dei metaboliti alterati"
+      },
+      "fiscalcode": "Fiscal code:"
+    },
+    "metabolomicstable": {
+      "tablepage": {
+        "title": "Organic Acids Analysis",
+        "subtitle": "Nutritional and Metabolomic Profile",
+        "section1": "Methodology: LC/Tandem Mass Spectrometry",
+        "section2": "*For these metabolites, excess levels in urine indicate a deficiency of the corresponding vitamin or reference molecule.",
+        "section3": "Report signed with a digital signature in accordance with Articles 20, 21, paragraph 2, 23, and 24 of Legislative Decree No. 82 of March 7, 2005, and subsequent amendments",
+        "section4": "Digitally signed by Dr. Alberto Santini on: "
+      },
+      "columns": {
+        "markers": "Metabolomic Markers",
+        "markers2": "in Urine",
+        "range": "Reference",
+        "range2": "Range",
+        "val": "Patient",
+        "val2": "Value",
+        "unit": "Units of",
+        "unit2": "Measurement",
+        "pop": "Statistical population"
+      },
+      "child": "under 13 years of age",
+      "man": "males over 13 years of age",
+      "woman": "females over 13 years of age",
+      "creatine": "µmol/mmol of creatinine",
+      "creatine_alt": "mg/dL of",
+      "creatine_cre": "creatinine",
+      "creatine_alt_2": "nmol/mmol of creatinine",
+      "groups": {
+        "0": {
+          "sectionTitle": "Mitochondrial Cellular Energy",
+          "title": "Glycolytic Cycle"
+        },
+        "1": {
+          "title": "Ketones and Fatty Acid Oxidation"
+        },
+        "2": {
+          "title": "Mitochondrial Markers"
+        },
+        "3": {
+          "sectionTitle": "Neurotransmitters",
+          "title": "Phenylalanine and Tyrosine Metabolites"
+        },
+        "4": {
+          "title": "Tryptophan Metabolites"
+        },
+        "5": {
+          "sectionTitle": "Intestinal Microbial Overgrowth",
+          "title": "Yeast and Fungal Markers"
+        },
+        "6": {
+          "title": "Bacterial Markers"
+        },
+        "7": {
+          "title": "Clostridia Markers"
+        },
+        "8": {
+          "sectionTitle": "Oxalate Metabolites",
+          "title": "Oxalate Metabolites"
+        },
+        "9": {
+          "sectionTitle": "Nutritional Markers",
+          "title": "Nutritional Markers"
+        },
+        "10": {
+          "sectionTitle": "Pyrimidine Metabolites Associated with Folate Metabolism",
+          "title": "Pyrimidine Metabolites Associated with Folate Metabolism"
+        },
+        "11": {
+          "sectionTitle": "Detoxification Indicators",
+          "title": "Detoxification Indicators"
+        },
+        "12": {
+          "sectionTitle": "Amino Acid Metabolites",
+          "title": "Amino Acid Metabolites"
+        }
+      }
+    },
+    "imagepage": {
+      "metabo": {
+        "1": "Citric Acid Cycle and Cellular Energy",
+        "2": "Neurotransmitter Pathways",
+        "3": "Intestinal Metabolites and Systemic Implications",
+        "4": "The Central Role of 3-HMG CoA in Glycemic Response, Fasting, and Statins",
+        "5": "Methylation and Detoxification Pathways"
+      }
+    },
+    "profilepage": {
+      "title": "Metabolomic Profile",
+      "subtitle": "Resolution of problems related to epigenetic effects",
+      "subtitlevlscfa": "Valutazione funzionale dei metaboliti del microbiota",
+      "sectiontitle1": "Introduction to the Metabolomic Profile",
+      "text": "The test analyzes organic acids present in urinary metabolites. These biomolecules are considered true functional markers, capable of detecting alterations due to nutritional and vitamin deficiencies, exposure to toxins, neurotransmitter metabolism, mitochondrial dysfunctions (Krebs cycle), oxidative stress, bacterial and fungal overgrowth, and oxalate levels. The presence of these functional markers is closely associated with many chronic degenerative diseases and becomes central to their diagnosis, enabling the development of a therapeutic approach that is uniquely personalized.",
+      "textvlscfa": "Di seguito sono riportati i metaboliti del microbiota intestinale che presentano valori in eccesso o in difetto rispetto agli intervalli di riferimento. L’analisi di queste variazioni consente di individuare eventuali alterazioni dell’attività metabolica del microbiota e possibili condizioni di disbiosi funzionale. Per ciascun parametro evidenziato vengono inoltre fornite indicazioni descrittive utili alla comprensione del significato biologico dei valori rilevati e del loro possibile impatto sull’equilibrio dell’ecosistema intestinale.",
+      "sectiontitle2": "The patient’s profile shows imbalances",
+      "hight": "Excess Metabolites",
+      "low": "Deficient Metabolites"
+    },
+    "istfecintroductionpage": {
+      "title": "Istamina fecale",
+      "subtitle": "Ruolo biologico e significato clinico",
+      "sectiontitle1": "Cos’è l’istamina fecale",
+      "text1": "Il test valuta la concentrazione di istamina presente nelle feci.",
+      "text2": "L’istamina è un’ammina biogena ad elevata attività biologica, coinvolta nella regolazione della risposta immunitaria, infiammatoria e gastrointestinale.",
+      "text3": "La determinazione dell’istamina fecale consente di analizzare la dinamica intestinale dell’istamina, rappresentando un marker funzionale dello stato della mucosa intestinale e dell’interazione tra microbiota e sistema immunitario locale. ",
+      "text4": "Questo parametro fornisce indicazioni sul corretto equilibrio tra produzione, regolazione e inattivazione dell’istamina a livello enterico."
+    },
+    "istfecexplanationpage": {
+      "sectiontitle1": "Connessione tra istamina e microbiota",
+      "text1": "A livello intestinale, l’istamina può derivare sia da una produzione endogena sia dall’attività metabolica del microbiota.",
+      "text2": "Alcuni batteri intestinali sono in grado di produrre istamina a partire dall’istidina attraverso specifici enzimi.",
+      "text3": "In condizioni fisiologiche, questa produzione è bilanciata da meccanismi di controllo che ne limitano l’accumulo.",
+      "text4": "Alterazioni della composizione del microbiota (disbiosi) possono favorire un aumento della produzione di istamina biologicamente attiva, contribuendo a una stimolazione persistente della risposta immunitaria locale e a una compromissione della funzionalità della barriera intestinale.",
+      "sectiontitle2": "Fattori che influiscono il livello di istamina nelle feci",
+      "text5": "I livelli di istamina fecale possono essere influenzati da diversi fattori:",
+      "fact1": "Dieta",
+      "text6": "La dieta, in particolare il consumo di alimenti ricchi di istamina o in grado di favorirne il rilascio.",
+      "fact2": "Equilibrio del microbiota intestinale",
+      "text7": "L’ equilibrio del microbiota intestinale può modulare la produzione di istamina.",
+      "fact3": "Farmaci",
+      "text8": "Farmaci, come antibiotici e antiacidi, in grado di alterare il microbiota e i meccanismi di regolazione intestinale.",
+      "text9": "Questi elementi possono contribuire, singolarmente o in associazione, alla variazione dei livelli di istamina rilevati.",
+      "sectiontitle3": "Implicazioni di un livello alterato di istamina",
+      "text10": "Un’alterazione dei livelli di istamina fecale può essere associata a una serie di manifestazioni cliniche che coinvolgono diversi sistemi dell’organismo.",
+      "text11": "L’istamina esercita i propri effetti attraverso l’attivazione di specifici recettori istaminergici, distribuiti a livello gastrointestinale, cutaneo, cardiovascolare, respiratorio e nervoso.",
+      "text12": "Valori elevati di istamina intestinale possono contribuire a disturbi gastrointestinali funzionali, reazioni pseudo-allergiche, alterazioni della risposta immunitaria e sintomi correlati all’asse intestino–cervello, quali cefalea, disturbi del sonno e alterazioni dell’umore."
+    },
+    "istfecresultpage": {
+      "title": "Istamina fecale",
+      "subtitle": "Valutazione del risultato analitico",
+      "sectiontitle1": "Come interpretare il test",
+      "text1": "Il valore di istamina fecale fornisce un’indicazione sul modo in cui l’intestino gestisce la produzione e la regolazione dell’istamina. Un risultato compreso all’interno dell’intervallo di riferimento suggerisce un equilibrio funzionale dei meccanismi intestinali coinvolti nel metabolismo dell’istamina, indicando una corretta interazione tra microbiota, mucosa intestinale e sistema immunitario locale.",
+      "text2": "Un aumento dei livelli di istamina fecale può riflettere una maggiore produzione di istamina a livello intestinale. Questa condizione è frequentemente associata a squilibri del microbiota, a un’iperattivazione della risposta immunitaria della mucosa o a una ridotta capacità di inattivazione dell’istamina. In tali situazioni, l’istamina può esercitare una stimolazione persistente dei recettori intestinali, contribuendo alla comparsa di sintomi gastrointestinali o sistemici.",
+      "sectiontitle2": "Livello di istamina fecale rilevato",
+      "table": {
+        "exam": "Esame",
+        "result": "Valore Paziente",
+        "unit": "Unità di Misura",
+        "reference": "Valore di Riferimento",
+        "istamina": "Istamina fecale"
+      },
+      "results": {
+        "common": {
+          "text1": "Il valore di",
+          "text1b": "Istamina fecale",
+          "text2": "rilevato risulta",
+          "text3": "all’intervallo di riferimento."
+        },
+        "medium": {
+          "title": "Valore lievemente elevato",
+          "bold": "lievemente superiore",
+          "text": "Questo dato suggerisce una possibile iniziale alterazione dell’equilibrio intestinale dell’istamina, da interpretare nel contesto clinico complessivo del paziente."
+        },
+        "high": {
+          "title": "Valore elevato",
+          "bold": "superiore",
+          "text": "Tale condizione può essere indicativa di una maggiore produzione intestinale di istamina o di una ridotta capacità di regolazione, e merita un’integrazione con la valutazione clinica e con altri marker funzionali."
+        },
+        "veryhigh": {
+          "title": "Valore marcatamente elevato",
+          "bold": "significativamente superiore",
+          "text": "Questo risultato è compatibile con una marcata alterazione della dinamica intestinale dell’istamina e richiede un’attenta valutazione clinica per definirne le possibili cause e implicazioni."
+        }
+      }
+    },
+    "gutsysintroductionpage": {
+      "title": "Gut Screening",
+      "subtitle": "Diagnostica completa del Microbiota intestinale",
+      "sectiontitle1": "Cos’è il Microbiota intestinale",
+      "sectiontitle2": "Perchè il Gut Screening è un test unico?",
+      "sectiontitle3": "Infezioni intestinali a bassa carica",
+      "text1": "Il microbiota intestinale è l’insieme dei batteri, funghi, parassiti e virus che abitano nel nostro intestino. L’equilibrio di questa comunità assai complessa di microorganismi, con caratteristiche di unicità per ogni individuo, è di primaria importanza per il mantenimento o il recupero del benessere psico-fisico della persona.",
+      "text2": "Consideriamo, in estrema sintesi, che al microbiota intestinale si devono la protezione della mucosa intestinale, la naturale regolazione delle difese immunitarie, la regolazione del metabolismo e l’equilibrio dell’asse intestino-cervello.",
+      "text3a": "Il ",
+      "text3": " integra metodiche di coltura microbiologica e analisi molecolare, consentendo l’identificazione precisa e quantitativa dei microrganismi e, attraverso l’esame colturale, la valutazione della loro vitalità e la possibilità di testare interventi mirati. Questa analisi offre una fotografia reale e dinamica dello stato intestinale, utile per definire strategie terapeutiche personalizzate. La presenza dell’aromatogramma completa ulteriormente il quadro informativo, rendendo il Gut Screening uno strumento rilevante della medicina di precisione e permettendo interventi più mirati rispetto ai test convenzionali.",
+      "text4": "Le informazioni ricavabili da questa analisi riguardano:",
+      "text5": "Squilibrio batterico o disbiosi",
+      "text6": "Presenza di batteri/funghi potenzialmente patogeni",
+      "text7": "Presenza di parassiti intestinali",
+      "text8": "Presenza di batteri appartenenti alla flora di protezione",
+      "text9": "Modulazione della terapia probiotica e integrativa",
+      "text10": "La presenza di microrganismi potenzialmente patogeni anche in basse concentrazioni, pur rimanendo al di sotto delle soglie cliniche di infezione acuta, può contribuire nel tempo all’alterazione dell’equilibrio del microbiota intestinale. Questa condizione può favorire uno stato di infiammazione cronica di basso grado, interferire con l’integrità della barriera intestinale e determinare una stimolazione persistente del sistema immunitario. L’azione prolungata di metaboliti microbici ed endotossine può sostenere fenomeni di disbiosi e aumentare la permeabilità intestinale, contribuendo al mantenimento di un’attivazione immunitaria cronica e rappresentando un possibile fattore di predisposizione a disturbi funzionali e condizioni infiammatorie a lungo termine."
+    },
+    "gutsyscaracteristicpage": {
+      "title": "Gut Screening",
+      "subtitle": "Caratteristiche del campione fecale e risultati microbiologici",
+      "sectiontitle1": "Caratteristiche delle feci",
+      "sectiontitle2": "Flora patogena/ transiente",
+      "header1": "pH",
+      "header2": "Consistenza",
+      "header3": "Colore",
+      "text1": "L’osservazione delle caratteristiche fisiche del ",
+      "text2": "campione fecale",
+      "text3": ", quali pH, consistenza e colore, rappresenta un primo elemento di valutazione dello stato funzionale dell’ambiente intestinale.",
+      "text4": "Questi parametri forniscono indicazioni utili sull’andamento dei processi digestivi, sull’equilibrio delle attività fermentative e putrefattive e sull’attività metabolica complessiva del microbiota intestinale.",
+      "text5": "Variazioni dei valori osservati possono essere influenzate da diversi fattori, tra cui abitudini alimentari, tempi di transito intestinale, stato di idratazione, composizione del microbiota e funzionalità della mucosa intestinale.",
+      "text6": "La valutazione integrata di tali caratteristiche, insieme ai risultati microbiologici e agli altri parametri analizzati nel Gut Screening, consente di ottenere una visione più completa dello stato dell’ecosistema intestinale e di supportare una corretta interpretazione clinica dei risultati del paziente."
+    },
+    "gutsysTables": {
+      "tableHeader1": "Nome",
+      "tableHeader2": "Valore",
+      "tableHeader3": "Nei limiti",
+      "tableHeader4": "Lievemente superiore",
+      "tableHeader5": "Mediamente superiore",
+      "tableHeader6": "Nettamente superiore",
+      "tableHeader7": "Lievemente inferiore",
+      "tableHeader8": "Nettamente inferiore",
+      "0": {
+        "sectionTitle": "Flora patogena/ transiente",
+        "title": "Batteri",
+        "text1a": "I",
+        "text1": " batteri ",
+        "text2": "patogeni o transitori possono essere presenti nell’intestino in basse quantità senza determinare effetti clinici rilevanti. Tuttavia, un loro aumento può alterare l’equilibrio del microbiota residente, favorendo uno stato di disbiosi. In queste condizioni, alcuni batteri possono produrre metaboliti potenzialmente irritativi o pro-infiammatori, interferendo con la normale funzionalità intestinale.",
+        "text3": "La proliferazione batterica può essere influenzata da diversi fattori, tra cui alterazioni dell’alimentazione, stress prolungato, terapie antibiotiche o una compromissione della barriera intestinale. Un’eccessiva presenza di batteri patogeni o transitori può riflettersi in disturbi digestivi e contribuire a un’alterazione della risposta immunitaria locale.",
+        "text4": "I valori rilevati devono essere interpretati nel contesto clinico complessivo del paziente e in relazione agli altri parametri del Gut Analysis."
+      },
+      "1": {
+        "sectionTitle": "Flora patogena/ transiente",
+        "title": "Funghi",
+        "text1a": "I",
+        "text1": " funghi",
+        "text2": " intestinali rappresentano una componente opportunistica del microbiota e tendono a proliferare in presenza di condizioni ambientali favorevoli. In condizioni fisiologiche sono mantenuti sotto controllo dall’equilibrio del microbiota batterico; tuttavia, un loro aumento può contribuire a uno stato di disbiosi intestinale.",
+        "text3": "La crescita fungina può essere favorita da terapie antibiotiche, eccesso di zuccheri nella dieta, stress o una ridotta competizione da parte dei batteri benefici. Un’alterazione della flora fungina può essere associata a disturbi intestinali e a una maggiore sensibilità della mucosa."
+      },
+      "2": {
+        "sectionTitle": "Flora patogena/ transiente",
+        "title": "Flora saprofita / proteolitica",
+        "text1a": "La",
+        "text1": " flora saprofita e proteolitica ",
+        "text2": " comprende microrganismi che, pur svolgendo normalmente un ruolo nella degradazione delle proteine e dei residui organici nel lume intestinale, possono comportarsi come patogeni opportunisti in condizioni di squilibrio. In caso di sovracrescita, questi batteri possono diventare problematici, producendo metaboliti tossici (come ammoniaca, indoli, fenoli e ammine) che possono danneggiare la mucosa intestinale, aumentare la permeabilità intestinale e contribuire a processi infiammatori locali e sistemici.",
+        "text3": "La proliferazione eccessiva di questa flora può essere favorita da un’alimentazione scorretta o non adatta per ripristinare l’eubiosi di questo microbiota, ridotta o accelerata motilità intestinale, compromissione della barriera intestinale o carenza di batteri benefici che normalmente ne limitano la crescita. Alcuni di questi microrganismi, pur essendo commensali in condizioni fisiologiche, hanno un riconosciuto potenziale patogeno e possono essere responsabili di infezioni opportunistiche, soprattutto in presenza di immunodeficienza o alterazioni della barriera mucosale."
+      },
+      "3": {
+        "sectionTitle": "Flora immunomodulante",
+        "title": "Flora immunomodulante",
+        "text1a": "La",
+        "text1": " flora immunomodulante",
+        "text2": " comprende microrganismi che partecipano alla regolazione della risposta immunitaria intestinale e al mantenimento della tolleranza immunologica. Questa componente del microbiota contribuisce al corretto dialogo tra microbiota, mucosa intestinale e sistema immunitario.",
+        "text3": "Un’alterazione della flora immunomodulante può riflettersi in una modulazione inefficiente della risposta immunitaria locale, favorendo stati di iper-reattività o infiammazione di basso grado. Tale squilibrio può essere associato a una ridotta capacità di adattamento dell’intestino agli stimoli esterni."
+      },
+      "4": {
+        "sectionTitle": "Flora di protezione",
+        "title": "Flora di protezione",
+        "text1a": "La",
+        "text1": " flora di protezione ",
+        "text2": "è costituita da microrganismi benefici che svolgono un ruolo fondamentale nel mantenimento dell’equilibrio intestinale. Essa contribuisce alla difesa contro la colonizzazione di microrganismi potenzialmente patogeni e al supporto dell’integrità della barriera intestinale.",
+        "text3": "Una riduzione della flora di protezione può aumentare la vulnerabilità dell’ecosistema intestinale, predisponendo a fenomeni di disbiosi e favorendo l’insorgenza di alterazioni funzionali dell’intestino. Questo squilibrio può riflettere una ridotta resilienza del microbiota."
+      }
+    },
+    "gutsysparasitespage": {
+      "title": "Gut Screening",
+      "subtitle": "Esami microbiologici complementari",
+      "sectiontitle1": "Parassitologico",
+      "sectiontitle2": "Identificazione molecolare delle seguenti specie di parassiti",
+      "header1": "Microrganismo identificato",
+      "header2": "Positivo",
+      "header3": "Negativo",
+      "text1": "L’",
+      "text2": "esame parassitologico ",
+      "text3": " viene eseguito sulle feci ed è volto a rilevare l’eventuale presenza di parassiti (che non possono essere rilevati nella coprocoltura). La Parassitologia riveste un ruolo importante per via delle molteplici infezioni-infestazioni i cui agenti eziologici sono rappresentati da alcuni parassiti che effettuano una parte del loro ciclo biologico nell'uomo. Noi eseguiamo ricerche su nove tipi di parassiti anche non comuni, potendo quindi fornire un'indicazione per un trattamento antiparassitario più completo."
+    },
+    "gutsysparasitestable": {
+      "header1": "Nome",
+      "header2": "Assenza",
+      "header3": "Presenza"
+    },
+    "gutsysaromapage": {
+      "sectiontitle1": "Aromatogramma",
+      "table1title": "Micogramma",
+      "table2title": "Aromatogramma",
+      "table3title": "Antibiogramma",
+      "text1": "L’",
+      "text2": "aromatogramma",
+      "text3": " è un test microbiologico complementare che valuta, in vitro, la sensibilità dei microrganismi isolati dal campione fecale nei confronti di specifiche sostanze aromatiche naturali, quali gli oli essenziali. L’esame ha esclusivamente finalità microbiologiche e non rappresenta una prova allergologica né una valutazione di tolleranza individuale alle sostanze testate.",
+      "text4": "I risultati forniscono indicazioni utili per orientare eventuali strategie di modulazione mirata del microbiota intestinale; per una maggiore efficacia dell’intervento, le indicazioni operative si basano sull’impiego degli stessi oli essenziali valutati nel test, selezionati in funzione della risposta microbiologica osservata. L’interpretazione dei risultati deve essere integrata con il quadro microbiologico complessivo e con la valutazione clinica del paziente."
+    },
+    "gutsysfunguspage": {
+      "title": "Gut Funghi ",
+      "subtitle": "Identificazione molecolare delle specie di funghi"
+    },
+    "gutsysindicationpage": {
+      "sectiontitle1": "Indicazioni per l’interpretazione del referto",
+      "text1": "I referti fin qui esposti sono da intendersi come informazioni utili al medico o professionista abilitato per valutare eventuali terapie o approfondimenti del caso e NON costituiscono né sostituiscono, in alcun modo, Diagnosi Clinica.",
+      "text2": "Anche gli eventuali suggerimenti ed esempi di Integratori sono da intendersi a titolo esemplificativo e ad esclusivo beneficio del medico, che dovrà valutarne l’eventuale uso, inserendoli nell’ambito anamnestico/diagnostico/terapeutico del paziente."
+    },
+    "vlscfaintroductionpage": {
+      "title": "Metaboliti del microbiota",
+      "subtitle": "Acidi Grassi a catena corta, media , ramificata e composti organici",
+      "sectiontitle1": "Introduzione",
+      "sectiontitle2": "Fonti Alimentari e funzioni degli SCFAs",
+      "sectiontitle3": "Fonti Alimentari e funzioni degli MCFAs",
+      "sectiontitle4": "Fonti Alimentari e funzioni degli BSCFAs",
+      "sectiontitle5": "Infezioni intestinali a bassa carica",
+      "text1": "Il test dei ",
+      "text2": "metaboliti del microbiota ",
+      "text3": "rappresenta uno strumento innovativo per esplorare la salute intestinale attraverso l'analisi delle sostanze prodotte dai microrganismi che popolano il nostro tratto gastrointestinale. Questi metaboliti, come gli acidi grassi a catena corta, media e ramificata, nonché gli acidi organici, offrono preziose informazioni sulla composizione e l'attività del microbiota, permettendo di valutare l'efficienza della fermentazione delle fibre alimentari, la presenza di batteri benefici, l’integrità della barriera intestinale ed eventuale sovracrescita microbica (SIBO) . Grazie a questo test, è possibile individuare eventuali squilibri o disfunzioni che possono influire sul benessere generale, fornendo una base scientifica per interventi personalizzati volti a migliorare la salute dell’intestino e, di conseguenza, di tutto l’organismo.",
+      "text4": "Gli SCFAs (Short-Chain Fatty Acids, acidi grassi a corta catena ) non provengono direttamente dagli alimenti ma sono prodotti quasi esclusivamente dalla fermentazione delle fibre alimentari da parte dei batteri del colon. Le fonti alimentari dirette sono infatti molto limitate, mentre la produzione endogena dipende dalla qualità e quantità di fibre ingerite.",
+      "text5": "Gli SCFA derivano soprattutto dalla fermentazione di fibre solubili ( pectine, frutto-oligosaccaridi (FOS), galatto-oligosaccaridi (GOS)) , amido resistente e altri carboidrati non digeribili. Questi composti si trovano particolarmente in legumi (lenticchie, ceci, fagioli), cereali integrali (avena, orzo, segale) ,frutta (mele, pere, banane non troppo mature), verdure ricche di fibre (carciofi, cipolle, porri, topinambur) , semi (lino, chia), tuberi raffreddati (patate o riso cotti e poi raffreddati → ricchi di amido resistente). Inoltre alcuni ceppi probiotici (soprattutto Lactobacillus ed Enterococcus) possono aumentare la produzione di SCFA modulando il microbiota, anche in assenza di patologia.  Gli acidi grassi a catena corta sono una importante fonte energetica, sia per l’epitelio intestinale che per il fegato, dove vengono veicolati direttamente dall’intestino attraverso la vena porta. A livello epatico, vengono rapidamente trasferiti nei mitocondri dell’epatocita indipendentemente dal sistema di trasporto della carnitina, rendendo più rapida la produzione di energia attraverso la beta-ossidazione e/o il ciclo di Krebs. Gli SCFAs  svolgono un ruolo importante nell'asse intestino-cervello, regolando i processi del sistema nervoso centrale, a esempio l'interazione cellula-cellula, la sintesi e il rilascio dei neurotrasmettitori, l'attivazione della microglia, la funzione mitocondriale e regolano la risposta antinfiammatoria. ",
+      "text6": "Gli MCFAs (Medium Chain Fatty Acid, acidi grassi a media catena ) si trovano principalmente nell'olio di cocco, nell'olio di palma e nel latte materno, oltre che nei prodotti derivati dal latte come burro e formaggi. Questi acidi grassi vengono rapidamente assorbiti dall'intestino e trasportati al fegato, dove sono utilizzati come fonte energetica immediata, senza necessità di essere immagazzinati come grasso. I MCFAs svolgono inoltre un'importante funzione antibatterica: contribuiscono a creare un ambiente acido che ostacola la proliferazione di patogeni e stimolano la risposta immunitaria attraverso l'attivazione dei recettori GPR, favorendo la migrazione di cellule immunitarie e la produzione di citochine pro-infiammatorie. Oltre all'effetto energetico e immuno-modulante, i MCFAs sono particolarmente utili nelle diete che richiedono un rapido apporto di energia, come nel caso di atleti o persone con difficoltà di assorbimento, e hanno un ruolo fondamentale nella nutrizione infantile grazie alla loro presenza nel latte materno.",
+      "text7": "Gli BSCFA  (Branched Short-Chain Fatty Acids, acidi grassi a corta catena ramificata ) sono metaboliti prodotti principalmente dalla fermentazione batterica delle proteine nell'intestino. I BSCFA non si trovano direttamente in grandi quantità negli alimenti, ma derivano dal metabolismo di specifici aminoacidi a catena ramificata (leucina, isoleucina, valina) contenuti nelle proteine. Pertanto, le fonti alimentari che ne favoriscono la produzione sono gli alimenti ricchi di proteine ( carne, pesce, uova e latticini) e alimenti fermentati. I BSCFA esercitano un’azione di inibizione sulla lipolisi e sulla lipogenesi nel tessuto adiposo, contribuiscono alla riduzione dei livelli di glicemia e insulinemia, e favoriscono la sintesi del peptide pancreatico PYY (Peptide YY), riconosciuto come l’ormone della sazietà. Questi effetti conferiscono ai BSCFA una potenziale rilevanza nella gestione metabolica dell’obesità e del diabete mellito di tipo 2.",
+      "text8": "A completamento del quadro generale intestinale sono state inserite altre molecole : acidi organici, cresoli e indacano . Questi metaboliti sono marker utili per identificare la sovracrescita batterica intestinale (SIBO), poiché la loro concentrazione nelle urine può aumentare quando vi è un alterato equilibrio della microflora (disbiosi). Questi derivano prettamente dalla fermentazione di carboidrati e proteine da parte di batteri opportunisti e la loro presenza indica un'attività microbica eccessiva o anomala, che può contribuire a sintomi come gonfiore, dolori addominali e disturbi dell'alvo.",
+      "text9": "La funzione di questi marker è quella di fornire un'indicazione precoce di disbiosi e sovracrescita batterica, consentendo un intervento mirato sulla dieta e sulla modulazione del microbiota, completando il quadro dello stato intestinale . Inoltre, il monitoraggio di questi acidi organici può aiutare a valutare l'efficacia dei trattamenti e prevenire complicanze metaboliche e infiammatorie associate a squilibri intestinali"
+    },
+    "vlscfatable": {
+      "title": "Metaboliti del microbiota",
+      "subtitle": "Analisi Completa della Disbiosi Intestinale",
+      "note17": "I seguenti sono isomeri del p-cresolo , di derivazione non esclusivamente microbica",
+      "note19": "Indicatore per normalizzazione il valore analitico",
+      "groups": {
+        "0": {
+          "sectiontitle1": "Acidi grassi a catena corta, media e ramificata",
+          "sectiontitle2": "(SCFA, MCFA, BSCFA)"
+        },
+        "1": {
+          "sectiontitle1": "Composti organici derivanti da sovracrescita",
+          "sectiontitle2": "microbica intestinale (disbiosi)"
+        }
+      }
+    }
   },
   "exp": {
+    "generic": {
+      "glicolitico": {
+        "title": "Glycolytic Cycle",
+        "text": "The glycolytic cycle is the process in which carbohydrates are converted into fundamental products for energy production. Carbohydrates, which contain glucose, are broken down to form pyruvate and two ATP molecules. In turn, pyruvate is converted into lactate and Acetyl-CoA which enters the tricarboxylic acid cycle."
+      },
+      "chetoni": {
+        "title": "Ketones and Fatty Acid Oxidation",
+        "text": "This section analyzes the products derived from the metabolism of fatty acids in physiological and pathological / abnormal conditions. Fatty acids are usually metabolized to provide energy from the beta-oxidation process. They are then converted into Acetyl-CoA through the action of carnitine that allows entry into the mitochondrial membrane. If beta-oxidation is compromised, fats are metabolized by an alternative pathway, called omega-oxidation. The production of these dicarboxylic fatty acids occurs in case of carnitine deficiency, prolonged or intermittent fasting conditions, diabetes. Ketone bodies are other products of lipid metabolism from the liver and are a source of energy in case of absence of glucose and an unbalanced diet in favor of fats. Only a minimal part is released in the urine, most of it must be oxidized in extrahepatic tissues with oxygen consumption."
+      },
+      "mitocondriali": {
+        "title": "Mitochondrial Markers",
+        "text": "The mitochondrial markers of the Krebs cycle (or TCA – of tricarboxylic acids), represent those organic acids that are generated by mitochondria to produce cellular energy. Mitochondrial dysfunctions, cognitive disorders, diabetes, cancer, cardiovascular diseases, chronic fatigue syndrome, can alter the process of energy production. The study of urinary excretion of organic acids allows to identify a therapeutic window for these specific pathologies to correct the mitochondrial dysfunctions identified. Such dysfunctions can result from nutritional deficiencies, toxins or genetic polymorphisms. There are several enzymes that regulate the reactions of the Krebs cycle, catalyzed by cofactors such as iron, niacin, magnesium, manganese, thiamine, riboflavin, pantothenic acid and lipoic acid. Exposure to toxic agents or metals can interfere with mitochondrial function.  A separate section has been dedicated to a metabolite derived from genetic defects of the mitochondrial cycle whose presence in excess could indicate a neurometabolic or oncological disorder."
+      },
+      "neurotrasmettitori": {
+        "title": "Metabolites of Neurotransmitters",
+        "text": "These organic acids come from the synthesis and degradation metabolism of neurotransmitters. Alterations of enzymatic processes regulated by nutritional cofactors, genetic predispositions, toxins, chronic diseases and stress can affect their presence in the urine. Neurotransmitters are synthesized from essential amino acids via vitamins and minerals. Among the most important neurotransmitters we see dopamine that is converted into norepinephrine by a beta-hydroxylase positively regulated by vitamin C. In turn, norepinephrine is converted to epinephrine by a methylation reaction. The formation of homovanillic and vanylmandelic metabolites is mediated by MAO and COMT enzymes, starting with dopamine and norepinephrine/epinephrine, respectively. The second group of metabolites analyzed concerns products derived from tryptophan, an amino acid that can undertake three different metabolic pathways: 1) For protein synthesis 2) For the synthesis of serotonin and 5-HIAA 3) For the synthesis of kynurenic acid, quinolin acid and NAD, stimulated by pro-inflammatory cytokines. The regulation of these pathways is well regulated by B vitamins (especially B6 and B3)."
+      },
+      "intestinale": {
+        "title": "Intestinal Microbial Overgrowth",
+        "text": "They are mostly compounds derived from fungi and yeasts that colonize the GI tract. Although a small part is always present as many results from the fermentation of phenols and food flavonoids, an important excess of different metabolites instead identifies an intestinal pathogenic colonization: often this analysis has been important to identify bacterial colonies hidden within biofilms. Malabsorption problems (with consequent alterations of nutritional markers), alterations of the mitochondrial cycle with accumulation of its intermediates and imbalance of neurotransmitters can be caused by deep infections of the GI tract. The heavy use of foods rich in dietary polyphenols can induce an overproduction of some of these metabolites."
+      },
+      "ossalati": {
+        "title": "Oxalate Metabolites",
+        "text": "These metabolites are derived from a hyper production of oxalates, the primary source of kidney stones. While a minimal or slightly out of range presence could identify food causes, the strong excess of one or more of these leads to genetic causes: genetic hyperoxaluria type I and II. Also, microbial sources (e.g., Candida) may cause a slight increase in these metabolites."
+      },
+      "nutrizionali": {
+        "title": "Nutritional Markers",
+        "text": "Metabolites resulting from the direct or indirect metabolism of vitamins and organic compounds. Nutritional markers play a fundamental role in many enzymatic processes and their deficiency could lead to important metabolic malfunctions. They can also be used to check the effectiveness of any nutritional supplements."
+      },
+      "piramidina": {
+        "title": "Pyrimidine Metabolites Associated with Folate Metabolism",
+        "text": "In the process of replication of genetic material, folic acid plays a fundamental role in the biosynthesis of pyrimidines (and purines). In this section, the presence of uracil and thymine in the urine is detected. Thanks to their role in DNA and RNA, the investigation of these two nitrogenous bases could therefore represent an interesting investigation for the search for genomic instability caused by lack of folic acid and/or genetic mutation (MTHFR)."
+      },
+      "detossificazione": {
+        "title": "Detoxification Indicators",
+        "text": "They are urinary metabolites that reflect exposure to environmental toxins or from an up-regulation of the detoxification process in response to toxic stimuli. In case of high work among these, it is advisable to identify the origin of the toxicity and act with antioxidants and adequate nutritional support to detoxify the metabolism."
+      },
+      "amminoacidi": {
+        "title": "Amino Acid Metabolites",
+        "text": "The measurement of metabolic intermediates involved in protein catabolism is carried out. Amino acids are an important building block for the cell and the body, and their evaluation is important for investigating dietary or enzyme deficiencies. Among these metabolites are keto acids, abnormal products derived from the incomplete breakdown of amino acids; Terminal products derived from the abuse of food products (aspartame), or important supplements made by athletes and bodybuilders. The accumulation of many of these amino acid derivatives can induce metabolic acidosis and neurotoxicity; In other cases, they can identify important congenital pathologies."
+      }
+    },
+    "piruvico": {
+      "name": "Pyruvic acid",
+      "tname": "Pyruvic",
+      "base": "Pyruvic and lactic acid are products of the central operation for energy production, glycolysis, the catabolic process of glucose. This process is regulated by the presence of zinc and B vitamins. Lactate is processed from pyruvate by oxidation, then entering the energy production cycle in TCA under aerobic conditions. Lactate can accumulate if PDC (Pyruvate Dehydrogenase Complex) cofactors are insufficient if structural polymorphisms are present or in case of CoQ10 deficiency creating a blockage in oxidative phosphorylation. The lack of mitochondrial ATP can induce a strong increase in lactate with a simultaneous decrease in pyruvate. Anaerobic conditions due to excessive physical exertion, insulin resistance, lung disease or anemia can also induce increased lactate. Pyruvate can also be produced by amino acid catabolism (alanine, serine, cystine, glycine, tryptophan and threonine). High concentrations of pyruvate may be related to lack of nutritional cofactors (such as vitamin B1, B2, B3, B7, magnesium and lipoic acid) for its conversion into Acetyl-CoA and oxaloacetate. Other causes can come from excessive carbohydrate intake.",
+      "hight": "Excess pyruvic acid can be reduced by vitamin supplementation. B1, B2, B3, B5, magnesium and lipoic acid. Also evaluate the nutritional status or any current amino acid supplements."
+    },
+
+    "lattico": {
+      "name": "Lactic acid",
+      "tname": "Lactic",
+      "base": "Pyruvic and lactic acid are products of the central operation for energy production, glycolysis, the catabolic process of glucose. This process is regulated by the presence of zinc and B vitamins. Lactate is processed from pyruvate by oxidation, then entering the energy production cycle in TCA under aerobic conditions. Lactate can accumulate if PDC (Pyruvate Dehydrogenase Complex) cofactors are insufficient if structural polymorphisms are present or in case of CoQ10 deficiency creating a blockage in oxidative phosphorylation. The lack of mitochondrial ATP can induce a strong increase in lactate with a simultaneous decrease in pyruvate. Anaerobic conditions due to excessive physical exertion, insulin resistance, lung disease or anemia can also induce increased lactate. Pyruvate can also be produced by amino acid catabolism (alanine, serine, cystine, glycine, tryptophan and threonine). High concentrations of pyruvate may be related to lack of nutritional cofactors (such as vitamin B1, B2, B3, B7, magnesium and lipoic acid) for its conversion into Acetyl-CoA and oxaloacetate. Other causes can come from excessive carbohydrate intake.",
+      "hight": "Excess lactic acid can be reduced by supplementation with PDC enzyme cofactors (Vit.B2, B3, B5 and lipoic acid) or with CoQ10. The pathological and sporting conditions of the patient must be evaluated."
+    },
+
+    "acidosebacico": {
+      "name": "Sebacic acid",
+      "tname": "Sebacic",
+      "base": "Sebacic acid is a normal urinary acid derived from fatty acid metabolism.",
+      "hight": "Excess sebacic acid is related to ketosis or intermittent fasting. It can also be associated with carnitine deficiency, dedicated to the transport of fats, or with genetic polymorphisms that alter the formation and metabolism of the latter;  Even in cases of fatty acid oxidation defects, in association with symptoms such as hypoglycemia, hypotonia, vomiting, lethargy, etc., the sebacic acid values may be higher than the limits.  Excessive intake of triglycerides (such as coconut oil) or foods containing adipic acid, increase urinary excretion. Keep in mind that this metabolite can lead to mitochondrial fatigue with membrane damage and free radical production. Evaluate carnitine supplementation."
+    },
+
+    "acidoadipico": {
+      "name": "Adipic acid",
+      "tname": "Adipic",
+      "base": "Adipic acid is a metabolite of fatty acids produced by peroxisomal beta-oxidation.",
+      "hight": "Excess adipic acid is related to ketosis or metabolic acidosis, or to carnitine deficiency (fat carrier) causing incomplete oxidation of fatty acids. Very high values may indicate genetic polymorphisms that alter the formation and metabolism of carnitine or deficiency of cofactors such as vit. B2 and magnesium. In case of fatty acid oxidation defects, symptoms such as hypoglycemia, hypotonia, vomiting, lethargy, etc. are associated. Keep in mind that these metabolites can lead to mitochondrial fatigue with membrane damage and free radical production. Evaluate supplementation with carnitine, lysine and vitamin B2."
+    },
+
+    "acidosuberico": {
+      "name": "Suberic acid",
+      "tname": "Suberic",
+      "base": "Suberic acid is a metabolite of fatty acids produced by peroxisomal beta-oxidation. It is a metabolic degradation product derived from oleic acid.",
+      "hight": "Excess suberic acid is related to ketosis or metabolic acidosis, or to carnitine deficiency (fat carrier) causing incomplete oxidation of fatty acids. Very high values may indicate genetic polymorphisms that alter the formation and metabolism of carnitine or deficiency of cofactors such as vit. B2 and magnesium. In case of fatty acid oxidation defects, symptoms such as hypoglycemia, hypotonia, vomiting, lethargy, etc. are associated. Keep in mind that these metabolites can lead to mitochondrial fatigue with membrane damage and free radical production. Evaluate supplementation with carnitine, lysine and vitamin B2."
+    },
+
+    "etilmalonico": {
+      "name": "Ethylmalonic acid",
+      "tname": "Ethylmalonic",
+      "base": "Ethylmalonic acid is a branched fatty acid synthesized purely from malonic acid. Chronically elevated levels are associated with two inborn errors of metabolism: short-chain acyl-CoA dehydrogenase deficiency (SCAD) and ethylmalonic encephalopathy. If it is particularly high, it acts as an acidogen and metabotoxin.",
+      "hight": "Excess ethylmalonic acid may indicate genetic polymorphisms that alter carnitine formation and metabolism or deficiency of cofactors such as vit. B2 and magnesium. In case of fatty acid oxidation defects, symptoms such as hypoglycemia, hypotonia, vomiting, lethargy, etc. are associated. Evaluate supplementation with carnitine, lysine and vitamin B2."
+    },
+
+    "acido3idrossibutirrico": {
+      "name": "3-Hydroxybutyric acid",
+      "tname": "3-Hydroxybutyric",
+      "base": "3-hydroxybutyric acid is a ketone body produced by the liver in case of lack of energy by carbohydrates or produced by metabolic acidosis given by the failure of the glycolysis process (in case of diabetic patients). Defects in cytochrome oxidase result in its excess, such as the diet restrictive towards carbohydrates and rich in fat and protein (ketogenic).",
+      "hight": "Excess 3-hydroxybutyric acid is often found in patients on a ketogenic diet or intermittent fasting. It is also possible its excessive production in case of diabetes mellitus or genetic diseases that affect glycolysis."
+    },
+
     "acidocitrico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Citric acid",
+      "tname": "Citric",
+      "base": "Citric acid is the first metabolite of the TCA cycle (tricarboxylic acid cycle or citric acid cycle), central metabolic pathway for all animals, plants and bacteria. Citric acid is derived from the condensation of oxaloacetate (the last metabolite of the TCA cycle) with acetyl-CoA from the catabolism of carbohydrates, fats and proteins. The chemical reactions of the TCA cycle generate up to 2/3 of the energy derived from food for higher organisms. It is also possible that this path is traveled backwards, so starting from citric acid its breakdown into acetyl-CoA takes place for the synthesis of fatty acids and oxaloacetate. From citric acid, by the enzyme aconitase, aconitic acid is generated. For the functionality of the enzyme aconitase is important the presence of the iron cofactor and the antioxidant action mediated by glutathione. Citric acid can also be introduced with the diet especially through lemons and limes or in foods in which it is used as a natural preservative. It can also be produced by yeast or intestinal bacteria.",
+      "hight": "The accumulation in the urine could be given by a blockage of the mitochondrial cycle at the level of the enzyme aconitase due to glutathione or iron deficiency or due to the presence of heavy metals (aluminum, mercury, arsenic and tin). The excess can also be due to an important intake of foods that contain it (citrus fruits or natural preservatives). Its accumulation could also be given by intestinal microbial overgrowth. Consider supplementation with glutathione or iron, if the nature of the imbalance is not dietary or microbial.",
+      "low": "The deficiency of citric acid could be related to the degradation of muscle mass due to intense sports activity or to problems related to renal function (kidney stones -in this case evaluate the levels of oxalates-, chronic kidney problems, renal tubular acidosis). Diabetic conditions or hyperparathyroidism can also alter this value. Also evaluate nutritional conditions such as states of malnutrition or potassium or citrus deficiency."
     },
+
     "acidoaconitico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Aconitic acid",
+      "tname": "Aconitic",
+      "base": "Aconitic acid is the second metabolite of the energy production cycle. The step that leads to its formation from citric acid depends on the enzyme aconitase, which function depends on the availability of glutamine and antioxidant agents. The difference with citric acid should be within 20%. If this ratio is not maintained there could be a deficiency of the enzyme aconitase: in this case act with the enzymatic cofactors related to glutamine, magnesium, iron and evaluate the presence of heavy metals that could alter the functionality of the enzyme.",
+      "hight": "The excess of aconitic acid, associated with deficiency of isocitric acid (the next metabolite of the cycle), indicates enzymatic problems of aconitase to be restored with glutathione supplementation in case of oxidative problems; otherwise, it can be acted with the enzyme cofactors cysteine and iron (especially for anemic patients).",
+      "low": "The deficiency of aconitic acid could highlight inefficiency of the enzyme aconitase due to lack of cofactors (cysteine and iron) or to the presence of heavy metals that alter the enzymatic function. Its deficiency could be concomitant with the deficiency of its predecessor, due to inefficient glycolysis or fat oxidation."
     },
+
     "acidoisocitrico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Isocitric acid",
+      "tname": "Isocitric",
+      "base": "Isocitric acid is the third metabolite of the TCA cycle, it is present in several foods, such as red currants, gooseberries, and apples. This could make isocitric acid a potential biomarker for consuming these foods.  Its production takes place by the enzyme aconitase, so it is sensitive to the presence of heavy metals and the absence of cysteine and iron cofactors. The isocitric acid is then converted to 2-oxoglutaric acid by the enzyme isocitrate dehydrogenase, dependent on the presence of vit. B3, magnesium and manganese.",
+      "hight": "The excess could be associated with a low value of the next metabolite (2-oxoglutaric acid); in this case evaluate supplementation with enzyme cofactors such as B3, Mg and / or Mn. If it is not associated with other metabolic alterations, it is likely of nutritional origin.",
+      "low": "Its deficiency is often related to enzymatic inefficiency due to lack of cysteine, iron or antioxidant agents, especially in case there is also excess aconitate. If the only alteration, it does not cause concern."
     },
+
     "acido2ossoglutarico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "2-oxoglutaric acid",
+      "tname": "2-oxoglutaric",
+      "base": "2-oxoglutaric acid is a key molecule in the TCA cycle, playing a critical role in determining the overall rate of this important metabolic process. It provides an important source of glutamine and glutamate that stimulates protein synthesis and bone tissue formation, inhibits protein breakdown in muscle and constitutes an important metabolic fuel for cells in the gastrointestinal tract.",
+      "hight": "In case of excess, it may be necessary to supplement cofactors such as B vitamins, zinc, magnesium and manganese to stimulate the activity of dehydrogenase for the formation of the next metabolite (succinic acid). Very high levels can also have amino acid origin (glutamine, histidine, arginine, proline, glutamate) and this would explain the energetic effect of the integration of free amino acids.",
+      "low": "Low levels of 2-oxoglutaric acid may reflect lack of its precursors or enzyme dysfunction due to lack of nutritional cofactors, genetic defects or exposure to toxins. There has also been a correlation between low levels of 2-oxoglutaric acid and excessive synthesis of saturated fatty acids and triglycerides in cases of insulin resistance."
     },
+
     "acidosuccinico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Succinic acid",
+      "tname": "Succinic",
+      "base": "Succinic acid is the intermediate metabolite of the energy production cycle, produced by the previous (succinyl-CoA) by the action of the enzyme succinyl-CoA synthase, with the production of NADH that directly supplies electrons to the mitochondrial respiratory chain. The enzyme cofactors are Mg, vit. B1,2 and 3.  The activity of succinyl-CoA synthase may be altered by the presence of heavy metals or toxic substances. In turn, succinic acid is metabolized by the enzyme succinate dehydrogenase for the formation of fumaric, action mediated by cofactors such as iron and vitamin B2, with release of FADH2. The enzyme succinate dehydrogenase plays a key role in mitochondrial metabolism and dysfunctions of its functionality are associated with tumors and neurodegenerative diseases. Succinic acid is also a microbial metabolite of Bacteroidetes.",
+      "hight": "The excess of succinic acid may be due to a lack of cofactors for its conversion into fumaric, therefore iron and vitamin B2 deficiency or the presence of heavy metals or toxic substances that inhibit the enzymatic action. In this case, consider supplementation with CoQ10 and/or magnesium. It can also be elevated by intestinal microbial overgrowth, particularly by Bacteroidetes. Several studies have shown that the simultaneous increase in succinic and fumaric acid play an important role in the oncogenic process caused by DNA damage and hypermethylation. Its oncogenic action is due to its ability to inhibit enzymes with prolyl hydroxylase domains that regulate the response to hypoxia of the transcription factor HIF.",
+      "low": "Low levels of succinic acid may be related to a poor diet or poor absorption of branched chain amino acids. Branched chain amino acids are catabolized into acetyl-CoA or succinyl-CoA to enter the Krebs cycle, in addition to vit deficiency. B12 may cause defects in the conversion of methylmalony-CoA to succinyl-CoA (valine and isoleucine pathway), decreasing succinyl-COA levels. Evaluate vit. B12 and the nutritional status of the patient."
     },
+
     "acidofumarico": {
-      "base": "",
-      "hight": ""
+      "name": "Fumaric acid",
+      "tname": "Fumaric",
+      "base": "Fumaric acid is among the terminal metabolites of the cycle, its production depends on the presence of succinic acid, the enzyme succinate dehydrogenase and its cofactors vitamin B2 and iron. It in turn is then converted into malic acid by the enzyme fumarase. Its quantity also depends on the catabolism of phenylalanine and tyrosine that enter the Krebs cycle for energy production via this intermediate. From recent studies it has been identified as probable oncometabolite along with succinic acid for their ability to inhibit enzymes containing prolyl-hydroxylase domains that regulate the response to hypoxia of the transcription factor HIF.",
+      "hight": "The excess is often related to a defect in the fumarase enzyme that should convert it to malic acid, the next metabolite, or to impaired mitochondrial function. To restore mitochondrial function, supplementation of CoQ10, NAD+, L-carnitine and acetyl-L-carnitine, riboflavin, nicotinamide, biotin and vitamins E is recommended. Its excess can also be related to the integration of branched chain amino acids."
     },
+
     "acidomalico": {
-      "base": "",
-      "hight": ""
+      "name": "Malic acid",
+      "tname": "Malic",
+      "base": "Malic acid is derived from the conversion of fumaric acid by the enzyme fumarase. In turn it is then converted by  malate dehydrogenase into oxaloacetate; malate dehydrogenase is a fundamental enzyme active both in the Krebs cycle and in the  malate-aspartate shuttle system  (system that mediates the transfer of electrons coming from glycolysis -in the cytosol- to the mitochondrial matrix, central for oxidative phosphorylation and generation of ATP). The cofactor required for this enzyme is niacin (vit. B3) Malic acid is usually found in amounts close to 0. Its presence may be related to the use of fruits (apples and pears) or vegetables. It is also an additive and preservative of soft drinks and syrups.",
+      "hight": "Excess malic acid could highlight the need for vit. B3 and CoQ10 or could be considered as a biomarker of the use of foods containing it. If it appears elevated together with the other components of the cycle, it is called mitochondrial dysfunction to be rebalanced."
     },
+
     "acido2idrossiglutarato": {
-      "base": "",
-      "hight": ""
+      "name": "2-Hydroxyglutaric acid",
+      "tname": "2-Hydroxyglutaric",
+      "base": "2-hydroxyglutarate (2-HG) acid is structurally like α-ketoglutarate (α-KG), an intermediate product of the tricarboxylic acid cycle; it can be generated by reducing the ketone group of α-KG to a hydroxyl group. The significant role that 2-HG plays has been certified in the pathophysiology of 2-hydroxyglutaric aciduria (2HGA), a neurometabolic disorder leading to progressive neurodegeneration. An important role of this metabolite has also been found in tumors involving mutant isocitrate dehydrogenase 1/2 (IDH1/2mt) and in clear cell renal cell carcinoma (ccRCC). It is in fact considered an oncometabolite, raising much attention to its oncogenic mechanism. In recent years, it has been verified that 2-HG accumulates in the context of hypoxia or acidic pH, and there is also research confirming the vital role that 2-HG plays in deciding the fate of immune cells.",
+      "hight": "The excess of 2-hydroxyglutaric acid highlights neurometabolic disorder or could be related to oncological situations.",
+      "note": "Metabolites Associated with Genetic Defects of the Mitochondrial Cycle"
     },
+
     "acidoomovanillico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Homovanillic acid (HVA)",
+      "tname": "Homovanillic",
+      "base": "Homovanillic acid (HVA) is the direct metabolite of dopamine, a neurotransmitter of fundamental importance as a precursor of other hormones of the catecholamine family. In the production of dopamine, phenylalanine and tyrosine, they are the main players along with enzyme cofactors such as iron, tetrahydrobiopterin and pyridoxic phosphate. Dopamine can also be produced by the gastrointestinal tract. Subsequently, dopamine can be converted to norepinephrine, using vit. C and copper. Otherwise, it can be used to metabolize homovanillic acid, by means of two enzymes MAO (monoamine oxidase) and COMT (catechol-o-methyltransferase) which use respectively as cofactors vit. B2 one and SAMe, magnesium and B6 the other enzyme.",
+      "hight": "The excessive presence of HVA in the urine can occur in case of lack of enzyme cofactors (copper and vit. C) to produce norepinephrine from dopamine. Quercetin supplementation also increases plasma HVA levels and thus elimination in the urine. Food flavonoids contained in tomato, onion and tea may contribute to the increase in HVA. As with vanylmandelic acid (VMA), an increase in urine of HVA is associated with neuronal tumor conditions. Mood disorders, severe stress and autism can induce an increase in dopamine and therefore HVA in the urine.",
+      "low": "HVA deficiency is often associated with deficiency of precursor amino acids (tyrosine and/or phenylalanine) or enzyme cofactors (iron, tetra biopterin, vit. B6, vit. B2 or SAMe). It may also reflect methylation defects or variations in genetic polymorphisms. Rates may also be low in patients taking MAO inhibitors against depressive or anxiety-causing disorders. Evaluate tyrosine supplementation, phenylalanine or enzyme cofactors."
     },
+
     "acidomanilvandelico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Vanylmandelic acid (VMA)",
+      "tname": "Vanylmandelic",
+      "base": "Vanylmandelic acid (VMA) is generated by the liver by enzymatic oxidation. It is produced from epinephrine and norepinephrine, which are also dopamine derived. Being a metabolite derived from tyrosine and phenylalanine, its levels reflect the synthesis and metabolism of catecholamines and the availability of these amino acids.",
+      "hight": "Excess VMA could be related to antidepressant or stimulant therapies for ADHD (Attention Deficit/Hyperactivity Disorder) that work by elevating the level of catecholamines. Elevated levels of this metabolite may also be associated with general disorders derived from old age. Excess VMA in urine is sometimes related to pheochromocytoma, neuronal crest tumors, renovascular hypertension, and neuroblastoma. In general, an increase in catecholamines may be associated with strong physiological stress, exercise and post-traumatic stress.",
+      "low": "VMA deficiency is often associated with deficiency of precursor amino acids (phenylalanine and/or tyrosine), insufficient nutritional cofactors (tetra biopterin, vitamin B6, iron) and genetic malformations. The methylation process is necessary for the formation of neurotransmitters and therefore methylation defects can affect its deficiency. Also, the lack of important cofactors for the formation of norepinephrine and epinephrine, such as copper, vit. C and SAMe, result in the reduction of metabolite levels. VMA rates may also be low in patients taking MAO inhibitors against depressive and anxiety-causing disorders."
     },
+
     "hvavma": {
-      "base": "",
-      "hight": ""
+      "name": "HVA/VMA ratio",
+      "tname": "HVA/VMA ratio",
+      "base": "The ratio between the two metabolites homovanillic acid and vanylmandelic acid may be useful to define the balance between the production of the neurotransmitter’s dopamine and epinephrine/norepinephrine, which share the pathway, or could highlight Clostridia infection or mold.",
+      "hight": "An increase in the HVA/VMA ratio could be caused by the decrease in the conversion of dopamine to norepinephrine by the enzyme dopamine beta-hydroxylase (DBH), dependent on copper and vitamin C, which in this case may therefore be deficient. Another reason could be the inhibition of this enzyme by Clostridia by-products (HPHA,4-cresol or 4-hydroxyphenylacetic acid). The DBH enzyme can also be inhibited by the presence of mold (fusaric acid), by pharmaceuticals such as disulfiram or aspartame. DBH genetic polymorphisms or neuropsychiatric disorders may also cause increased HVA/VMA ratio."
     },
-    "acidodopac": {
-      "base": "",
-      "hight": "",
-      "low": ""
+
+    "34diidrossifenilacetico": {
+      "name": "3,4-Dihydroxyphenylacetic acid (DOPAC)",
+      "tname": "3,4-Dihydroxyphenylacetic",
+      "base": "DOPAC acid is a phenolic acid and a metabolite of the neurotransmitter dopamine. Dopamine undergoes oxidative deamination by monoamine oxidase (MAO) becoming 3,4-dihydroxyphenylacetaldehyde (DOPAL), which is metabolized primarily to DOPAC via aldehyde dehydrogenase (ALDH2). Known inhibitors of the ALDH2 enzyme, e.g., 4-hydroxy-2-nonenal (4HNE), inhibit the oxidation of DOPAL. In Parkinson's disease, DOPAC production is reduced. In clinical trials it is interesting to calculate both the amount of dopamine and DOPAC to evaluate the activity of dopaminergic neurons. In fact, we can consider extracellular DOPAC as the amount of dopamine produced and stored in the presynaptic neuron, while dopamine levels represent how much has been released through the depolarization of neurons. DOPAC is one of the main phenolic acids formed during human microbial fermentation of teas, citrus fruits and soy flavonoid supplements. DOPAC can be found in Gram-positive bacteria.",
+      "hight": "High levels of DOPAC can be detected due to factors that inhibit dopamine beta hydroxylase (DBH) such as elevated Clostridia metabolites, S-adenosyl methionine (SAM-e) deficiencies, or deficiencies of the enzyme using SAM-e, catechol O-methyltransferase (COMT).",
+      "low": "Low DOPAC levels may be due to decreased intake or absorption of dopamine precursor amino acids such as phenylalanine and/or tyrosine, or decreased amounts of cofactors needed for dopamine biosynthesis such as tetrahydrobiopterin and vitamin B6 coenzyme. DOPAC levels may also be low due to treatment with monoamine oxidase inhibitors (MAOs) or genetic polymorphisms (SNPs) of MAO or aldehyde dehydrogenase (ALDH) that cause a decrease in enzyme activity."
     },
+
+    "triptofano": {
+      "name": "Tryptophan",
+      "tname": "Tryptophan",
+      "base": "Tryptophan is an essential amino acid that the human body is unable to synthesize independently; therefore, it must necessarily be introduced through the diet. It is a fundamental precursor of numerous biologically active molecules, including serotonin, a neurotransmitter involved in mood regulation, and melatonin, responsible for controlling the sleep-wake cycle. In addition, tryptophan contributes both to protein synthesis (in the L-tryptophan form) and to the maintenance and regeneration of the intestinal mucosa, protecting it from potentially harmful agents, an aspect particularly relevant for the health of the digestive system. Tryptophan is also used by enterochromaffin cells for the production of serotonin in the intestine.",
+      "hight": "An excess of tryptophan in the urine, also known as tryptophanuria, may be indicative of an alteration in the metabolism of this amino acid. This condition can result from a genetic defect in the enzymes involved in tryptophan degradation pathways, as occurs in the rare disease called Hartnup syndrome, or from excessive dietary intake or intestinal malabsorption. In these situations, tryptophan is not properly metabolized and is eliminated in higher quantities through the urine. The presence of high concentrations of tryptophan in the urine can cause systemic deficiencies, affecting the synthesis of serotonin and melatonin and, consequently, altering mood, the sleep-wake cycle and the immune system. It is important to investigate the underlying causes through specific examinations and evaluate any associated symptoms, such as neurological disorders, skin problems or behavioral alterations, to set up a correct diagnostic and therapeutic pathway.",
+      "low": "A tryptophan deficiency can lead to multiple adverse effects on the body, including mood alterations such as depression and anxiety, sleep-wake rhythm disorders, such as insomnia, mainly attributable to decreased levels of serotonin and melatonin. Deficiency of this amino acid can also impair the efficiency of the immune system by virtue of its function in protein synthesis and in maintaining the integrity of the intestinal mucosa. To meet the daily requirement of tryptophan, it is recommended to eat foods such as chicken and turkey meat, fish, eggs, milk and dairy products, nuts and seeds, legumes (such as soy and beans), whole grains, bananas and potatoes."
+    },
+
+    "nacetil5idrossitriptamina": {
+      "name": "N-acetylserotonin",
+      "tname": "N-acetyl-5-hydroxytryptamine",
+      "base": "N-acetylserotonin, also known as N-acetyl-5-hydroxytryptamine, is an organic compound intermediate in the synthesis of melatonin from serotonin. It is formed through serotonin acetylation, a process catalyzed by the enzyme serotonin N-acetyltransferase, especially in the pineal gland. Recent studies suggest that N-acetylserotonin possesses antioxidant properties, helping to protect cells from oxidative stress. It also plays an important role in the nervous system due to neuroprotective effects, participation in the modulation of cognitive functions and synaptic plasticity. In summary, N-acetyl-5-hydroxytryptamine is a central molecule in tryptophan metabolism, a biochemical bridge between serotonin and melatonin, and potentially involved in various processes that affect the well-being of the nervous system and sleep quality.",
+      "hight": "Increased urinary values of N-acetyl-5-hydroxytryptamine may be indicative of an increased conversion of serotonin to melatonin, a phenomenon that can occur in conditions of hyperactivity of the pineal gland or in response to particular environmental stimuli, such as prolonged exposure to darkness. This increase can be reflected in a tendency of the body to promote the processes of adaptation to the circadian rhythm and to support the quality of sleep. In the clinical setting, elevated levels of N-acetylserotonin in urine could suggest a biological response aimed at improving neuroendocrine regulation and defense against oxidative stress, while making further investigations appropriate to understand any implications on general well-being and neuropsychic functions.",
+      "low": "Reduced urinary values of N-acetyl-5-hydroxytryptamine may be indicative of a decrease in the conversion of serotonin to melatonin, suggesting a possible deficit in the synthesis of the latter. This condition could be reflected in disturbances in the sleep-wake rhythm, alterations in sleep quality or a reduced ability of the body to adapt to environmental changes. In the clinical setting, the detection of low levels of N-acetylserotonin in the urine may represent a signal of imbalance in tryptophan metabolism, making it appropriate to carry out an in-depth evaluation of the biochemical pathways involved and the possible consequences on neuropsychic and general well-being."
+    },
+
+    "serotonina": {
+      "name": "Serotonin",
+      "tname": "Serotonin",
+      "base": "Serotonin (or 5-hydroxytryptamine) is one of the main biogenic amines produced in the body, also derived from tryptophan through a process of hydroxylation and decarboxylation. Often referred to as the feel-good neurotransmitter, serotonin plays a crucial role in the central nervous system, where it regulates mood, feelings of well-being, and emotions. Its functions, however, go far beyond the neuropsychic sphere: serotonin intervenes in the regulation of appetite, the sleep-wake cycle, pain perception, sexual behavior and cognitive functions. A particularly relevant aspect is that about 90% of the body's total serotonin is found outside the central nervous system, especially in the enterochromaffin cells of the intestine. Here, serotonin regulates gastrointestinal motility, stimulates peristaltic contractions and helps maintain the balance between absorption, secretion and immune activity in the intestine. Its presence is also fundamental in the modulation of blood clotting, as it is released by platelets in the case of vascular lesions. Alterations in serotonin concentrations, synthesis or metabolism are implicated in numerous pathological conditions: from major depression to migraine, from eating disorders such as bulimia and anorexia, to inflammatory bowel diseases and certain forms of pulmonary hypertension. For this reason, serotonin is often referred to as a pivotal molecule in human physiology, a real junction between mental well-being, physical health and adaptation to environmental stimuli.",
+      "hight": "Increased urinary levels of serotonin may reflect an increase in the synthesis, release or degradation of this neurotransmitter in the body. This condition may be indicative of increased serotonergic activity, often associated with states of hyperactivity of the central or peripheral nervous system, or the presence of neuroendocrine tumors such as carcinoid, which produce large amounts of serotonin. In the clinical setting, elevated serotonin values in urine can also occur in response to intense stress, alterations in metabolism or consumption of foods particularly rich in serotonin, and suggest the need to further evaluate tryptophan metabolism and possible underlying causes.",
+      "low": "Reduced urinary levels of serotonin may indicate a decrease in the synthesis or release of this neurotransmitter, or an altered degradation of it. This condition may reflect a state of serotonergic deficiency, often associated with mood disorders such as depression, anxiety, or sleep disturbances. In the clinical setting, low values of serotonin in urine suggest the need to investigate tryptophan metabolism and evaluate any neurochemical imbalances or conditions that negatively affect mental and physical well-being."
+    },
+
+    "melatonina": {
+      "name": "Melatonin",
+      "tname": "Melatonin",
+      "base": "Melatonin is a hormone produced mainly by the pineal gland, located at the base of the brain, and represents the final step in tryptophan metabolism, after the conversion of serotonin into N-acetyl-5-hydroxy-tryptamine (N-acetylserotonin). Its synthesis and secretion are closely related to the light-dark cycle: during the night, in the absence of light stimuli, the pineal gland intensifies the production of melatonin, thus promoting sleep induction and synchronization of the circadian rhythm. The functions of melatonin are many: in addition to regulating the sleep-wake cycle and facilitating falling asleep, melatonin contributes to the body's adaptation to environmental changes, such as time zones or seasons. It also plays a role in antioxidant activity, protecting cells from damage caused by free radicals, and influences immune, cardiovascular and metabolic processes. Recent research suggests that melatonin can also modulate mood and stress response, confirming its importance not only in sleep well-being, but also in the body's overall balance. For this reason, it is often considered an internal biological clock, capable of marking the times of psychophysical health and promoting harmony between body and environment.",
+      "hight": "Increased urinary values of melatonin may be indicative of excessive production of this hormone by the pineal gland, often in response to conditions of prolonged darkness or particular environmental stimuli that promote nocturnal secretion. This increase can be reflected in a marked tendency of the body to strengthen the mechanisms of synchronization of the circadian rhythm and to promote the quality of sleep. In clinical settings, high levels of melatonin in urine may suggest an adaptive response to environmental changes, such as long periods of darkness, or be a consequence of taking melatonin supplements. However, it is important to further investigate the assessment to rule out any endocrine dysfunctions or alterations of the central nervous system that may influence hormonal regulation.",
+      "low": "Reduced urinary values of melatonin may be indicative of poor production or secretion of this hormone by the pineal gland. This condition is frequently associated with difficulty falling asleep, circadian rhythm disturbances and a reduced ability of the body to adapt to environmental changes, such as jet lag or seasonal variations. In clinical settings, low levels of melatonin in urine may be a sign of imbalance in sleep regulation and suggest the need to investigate underlying causes, including alterations in the light-dark cycle, chronic stress, or conditions involving the central nervous system."
+    },
+
     "acido5idrossindolacetico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "5-hydroxyindol-3-acetic acid (5-HIAA)",
+      "tname": "5-hydroxyindol-3-acetic",
+      "base": "5-hydroxyindol-3-acetic acid, often abbreviated as 5-HIAA, is a biological compound of great importance, known primarily as the major metabolite of serotonin. When serotonin is degraded in the body, it goes through a series of biochemical transformations mediated by monoamine oxidase (MAO) and aldehyde dehydrogenase, resulting in the end product 5-HIAA. This process takes place mainly in the central nervous system and gastrointestinal tract, where serotonin fulfils its multiple roles. After its formation, 5-HIAA is generally eliminated from the body in the urine. For this reason, the dosage of 5-HIAA in urine is often used as a clinical indicator to assess the activity of serotonergic metabolism. Although 5-HIAA does not have a direct role as a neurotransmitter, its presence and concentration in the body are crucial for monitoring serotonin metabolism. Some of the key features and uses include: Diagnostic indicator: The 5-HIAA assay is mainly used in the diagnosis of neuroendocrine tumors such as carcinoid, which can produce high amounts of serotonin and, consequently, 5-HIAA. High values in the urine can therefore signal the presence of these diseases. Monitoring of serotonergic metabolism: The measurement of 5-HIAA allows you to indirectly assess the amount of serotonin synthesized and degraded, offering valuable information in the case of mood disorders, behavioral alterations, neuropsychiatric diseases and diseases of the gastrointestinal tract. Role in scientific research: 5-HIAA is often studied to better understand the physiology of serotonin, its regulation, and the processes involved in pathological conditions related to stress, depression, and anxiety.",
+      "hight": "Excessive urinary values of 5-hydroxyindol-3-acetic acid (5-HIAA) are often indicative of a significant increase in serotonin breakdown in the body. This condition is observed especially in the presence of neuroendocrine tumors such as carcinoid, which can produce large amounts of serotonin, thus leading to an increase in its main metabolite, 5-HIAA, in the urine. In the clinical setting, elevated levels of 5-HIAA can also occur in situations of serotonergic hyperactivity, in response to intense stress, or following the consumption of foods particularly rich in serotonin. The detection of elevated urinary values of 5-HIAA is therefore an important diagnostic signal, suggesting the need to further evaluate serotonergic metabolism and investigate any underlying pathologies, such as neuroendocrine tumors or alterations in tryptophan metabolism. In these cases, it is essential to proceed with further investigations to identify the cause of the overproduction of serotonin and to assess the possible repercussions on the general well-being of the body.",
+      "low": "Reduced urinary values of 5-hydroxyindol-3-acetic acid (5-HIAA) may indicate a decrease in serotonin metabolism, suggesting insufficient synthesis or degradation of this neurotransmitter. This condition is sometimes found in states of serotonergic deficiency, which can be associated with mood disorders, behavioral alterations or neuropsychiatric pathologies. In the clinical setting, the presence of low levels of 5-HIAA in urine may represent a signal of imbalance in tryptophan metabolism or reduced activity of serotonergic pathways, making further investigations necessary to identify the underlying causes and assess possible repercussions on general well-being."
     },
+
+    "chinurenina": {
+      "name": "Kynurenine",
+      "tname": "Kynurenine",
+      "base": "Kinurenine is a tryptophan-derived metabolite, produced primarily through the kynurenine pathway involving the enzymes TDO and IDO. This compound plays a crucial role in cellular metabolism and in the regulation of the immune response. The proper functioning of the kynurenine pathway is essential to maintain the balance between serotonin production and inflammatory control: activation of this pathway, particularly during chronic stress (cortisol), oxidative stress (nitric oxide NO) or inflammatory processes (pro-inflammatory cytokines), can subtract tryptophan from serotonin synthesis, thus affecting both mood and sleep quality. Kynurenine and its derivatives are predominantly found in tissues where TDO and IDO enzymes are present and functioning, such as the liver, kidneys, brain, and immune cells; as well as in body fluids when the metabolic pathway is activated. Kynurenine is further transformed into its derivatives, taking two different pathways: the kynurenic acid pathway and the NAD pathway. The kynurenic acid route is often taken in cases of neurodegenerative diseases and mood disorders. In addition, kynurenic acid also has anti-inflammatory effects, helping to limit the excessive immune response to harmful stimuli. The NAD pathway, on the other hand, leads to the formation of the latter, a coenzyme essential in redox reactions, therefore in energy metabolism and regulation of oxidative stress. Balancing the kynurenic acid pathway with that of NAD production represents a crucial node for neuropsychic and immunometabolic health. Knowledge of the role of kynurenine is fundamental not only for the understanding of neurochemical and immunological mechanisms, but also for the study of pathologies related to dysfunctions of mood, inflammation and tryptophan metabolism.",
+      "hight": "Elevated kynurenine levels in the urine may be indicative of abnormal activation of the tryptophan metabolic pathway, particularly the kynurenine pathway. This condition can occur in response to chronic inflammatory states, oxidative stress, or increased activity of TDO and IDO enzymes, often induced by pro-inflammatory cytokines or excess cortisol. The increased elimination of kynurenine through the urine reflects an increased conversion of tryptophan to this metabolite, thus subtracting substrate from serotonin synthesis and negatively affecting mood and sleep quality. In addition, the presence of high concentrations of kynurenine in the urine can be a sign of metabolic or immune imbalances, as occurs in some infections, autoimmune diseases or chronic stress conditions. It is important to evaluate these data in a broader clinical context, considering any associated symptoms such as mood changes, chronic fatigue, sleep disturbances or signs of systemic inflammation, in order to identify the underlying causes and set up an appropriate diagnostic and therapeutic pathway.",
+      "low": "Low levels of kynurenine can lead to an excess of tryptophan intended for the synthesis of serotonin, altering the balance between neurotransmitters and molecules involved in the immune and inflammatory response, favouring the latter with the risk of chronic inflammation and autoimmune diseases. In addition, given the competition with the serotonin pathway, a serotonin deficiency can negatively affect mood and sleep quality. The kynurenine pathway also leads to the production of NAD, so a kynurenine deficiency can therefore reduce NAD synthesis, with possible negative effects on cellular metabolism and the ability to respond to oxidative stress."
+    },
+
     "acidochinurenico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Kynurenic acid",
+      "tname": "Kynurenic",
+      "base": "Kynurenic acid is a metabolite that results from the transformation of kynurenine, which in turn is produced by tryptophan metabolism via the kynurenine pathway. This compound plays a role of primary importance as a neuroprotective modulator in the nervous system: it acts by regulating the activity of glutamate receptors, thus helping to protect neurons from excitotoxic damage, a phenomenon often implicated in neurodegenerative diseases. In addition to its action at the level of the central nervous system, kynurenic acid also exerts anti-inflammatory effects, limiting the excessive immune response to harmful stimuli and promoting a balance between neuroprotection and inflammation control. The production of kynurenic acid tends to increase in conditions of depression, obesity or hypertension, suggesting its involvement in mood disorders, metabolism and the regulation of the stress response. In summary, the balance between the production of kynurenic acid and the formation of NAD represents a crucial node for neuropsychic and immunometabolic health: its alteration can be the basis of numerous pathologies related to mood, inflammation and tryptophan metabolism.",
+      "hight": "Elevated urinary levels of kynurenic acid may be indicative of increased activation of the kynurenine pathway, often in response to chronic inflammatory states, oxidative stress, or immune dysfunction. This increase may reflect an attempt by the body to limit inflammatory and neurotoxic processes through the production of a metabolite with anti-inflammatory and neuroprotective properties. However, excessive excretion of tryptophan in the urine could also suggest an imbalance in tryptophan metabolism, with possible repercussions on serotonin and NAD synthesis, thus affecting both mood and cellular energy metabolism. In the clinical setting, the evaluation of elevated kynurenic acid values in the urine should always be integrated with the analysis of the patient's symptoms and general context, to identify any underlying conditions such as chronic inflammation, autoimmune diseases or mood disorders.",
+      "low": "Poor urinary kynurenic acid levels may be indicative of reduced activation of the kynurenine pathway, often related to a lower immune response or limited production of neuroprotective metabolites. This condition may reflect a deficit in the body's ability to modulate inflammation and protect the nervous system from the effects of oxidative stress. In addition, low excretion of kynurenic acid in the urine may suggest an imbalance in tryptophan metabolism, with a possible prevalence of serotonin synthesis over neuroprotective processes, thus affecting both mood regulation and resistance to inflammatory and oxidative insults."
     },
+
     "acidochinolinico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Quinolinic acid",
+      "tname": "Quinolinic",
+      "base": "Quinolinic acid is a metabolite of the kynurenine pathway, which is also derived from tryptophan. It is mainly formed in the central nervous system and the immune system, especially in conditions of inflammatory activation. This compound has an ambivalent role: on the one hand, it is a fundamental precursor for the synthesis of NAD (nicotinamide adenine dinucleotide), a coenzyme essential for cellular energy metabolism; on the other hand, in the presence of high concentrations, quinolinic acid can exert neurotoxic effects, as it acts as an agonist of NMDA glutamate receptors, facilitating neuronal excitotoxicity.",
+      "hight": "The accumulation of quinolinic acid has been associated with various neurodegenerative and inflammatory diseases, such as multiple sclerosis, Alzheimer's, depression and some autoimmune diseases. The correct balance between the production of quinolinic acid and its conversion into NAD is therefore a key element for the health of the nervous system and the prevention of damage related to oxidative stress and chronic inflammation.",
+      "low": "Reduced urinary levels of quinolinic acid may indicate limited activation of the kynurenine pathway, resulting in reduced NAD synthesis and potential impairment of cellular metabolic capacity and oxidative stress response. This condition may reflect a lower production of quinolinic acid in both the central nervous system and the immune system, suggesting an attenuated inflammatory response or an imbalance in tryptophan metabolism in favour of other pathways, such as serotonin. In the clinical setting, low values of quinolinic acid in urine could be related to reduced efficiency in neuroprotection processes and in the regulation of antioxidant defences, increasing vulnerability to conditions of cellular stress and chronic inflammation."
     },
+
+    "triptamina": {
+      "name": "Tryptamine",
+      "tname": "Tryptamine",
+      "base": "Tryptamine is an organic molecule belonging to the family of biogenic amines, derived directly from tryptophan through simple decarboxylation. Structurally, it forms the core of several biologically active compounds, including serotonin and melatonin, which are crucial for regulating mood and circadian rhythms. Although it is present in small quantities in the body, tryptamine acts as a neuromodulator in the central nervous system, influencing synaptic transmission and, according to some evidence, participating in sensory perception processes and the modulation of neuronal activity. In addition, it acts as a precursor for various endogenous and natural substances, many of which have significant psychoactive and physiological properties. The presence and activity of tryptamine are being studied for their possible role in mood regulation, stress adaptation mechanisms and some neuropsychiatric conditions.",
+      "hight": "Reduced urinary levels of tryptamine may reflect decreased decarboxylation of tryptophan or reduced endogenous production of this biogenic amine. This condition may be indicative of alterations in tryptophan metabolism, with a possible deviation to other metabolic pathways, such as serotonin or kynurenine. In the clinical setting, low tryptamine values in urine could be related to lower neuromodulator activity or a state of reduced adaptation to stress, potentially affecting mood and response to environmental stimuli.",
+      "low": "Reduced urinary levels of tryptamine may reflect decreased decarboxylation of tryptophan or reduced endogenous production of this biogenic amine. This condition may be indicative of alterations in tryptophan metabolism, with a possible deviation to other metabolic pathways, such as serotonin or kynurenine. In the clinical setting, low tryptamine values in urine could be related to lower neuromodulator activity or a state of reduced adaptation to stress, potentially affecting mood and response to environmental stimuli."
+    },
+
+    "acidocitramalico": {
+      "name": "Citramalic acid",
+      "tname": "Citramalic",
+      "base": "Citramalic acid is an analogue of malic acid. It is found in all living organisms but is a metabolite by-product of some species of yeast (e.g., Saccharomyces, Propionibacterium acnes and Aspergillus Niger...). Citramalic acid can be broken down by the enzyme citramalate lyase, which converts citramalate to acetate and pyruvate. Conversely, citramalate synthase is an enzyme found in bacteria that synthesizes citramalic acid from acetyl-CoA, pyruvate and water. Citramalic acid may play a useful role in medical diagnoses: it was found in the urine of two siblings with autistic characteristics. Citramalic acid can also be used as a urinary marker for intestinal dysbiosis. Its urinary presence can also be influenced by the massive dietary intake of fruit (apples, cranberries and sugar beet).",
+      "hight": "The presence more than citramalic acid identifies the overgrowth of yeasts or a high intake of fruit. It should also be remembered that an important use of sugars (even those of fruit) stimulates the growth of yeasts."
+    },
+
+    "5idrossimetil2furancarbossilico": {
+      "name": "5-Hydroxymethyl-2-furancarboxylic acid",
+      "tname": "5-Hydroxymethyl-2-furancarboxylic",
+      "base": "5-Hydroxymethyl-2-furancarboxylic acid, also called Sumiki acid, is a natural human metabolite. It is also produced from some species of fungi and yeasts, e.g., Aspergillus.",
+      "hight": "Sumiki acid can be excreted in excess by normal individuals after a load of phenylalanine. Sumiki acid is a byproduct of the fungus Aspergillus and of other species of fungi and yeasts."
+    },
+
+    "acidotartarico": {
+      "name": "Tartaric acid",
+      "tname": "Tartaric",
+      "base": "Tartaric acid is a nonspecific metabolite of yeast and bacterial infections such as Agrobacterium, Nocardia, Rhizobium, Saccharomyces. It can also derive from the massive use of wine, grappa, chocolate or food preservatives. Naturally present in products derived from the pressing of grapes, it is instead added as a preservative, antioxidant, emulsifier and acidifier by the food industry. Consumed in high doses it acts as a muscle toxin with serious alterations such as paralysis and death.",
+      "hight": "High levels in the urine may be due to the presence of yeast (in the intestines or bladder). Candida infection also stimulates production of this metabolite. Also investigate the eating habits of the patient, being biomarker of some foods listed above. High levels of tartaric acid have been found in autistic children."
+    },
+
+    "furancarbonilglicina": {
+      "name": "Furan carbonyl glycine",
+      "tname": "Furan carbonyl glycine",
+      "base": "Furan carbonyl glycine is a nonspecific metabolite produced by Aspergillus and other fungal species in the gastrointestinal tract. Aspergillus transmits opportunistic mycoses: similarly, to Candida albicans, Aspergillus creates damage in the host (man) exclusively under conditions favorable to it. In fact, Aspergillus is among the commensal microorganisms that, only in some precise circumstances, turn into opportunistic pathogens. The decline in the host's immune defenses, asthma and bronchial cysts are important predisposing factors. The most common source of exposure is moldy food or household mold.",
+      "hight": "Excess furan carbonyl glycine identifies fungal overgrowth, so it is advisable to investigate dietary habits and possible environmental exposures. Then evaluate an anti-fungal therapy and perform a specific test for fungal infections."
+    },
+
+    "acidotricarballilico": {
+      "name": "Tricarballyl acid",
+      "tname": "Tricarballyl",
+      "base": "Tricarballyl acid is a chemical byproduct released by fumonisins (contaminant of corn products) as it passes through the gastrointestinal tract. Fumonisins are fungal toxins produced by the fungus Fusarium verticillioides. Tricarballyl acid is an inhibitor of the enzyme aconitase, magnesium chelator, and therefore interferes with the Krebs cycle. In addition, trycarballyl acid is a by-product of refining beet sugar and maple sugar and may appear after ingestion of these sugars.",
+      "hight": "Excess tricarballyl acid could identify fungal overgrowth. Clinical syndromes due to intact mycotoxin are rare and characterized by abdominal pain and diarrhea. It can also appear after consumption of sugar beet or maple syrup."
+    },
+
+    "arabinosio": {
+      "name": "Arabinose",
+      "tname": "Arabinose",
+      "base": "Arabinose is a pentose sugar product of degradation of hyaluronic acid, it can also be found in some fruits (apples, plums, cherries and grapes). Arabinose is found in all organisms, from bacteria to plants to animals. There are two different paths of use of arabinose in nature: bacterial and fungal. The bacterial pathway converts arabinose to xylulose-5-P after which it enters the pentose phosphate pathway for ethanol production. The fungal pathway converts arabinose to L-arabinitol and eventually enters the non-oxidative pentose phosphate pathway for further metabolism. The presence of arabinose in the urine may indicate an overgrowth of intestinal yeast such as Candida albicans or other yeast/fungal species. L-arabinose is also a microbial metabolite found and produced by Mycobacterium. Candidiasis is an opportunistic infection caused by yeast and can lead to various changes: dysbiosis, food allergies and intolerances, oxidative stress, etc.",
+      "hight": "Excess arabinose could indicate ongoing infection with Candida or other yeasts. Also evaluate the eating style of the patient in case of important presence of this metabolite, reduce sugars. It could also be a marker of an important use of fruit."
+    },
+
+    "arabitolo": {
+      "name": "Arabitol",
+      "tname": "Arabitol",
+      "base": "Arabitol is polyol (sugar alcohol) obtained from the reduction of arabinose. It is considered a marker of invasive candidiasis or infection with Debaryomyces, Pichia and Zygosaccharomyces.",
+      "hight": "Excess arabitol in urine identifies ongoing fungal infection. It has also been associated with Alzheimer's disease. Metabolic inborn errors can cause it to increase in urine."
+    },
+
+    "acido25furandicarbossilico": {
+      "name": "2,5-furandicarboxylic acid",
+      "tname": "2,5-Furandicarboxylic",
+      "base": "2,5-furandicarboxylic acid is a normal urinary metabolite in humans, resulting from dietary use of cooked meat. 2,5-furandicarboxylic acid is also a nonspecific microbial metabolite and biomarker of high amounts of fructose.",
+      "hight": "Excess 2,5-furandicarboxylic acid is associated with nonspecific fungal growth or strong fruit intake."
+    },
+
+    "acido4idrossiippurico": {
+      "name": "4-Hydroxyhippuric acid",
+      "tname": "4-Hydroxyhippuric",
+      "base": "4-hydroxyhippuric acid is a microbial product derived from the metabolism of polyphenols by the intestinal microflora or of food/pharmacological origin for the intake of polyphenols or parabens.",
+      "hight": "The excess of 4-hydroxyhippuric acid can highlight the individual's exposure to parabens found in foods, cosmetics and most pharmaceuticals. Although they have been defined in the past as safe for humans, their low toxicity continues to be debated. The excess of this metabolite can also be associated with the intake of fruits containing polyphenols rich in anthocyanins, flavonols and hydroxycinnamates, or with an excess of bacteria that metabolize polyphenols."
+    },
+
+    "acidoippurico": {
+      "name": "Hippuric acid",
+      "tname": "Hippuric",
+      "base": "Hippuric acid is derived from benzoic acid conjugated with glycine in the liver (Benzoate + Glycine -> Hippurate). Most of the hippuric acid in urine is derived from the microbial degradation of chlorogenic acid into benzoic acid. Chlorogenic acid is a substance commonly found in beverages (tea, coffee) and fruits (apples, pears, blueberries, carrots, tomatoes, peaches) but also in sunflower seeds, potatoes, eggplants and sweet potatoes. Benzoic acid is present in large quantities in cranberry juice and is a food preservative. Hippuric acid can also be generated due to prolonged exposure to the chemical solvent toluene. In general, it is more representative as a marker of the metabolism of bacterial phenolic compounds.",
+      "hight": "The excess of hippuric acid is caused by the bacterial metabolism of phenolic compounds introduced into the usual diet. More rarely it can be associated with hydrocarbon poisoning.",
+      "low": "Low levels of hippuric acid are associated with dysbiosis, to be investigated by specific test."
+    },
+
+    "acidobenzoico": {
+      "name": "Benzoic acid",
+      "tname": "Benzoic",
+      "base": "Benzoic acid is a byproduct of phenylalanine metabolism in bacteria. It is also produced when intestinal bacteria (E. coli, Bifids, Lactobacilli, Eubacterium, Bacteroidetes) process polyphenols (from fruits, coffee, tea or vegetables). It can be found in the infectious agent Serratia.",
+      "hight": "Its excess can also be related to cystic fibrosis, enteritis, celiac disorder, short bowel syndrome or massive intake of food preservatives."
+    },
+
+    "indacano": {
+      "name": "Indican",
+      "tname": "Indican",
+      "base": "Indican is a colorless organic compound consisting of an indole ring conjugated to glucose. It is a substance naturally present in the urine of humans and mammals in general, as a metabolite of tryptophan. Tryptophan is converted into indole by gut bacteria, particularly by (e.g., Pepto streptococcus indolicus, Bacteroides putredinis and Clostridium sporogeneses) which metabolize it allowing the loss of the side chain; the indole produced is then absorbed by the intestinal mucosa entering the entero-hepatic circulation. In the liver it undergoes an enzymatic process of detoxification biphasic: in the first step it is transformed into 3-hydroxyindole and subsequently conjugated with sulfuric acid or glucuronic acid for its excretion through the kidneys and urine in the form of indican. The urinary concentration of indigo reflects the presence of putrefactive phenomena affecting proteins and nitrogen compounds, a process mediated by some bacterial species such as Proteus and Klebsiella.  The fundamental action of these bacteria allows to carry out the first step of detoxification of the compoundswith the formation of endotoxic substances (ammonia, box, indole, phenols) which subsequently reach the liver compromising its functionality.  The indole, along with the box, is responsible for much of the smell of feces.",
+      "hight": "The excessive presence of indican is related to dysbiosis that can be mild (around 20 mg / l), medium (if they investigate it is between 20 and 40 mg / l) or severe (if greater than 40 mg / l).    Also evaluate the nutritional status as a diet rich in protein induces an increase in this metabolite. A deficiency of Lactobacilli bacteria contributes to the patient's lack of eubiosis, causing symptoms such as bloating, digestive difficulties, fatigue and immune weakness. Other causes could be metabolic diseases such as blue diaper syndrome or Hartnup's disease."
+    },
+
+    "acido4idrossifenilacetico": {
+      "name": "4-Hydroxyphenylacetic acid",
+      "tname": "4-Hydroxyphenylacetic",
+      "base": "4-Hydroxyphenylacetic acid is a microbial metabolite produced by Acinetobacter, Clostridium, Klebsiella, Pseudomonas and Proteus. This metabolite is produced from Tyrosine and can be converted into Cresol. Important food sources such as soy, turkey, chicken, almonds, pumpkin seeds make this metabolite biomarker of the use of these foods.",
+      "hight": "Excess of this metabolite is associated with the overgrowth of small gut bacteria from Clostridia species including C. difficile, C.  stricklandii, C.  lituseburense, C.  subterminal, C.  putrefaciens and C.  propionicum. Giardia Lamblia infection, small intestine diseases, use of antibiotics against aerobic bacteria, cystic fibrosis, transient lactose intolerance can also induce an increase in this metabolite."
+    },
+
+    "acido3indoloacetico": {
+      "name": "3-indole acetic acid",
+      "tname": "3-Indole acetic",
+      "base": "3-indole acetic acid is a metabolite derived from tryptophan by intestinal putrefaction. Its production derives from E. coli, P. vulgaris, A. faciens and Aerogenes, in some cases also from Clostridia.",
+      "hight": "The excess of 3-indoleacetic (and its intermediate box) could be induced by a diet rich in meat. Excessive production is a sign of toxicity of the organism caused by dysbiosis or an unbalanced diet. Very high amounts of this tryptophan-derived metabolite could indicate a depletion of tryptophan necessary for other physiological functions."
+    },
+
+    "pcresolo": {
+      "name": "P-cresol",
+      "tname": "P-Cresol",
+      "base": "P-cresol is a metabolite of aromatic amino acids produced by the intestinal microflora. Tyrosine and phenylalanine are first converted to 4-hydroxyphenylacetic acid, then this is decarboxylated to p-cresol (putrefaction).  This role is played both by aerobic bacteria (enterobacteria), but also by anaerobes (Clostridium). Clostrium difficile is a bacterium often widespread in hospitals, capable of causing increases in cresol production in affected subjects. C. difficile strains produce toxins that trigger diarrhea, colitis and complications of these until death in the most debilitated individuals. Excessive amounts of p-cresol can inhibit the enzyme dopamine-beta-hydroxylase, leading to neurotransmitter imbalances. High amounts of p-cresol have been found in autistic subjects.",
+      "hight": "In uremia, changes in the intestinal flora determine the specific overgrowth of bacteria that are specific producers of p-cresol. Excess protein in the diet results in increased secretion of this metabolite. Kidney diseases also show increased p-cresol."
+    },
+
+    "3idrossifenilacetico": {
+      "name": "3-Hydroxyphenylacetic acid",
+      "tname": "3-Hydroxyphenylacetic",
+      "base": "3-hydroxyphenylacetic acid is produced by amino acid fermentation (purely tyrosine) caused by poor digestion and absorption. It is often used as a marker for protein malabsorption. Also, the intake of food polyphenols (wine, green tea, grapes) causes the appearance of this metabolite in the urine. Its presence in the urine also depends on infection caused by Clostridia or Klebsiella.",
+      "hight": "While in healthy subjects these residues are limited, they can be numerous in phenylketonuria, a rare metabolic disease. It can also be a marker of the use of foods with polyphenols, protein malabsorption and strong dysbiosis caused by Clostridia or Klebsiella."
+    },
+
+    "HPHPA": {
+      "name": "HPHPA",
+      "tname": "HPHPA",
+      "base": "HPHPA stands for 3-(3-hydroxyphenyl)-3-hydroxypropionic acid. It is abundant in adult human urine and is benign in small amounts. The source of this compound is mostly from anaerobic bacteria of the genus Clostridium. Clostridia can significantly alter brain neurotransmitters, inactivating dopamine beta-hydroxylase leading to excessive dopamine production and reduced norepinephrine. Excess dopamine is associated with forms of psychotic disorder. If this marker is high, it is useful to relate it with the main metabolite of dopamine (homovanyllic acid) and with that of norepinephrine (vanilmandelic acid).",
+      "hight": "Excess HPHPA indicates excessive growth of Clostridia bacteria in the gastrointestinal tract. When chronically high, the impact found in humans is often related to schizophrenia and autism spectrum, in fact this metabolite is communally elevated in GAPS cases (Gut Syndrome and Psychology)."
+    },
+
+    "acidoglicolico": {
+      "name": "Glycolic acid",
+      "tname": "Glycolic",
+      "base": "Glycolic acid is the smallest alpha-hydroxy acid. It is very high in cases of genetic hyperoxaluria type I. Normal glycolic acid values exclude the genetic cause of significant increase in oxalic acid in the urine.  The renal toxicity of glycolic acid is due to its metabolism with oxalic acid. These two acids, together with lactic, are responsible for anionic gap metabolic acidosis. Glycolic acid is also present in food (glycerol or glycerin), but more often it is produced by yeasts (Aspergillo, Penicillo or Candida) or gastrointestinal bacteria (Acetobacteria, Corinebacteria, Escherichia ...).",
+      "hight": "The excess of glycolic acid in association with the increase of oxalic acid, defines genetic hyperoxaluria type I. Otherwise its excessive presence can be of food origin or derived from bacterial production or intestinal yeasts."
+    },
+
+    "acidoglicerico": {
+      "name": "Glyceric acid",
+      "tname": "Glyceric",
+      "base": "Glyceric acid can be a marker of genetic pathology D-glycerine aciduria, acting as a metabotoxin and acidogen. Otherwise, glyceric acid can derive from microbial sources such as yeasts (Aspergillo, Penicillo or Candida) or from food sources of glycerol or glycerin.",
+      "hight": "Marked excess glyceric acid can reveal D-glyceric aciduria. Otherwise, its excessive presence can be of food origin or derived from intestinal yeasts."
+    },
+
+    "acidoossalico": {
+      "name": "Oxalic acid",
+      "tname": "Oxalic",
+      "base": "Oxalic acid is a strong dicarboxylic acid produced by the human body by the metabolism of glyoxyc acid or ascorbic acid. It is known primarily for its role in the formation of kidney stones in association with calcium. Although the dietary contribution of green leafy vegetables, fresh fruit and dried fruit can affect the formation of calcium oxalates, these also have a protective effect, so it is good to make a limited use of them. Even the integration of ascorbic acid, precursor of oxalic, could favor the formation of kidney stones so it is recommended a minimum integration for subjects predisposed to stones. The major producers of oxalic acid are some species of Aspergillus, Penicillium and Candida, so ad hoc antifungal therapy is advisable, administration of lactic acid bacteria and probiotic agents. Genetic predispositions for deficiency of the enzyme fumarase and primary hyperoxaluria I or peroxisome deficiency can cause a major increase in oxalates resulting in damage to skin, blood vessels and bone tissues. In these cases, maintaining high levels of magnesium and urinary citrate, you can help the expulsion of stones and limit oxalate deposition diseases.",
+      "hight": "Excess oxalic acid could be associated with major vitamin C supplementation or fungal infection and dysbiosis. If the other metabolites of oxalates (  glycolic  acid and glyceric acid) are also elevated, it is likely that it is a genetic predisposition to hyperoxaluria; otherwise you can act by treating specifically the intestinal bacterial flora and limit the intake of oxalates and vit.C. Evaluate magnesium and citrate supplementation to promote the expulsion of kidney stones."
+    },
+
     "acidopantotenico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Pantothenic acid",
+      "tname": "Pantothenic",
+      "base": "Pantothenic acid refers to vit. B5, water-soluble vitamin necessary to form coenzyme-A, fundamental for the metabolism and synthesis of carbohydrates, proteins and fats. It has an important role in regulating blood cholesterol, maintaining the nervous system and hormone levels. Food sources of pantothenic acid are meat, eggs, whole grain products, legumes, milk, fruits and vegetables. It is usually released quickly in the urine.",
+      "hight": "Excess is associated with ongoing or past supplementation of vit. B5.",
+      "low": "Poor pantothenic acid values may reflect vitamin B5 deficiency, for which it is advisable to review the patient's usual diet and evaluate specific supplementation."
     },
+
     "acidoglutarico": {
-      "base": "",
-      "hight": ""
+      "name": "Glutaric acid",
+      "tname": "Glutaric*",
+      "base": "Glutaric acid is an intermediate product of the metabolism of certain amino acids, including lysine and tryptophan. The increase indicates deficiency of riboflavin (vitamin B2), cofactor needed by the enzyme glutaryl-CoA dehydrogenase that is supposed to convert glutaric acid to Cotonyl-CoA. Other factors that increase glutaric acid levels include fatty acid oxidation defects and metabolic effects of valproic acid (Depakene) or celiac disease.",
+      "hight": "Excess glutaric acid could represent vitamin deficiency. B2 or oxidation defects. Very high values of glutaric acid highlight the genetic disease glutaric acidemia type I, in which the enzyme that is supposed to mediate amino acid catabolism does not work properly."
     },
+
     "acidometilmalonico": {
-      "base": "",
-      "hight": ""
+      "name": "Methylmalonic acid",
+      "tname": "Methylmalonic*",
+      "base": "Methylmalonic acid is a metabolite formed from propionyl-CoA derived from valine, isoleucine, methionine, threonine and odd-chain fatty acids then converted to methylmalonyl-CoA. Methylmalonyl-CoA has two destinies: the first is to enter the Krebs cycle as succinyl-CoA, through the action of methylmalonyl-CoA mutase, an enzyme that uses vit. B12 as a cofactor, the second destiny is instead to be converted into methylmalonic acid and then eliminated through the urine.",
+      "hight": "Excess methylmalonic acid reflects vit. B12 mainly but can also detect a rare enzyme deficiency of methylmalonyl-CoA mutase. The deficiency of vit. B12 could be caused by intestinal absorption problems, alcoholism and a strictly vegan diet. Food sources of vitamin B12 are of animal origin: liver, milk and dairy products, beef and eggs. The level of methylmalonic acid appears to be a more sensitive indicator of vitamin B12 deficiency than the quantification of vitamin B12 directly in serum. It is important to monitor this metabolite in the prevention of cognitive decline and neuropathy."
     },
-    "Nacetilcisteina": {
-      "base": "",
-      "hight": ""
+
+    "nacetilcisteina": {
+      "name": "N-acetylcysteine",
+      "tname": "N-Acetylcysteine",
+      "base": "N-acetylcysteine is a powerful antioxidant that increases glutathione stores in the body. Together with glutathione, of which it is a precursor, N-acetylcysteine binds directly to toxic metabolites, also carrying out a cytoprotective action for the cell. Although N-acetylcysteine may be helpful under certain conditions, overuse of the supplement could be harmful. NAC supplementation is often used in cases of paracetamol overdose, in which N-acetylcysteine acts to maintain or replenish depleted glutathione stores in the liver and improve non-toxic metabolism of paracetamol. NAC is also used as a mucolytic or antiviral agent in patients with HIV.",
+      "hight": "Excess N-acetylcysteine is due to ongoing or past supplementation."
     },
+
     "acidoascorbico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Ascorbic acid",
+      "tname": "Ascorbic",
+      "base": "Ascorbic acid occurs naturally in fruits and vegetables and is an essential nutrient in the human diet. The biologically active form of ascorbic acid is vitamin C. The human body is not able to synthesize it independently, so it is essential to introduce it through food. Food sources of vitamin C are kiwi, strawberries, citrus fruits, pineapples, vegetables and fresh vegetables. Vit. C functions as a reducing agent and coenzyme of several metabolic pathways (carnitine and norepinephrine biosynthesis, tyrosine metabolism, collagen hydroxylation and peptide hormone amidation). Its ability to donate electrons makes it a powerful water-soluble antioxidant that readily eliminates free radicals such as molecular oxygen, superoxide, hydroxyl radical and hypochlorous acid. In this context, several mechanisms could explain a link between vit. C and heart disease, primarily the relationship between the oxidation of LDL cholesterol and vit. C and E, as well as the mechanisms that improve vasodilation and vascular reactivity.",
+      "hight": "Excess in urine is related to vit supplementation. C. Excess ascorbic acid may also be associated with hyperoxaemia.",
+      "low": "Its deficit is associated with deficiency. Vitamin C supplementation is advisable in these cases."
     },
+
     "acido4piridossico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "4-Pyridoxic acid",
+      "tname": "4-Pyridoxic",
+      "base": "4-Pyridoxic acid is a member of the class of compounds known as methylpyridines and is the catabolic product of vitamin B6. Vitamin B6 intervenes in the process of transformation of proteins, carbohydrates and fats and contributes to the formation of hemoglobin. It is also important for normal brain development and the immune system. It is also essential for the synthesis of serotonin, which together with other neurotransmitters helps regulate mood, sleep, appetite, memory and the ability to concentrate. Because some individuals may require very high doses of vitamin B6, high values do not indicate the need to reduce vitamin B6 intake. Food sources of vitamin B6 are meat, fish, liver, whole grains, eggs, milk and cheese, but also chickpeas, lentils and dried fruit. 4-pyridoxyc acid deficiency in urine may be related to poor vitamin levels. B6, high oxalates, low neurotransmitters or malabsorption problems. Evaluate vitamin B6 supplementation.",
+      "hight": "Very high values are associated with past or ongoing supplementation of B vitamins.",
+      "low": "Urine 4-pyridoxic acid deficiency could be related to poor levels of vit. B6, high oxalates, low neurotransmitters or malabsorption problems. Evaluate vitamin B6 supplementation."
     },
+
     "3idrossi3metilglutarico": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "3-Hydroxy-3-methylglutaric acid (HMG)",
+      "tname": "3-Hydroxy-3-methylglutaric",
+      "base": "3-Hydroxy-3-methylglutaric acid (HMG) is an intermediate in the degradation process of leucine, but also a metabolic precursor of cholesterol and CoQ10. 3-hydroxy-3-methylglutaryl-CoA is usually converted to acetyl-CoA and acetoacetate by the enzyme 3-hydroxy-3-methylglutaryl-CoA lyase but in case of enzyme inefficiency there is no such conversion with accumulation of HMG leading to mitochondrial toxicity. The enzyme HMG-CoA lyase also plays an important role in the formation of the ketone body 3-hydroxybutyric acid. HMG is a metabolite with lipid-lowering action and inhibits cholesterol synthesis. Drugs that interfere with the HMG-CoA lyase enzyme induce high levels of HMG and consequent low levels of cholesterol and CoQ10.",
+      "hight": "Values above the reference range may be found in patients taking statins and red yeast rice, for which CoQ10 supplementation is recommended. Deficiency of the HMG-CoA lyase enzyme can elevate HMG levels, leading to CoQ10 deficiency and developmental disorders and cardiomyopathies.",
+      "low": "The shortage does not see relevant clinical associations."
     },
+
+    "uracile": {
+      "name": "Uracil",
+      "tname": "Uracil",
+      "base": "Uracil and thymine are related to folic acid metabolism. Folic acid is fundamental for the replication of gene material as it plays a key role in the biosynthesis of purines and pyrimidines (constituents of DNA and RNA) as well as amino acids: in humans it is assimilated by the diet and not synthesized. Folic acid deficiency is negatively implicated in these processes of genomic or epigenetic regulation. The enzyme 5,10-methyltetridrofolate reductase (5,10-MTHFR) is a folic acid-dependent enzyme that exists in polymorphic form. The action of the enzyme 5,10-MTHFR regulates both DNA phenotypic expression and homocysteine metabolism. In the face of a correct nutritional intake of folic acid, the optimal presence of 5,10-MTHFR protects against the risk of incorrect embryogenetic development as well as from the development of many degenerative diseases. Uracyl and thymine are released from RNA and DNA, with increased genomic instability and epigenetic effects, in the case of folic acid deficiency.",
+      "hight": "Excess of one or both metabolites uracil and thymine is related to disorders of folic acid metabolism, folic acid deficiency and genetic disorders of pyrimidine metabolism. A low intake of folic acid and the consequent reduced production of the enzyme 5,10-MTHFR that intervenes in the correct conversion from dUMP (deoxy uridine monophosphate) to dTMP (deoxy thymidine monophosphate), determines an increase in the mis-incorporation of uracil in DNA with an increase in genomic instability. Research shows that the processes involved in programmed cell death are closely correlated with the presence of circulating folic acid which is responsible for the integrity of the human genome."
+    },
+
+    "timina": {
+      "name": "Thymine",
+      "tname": "Thymine",
+      "base": "Uracil and thymine are related to folic acid metabolism. Folic acid is fundamental for the replication of gene material as it plays a key role in the biosynthesis of purines and pyrimidines (constituents of DNA and RNA) as well as amino acids: in humans it is assimilated by the diet and not synthesized. Folic acid deficiency is negatively implicated in these processes of genomic or epigenetic regulation. The enzyme 5,10-methyltetridrofolate reductase (5,10-MTHFR) is a folic acid-dependent enzyme that exists in polymorphic form. The action of the enzyme 5,10-MTHFR regulates both DNA phenotypic expression and homocysteine metabolism. In the face of a correct nutritional intake of folic acid, the optimal presence of 5,10-MTHFR protects against the risk of incorrect embryogenetic development as well as from the development of many degenerative diseases. Uracyl and thymine are released from RNA and DNA, with increased genomic instability and epigenetic effects, in the case of folic acid deficiency.",
+      "hight": "Excess of one or both metabolites uracil and thymine is related to disorders of folic acid metabolism, folic acid deficiency and genetic disorders of pyrimidine metabolism. A low intake of folic acid and the consequent reduced production of the enzyme 5,10-MTHFR that intervenes in the correct conversion from dUMP (deoxy uridine monophosphate) to dTMP (deoxy thymidine monophosphate), determines an increase in the mis-incorporation of uracil in DNA with an increase in genomic instability. Research shows that the processes involved in programmed cell death are closely correlated with the presence of circulating folic acid which is responsible for the integrity of the human genome."
+    },
+
+    "2idrossiippurico": {
+      "name": "2-Hydroxyhippuric acid",
+      "tname": "2-Hydroxyhippuric",
+      "base": "2-Hydroxyhippuric acid (salicyluric acid) is a conjugate of the amino acid glycine and benzoic acid. It is formed by the body to eliminate excess salicylates resulting from the use of aspirin or the consumption of aspartame-based sweeteners. 2-hydroxyhippuric acid can also result from the conversion of tyrosine and phenylalanine by gastrointestinal bacteria. Very high rates inhibit dopamine beta-hydroxylase with elevation of HVA (homovanillic acid) and reduction of VMA (vanylmandelic acid).",
+      "hight": "The increase in urine may also be related to the growth of gastrointestinal bacteria, the use of artificial sweeteners containing aspartame or excessive use of aspirin.",
+      "note": "Aspartame or GI Bacterial Salicylates"
+    },
+
+    "acidoorotico": {
+      "name": "Orotic acid",
+      "tname": "Orotic",
+      "base": "Orotic acid is an intermediate product in nucleotide synthesis and is linked to arginine metabolism as a marker of ammonium balance in the urea cycle. If there is an insufficient detoxification capacity of ammonium by urea cycle, the synthesis of orotate takes place.",
+      "hight": "The increase in urine of this metabolite is representative of an arginine deficiency and simultaneously of a decrease in the efficiency of detoxifying ammonia and a reduced formation of nitric oxide. Innate errors in metabolism can increase orotate and ammonia levels, or it can result from excessive intestinal bacterial growth. Even a strong use of dairy products and cow's milk induces elevated orotate in the urine, excessive use of protein in the diet or alcohol abuse. Drugs such as allopurinol and 6-azauridine seem to be correlated with the synthesis of pyrimidine and therefore orotate. Evaluate supplementation with arginine and magnesium.",
+      "note": "Ammonia Excess"
+    },
+
+    "acidopiroglutammico": {
+      "name": "Pyroglutamic acid",
+      "tname": "Pyroglutamic",
+      "base": "Pyroglutamic acid, also called 5-oxoproline, is produced and used by GGT (gamma-glutamyl transferase) for the production and recycling of glutathione, a fundamental antioxidant. Glutathione is a tripeptide formed by glutamine, glycine and cysteine. Pyroglutamate is a precursor of glutathione through which the union of the three amino acids can take place. This action is mediated by cofactors such as magnesium and ATP. Under physiological conditions, a modest amount of pyroglutamate is present in the urine.",
+      "hight": "The pathological conditions in which an increase in pyroglutamate occurs in the  urine are due to the alteration of one or more enzymes that collaborate in the cycle for its synthesis or mitochondrial dysfunction due to oxidative stress or to food causes (glycine, cysteine, glutamine and magnesium restriction or taurine supplementation) or pharmacological (drugs that require conjugation with glutathione). Glutathione deficiency conditions, e.g., due to acetomifen toxicity, also lead to elevated pyroglutamate levels. Evaluate supplementation with glutathione, NAC and amino acids (methionine and glycine).",
+      "low": "The deficiency shows a lack of glutathione or cofactors necessary for its synthesis (glutamine, glycine and cysteine).",
+      "note": "Glutathione"
+    },
+
+    "acido2idrossibutirrico": {
+      "name": "2-Hydroxybutyric acid",
+      "tname": "2-Hydroxybutyric",
+      "base": "2-hydroxybutyric acid is a product of mammalian tissues (hepatic) that catabolize L-threonine or synthesize glutathione; therefore, it is considered a marker of oxidative stress. 2-hydroxybutyric acid is an organic acid produced from alpha-ketobutyrate (byproduct in the glutathione synthesis pathway) through the enzymes lactate dehydrogenase (LDH) or alpha-hydroxybutyrate dehydrogenase (HBDH), enzymes catalyzed by NADH. In case of metabolic stress, it is essential to have important supplies of L-cysteine for the synthesis of glutathione, so homocysteine is diverted to the transolforation pathway forming cystathionine. From the cleavage of cystathionine into cysteine, alpha-ketobutyrate is formed and then 2-hydroxybutyric acid. Oxidative stress induced by insulin resistance also increases the rate of hepatic synthesis of glutathione, therefore it could be used as a biomarker of prediabetic stages.",
+      "hight": "Elevated levels of 2-hydroxybutyric acid are associated with conditions in which hepatic synthesis of glutathione from methionine is increased due to oxidative stress or detoxification functions. Conditions of poor diet, smoking, lack of exercise inhibit the action of alpha-hydroxybutyrate dehydrogenase (HBDH) which catalyzes the conversion of 2-hydroxybutyrate into acetate, thus causing an increase in the urine. It can be associated with prediabetic stages or is found high in infectious diseases such as measles. In case of birth asphyxia or inherited metabolic diseases, it may appear elevated."
+    },
+
     "acido4metil2ossovalerico": {
-      "base": "",
-      "hight": ""
+      "name": "4-methyl-2-oxovaric acid",
+      "tname": "4-Methyl-2-Oxovaric",
+      "base": "4-methyl-2-oxovaric acid, also called ketoleucine, is an abnormal metabolite that results from the incomplete breakdown of branched-chain amino acids. Isoleucine, leucine and valine are three essential branched-chain amino acids (BCAAs) that are taken using proteins or sports supplements, providing ready-to-use energy. Skeletal muscle catabolizes these BCAA amino acids via aminotransferase enzymes to form keto acids in the blood so that they are then metabolized later by the liver. BCAAs are substrates for protein synthesis, energy production, neurotransmitter production and other metabolic processes. Keto acids require an enzyme complex called branched-chain alpha-keto dehydrogenase (BCKD) to be metabolized, an enzyme complex that requires vitamin cofactors such as vit. B1, B2, B3, B5 and lipoic acid. If keto acids are not metabolized, they accumulate becoming neurotoxic and metabotoxic. A neurotoxin causes damage to nerve cells and nerve tissues. A metabotoxin is an endogenous metabolite that causes adverse health effects at chronically high levels. Chronically elevated levels of ketoleucine are associated with maple syrup urine disease, a metabolic disorder caused by a deficiency of the branched-chain alpha-ketoacid dehydrogenase complex (BCKD) leading to the accumulation of branched-chain amino acids (leucine, isoleucine and valine) and their toxic byproducts (keto acids) in the blood and urine.",
+      "hight": "Excess is rare and associated with alkaptonuria. If the value is slightly altered, supplement the enzyme cofactor iron and the antioxidant vit. C, then check back over time by investigating cardiac, renal and joint functions. Evaluate a low-protein diet."
     },
     "acidomandelico": {
-      "base": "",
-      "hight": ""
+      "name": "Mandelic acid",
+      "tname": "Mandelic",
+      "base": "Mandelic acid is a derivative of phenylalanine and of the metabolism of adrenaline and noradrenaline. It can also be produced through exposure to styrene, a toxic environmental compound. It also has antibacterial and soothing properties, which is why it is often used in cosmetics.",
+      "hight": "An excess of mandelic acid is often related to phenylalanine metabolism or exposure to toxic substances. It may also be elevated in cases of genetic disorders such as PKU and tyrosinemia."
     },
+
     "acidoomogentisico": {
-      "base": "",
-      "hight": ""
+      "name": "Homogentisic acid",
+      "tname": "Homogentisic",
+      "base": "Homogentisic acid, also known as melanic acid, is a metabolite involved in the degradation of tyrosine and phenylalanine, mediated by the enzyme homogentisate oxidase and the iron cofactor. If the enzyme is mutated, an excess of homogentisic acid occurs along with the clinical signs of alkaptonuria, a rare metabolic disorder: darkening of urine, arthritis, kidney stones, heart valve disease, etc. It may also be considered a potential marker of coronary risk related to oxidative stress, as well as an osteotoxin and nephrotoxin, causing damage to bones, joints, and/or kidneys. In fact, the accumulation of homogentisic acid leads to damage to cartilage and heart valves, and may precipitate as kidney stones. The conversion of homogentisic acid into benzoquinone acetic acid leads to the formation of polymers that deposit in cartilage collagen, causing ochronosis and subsequently osteoarthritis.",
+      "hight": "Excess levels are rare and generally associated with alkaptonuria. If the value is slightly altered, it is advisable to supplement the enzymatic cofactor iron and the antioxidant vitamin C, then monitor over time while assessing cardiac, renal, and joint function. A low-protein diet may also be considered."
     },
+
     "acido2idrossiisocaproico": {
-      "base": "",
-      "hight": ""
+      "name": "2-Hydroxyisocaproic acid",
+      "tname": "2-Hydroxyisocaproic",
+      "base": "2-hydroxyisocaproic acid is a product of leucine metabolism. It is widely used by the body building community. From recent studies, it seems proven that in patients with maple syrup disease accelerates lipid peroxidation. 2-Hydroxyisocaproic acid is also produced by Lactobacilli and other fungal species.",
+      "hight": "Moderate excess of 2-hydroxyisocaproic acid is associated with leucine supplementation or fungal overgrowth. If in strong excess, investigate whether it is maple syrup disease (MSUD), an inherited metabolic disorder characterized by neurological dysfunction, psychomotor and mental retardation."
     },
+
     "acidoNacetilaspartico": {
-      "base": "",
-      "hight": ""
+      "name": "N-acetyl aspartic acid",
+      "tname": "N-Acetyl aspartic",
+      "base": "N-acetyl aspartic acid is a derivative of aspartic acid, an amino acid present in sweeteners with aspartame, supplements with aspartic acid or derived salts or in plant and animal sources to a lesser extent. N-acetyl aspartic acid is the second most concentrated molecule in the brain after the amino acid glutamate. The various functions performed by N-acetyl aspartic acid  are still being studied, but the main functions proposed include (1) acting  as a neuronal osmolyte involved in fluid balance in the brain, (2) serving as a  source of acetate for lipid and myelin synthesis in oligodendrocytes, (3) serving as a precursor for the synthesis of the important neurotransmitter dipeptide N-acetylaspartilglutamate  (NAAG), and (4) play a potential role in energy production from the amino acid glutamate in neuronal mitochondria. High levels of N-acetyl aspartic acid can lead to abnormal neural signals, delayed or stopped intellectual development, and difficulties with general motor skills. When present at sufficiently high levels, N-acetyl aspartic acid can be a neurotoxin, an acidogen and a metabotoxin. This situation manifests itself in case of genetic disorders, such as Canavan's disease, causing brain degeneration.",
+      "hight": "The slight excess of N-acetyl aspartic acid could result from heavy use of products with aspartate (beverages or soy). If much higher, follow neuronal tests."
     },
+
     "acidomalonico": {
-      "base": "",
-      "hight": ""
+      "name": "Malonic acid",
+      "tname": "Malonic",
+      "base": "Malonic acid is involved in the biosynthesis of fatty acids, joining with acetic acid for conversion into acetoacetic acid. Malonic acid has been detected in several foods such as red beets, corn, beans and cow's milk. This could make malonic acid a potential biomarker for consumption of these foods. Malonic acid has been found to be associated with several diseases such as eosinophilic esophagitis, combined malonic and methylmalonic aciduria, and early preeclampsia.",
+      "hight": "Excess malonic acid could indicate important intake of certain foods or linked to previously reported diseases."
     },
+
     "acido4idrossifenilpiruvico": {
-      "base": "",
-      "hight": ""
+      "name": "4-Hydroxyphenylpyruvic acid",
+      "tname": "4-Hydroxyphenylpyruvic",
+      "base": "4-Hydroxyphenylpyruvic acid is a keto acid involved in the tyrosine catabolism pathway, which is then converted to homogentisic acid by the enzyme 4-hydroxyphenylpyruvic acid dioxygenase (HPD). HPD enzyme deficiency causes phenylketonuria, a congenital metabolic error.",
+      "hight": "The strong excess is related to an autosomal recessive disorder characterized by elevated levels of tyrosine in the blood and massive excretion of tyrosine derivatives in the urine."
     },
+
     "acido2idrossi3metilbutirrico": {
-      "base": "",
-      "hight": ""
+      "name": "2-Hydroxy-3-methylbutyric acid",
+      "tname": "2-Hydroxy-3-methylbutyric",
+      "base": "2-Hydroxy-3-methylbutyric acid originates from ketogenesis and the metabolism of valine, leucine and isoleucine. It is present in patients with phenylketonuria, acidemia, maple syrup disease and other congenital metabolic disorders or in cases of ketoacidosis.",
+      "hight": "The minimal excess highlights states of lactic acidosis or ketoacidosis. In cases where the levels are much higher than the reference range, these are important congenital pathologies."
     },
-    "uracileetimina": {
-      "base": "",
-      "hight": ""
-    },
-    "acidocitramalico": {
-      "base": "",
-      "hight": ""
-    },
-    "5idrossimetil2furancarbossilico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidotartarico": {
-      "base": "",
-      "hight": ""
-    },
-    "furancarbonilglicina": {
-      "base": "",
-      "hight": ""
-    },
-    "acidotricarballilico": {
-      "base": "",
-      "hight": ""
-    },
-    "arabinosio": {
-      "base": "",
-      "hight": ""
-    },
-    "arabitolo": {
-      "base": "",
-      "hight": ""
-    },
-    "acido25furandicarbossilico": {
-      "base": "",
-      "hight": ""
-    },
-    "acido4idrossiippurico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidoippurico": {
-      "base": "",
-      "hight": ""
-    },
-    "ippurico": {
-      "low": ""
-    },
-    "acidobenzoico": {
-      "base": "",
-      "hight": ""
-    },
-    "indacano": {
-      "base": "",
-      "hight": ""
-    },
-    "acido4idrossifenilacetico": {
-      "base": "",
-      "hight": ""
-    },
-    "acido3indoloacetico": {
-      "base": "",
-      "hight": ""
-    },
-    "pcresolo": {
-      "base": "",
-      "hight": ""
-    },
-    "3idrossifenilacetico": {
-      "base": "",
-      "hight": ""
-    },
-    "HPHPA": {
-      "base": "",
-      "hight": ""
-    },
-    "acidoglicolico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidoglicerico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidoossalico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidosebacico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidoadipico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidosuberico": {
-      "base": "",
-      "hight": ""
-    },
-    "etilmalonico": {
-      "base": "",
-      "hight": ""
-    },
-    "acido3idrossibutirrico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidopiruvicoelattico": {
-      "base": "",
-      "hight": "",
-      "low": ""
-    },
-    "2idrossiippurico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidoorotico": {
-      "base": "",
-      "hight": ""
-    },
-    "acidopiroglutammico": {
-      "base": "",
-      "hight": "",
-      "low": ""
-    },
-    "acido2idrossibutirrico": {
-      "base": "",
-      "hight": ""
-    },
+
     "creatinina": {
-      "base": "",
-      "hight": "",
-      "low": ""
+      "name": "Creatinine",
+      "tname": "Creatinine",
+      "base": "Creatinine is commonly calculated for the evaluation of urinary analytes. Its excretion is influenced by skeletal muscle and body state.",
+      "hight": "The intake of dietary proteins containing arginine and glycine (precursors of creatinine) and creatinine supplementation itself can increase their levels. The state of hydration also plays an important role. Excess creatinine can also show renal dysfunction.",
+      "low": "Its deficit is usually related to too little muscle mass. A low value could also indicate an increase in glomerular filtration rate (eGFR)."
+    },
+    "vlsfca": {
+      "1": {
+        "name": "Acido acetico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "2": {
+        "name": "Acido propionico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "3": {
+        "name": "Acido Iso-butirrico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "4": {
+        "name": "Acido butirrico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "5": {
+        "name": "Acido 2-metilbutirrico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "6": {
+        "name": "Acido Iso-valerico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "7": {
+        "name": "Acido Valerico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "8": {
+        "name": "Acido Caproico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "9": {
+        "name": "Acido Eptanoico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "10": {
+        "name": "Indacano",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "11": {
+        "name": "p-Cresolo",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "12": {
+        "name": "Acido benzoico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "13": {
+        "name": "Acido 4-idrossifenilacetico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "14": {
+        "name": "Acido 3-idrossifenilacetico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "15": {
+        "name": "Acido lattico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "16": {
+        "name": "Acido 2,5 furandicarbossilico",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "17": {
+        "name": "o-Cresolo",
+        "base": "",
+        "hight": "",
+        "low": ""
+      },
+      "18": {
+        "name": "m-Cresolo",
+        "base": "",
+        "hight": "",
+        "low": ""
+      }
     }
   }
 }

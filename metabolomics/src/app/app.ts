@@ -5,7 +5,7 @@ import { StaticDataService } from '../services/static-data.service';
 import { NavbarComponent } from '../components/shared/navbar/navbar.component';
 import { FooterComponent } from '../components/shared/footer/footer.component';
 import { CustomersDataService } from '../services/customers-data.service';
-import { forkJoin, take } from 'rxjs';
+import { forkJoin } from 'rxjs';
 import { ToastComponent } from '../components/shared/toast/toast.component';
 
 @Component({
@@ -28,7 +28,7 @@ export class App implements OnInit, OnDestroy {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIstaminaExample(),
+      example: this.staticDataService.loadMetabolitesExample(),
     })
       .pipe()
       .subscribe(({ example }) => {

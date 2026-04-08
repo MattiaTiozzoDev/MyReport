@@ -30,6 +30,10 @@
   },
   "pdfpages": {
     "presentation": {
+      "METABO": "Profilo Metabolomico degli Acidi Organici",
+      "GUTSYS": "Istamina Fecale",
+      "ISTFEC": "Gut Screening®",
+      "VLSCFA": "Metaboliti del microbiota",
       "title": "Diagnostica di precisione per una salute personalizzata",
       "subtitle": "I nostri referti nascono dall’integrazione di tecnologie diagnostiche avanzate e metodologie scientifiche validate, con l’obiettivo di fornire dati accurati e affidabili a supporto di valutazioni cliniche personalizzate.",
       "director": "Direttore sanitario:"
@@ -95,7 +99,11 @@
     "metabolomicstable": {
       "tablepage": {
         "title": "Analisi degli Acidi Organici",
-        "subtitle": "Profilo Nutrizionale e Metabolomico"
+        "subtitle": "Profilo Nutrizionale e Metabolomico",
+        "section1": "Metodologia: LC/Spettrometria di Massa Tandem",
+        "section2": "*Per questi metaboliti l’eccesso nelle urine individua una carenza della vitamina / molecola di riferimento",
+        "section3": "Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche",
+        "section4": "Firmato digitalmente dal dott Alberto Santini il: "
       },
       "columns": {
         "markers": "Markers Metabolomici",
@@ -163,6 +171,15 @@
           "sectionTitle": "Metaboliti degli Amminoacidi",
           "title": "Metaboliti degli Amminoacidi"
         }
+      }
+    },
+    "imagepage": {
+      "metabo": {
+        "1": "Ciclo dell’acido citrico e dell’energia cellulare",
+        "2": "Pathway dei Neurotrasmettitori",
+        "3": "Metaboliti intestinali e implicazioni sistemiche",
+        "4": "Ruolo centrale del 3-HMG CoA nella risposta glicemica, digiuno e statine",
+        "5": "Pathway della Metilazione e della Detossificazione"
       }
     },
     "profilepage": {
@@ -443,48 +460,56 @@
     },
     "piruvico": {
       "name": "Acido piruvico",
+      "tname": "Piruvico",
       "base": "L'acido piruvico e lattico sono prodotti dell'operazione centrale per la produzione di energia, la glicolisi, il processo catabolico del glucosio. Tale processo è regolato dalla presenza di zinco e vitamine del gruppo B . Il lattato viene processato a partire dal piruvato per ossidazione, entrando poi nel ciclo di produzione energetica in TCA in condizioni aerobiche. Il lattato può accumularsi se i cofattori PDC (Complesso Piruvato Deidrogenasi) sono insufficienti, se sono presenti polimorfismi strutturali o in caso di deficienza di CoQ10 creando un blocco nella fosforilazione ossidativa. La mancanza di ATP mitocondriale può indurre un forte aumento di lattato con contemporanea diminuzione di piruvato. Anche condizioni di anaerobiosi dovute a eccessivo sforzo fisico, resistenza insulinica, patologie polmonari o anemia possono indurre aumento lattato. Il piruvato può essere prodotto anche dal catabolismo amminoacidico ( alanina, serina, cistina, glicina, triptofano e treonina). Elevate concentrazioni di piruvato possono essere correlate a mancanza di cofattori nutrizionali (come vitamina B1,B2,B3,B7, magnesio e acido lipoico) per la sua conversione in Acetil-CoA e ossalacetato. Altre cause possono provenire da eccessivo introito di carboidrati.",
       "hight": "L'eccesso di acido piruvico può essere ridotto tramite integrazione di vit. B1,B2,B3,B5, magnesio e acido lipoico. Valutare anche lo stato nutrizionale o eventuali integrazioni amminoacidiche in corso."
     },
 
     "lattico": {
       "name": "Acido lattico",
+      "tname": "Lattico",
       "base": "L'acido piruvico e lattico sono prodotti dell'operazione centrale per la produzione di energia, la glicolisi, il processo catabolico del glucosio. Tale processo è regolato dalla presenza di zinco e vitamine del gruppo B . Il lattato viene processato a partire dal piruvato per ossidazione, entrando poi nel ciclo di produzione energetica in TCA in condizioni aerobiche. Il lattato può accumularsi se i cofattori PDC (Complesso Piruvato Deidrogenasi) sono insufficienti, se sono presenti polimorfismi strutturali o in caso di deficienza di CoQ10 creando un blocco nella fosforilazione ossidativa. La mancanza di ATP mitocondriale può indurre un forte aumento di lattato con contemporanea diminuzione di piruvato. Anche condizioni di anaerobiosi dovute a eccessivo sforzo fisico, resistenza insulinica, patologie polmonari o anemia possono indurre aumento lattato. Il piruvato può essere prodotto anche dal catabolismo amminoacidico ( alanina, serina, cistina, glicina, triptofano e treonina). Elevate concentrazioni di piruvato possono essere correlate a mancanza di cofattori nutrizionali (come vitamina B1,B2,B3,B7, magnesio e acido lipoico) per la sua conversione in Acetil-CoA e ossalacetato. Altre cause possono provenire da eccessivo introito di carboidrati.",
       "hight": "L'eccesso di acido lattico può essere ridotto tramite l'integrazione con i cofattori enzimatici del PDC (Vit.B2,B3,B5 e acido lipoico) o con CoQ10. Da valutare le condizioni patologiche e sportive del paziente."
     },
 
     "acidosebacico": {
       "name": "Acido sebacico",
+      "tname": "Sebacico",
       "base": "L’acido sebacico  è un normale acido urinario derivato dal metabolismo degli acidi grassi.",
       "hight": "L'eccesso di acido sebacico è correlato a chetosi oppure a digiuno-digiuno intermittente. Si può associare anche a carenza di carnitina, dedita al trasporto di grassi, oppure a polimorfismi genetici che alterano la formazione e metabolismo di quest'ultima;  anche in casi di difetti di ossidazione degli acidi grassi, in associazioni a sintomi come ipoglicemia,ipotonia, vomito, letargia, ecc.., i valori di acido sebacico possono essere superiori ai limiti.  L'eccessiva assunzione di trigliceridi (come l'olio di cocco) o alimenti contenenti acido adipico , ne aumentano l'escrezione urinaria. Tenere in considerazione che questo metabolita può comportare affaticamento mitocondriale con danno di membrana e produzione di radicali liberi. Valutare integrazione con carnitina."
     },
 
     "acidoadipico": {
       "name": "Acido adipico",
+      "tname": "Adipico",
       "base": "L’acido adipico è un metabolita degli acidi grassi prodotto dalla beta-ossidazione perossisomale.",
       "hight": "L'eccesso di acido adipico è correlato a chetosi o acidosi metabolica, oppure a carenza di carnitina (carrier dei grassi) provocando ossidazione incompleta degli acidi grassi.  Valori molto elevati possono indicare polimorfismi genetici che alterano la formazione e il metabolismo della carnitina oppure carenza di cofattori come vit.B2 e magnesio. In caso di difetti di ossidazione degli acidi grassi sono associati sintomi come ipoglicemia,ipotonia, vomito, letargia, ecc.. Tenere in considerazione che questi metaboliti possono comportare affaticamento mitocondriale con danno di membrana e produzione di radicali liberi. Valutare integrazione con carnitina , lisina e vitamina B2."
     },
 
     "acidosuberico": {
       "name": "Acido suberico",
+      "tname": "Suberico",
       "base": "L’acido suberico è un metabolita degli acidi grassi prodotto dalla beta-ossidazione perossisomale. E' un prodotto di degradazione metabolica derivato dall'acido oleico.",
       "hight": "L'eccesso di acido suberico è correlato a chetosi o acidosi metabolica, oppure a carenza di carnitina (carrier dei grassi) provocando ossidazione incompleta degli acidi grassi.  Valori molto elevati possono indicare polimorfismi genetici che alterano la formazione e il metabolismo della carnitina oppure carenza di cofattori come vit.B2 e magnesio. In caso di difetti di ossidazione degli acidi grassi sono associati sintomi come ipoglicemia,ipotonia, vomito, letargia, ecc.. Tenere in considerazione che questi metaboliti possono comportare affaticamento mitocondriale con danno di membrana e produzione di radicali liberi. Valutare integrazione con carnitina , lisina e vitamina B2."
     },
 
     "etilmalonico": {
       "name": "Acido etilmalonico",
+      "tname": "Etilmalonico",
       "base": "L’acido etilmalonico è un acido grasso ramificato sintetizzato prettamente a partire dall'acido malonico. Livelli cronicamente elevati sono associati a due errori congeniti del metabolismo: deficit acil-CoA deidrogenasi a catena corta (SCAD) ed encefalopatia etilmalonica . Se è particolarmente elevato agisce come acidogeno e metabotossina.",
       "hight": "L'eccesso di acido etilmalonico può indicare polimorfismi genetici che alterano la formazione e il metabolismo della carnitina oppure carenza di cofattori come vit.B2 e magnesio. In caso di difetti di ossidazione degli acidi grassi sono associati sintomi come ipoglicemia,ipotonia, vomito, letargia, ecc.. Valutare integrazione con carnitina , lisina e vitamina B2."
     },
 
     "acido3idrossibutirrico": {
       "name": "Acido 3-idrossibutirico",
+      "tname": "3-Idrossibutirrico",
       "base": "L’acido 3-idrossibutirrico è un corpo chetonico prodotto dal fegato in caso di mancanza di energia da parte dei carboidrati o prodotto da acidosi metabolica data dal fallimento del processo di glicolisi (in caso di pazienti diabetici).  Difetti nella citocromo ossidasi ne comportano l'eccesso , come la dieta restrittiva nei confronti di carboidrati e ricca di grassi e proteine (chetogenica).",
       "hight": "L'eccesso di acido 3-idrossibutirrico si riscontra spesso in pazienti che seguono una dieta chetogenica o digiuno-digiuno intermittente. Inoltre è possibile una sua eccessiva produzione in caso di diabete mellito o malattie genetiche che intaccano la glicolisi."
     },
 
     "acidocitrico": {
       "name": "Acido citrico",
+      "tname": "Citrico",
       "base": "L’acido citrico è il primo metabolita del ciclo TCA ( ciclo degli acidi tricarbossilici o ciclo dell'acido citrico ), via metabolica centrale per tutti gli animali, piante e batteri.  L'acido citrico deriva dalla condensazione dell'ossalacetato (ultimo metabolita del ciclo TCA) con acetil-CoA proveniente dal catabolismo di carboidrati, grassi e proteine. Le reazioni chimiche del ciclo TCA generano fino ai 2/3  dell'energia derivata dal cibo per gli organismi superiori. E' inoltre possibile che tale via venga percorsa a ritroso, quindi a partire dall'acido citrico avviene la sua scomposizione in acetil-CoA per la sintesi di acidi grassi e ossalacetato. Dall'acido citrico, per opera dell'enzima aconitasi, si genera l'acido aconitico. Per la funzionalità dell'enzima aconitasi è importante la presenza del cofattore ferro e l'azione antiossidante mediata dal glutatione.  L'acido citrico può essere introdotto anche con la dieta specialmente tramite limoni e lime oppure in alimenti nel quale viene utilizzato come conservante naturale.  Può essere anche prodotto da lieviti o batteri intestinali.",
       "hight": "L'accumulo nelle urine potrebbe essere dato da un blocco del ciclo mitocondriale a livello dell'enzima aconitasi per eventuale carenza di glutatione o ferro oppure per presenza di metalli pesanti (alluminio, mercurio, arsenico e stagno). L'eccesso può essere dovuto anche a un introito importante di alimenti che lo contengono (agrumi o conservanti naturali). Il suo accumulo potrebbe essere dato anche da sovraccrescita microbica intestinale. Valutare integrazione con glutatione o ferro, se la natura dello squilibrio non è di natura alimentare o microbica.",
       "low": "Il deficit di acido citrico potrebbe essere correlato alla degradazione della massa muscolare per attività sportiva intensa oppure per problematiche legate alla funzionalità renale (calcolosi renale -in tal caso valutare i livelli di ossalati- , problemi renali cronici, acidosi renale tubulare). Anche condizioni diabetiche o iperparatiroidismo possono alterare tale valore. Valutare anche condizioni nutrizionali come stati di malnutrizione o carenza di potassio o agrumi."
@@ -492,6 +517,7 @@
 
     "acidoaconitico": {
       "name": "Acido aconitico",
+      "tname": "Aconitico",
       "base": "L’acido aconitico è il secondo metabolita del ciclo di produzione energetica. Il passaggio che porta alla sua formazione a partire dall'acido citrico dipende dall'enzima aconitasi, la quale funzione dipende dalla disponibilità di glutammina e agenti antiossidanti. La differenza con l'acido citrico dovrebbe essere entro il 20%. Se non viene mantenuto questo rapporto ci potrebbe essere un deficit dell’enzima aconitasi: in tal caso agire con i cofattori enzimatici relativi glutammina, magnesio, ferro e valutare la presenza di metalli pesanti che potrebbero alterare la funzionalità dell'enzima. ",
       "hight": "L’eccesso di acido aconitico, associato a deficit di acido isocitrico (il metabolita successivo del ciclo), indica problemi enzimatici dell'aconitasi da ripristinare con supplementazione di glutatione in caso di problemi ossidativi; diversamente si può agire con i cofattori enzimatici cisteina e ferro (soprattutto per pazienti  anemici).",
       "low": "Il deficit di acido aconitico potrebbe evidenziare inefficienza dell'enzima aconitasi per carenza dei cofattori (cisteina e ferro) oppure per presenza di metalli pesanti che alterano la funzionalità enzimatica.  La sua carenza potrebbe essere concomitante con la carenza del suo predecessore, per inefficiente glicolisi o ossidazione dei grassi."
@@ -499,6 +525,7 @@
 
     "acidoisocitrico": {
       "name": "Acido isocitrico",
+      "tname": "Isocitrico",
       "base": "L’acido isocitrico è il terzo metabolita del ciclo TCA, è presente in diversi alimenti, come ribes rosso, uva spina e mele. Ciò potrebbe rendere l'acido isocitrico un potenziale biomarcatore per il consumo di questi alimenti.   La sua produzione avviene per opera dell'enzima aconitasi, quindi è sensibile alla presenza di metalli pesanti e all'assenza di cofattori cisteina e ferro. L'acido isocitrico viene poi convertito in acido 2-ossoglutarico dall'enzima isocitrato deidrogenasi, dipendente dalla presenza di vit.B3, magnesio e manganese.",
       "hight": "L'eccesso potrebbe essere associato a un valore basso del metabolita successivo ( acido 2-ossoglutarico); in tal caso valutare supplementazione con cofattori enzimatici come B3, Mg e/o Mn.  Se non è associato ad altre alterazioni metaboliche, è di probabile origine nutrizionale.",
       "low": "Il suo deficit è correlato spesso a inefficienza enzimatica per carenza di cisteina, ferro o agenti antiossidanti, soprattutto in caso ci sia anche eccesso di aconitato. Se unica alterazione, non desta preoccupazione."
@@ -506,6 +533,7 @@
 
     "acido2ossoglutarico": {
       "name": "Acido 2-ossoglutarico",
+      "tname": "2-Ossoglutarico",
       "base": "L’acido 2-ossoglutarico è una molecola chiave nel ciclo TCA, svolgendo un ruolo fondamentale nel determinare la velocità complessiva di questo importante processo metabolico.Fornisce un'importante fonte di glutammina e glutammato che stimola la sintesi proteica e la formazione del tessuto osseo, inibisce la degradazione delle proteine​​nel muscolo e costituisce un importante combustibile metabolico per le cellule del tratto gastrointestinale.",
       "hight": "In caso di eccesso potrebbe essere necessaria integrazione di cofattori quali vitamine del gruppo B, zinco, magnesio e manganese per stimolare l'attività della deidrogenasi per la formazione del metabolita successivo (acido succinico). Livelli molto elevati possono avere anche provenienza amminoacidica ( glutammina, istidina, arginina, prolina, glutammato) e questo spiegherebbe l'effetto energetico dell'integrazione di amminoacidi liberi.",
       "low": "Bassi livelli di acido  2-ossoglutarico possono riflettere la mancanza dei suoi precursori oppure una disfunzione enzimatica dovuta alla mancanza di cofattori nutrizionali, difetti genetici o esposizioni a tossine. Si è anche riscontrata correlazione tra bassi livelli di acido 2-ossoglutarico e un'eccessiva sintesi di acidi grassi saturi e trigliceridi in casi di insulino-resistenza."
@@ -513,6 +541,7 @@
 
     "acidosuccinico": {
       "name": "Acido succinico",
+      "tname": "Succinico",
       "base": "L’acido succinico è il metabolita intermedio del ciclo di produzione energetica, prodotto dal precedente (succinil-CoA) per azione dell’enzima succinil-CoA sintasi, con produzione di NADH che fornisce direttamente elettroni alla catena respiratoria mitocondriale. I cofattori enzimatici sono Mg, vit.B1,2 e 3.  L'attività della succinil-CoA sintasi potrebbe essere alterata dalla presenza di metalli pesanti o sostanze tossiche.  A sua volta l'acido succinico è metabolizzato dall'enzima succinato deidrogenasi per la formazione di fumarico, azione mediata da cofattori quali ferro e vitamina B2 , con rilascio di FADH2. L'enzima succinato deidrogenasi gioca un ruolo chiave nel metabolismo mitocondriale e disfunzioni della sua funzionalità sono associate a tumore e patologie neurodegenerative.  L'acido succinico è anche un metabolita microbico di Bacteroidetes.",
       "hight": "L'eccesso di acido succinico può essere dovuto a carenza di cofattori per la sua conversione in fumarico, quindi deficienza di ferro e vitamina B2 oppure per presenza di metalli pesanti o sostanze tossiche che inibiscono l'azione enzimatica.  In tal caso valutare integrazione con CoQ10 e/o magnesio. Può essere elevato anche per sovracrescita microbica intestinale, in particolare da parte di Bacteroidetes. Diversi studi hanno dimostrato che l'aumento contemporaneo di acido succinico e fumarico giocano un ruolo importante nel processo oncogenico causato dal danno al DNA e ipermetilazione. La sua azione oncogenica sembra essere dovuta alla sua capacità di inibire enzimi con domini prolil idrossilasi che regolano la risposta all'ipossia del fattore di trascrizione HIF.",
       "low": "Livelli bassi di acido succinico possono essere correlati a un dieta povera o scarso assorbimento di aminoacidi ramificati. Gli aminoacidi ramificati sono catabolizzati in acetil-CoA o succinil-CoA per entrare nel ciclo di Krebs, inoltre la carenza di vit.B12 può causare difetti nella conversione di metilmalonic-CoA in succinil-Coa (via della valina e isoleucina), con diminuzione dei livelli di succinil-COA. Valutare integrazione di vit.B12 e lo stato nutrizionale del paziente."
@@ -520,24 +549,29 @@
 
     "acidofumarico": {
       "name": "Acido fumarico",
+      "tname": "Fumarico",
       "base": "L’acido fumarico è tra i metaboliti terminali del ciclo, la sua produzione dipende dalla presenza di acido succinico, dall'enzima succinato deidrogenasi e i suoi cofattori vitamina B2 e ferro. A sua volta viene poi convertito in acido malico dall'enzima fumarasi. La sua quantità dipende anche dal catabolismo di fenilalanina e tirosina che entrano nel ciclo di Krebs per la produzione di energia tramite questo intermedio. Da studi recenti è stato identificato come probabile oncometabolita insieme all'acido succinico per la loro capacità di inibire enzimi contenti domini prolil- idrossilasi che regolano la risposta all'ipossia del fattore di trascrizione HIF.",
       "hight": "L'eccesso è spesso correlato a un difetto dell'enzima fumarasi che lo dovrebbe convertire nell'acido malico, il metabolita successivo, oppure da un'alterata funzionalità mitocondriale. Per ripristinare la funzionalità mitocondriale si consiglia la supplementazione di CoQ10, NAD+, L-carnitina e acetyl-L-carnitina, riboflavina, nicotinamide, biotina e vitamine E. Il suo eccesso può essere correlato anche a integrazione di amminoacidi ramificati."
     },
 
     "acidomalico": {
       "name": "Acido malico",
+      "tname": "Malico",
       "base": "L’acido malico deriva dalla conversione dell'acido fumarico a opera dell'enzima fumarasi. A sua volta viene poi convertito dalla malato deidrogenasi in ossalacetato; la malato deidrogenasi è un enzima fondamentale attivo sia nel ciclo di krebs che nel sistema shuttle malato-aspartato (sistema che media il trasferimento di elettroni provenienti dalla glicolisi -nel citosol- alla matrice mitocondriale, centrale per la fosforilazione ossidativa e generazione di ATP). Il cofattore necessario per questo enzima è la niacina (vit.B3)  L'acido malico si trova solitamente in quantità prossime allo 0. La sua presenza può essere correlata all’utilizzo di frutta ( mele e pere) o verdura . E’ inoltre un additivo e conservante di bibite e sciroppi.",
       "hight": "L'eccesso di acido malico potrebbe evidenziare la necessità di vit.B3 e CoQ10 oppure potrebbe essere considerato come biomarcatore dell'utilizzo di alimenti che lo contengono. Se appare elevato insieme agli altri componenti del ciclo, si parla di disfunzione mitocondriale da riequlibrare."
     },
 
     "acido2idrossiglutarato": {
       "name": "Acido 2-idrossiglutarato",
+      "tname": "2-Idrossiglutarato",
       "base": "L'acido 2-idrossiglutarato (2-HG) è strutturalmente simile al α-chetoglutarato (α-KG),  un prodotto intermedio del ciclo dell'acido tricarbossilico ; può essere generato riducendo il gruppo chetonico di α-KG a un gruppo ossidrile. Il ruolo significativo che il 2-HG svolge è stato certificato nella fisiopatologia dell'aciduria 2-idrossiglutarica (2HGA),  disturbo neurometabolico che porta a neurodegenerazione progressiva. E' stato riscontrato un ruolo importante di questo metabolita anche in tumori che vedono isocitrato deidrogenasi mutante 1/2 (IDH1/2mt) e nel carcinoma a cellule renali a cellule chiare (ccRCC). È infatti considerato un oncometabolita, sollevando molta attenzione sul suo meccanismo oncogenico. Negli ultimi anni, è stato verificato che il 2-HG si accumula nel contesto dell'ipossia o del pH acido, e ci sono anche ricerche che confermano il ruolo vitale che il 2-HG svolge nella decisione del destino delle cellule immunitarie.",
-      "hight": "L'eccesso di acido 2-idrossiglutarico evidenzia disturbo neurometabolico oppure potrebbe essere correlato a situazioni oncologiche."
+      "hight": "L'eccesso di acido 2-idrossiglutarico evidenzia disturbo neurometabolico oppure potrebbe essere correlato a situazioni oncologiche.",
+      "note": "Metaboliti legati ai difetti genetici del ciclo mitocondriale"
     },
 
     "acidoomovanillico": {
       "name": "Acido omovanillico (HVA)",
+      "tname": "Omovanillico HVA",
       "base": "L’acido omovanillico (HVA) è il metabolita diretto della dopamina, neurotrasmettitore di fondamentale importanza in quanto precursore di altri ormoni della famiglia delle catecolamine.  Nella produzione di dopamina, fenilalanina e tirosina, sono i principali attori insieme a cofattori enzimatici come il ferro, la tetraidrobiopterina e fosfato piridossico. La dopamina può essere anche prodotta dal tratto gastrointestinale. Successivamente la dopamina può essere convertita a norepinefrina, usando come cofattori vit.C e rame. Diversamente può essere utilizzata per metabolizzare l'acido omovanillico, mediante due enzimi MAO (monoamina ossidasi) e COMT  ( catecol-o-metiltransferasi)  che utilizzano rispettivamente come cofattori vit.B2 uno e SAMe, magnesio e B6 l'altro enzima.",
       "hight": "L’eccessiva presenza di HVA nelle urine può manifestarsi in caso di mancanza di cofattori enzimatici (rame e vit.C) per la produzione di norepinefrina a partire dalla dopamina. Anche la supplementazione di quercitina aumenta i livelli plasmatici di HVA e quindi l’eliminazione nelle urine.  Flavonoidi alimentari contenuti in pomodoro, cipolla e te possono contribuire all’aumento di HVA.  Come accade per l'acido vanilmandelico (VMA), anche in questo caso si associa un aumento nelle urine di HVA a condizioni tumorali neuronali. Disordini dell’umore, forte stress e autismo possono indurre aumento di dopamina e quindi di HVA nelle urine.",
       "low": "La carenza di HVA è spesso associata a deficienza degli aminoacidi precursori (tirosina e/o fenilalanina) o dei cofattori enzimatici (ferro, tetrabiopterina, vit. B6, vit. B2 o SAMe). Può riflettere anche difetti di metilazione o variazioni di polimorfismi genetici. I tassi possono essere bassi anche in pazienti che assumono inibitori MAO contro disturbi depressivi o ansiogeni. Valutare integrazione di tirosina, fenilalanina o cofattori enzimatici."
@@ -545,6 +579,7 @@
 
     "acidomanilvandelico": {
       "name": "Acido vanilmandelico (VMA)",
+      "tname": "Vanilmandelico VMA",
       "base": "L’ acido vanilmandelico (VMA) viene generato dal fegato per ossidazione enzimatica. Viene prodotto a partire da epinefrina e norepinefrina, a loro volta di derivazione dopaminica.  Essendo un metabolita derivato dalla tirosina e fenilalanina, i suoi livelli riflettono la sintesi e metabolismo di catecolamine e la disponibilità di questi amminoacidi.",
       "hight": "L'eccesso di VMA potrebbe essere correlato a terapie antidepressive o stimolanti per ADHD ( Il Disturbo da Deficit di Attenzione/Iperattività)  che agiscono entrambi elevando il livello delle catecolamine. Livelli elevati di questo metabolita possono associarsi anche a generali disordini derivati dalla terza età . Eccesso di VMA nelle urine è a volte correlato a feocromocitoma , tumori della cresta neuronale , ipertensione renovascolare e neuroblastoma. In generale un aumento di catecolamine può associarsi a forte stress fisiologico , esercizio fisico e stress post-traumatico.",
       "low": "La carenza di VMA è spesso associata a deficit degli aminoacidi precursori (fenilalanina e/o tirosina), a insufficienti cofattori nutrizionali (tetrabiopterina, vit B6, ferro) e malformazioni genetiche . Il processo di metilazione è necessario per la formazione dei neurotrasmettitori e quindi difetti di metilazione possono incidere sulla sua carenza. Anche la mancanza di cofattori importanti per la formazione di norepinefrina ed epinefrine , come il rame , la vit.C e il SAMe ,  comportano la riduzione dei livelli del metabolita.  I tassi di VMA possono essere bassi anche nei pazienti che assumono inibitori MAO contro disturbi depressivi e ansiogeni."
@@ -552,12 +587,14 @@
 
     "hvavma": {
       "name": "Ratio HVA/VMA",
+      "tname": "Ratio HVA/VMA",
       "base": "HVA/VMA può essere utile per definire l’equilibrio tra la produzione dei neurotrasmettitori dopamina ed epinefrina/noradrenalina, che condividono il pathway oppure potrebbe evidenziare infezione da Clostridia o muffe.",
       "hight": "Un aumento del rapporto HVA/VMA potrebbe essere causato dalla diminuzione della conversione di dopamina in noradrenalina a opera dell’enzima dopamina beta-idrossilasi (DBH), dipendente dal rame e dalla vitamina C che in questo caso potrebbero essere quindi carenti.  Un altro motivo potrebbe essere l’inibizione di questo enzima da parte dei sottoprodotti di Clostridia (HPHA,4-cresolo o acido 4-idrossifenilacetico).  L’enzima DBH può essere inibito anche dalla presenza di muffe (acido fusarico), da prodotti farmaceutici come disulfiram o aspartame. Anche polimorfismi genetici del DBH oppure disturbi neuropsichiatrici possono causare aumento del rapporto HVA/VMA."
     },
 
     "34diidrossifenilacetico": {
       "name": "Acido 3,4-Diidrossifenilacetico",
+      "tname": "3,4-Diidrossifenilacetico",
       "base": "L'acido DOPAC è un acido fenolico e un metabolita del neurotrasmettitore dopamina. La dopamina subisce deaminazione ossidativa a opera della monoamina ossidasi (MAO) diventando 3,4-diidrossifenilacetaldeide (DOPAL), che viene metabolizzato principalmente in DOPAC tramite aldeide deidrogenasi (ALDH2).  Noti inibitori dell'enzima ALDH2 , es il 4-idrossi-2-nonenale (4HNE) , inibiscono l'ossidazione di DOPAL. Nel morbo di Parkinson la produzione di DOPAC viene notevolmente ridotta. In studi clinici è interessante calcolare sia la quantità di dopamina che di DOPAC  per valutare l'attività dei neuroni dopaminergici. Infatti possiamo considerare il DOPAC extracellulare come la quantità di dopamina prodotta e immagazzinata nel neurone presinaptico, mentre i livelli di dopamina rappresentano quanto effettivamente ne è stata rilasciata attraverso la depolarizzazione dei neuroni. DOPAC è uno dei principali acidi fenolici formati durante la fermentazione microbica umana di tè, agrumi e integratori di flavonoidi di soia. DOPAC può essere trovato nei batteri Gram-positivi. ",
       "hight": "Alti livelli di DOPAC possono essere rilevati a causa di fattori che inibiscono la dopamina beta idrossilasi (DBH) come elevati metaboliti di Clostridia, carenze di S-adenosil metione (SAM-e) o carenze dell'enzima che utilizza SAM-e, catecolo Ometiltransferasi (COMT).",
       "low": "I bassi livelli di DOPAC possono essere dovuti alla diminuzione dell'assunzione o dell'assorbimento degli aminoacidi precursori della dopamina come la fenilalanina e / o la tirosina o alla diminuzione delle quantità di cofattori necessari per la biosintesi della dopamina come la tetraidrobiopterina e il coenzima della vitamina B6. I livelli di DOPAC possono anche essere bassi a causa del trattamento con inibitori della monoamino ossidasi (MAO) o polimorfismi genetici (SNP) di MAO o aldeide deidrogenasi (ALDH) che causano una diminuzione dell'attività enzimatica."
@@ -565,6 +602,7 @@
 
     "triptofano": {
       "name": "Triptofano",
+      "tname": "Triptofano",
       "base": "Il triptofano è un amminoacido essenziale che l’organismo umano non è in grado di sintetizzare autonomamente; pertanto, deve essere necessariamente introdotto tramite la dieta. Esso rappresenta un precursore fondamentale di numerose molecole biologicamente attive, tra cui la serotonina, un neurotrasmettitore implicato nella regolazione dell’umore, e la melatonina, responsabile del controllo del ciclo sonno-veglia. Inoltre, il triptofano contribuisce sia alla sintesi proteica (nella forma L-triptofano) sia al mantenimento e alla rigenerazione della mucosa intestinale, proteggendola da agenti potenzialmente nocivi, aspetto particolarmente rilevante per la salute dell’apparato digerente. Il triptofano viene inoltre utilizzato dalle cellule enterocromaffini per la produzione di serotonina a livello intestinale.",
       "hight": "Un eccesso di triptofano nelle urine, noto anche come triptofanuria, può essere indicativo di un’alterazione del metabolismo di questo amminoacido. Tale condizione può derivare da un difetto genetico degli enzimi coinvolti nelle vie di degradazione del triptofano, come avviene nella rara malattia detta sindrome di Hartnup, oppure da un’assunzione alimentare eccessiva o da un malassorbimento intestinale. In queste situazioni, il triptofano non viene correttamente metabolizzato e viene eliminato in quantità superiore attraverso le urine. La presenza di elevate concentrazioni di triptofano nelle urine può causare carenze a livello sistemico, influenzando la sintesi di serotonina e melatonina e, di conseguenza, alterando l’umore, il ciclo sonno-veglia e le difese immunitarie. È importante indagare le cause sottostanti attraverso esami specifici e valutare eventuali sintomi associati, come disturbi neurologici, problemi cutanei o alterazioni del comportamento, per impostare un corretto percorso diagnostico e terapeutico.",
       "low": "Una carenza di triptofano può determinare molteplici effetti avversi sull’organismo, tra cui alterazioni dell’umore come depressione e ansia,  disturbi del ritmo sonno-veglia, quali insonnia, principalmente attribuibili alla diminuzione dei livelli di serotonina e melatonina. Il deficit di questo amminoacido può anche compromettere l’efficienza del sistema immunitario in virtù della sua funzione nella sintesi proteica e nel mantenimento dell’integrità della mucosa intestinale. Per soddisfare il fabbisogno giornaliero di triptofano, si raccomanda l’assunzione di alimenti quali carne di pollo e tacchino, pesce, uova, latte e derivati, frutta secca e semi, legumi (come soia e fagioli), cereali integrali, banane e patate."
@@ -572,6 +610,7 @@
 
     "nacetil5idrossitriptamina": {
       "name": "N-Acetilserotonina",
+      "tname": "N-Acetilserotonina",
       "base": "N-acetil-5-idrossitriptamina, conosciuta anche come N-acetilserotonina, è un composto organico intermedio nella sintesi della melatonina a partire dalla serotonina. Si forma attraverso l’acetilazione della serotonina, un processo catalizzato dall’enzima serotonina N-acetiltransferasi, soprattutto nella ghiandola pineale. Studi recenti suggeriscono che la N-acetilserotonina possieda proprietà antiossidanti, contribuendo a proteggere le cellule dallo stress ossidativo. Svolge inoltre un ruolo importante nel sistema nervoso grazie a effetti neuroprotettivi, alla partecipazione nella modulazione delle funzioni cognitive e della plasticità sinaptica. In sintesi, la N-acetil-5-idrossitriptamina è una molecola centrale nel metabolismo del triptofano, ponte biochimico tra serotonina e melatonina, e potenzialmente coinvolta in vari processi che influenzano il benessere del sistema nervoso e la qualità del sonno.",
       "hight": "Valori urinari aumentati di N-acetil-5-idrossitriptamina possono essere indicativi di una maggiore conversione della serotonina in melatonina, fenomeno che può verificarsi in condizioni di iperattività della ghiandola pineale o in risposta a particolari stimoli ambientali, come l’esposizione prolungata al buio. Tale incremento può riflettersi in una tendenza dell’organismo a favorire i processi di adattamento al ritmo circadiano e a sostenere la qualità del sonno. In ambito clinico, livelli elevati di N-acetilserotonina nelle urine potrebbero suggerire una risposta biologica volta a migliorare la regolazione neuroendocrina e la difesa dallo stress ossidativo, pur rendendo opportune ulteriori indagini per comprendere eventuali implicazioni sul benessere generale e sulle funzioni neuropsichiche.",
       "low": "Valori urinari ridotti di N-acetil-5-idrossitriptamina possono essere indicativi di una diminuzione della conversione della serotonina in melatonina, suggerendo un possibile deficit nella sintesi di quest’ultima. Tale condizione potrebbe riflettersi in disturbi del ritmo sonno-veglia, alterazioni della qualità del sonno o una ridotta capacità dell’organismo di adattarsi ai cambiamenti ambientali. In ambito clinico, la rilevazione di livelli bassi di N-acetilserotonina nelle urine può rappresentare un segnale di squilibrio nel metabolismo del triptofano, rendendo opportuna una valutazione approfondita delle vie biochimiche coinvolte e delle possibili conseguenze sul benessere neuropsichico e generale."
@@ -579,6 +618,7 @@
 
     "serotonina": {
       "name": "Serotonina",
+      "tname": "Serotonina",
       "base": "La serotonina ( o 5-idrossitriptamina) è una delle principali ammine biogene prodotte nell’organismo, derivata anch’essa dal triptofano tramite un processo di idrossilazione e decarbossilazione. Spesso definita come il “neurotrasmettitore del buonumore”, la serotonina gioca un ruolo cruciale nel sistema nervoso centrale, dove regola l’umore, il senso di benessere e le emozioni. Le sue funzioni, tuttavia, vanno ben oltre la sfera neuropsichica: la serotonina interviene nella regolazione dell’appetito, del ciclo sonno-veglia, della percezione del dolore, del comportamento sessuale e delle funzioni cognitive. Un aspetto particolarmente rilevante è che circa il 90% della serotonina totale dell’organismo si trova fuori dal sistema nervoso centrale, soprattutto nelle cellule enterocromaffini dell’intestino. Qui, la serotonina regola la motilità gastrointestinale, stimola le contrazioni peristaltiche e contribuisce a mantenere l’equilibrio tra assorbimento, secrezione e attività immunitaria a livello intestinale. La sua presenza è anche fondamentale nella modulazione della coagulazione sanguigna, poiché rilasciata dalle piastrine in caso di lesioni vascolari. Alterazioni nelle concentrazioni, nella sintesi o nel metabolismo della serotonina sono implicate in numerose condizioni patologiche: dalla depressione maggiore all’emicrania, dai disturbi alimentari come bulimia e anoressia, fino alle malattie infiammatorie intestinali e a certe forme di ipertensione polmonare. Per questo motivo, la serotonina viene spesso indicata come una molecola cardine nella fisiologia umana, vero e proprio trait d’union fra benessere psichico, salute fisica e adattamento agli stimoli ambientali.",
       "hight": "Livelli urinari aumentati di serotonina possono riflettere un incremento della sintesi, del rilascio o della degradazione di questo neurotrasmettitore nell’organismo. Tale condizione può essere indicativa di una maggiore attività serotoninergica, spesso associata a stati di iperattività del sistema nervoso centrale o periferico, oppure alla presenza di tumori neuroendocrini come il carcinoide, che producono grandi quantità di serotonina. In ambito clinico, valori elevati di serotonina nelle urine possono manifestarsi anche in risposta a stress intensi, alterazioni del metabolismo o consumo di alimenti particolarmente ricchi di serotonina, e suggeriscono la necessità di approfondire la valutazione del metabolismo del triptofano e delle possibili cause sottostanti.",
       "low": "Livelli urinari ridotti di serotonina possono indicare una diminuzione della sintesi o del rilascio di questo neurotrasmettitore, oppure una sua alterata degradazione. Tale condizione può riflettere uno stato di carenza serotoninergica, spesso associato a disturbi dell’umore come depressione, ansia o alterazioni del sonno. In ambito clinico, valori bassi di serotonina nelle urine suggeriscono la necessità di approfondire il metabolismo del triptofano e valutare eventuali squilibri neurochimici o condizioni che influenzano negativamente il benessere psichico e fisico."
@@ -586,6 +626,7 @@
 
     "melatonina": {
       "name": "Melatonina",
+      "tname": "Melatonina",
       "base": "La melatonina è un ormone prodotto principalmente dalla ghiandola pineale, situata alla base del cervello, e rappresenta la tappa finale del metabolismo del triptofano, dopo la conversione della serotonina in N-acetil-5-idrossi-triptamina ( N-acetilserotonina) . La sua sintesi e secrezione sono strettamente correlate al ciclo luce-buio: durante la notte, in assenza di stimoli luminosi, la ghiandola pineale intensifica la produzione di melatonina, favorendo così l’induzione del sonno e la sincronizzazione del ritmo circadiano. Le funzioni della melatonina sono molteplici: oltre a regolare il ciclo sonno-veglia e facilitare l’addormentamento, la melatonina contribuisce all’adattamento dell’organismo ai cambiamenti ambientali, come i fusi orari o le stagioni. Svolge inoltre un ruolo nell’attività antiossidante, proteggendo le cellule dai danni causati dai radicali liberi, e influenza processi immunitari, cardiovascolari e metabolici. Recenti ricerche suggeriscono che la melatonina possa modulare anche il tono dell’umore e la risposta allo stress, confermando la sua importanza non solo nel benessere del sonno, ma anche nell’equilibrio globale dell’organismo. Per questo motivo, viene spesso considerata un “orologio biologico” interno, capace di scandire i tempi della salute psicofisica e di favorire l’armonia fra corpo e ambiente.",
       "hight": "Valori urinari aumentati di melatonina possono essere indicativi di una produzione eccessiva di questo ormone da parte della ghiandola pineale, spesso in risposta a condizioni di oscurità prolungata o a particolari stimoli ambientali che favoriscono la secrezione notturna. Tale incremento può riflettersi in una spiccata tendenza dell’organismo a rafforzare i meccanismi di sincronizzazione del ritmo circadiano e a promuovere la qualità del sonno. In ambito clinico, livelli elevati di melatonina nelle urine possono suggerire una risposta adattativa a cambiamenti ambientali, come lunghi periodi di oscurità, oppure essere conseguenza dell’assunzione di integratori a base di melatonina. Tuttavia, è importante approfondire la valutazione per escludere eventuali disfunzioni endocrine o alterazioni del sistema nervoso centrale che possano influenzare la regolazione ormonale.",
       "low": "Valori urinari ridotti di melatonina possono essere indicativi di una scarsa produzione o secrezione di questo ormone da parte della ghiandola pineale. Tale condizione si associa frequentemente a difficoltà nell’addormentamento, disturbi del ritmo circadiano e una ridotta capacità dell’organismo di adattarsi ai cambiamenti ambientali, come il jet lag o le variazioni stagionali. In ambito clinico, livelli bassi di melatonina nelle urine possono rappresentare un segnale di squilibrio nella regolazione del sonno e suggerire la necessità di approfondire le cause sottostanti, tra cui alterazioni del ciclo luce-buio, stress cronico o patologie che coinvolgono il sistema nervoso centrale."
@@ -593,6 +634,7 @@
 
     "acido5idrossindolacetico": {
       "name": "Acido 5-idrossi-indol-3-acetico",
+      "tname": "5-idrossi-indol-3-acetico",
       "base": "L’acido 5-idrossi-indol-3-acetico, spesso abbreviato come 5-HIAA, è un composto biologico di grande rilevanza, noto principalmente come il principale metabolita della serotonina. Quando la serotonina viene degradata nell’organismo, essa attraversa una serie di trasformazioni biochimiche mediate da monoamino ossidasi (MAO) e l’aldeide deidrogenasi, con prodotto finale 5-HIAA. Questo processo avviene principalmente nel sistema nervoso centrale e nel tratto gastrointestinale, dove la serotonina svolge i suoi molteplici ruoli. Dopo la sua formazione, il 5-HIAA viene generalmente eliminato dall’organismo tramite le urine. Per questo motivo, il dosaggio del 5-HIAA nelle urine è spesso utilizzato come indicatore clinico per valutare l’attività del metabolismo serotoninergico. Sebbene il 5-HIAA non abbia un ruolo diretto come neurotrasmettitore, la sua presenza e la sua concentrazione nell’organismo sono fondamentali per monitorare il metabolismo della serotonina. Alcune delle funzioni e degli utilizzi principali includono: - Indicatore diagnostico: Il dosaggio del 5-HIAA viene impiegato soprattutto nella diagnosi di tumori neuroendocrini come il carcinoide, che può produrre elevate quantità di serotonina e, di conseguenza, di 5-HIAA. Valori elevati nelle urine possono quindi segnalare la presenza di tali patologie. - Monitoraggio del metabolismo serotoninergico: La misurazione del 5-HIAA permette di valutare indirettamente la quantità di serotonina sintetizzata e degradata, offrendo informazioni preziose in caso di disturbi dell’umore, alterazioni del comportamento, patologie neuropsichiatriche e malattie del tratto gastrointestinale. - Ruolo nella ricerca scientifica: Il 5-HIAA è spesso studiato per comprendere meglio la fisiologia della serotonina, la sua regolazione e i processi coinvolti in condizioni patologiche legate a stress, depressione e ansia.",
       "hight": "Valori urinari eccessivi di acido 5-idrossi-indol-3-acetico (5-HIAA) sono spesso indicativi di un aumento significativo della degradazione della serotonina nell’organismo. Questa condizione si osserva soprattutto in presenza di tumori neuroendocrini come il carcinoide, che possono produrre grandi quantità di serotonina, determinando così un incremento del suo principale metabolita, il 5-HIAA, nelle urine. In ambito clinico, livelli elevati di 5-HIAA possono anche manifestarsi in situazioni di iperattività serotoninergica, in risposta a stress intensi, o in seguito al consumo di alimenti particolarmente ricchi di serotonina.La rilevazione di valori urinari elevati di 5-HIAA rappresenta quindi un importante segnale diagnostico, che suggerisce la necessità di approfondire la valutazione del metabolismo serotoninergico e di indagare eventuali patologie sottostanti, come i tumori neuroendocrini o alterazioni del metabolismo del triptofano. In questi casi, è fondamentale procedere con ulteriori indagini per identificare la causa dell’iperproduzione di serotonina e per valutare le possibili ripercussioni sul benessere generale dell’organismo.",
       "low": "Valori urinari ridotti di acido 5-idrossi-indol-3-acetico (5-HIAA) possono indicare una diminuzione del metabolismo della serotonina, suggerendo una sintesi o una degradazione insufficiente di questo neurotrasmettitore. Tale condizione si riscontra talvolta in stati di carenza serotoninergica, che possono essere associati a disturbi dell’umore, alterazioni del comportamento o patologie neuropsichiatriche. In ambito clinico, la presenza di bassi livelli di 5-HIAA nelle urine può rappresentare un segnale di squilibrio nel metabolismo del triptofano o di una ridotta attività delle vie serotoninergiche, rendendo necessarie ulteriori indagini per individuare le cause sottostanti e valutare possibili ripercussioni sul benessere generale."
@@ -600,6 +642,7 @@
 
     "chinurenina": {
       "name": "Chinurenina",
+      "tname": "Kinurenina",
       "base": "La chinurenina è un metabolita derivato dal triptofano, prodotto principalmente attraverso la via della chinurenina che coinvolge gli enzimi TDO e IDO . Questo composto riveste un ruolo cruciale nel metabolismo cellulare e nella regolazione della risposta immunitaria. Il corretto funzionamento della via della chinurenina è essenziale per mantenere l’equilibrio tra produzione di serotonina e controllo dello stato infiammatorio: l’attivazione di questa via, in particolare durante stress cronico (cortisolo) , stress ossidativo (monossido di azoto NO) o processi infiammatori (citochine pro-infiammatorie), può sottrarre triptofano alla sintesi della serotonina, influenzando così sia l’umore che la qualità del sonno. La chinurenina e i suoi derivati si trovano prevalentemente nei tessuti in cui gli enzimi TDO e IDO sono presenti e funzionanti, come il fegato, i reni, il cervello e nelle cellule immunitarie; oltre che nei fluidi corporei quando la via metabolica è attivata. La chinurenina viene trasformata ulteriormente nei suoi derivati , prendendo due vie differenti : la via dell’acido chinurenico e la via del NAD. La via dell’acido chinurenico viene spesso intrapresa in casi di patologie neurodegenerative e disturbi dell’umore. Inoltre l’acido chinurenico ha anche effetti antinfiammatori , contribuendo a limitare la risposta immunitaria eccessiva dei confronti di stimoli dannosi. La via del NAD invece porta alla formazione di quest’ultimo, un coenzima essenziale nelle reazioni di ossidoriduzione , quindi nel metabolismo energetico e regolazione dello stress ossidativo. Il bilanciamento della via dell’acido chinurenico rispetto a quella della produzione di NAD rappresenta un nodo cruciale per la salute neuropsichica e immunometabolica. La conoscenza del ruolo della chinurenina è fondamentale non solo per la comprensione dei meccanismi neurochimici e immunologici, ma anche per lo studio di patologie correlate a disfunzioni dell’umore, dell’infiammazione e del metabolismo del triptofano.",
       "hight": "Livelli elevati di chinurenina nelle urine possono essere indicativi di un’attivazione anomala della via metabolica del triptofano, in particolare della via della chinurenina. Questa condizione può verificarsi in risposta a stati infiammatori cronici, stress ossidativo o a un’aumentata attività degli enzimi TDO e IDO, spesso indotta da citochine pro-infiammatorie o da un eccesso di cortisolo. L’eliminazione aumentata di chinurenina attraverso le urine riflette una maggiore conversione del triptofano in questo metabolita, sottraendo così substrato alla sintesi di serotonina e influenzando negativamente l’umore e la qualità del sonno. Inoltre, la presenza di concentrazioni elevate di chinurenina nelle urine può essere un segnale di squilibri metabolici o immunitari, come avviene in alcune infezioni, patologie autoimmuni o condizioni di stress cronico. È importante valutare questi dati in un contesto clinico più ampio, considerando eventuali sintomi associati quali alterazioni dell’umore, stanchezza cronica, disturbi del sonno o segni di infiammazione sistemica, al fine di individuare le cause alla base e impostare un percorso diagnostico e terapeutico adeguato.",
       "low": "Scarsi livelli di chinurenina può portare a un eccesso di triptofano destinato alla sintesi della serotonina , alterando il bilanciamento tra neurotrasmettitori e molecole coinvolte nelle risposta immunitaria e infiammatoria, favorendo quest’ultima con rischio di infiammazione cronica e patologie autoimmuni. Inoltre , data la competizione con il pathway della serotonina, una sua carenza può influenzare negativamente l’umore e la qualità del sonno . La via della chinurenina porta anche alla produzione di NAD, per cui una carenza di chinurenina può quindi ridurre la sintesi di NAD, con possibili effetti negativi sul metabolismo cellulare e sulla capacità di risposta allo stress ossidativo."
@@ -607,6 +650,7 @@
 
     "acidochinurenico": {
       "name": "Acido chinurenico",
+      "tname": "Chinurenico",
       "base": "L’acido chinurenico è un metabolita che deriva dalla trasformazione della chinurenina, a sua volta prodotta dal metabolismo del triptofano tramite la via della chinurenina. Questo composto svolge un ruolo di primaria importanza come modulatore neuroprotettivo nel sistema nervoso: agisce regolando l’attività dei recettori del glutammato, contribuendo così a proteggere i neuroni dai danni eccitotossici, un fenomeno spesso implicato nelle patologie neurodegenerative. Oltre alla sua azione a livello del sistema nervoso centrale, l’acido chinurenico esercita anche effetti antinfiammatori, limitando la risposta immunitaria eccessiva nei confronti di stimoli dannosi e favorendo un equilibrio tra neuroprotezione e controllo delle infiammazioni. La produzione di acido chinurenico tende ad aumentare in condizioni di depressione, obesità o ipertensione, suggerendo il suo coinvolgimento nei disturbi dell’umore, nel metabolismo e nella regolazione della risposta allo stress. In sintesi, il bilanciamento tra la produzione di acido chinurenico e la formazione di NAD rappresenta un nodo cruciale per la salute neuropsichica e immunometabolica: una sua alterazione può essere alla base di numerose patologie legate all’umore, all’infiammazione e al metabolismo del triptofano.",
       "hight": "Elevati livelli urinari di acido chinurenico possono essere indicativi di una maggiore attivazione della via della chinurenina, spesso in risposta a stati infiammatori cronici, stress ossidativo o disfunzioni immunitarie. Questo aumento può riflettere un tentativo dell’organismo di limitare i processi infiammatori e neurotossici attraverso la produzione di un metabolita con proprietà antinfiammatorie e neuroprotettive. Tuttavia, una sua escrezione eccessiva nelle urine potrebbe anche suggerire uno squilibrio del metabolismo del triptofano, con possibili ripercussioni sulla sintesi della serotonina e del NAD, influenzando così sia l’umore che il metabolismo energetico cellulare. In ambito clinico, la valutazione di valori elevati di acido chinurenico nelle urine deve essere sempre integrata con l’analisi dei sintomi e del contesto generale del paziente, per individuare eventuali condizioni sottostanti come infiammazione cronica, patologie autoimmuni o disturbi dell’umore.",
       "low": "Scarsi livelli urinari di acido chinurenico possono essere indicativi di una ridotta attivazione della via della chinurenina, spesso correlata a una minore risposta immunitaria o a una limitata produzione di metaboliti neuroprotettivi. Questa condizione può riflettere un deficit nella capacità dell’organismo di modulare l’infiammazione e di proteggere il sistema nervoso dagli effetti dello stress ossidativo. Inoltre, una bassa escrezione di acido chinurenico nelle urine può suggerire uno sbilanciamento del metabolismo del triptofano, con una possibile prevalenza della sintesi di serotonina rispetto ai processi di neuroprotezione, influenzando così sia la regolazione dell’umore che la resistenza agli insulti infiammatori e ossidativi."
@@ -614,6 +658,7 @@
 
     "acidochinolinico": {
       "name": "Acido chinolinico",
+      "tname": "Chinolinico",
       "base": "L’acido chinolinico è un metabolita della via della chinurenina, anch’esso derivato dal triptofano. Si forma principalmente nel sistema nervoso centrale e nel sistema immunitario, soprattutto in condizioni di attivazione infiammatoria. Questo composto ha un ruolo ambivalente: da una parte, è un precursore fondamentale per la sintesi del NAD (nicotinammide adenina dinucleotide), coenzima essenziale per il metabolismo energetico cellulare; dall’altra, in presenza di concentrazioni elevate, l’acido chinolinico può esercitare effetti neurotossici, poiché agisce come agonista dei recettori NMDA del glutammato, facilitando fenomeni di eccitotossicità neuronale.",
       "hight": "L’accumulo di acido chinolinico è stato associato a diverse patologie neurodegenerative e infiammatorie, quali la sclerosi multipla, l’Alzheimer, la depressione e alcune malattie autoimmuni. Il corretto equilibrio tra la produzione di acido chinolinico e la sua conversione in NAD rappresenta quindi un elemento chiave per la salute del sistema nervoso e la prevenzione di danni legati allo stress ossidativo e all’infiammazione cronica.",
       "low": "Livelli urinari ridotti di acido chinolinico possono indicare una limitata attivazione della via della chinurenina, con conseguente riduzione della sintesi di NAD e potenziale compromissione della capacità metabolica cellulare e della risposta allo stress ossidativo. Questa condizione può riflettere una minore produzione di acido chinolinico sia a livello del sistema nervoso centrale che del sistema immunitario, suggerendo una risposta infiammatoria attenuata o uno sbilanciamento nel metabolismo del triptofano a favore di altri pathway, come quello della serotonina. In ambito clinico, valori bassi di acido chinolinico nelle urine potrebbero essere correlati a una ridotta efficienza nei processi di neuroprotezione e nella regolazione delle difese antiossidanti, aumentando la vulnerabilità a condizioni di stress cellulare e infiammazione cronica."
@@ -621,6 +666,7 @@
 
     "triptamina": {
       "name": "Triptamina",
+      "tname": "Triptamina",
       "base": "La triptamina è una molecola organica appartenente alla famiglia delle ammine biogene, derivata direttamente dal triptofano attraverso una semplice decarbossilazione. Strutturalmente, costituisce il nucleo di numerosi composti biologicamente attivi, tra cui la serotonina e la melatonina, fondamentali per la regolazione dell’umore e dei ritmi circadiani. Pur essendo presente in piccole quantità nell’organismo, la triptamina agisce come neuromodulatore nel sistema nervoso centrale, influenzando la trasmissione sinaptica e, secondo alcune evidenze, partecipando ai processi di percezione sensoriale e alla modulazione dell’attività neuronale. Inoltre, funge da precursore per varie sostanze endogene e naturali, molte delle quali dotate di rilevanti proprietà psicoattive e fisiologiche. La presenza e l’attività della triptamina sono oggetto di studio per il loro possibile ruolo nella regolazione dell’umore, nei meccanismi di adattamento allo stress e in alcune condizioni neuropsichiatriche.",
       "hight": "Livelli urinari aumentati di triptamina possono indicare una maggiore decarbossilazione del triptofano o un’attivazione accentuata della produzione endogena di questa ammina biogena. Tale condizione può essere correlata a un incremento dei processi neuromodulatori nel sistema nervoso centrale, con possibili effetti sulla percezione sensoriale, sulla regolazione dell’umore e sulla risposta allo stress. In ambito clinico, valori elevati di triptamina nelle urine potrebbero riflettere un adattamento fisiologico a stimoli ambientali intensi o essere associati a stati di iperattività neuronale e alterazioni del metabolismo neuropsichico.",
       "low": "Livelli urinari ridotti di triptamina possono riflettere una diminuzione della decarbossilazione del triptofano o una ridotta produzione endogena di questa ammina biogena. Tale condizione può essere indicativa di alterazioni nel metabolismo del triptofano, con una possibile deviazione verso altre vie metaboliche, come quella della serotonina o della chinurenina. In ambito clinico, bassi valori di triptamina nelle urine potrebbero essere correlati a una minore attività neuromodulatoria o a uno stato di ridotto adattamento allo stress, influenzando potenzialmente l’umore e la risposta agli stimoli ambientali."
@@ -628,60 +674,70 @@
 
     "acidocitramalico": {
       "name": "Acido citramalico",
+      "tname": "Citramalico",
       "base": "L’acido citramalico è un analogo dell'acido malico. Si trova in quasi tutti gli organismi viventi,  ma è principalmente un metabolita sottoprodotto di alcune specie di lievito ( es. Saccharomyces , Propionibacterium acnes e Aspergillus niger…). L'acido citramalico può essere scomposto dall'enzima citramalato liasi, che converte il citramalato in acetato e piruvato. In maniera opposta, la citramalato sintasi è un enzima presente nei batteri che sintetizza l'acido citramalico da acetil-CoA, piruvato e acqua. L'acido citramalico può avere un ruolo utile nelle diagnosi mediche: è  stato trovato nelle urine di due fratelli con caratteristiche autistiche. L'acido citramalico può anche essere usato come marcatore urinario per la disbiosi intestinale. La sua presenza urinaria può essere anche influenzata dal massiccio introito alimentare di frutta (mele, mirtilli rossi e barbabietola da zucchero).",
       "hight": "La presenza in eccesso di acido citramalico identifica la sovraccrescita di lieviti oppure un introito elevato di frutta. Inoltre è da ricordare che un utilizzo importante di zuccheri (anche quelli della frutta) stimola la crescita dei lieviti."
     },
 
     "5idrossimetil2furancarbossilico": {
       "name": "Acido 5-idrossimetil-2-furancarbossilico",
+      "tname": "5-idrossimetil-2-furancarbossilico",
       "base": "L’acido 5-idrossimetil-2-furancarbossilico, anche detto acido Sumiki, è un metabolita umano naturale. Viene anche prodotto da alcune specie di funghi e lieviti, es.Aspergillus.",
       "hight": "L'acido Sumiki può essere escreto in eccesso da soggetti normali dopo un carico di fenilalanina .L'acido Sumiki è un sottoprodotto del fungo Aspergillus e probabilmente anche di altre specie di funghi e lieviti."
     },
 
     "acidotartarico": {
       "name": "Acido tartarico",
+      "tname": "Tartarico",
       "base": "L’acido tartarico è un metabolita aspecifico di infezioni da lieviti e batteri come da Agrobacterium, Nocardia, Rhizobium, Saccharomyces. Può derivare anche dall'utilizzo massiccio di vino , grappe, cioccolato o conservanti alimentari . Naturalmente presente nei prodotti derivati dalla spremitura dell'uva , viene invece aggiunto come conservante , antiossidante, emulsionante e acidificante dall'industria alimentare . Consumato ad alte dosi agisce come tossina muscolare con alterazioni gravi come paralisi e morte.",
       "hight": "I livelli elevati nelle urine possono essere dovuti alla presenza di lieviti (nell'intestino o nella vescica). Anche l’infezione da Candida stimola  produzione di questo metabolita. Indagare inoltre le abitudini alimentari del paziente , essendo biomarcatore di alcuni alimenti prima elencati.  Alti livelli di acido tartarico sono stati trovati nei bambini autistici."
     },
 
     "furancarbonilglicina": {
       "name": "Furancarbonilglicina",
+      "tname": "Furancarbonilglicina",
       "base": "Furan carbonil glicina è un metabolita aspecifico prodotto da Aspergillus e altre specie funginee nel tratto gastrointestinale. L'Aspergillus trasmette micosi opportunistiche: similmente a Candida albicans, Aspergillus crea danno nell'ospite (uomo) esclusivamente in condizioni a esso favorevoli. Difatti, Aspergillus rientra tra i microorganismi commensali che, solo in alcune precise circostanze, si trasformano in patogeni opportunisti. Il calo delle difese immunitarie dell'ospite, l'asma e le cisti bronchiali si rivelano importanti fattori predisponenti. La fonte di esposizione più comune è il cibo ammuffito oppure muffe ambientali casalinghe.",
       "hight": "L'eccesso di furancarbonilglicina identifica sovracrescita funginea per cui si consiglia di indagare le abitudini alimentari e eventuali esposizioni ambientali. Valutare quindi una terapia anti-funginea ed eventualmente eseguire un test specifico per le infezioni funginee."
     },
 
     "acidotricarballilico": {
       "name": "Acido tricarballilico",
+      "tname": "Tricarballilico",
       "base": "L'acido tricarballilico è un sottoprodotto chimico rilasciato dalle fumonisine (contaminante di prodotti a base di mais ) durante il passaggio attraverso il tratto gastrointestinale. Le fumonisine sono tossine funginee prodotte principalmente dal fungo Fusarium verticillioides. L'acido tricarballilico è un inibitore dell'enzima aconitasi , chelante del magnesio, e quindi interferisce con il ciclo di Krebs. Inoltre, l'acido tricarballilico è un sottoprodotto della raffinazione dello zucchero di barbabietola e dello zucchero d'acero e potrebbe comparire dopo l'ingestione di questi zuccheri.",
       "hight": "L'eccesso di acido tricarballilico potrebbe identificare sovracrescita funginea.  Le sindromi cliniche dovute alla micotossina intatta sono rare e caratterizzate da dolore addominale e diarrea. Può apparire anche dopo il consumo di barbabietola da zucchero o sciroppo d'acero."
     },
 
     "arabinosio": {
       "name": "Arabinosio",
+      "tname": "Arabinosio",
       "base": "L' Arabinosio è uno zucchero pentoso  prodotto di degradazione dell'acido ialuronico, è possibile trovarlo anche in alcuni tipi di frutta ( mele, prugne, ciliegie e uva) . L'arabinosio si trova in tutti gli organismi, dai batteri alle piante agli animali. Esistono due diversi percorsi di utilizzo dell'arabinosio in natura: batterico e fungino. La via batterica converte l'arabinosio in xilulosio-5-P dopo di che entra nella via del pentoso fosfato per la produzione di etanolo. La via fungina converte l'arabinosio in L-arabinitolo e infine entra nella via del pentoso fosfato non ossidativo per un ulteriore metabolismo. La presenza di arabinosio nelle urine può indicare una crescita eccessiva di lievito intestinale come Candida albicans o altre specie di lieviti / funghi. L-arabinosio è anche un metabolita microbico trovato e prodotto da Mycobacterium. La candidosi è un'infezione opportunistica causata dal lievito e può portare a vari cambiamenti: disbiosi, allergie e intolleranze alimentari, stress ossidativo, ecc.",
       "hight": "L'eccesso di arabinosio potrebbe indicare infezione in corso di Candida o altri lieviti. Valutare anche lo stile alimentare del paziente in caso di presenza importante di questo metabolita, ridurre gli zuccheri. Potrebbe essere anche un marcatore di un utilizzo importante di frutta."
     },
 
     "arabitolo": {
       "name": "Arabitolo",
+      "tname": "Arabitolo",
       "base": "L'Arabitolo è poliolo (alcol dello zucchero) ottenuto dalla riduzione dell'arabinosio. E' considerato marcatore di candidosi invasiva o infezione da Debaryomyces, Pichia e Zygosaccharomyces.",
       "hight": "L'eccesso di arabitolo nelle urine identifica infezione funginea in corso. E' stato inoltre associato al morbo di Alzheimer. Errori congeniti metabolici possono causarne l'incremento nelle urine."
     },
 
     "acido25furandicarbossilico": {
       "name": "Acido 2,5-furandicarbossilico",
+      "tname": "Furan-2,5-Dicarbossilico",
       "base": "L' acido 2,5-furandicarbossilico è un normale metabolita urinario nell'uomo, probabilmente derivante dall'utilizzo nella dieta di carne sottoposta a cottura. L'acido 2,5-furandicarbossilico è anche un metabolita microbico aspecifico e biomarcatore di forti quantità di fruttosio.",
       "hight": "L'eccesso di acido 2,5-furandicarbossilico si associa a crescita funginea aspecifica o forte introito di frutta."
     },
 
     "acido4idrossiippurico": {
       "name": "Acido 4-idrossiippurico",
+      "tname": "4-idrossiippurico",
       "base": "L’acido 4-idrossiippurico è un prodotto finale microbico derivato dal metabolismo dei polifenoli da parte della microflora intestinale oppure di origine alimentare/farmacologica per assunzione di polifenoli o parabeni.",
       "hight": "L'eccesso di 4-idrossiippurico può evidenziare l'esposizione dell'individuo a parabeni presenti in cibi,  cosmetici e in gran parte dei prodotti farmaceutici . Seppur in passato siano stati definiti sicuri per l'uomo, la loro bassa tossicità continua a essere discussa. L'eccesso di questo metabolita si può associare anche all'assunzione di frutti contenenti polifenoli ricchi di antociani, flavonoli e idrossicinnamati, oppure a un eccesso di batteri che metabolizzano polifenoli."
     },
 
     "acidoippurico": {
       "name": "Acido ippurico",
+      "tname": "Ippurico",
       "base": "L’acido ippurico deriva dall’acido benzoico coniugato con la glicina nel fegato ( Benzoato + Glicina -> Ippurato). La maggior parte dell'acido ippurico nell'urina è derivato dalla degradazione microbica dell'acido clorogenico in acido benzoico. L'acido clorogenico è una sostanza comunemente trovata in bevande (te, caffè) e frutti (mele, pere, mirtilli, carote, pomodori, pesche) ma anche in semi di girasole , patate,melanzane e patate dolci. L'acido benzoico è presente in grande quantità nel succo di mirtillo ed è un conservante alimentare. L'acido ippurico può generarsi anche a causa dell'esposizione prolungata al solvente chimico toluene.  In generale è più rappresentativo come marcatore del metabolismo dei composti fenolici a opera batterica.",
       "hight": "L'eccesso di acido ippurico è causato principalmente dal metabolismo batterico dei composti fenolici introdotti nell'alimentazione abituale . Più raramente può essere associato a intossicazione da idrocarburi.",
       "low": "Livelli bassi di acido ippurico sono associati a disbiosi, eventualmente da indagare tramite test specifico."
@@ -689,66 +745,77 @@
 
     "acidobenzoico": {
       "name": "Acido benzoico",
+      "tname": "Benzoico",
       "base": "L’acido benzoico è un sottoprodotto del metabolismo della fenilalanina nei batteri. Viene anche prodotto quando i batteri intestinali ( E.Coli, Bifidi, Lactobacilli , Eubacterium, Bacteroidetes) elaborano i polifenoli (da frutta, caffè, te o verdure ). Si può trovare nell’agente infettivo Serratia.",
       "hight": "Il suo eccesso può essere correlato anche a fibrosi cistica , enteriti , disordine celiaco , sindrome dell’intestino corto o massiccio introito di conservanti alimentari."
     },
 
     "indacano": {
       "name": "Indacano",
+      "tname": "Indacano",
       "base": "L’indacano è  un composto organico incolore costituito da un anello indolo coniugato al glucosio. E’ un sostanza presente naturalmente nelle urine di umani e mammiferi in generale, in quanto metabolita del triptofano. Il triptofano viene convertito in indolo dai batteri intestinali , in particolare da ( es. Peptostreptococcus indolicus, Bacteroides putredinis e Clostridium sporogenes)  che lo metabolizzano permettendo la perdita della catena laterale; l’indolo prodotto viene quindi assorbito dalla mucosa intestinale entrando nel circolo entero-epatico. Nel fegato subisce un processo enzimatico di detossificazione bifasica : nel primo step viene trasformato in 3-idrossiindolo e successivamente coniugato con acido solforico o acido glucoronico  per la sua escrezione tramite i reni e le urine sotto forma di indacano . La concentrazione urinaria di indacano riflette la presenza di fenomeni putrefattivi a carico delle proteine e dei composti azotati , processo mediato da alcune specie batteriche come Proteus e Klebsiella. L’azione fondamentale di questi batteri permette di compiere il primo step di detossificazione dei composti  con formazione di sostante endotossiche ( ammoniaca, scatolo, indolo, fenoli) che successivamente raggiungono il fegato compromettendone la funzionalità. L’indolo, insieme allo scatolo, è responsabile di gran parte dell’odore delle feci.",
       "hight": "L’eccessiva presenza di indacano è correlato a disbiosi che può essere lieve (intorno di 20 mg/l)  , media ( se indacano è tra i 20 e 40 mg/l) o grave (se superiore a 40 mg/l).  Valutare anche lo stato nutrizionale in quanto una dieta ricca di proteine induce un aumento di questo metabolita. Una carenza di batteri Lactobacilli contribuisce alla mancata eubiosi del paziente, causando sintomi come gonfiore, difficoltà digestive , stanchezza e debolezza immunitaria. Altre cause potrebbero essere malattie metaboliche come la “sindrome del pannolino blu” oppure la malattia di Hartnup."
     },
 
     "acido4idrossifenilacetico": {
       "name": "Acido 4-idrossifenilacetico",
+      "tname": "4-Idrossifenilacetico",
       "base": "L’acido 4-idrossifenilacetico è un metabolita microbico prodotto da Acinetobacter, Clostridium, Klebsiella, Pseudomonas e Proteus. Questo metabolita viene prodotto a partire dalla Tirosina e può essere convertito in Cresolo. Fonti importanti alimentari come soia, tacchino, pollo, mandorle, semi di zucca rendono questo metabolita biomarcatore dell'utilizzo di questi alimenti.",
       "hight": "L'eccesso di questo metabolita è associato alla crescita eccessiva di piccoli batteri intestinali da specie Clostridia tra cui C. difficile, C. stricklandii, C. lituseburense, C. subterminale, C. putrefaciens e C. propionicum. Anche l'infezione da Giardia Lamblia, patologie del piccolo intestino, utilizzo di antibiotici contro batteri aerobici, fibrosi cistica, intolleranza transitoria al lattosio possono indurre aumento di questo metabolita."
     },
 
     "acido3indoloacetico": {
       "name": "Acido 3-indolo acetico",
+      "tname": "3-Indoloacetico",
       "base": "L’acido 3-indolo acetico è un metabolita derivante dal triptofano mediante putrefazione intestinale . La sua produzione deriva principalmente da E.Coli, P.vulgaris, A.faciens e M.aerogenes, in alcuni casi anche da Clostridia.",
       "hight": "L'eccesso di 3-indolacetico ( e del suo intermedio scatolo) potrebbe essere indotto da una dieta ricca di carne. Un’eccessiva produzione è segno di tossicità dell’organismo causata da disbiosi o da una dieta sbilanciata . Quantità molto elevate di questo metabolita derivato dal triptofano potrebbero indicare un esaurimento del triptofano necessario per altre funzioni fisiologiche."
     },
 
     "pcresolo": {
       "name": "P-cresolo",
+      "tname": "P-Cresolo",
       "base": "Il P-cresolo è un metabolita degli aminoacidi aromatici prodotto dalla microflora intestinale. Tirosina e fenilalanina vengono convertiti prima in acido 4-idrossifenilacetico, poi questa viene decarbossilata in p-cresolo (putrefazione).  Tale ruolo è svolto sia da batteri aerobi (principalmente gli enterobatteri), ma anche da anaerobi  (principalmente il Clostridium). Il Clostrium difficile è un batterio spesso diffuso negli ospedali,  capace di provocare aumenti della produzione di cresolo nei soggetti affetti .I ceppi di C.difficile producono tossine che scatenano diarrea, colite e complicazioni di queste fino alla morte nei soggetti più debilitati. Eccessive quantità di p-cresolo possono inibire l'enzima dopamina-beta-idrossilasi , portando a squilibri dei neurotrasmettitori. Elevate quantità di p-cresolo sono state riscontrate in soggetti autistici.",
       "hight": " Nell'uremia, le modificazioni della flora intestinale determinano la crescita eccessiva specifica dei batteri che sono specifici produttori di p-cresolo. Eccesso di proteine nell'alimentazione si traduce nell'aumento di secrezione di questo metabolita.  Anche patologie legate ai reni evidenziano aumento di p-cresolo."
     },
 
     "3idrossifenilacetico": {
       "name": "Acido 3-idrossifenilacetico",
+      "tname": "3-Idrossifenilacetico",
       "base": "L’acido 3-idrossifenilacetico viene prodotto per fermentazione aminoacidica (prettamente tirosina) causata da cattiva digestione e assorbimento. Spesso viene utilizzato come marcatore per malassorbimento proteico . Anche l’introito di polifenoli alimentari ( vino, te verde, uva) provoca la comparsa di questo metabolita nelle urine. La sua presenza nelle urine dipende anche da infezione causata da Clostridi oppure da Klebsiella.",
       "hight": "Mentre in soggetti sani questi residui sono limitati, possono essere numerosi in caso di fenilchetonuria, rara patologia metabolica. Può essere anche un marcatore dell’utilizzo di alimenti con polifenoli , del malassorbimento proteico e forte disbiosi causata da Clostridi o Klebsiella."
     },
 
     "HPHPA": {
       "name": "HPHPA",
+      "tname": "HPHPA",
       "base": "HPHPA è l'acronimo di acido 3-(3-idrossifenil)-3-idrossipropionico. E' relativamente abbondante nelle urine umane adulte ed è benigno in quantità ridotte. La fonte di questo composto sembra essere per lo più proveniente da batteri anaerobici del genere Clostridium.  I Clostridi possono alterare in maniera importante i neurotrasmettitori cerebrali, inattivando la dopamina beta-idrossilasi portando in questo modo a un'eccessiva produzione di dopamina e ridotta di noradrenalina. L'eccesso di dopamina è associato a forme di disturbo psicotico. Nel caso questo marcatore sia elevato, è utile rapportarlo con il principale metabolita della dopamina (ac.omovanillico) e con quello della noradrenalina (ac.vanilmandelico).",
       "hight": "L'eccesso di HPHPA indica un'eccessiva crescita di batteri Clostridi nel tratto gastrointestinale. Quando cronicamente elevato, l'impatto che si riscontra nell'uomo è correlato spesso a schizofrenia e spettro autistico, infatti questo metabolita è conunemente elevato nei casi GAPS ( Sindrome dell'intestino e della psicologia)."
     },
 
     "acidoglicolico": {
       "name": "Acido glicolico",
+      "tname": "Glicolico",
       "base": "L’acido glicolico è il più piccolo alfa-idrossiacido. Risulta essere molto elevato in casi di iperossaluria genetica di tipo I. I valori normali dell'acido glicolico escludono la causa genetica di aumento significativo dell'acido ossalico nelle urine.  La tossicità renale dell'acido glicolico è dovuta al suo metabolismo con l'acido ossalico. Questi due acidi, insieme al lattico , sono responsabili di acidosi metabolica del gap anionico. L'acido glicolico è presente anche a livello alimentare (glicerolo o glicerina), ma più spesso viene prodotto da lieviti  (Aspergillo, Penicillo o Candida) o batteri gastrointestinali ( Acetobatteri, Corinebatteri, Escherichia..).",
       "hight": "L'eccesso di acido glicolico in associazione all'aumento di acido ossalico, definisce iperossaluria genetica di tipo I. Diversamente la sua presenza eccessiva può essere di origine alimentare o derivata da produzione batterica o di lieviti intestinali."
     },
 
     "acidoglicerico": {
       "name": "Acido glicerico",
+      "tname": "Glicerico",
       "base": "L’acido glicerico può essere un marcatore della patologia genetica aciduria D-glicerica , agendo come metabotossina e acidogeno. Altrimenti l'acido glicerico può derivare da fonti microbiche come lieviti (Aspergillo, Penicillo o Candida) oppure da fonti alimentari di glicerolo o glicerina.",
       "hight": "L'eccesso marcato di acido glicerico può rivelare aciduria D-glicerica. Diversamente la sua presenza eccessiva può essere di origine alimentare o derivata da lieviti intestinali."
     },
 
     "acidoossalico": {
       "name": "Acido ossalico",
+      "tname": "Ossalico",
       "base": "L’acido ossalico è un forte acido dicarbossilico prodotto dal corpo umano dal metabolismo dell’acido gliossico o dall’acido ascorbico. E’ conosciuto primariamente per il suo ruolo nella formazione dei calcoli renali in associazione con il calcio.  Per quanto il contributo alimentare da parte di verdure a foglia verde, frutta fresca e frutta secca possa influire sulla formazione di ossalati di calcio, questi risultano avere anche un effetto protettivo quindi è bene farne un uso seppur limitato. Anche l’integrazione di acido ascorbico, precursore dell’ossalico, potrebbe favorire la formazione di calcoli renali per cui se ne consiglia un’integrazione minima per i soggetti predisposti a calcolosi. I maggiori produttori di acido ossalico sono alcune specie di Aspergillus, Peniciullim e Candida, per cui è consigliabile una terapia antifunginea ad hoc, somministrazione di batteri lattici e agenti probiotici. Predisposizioni genetiche per deficit dell’enzima fumarasi e iperossaluria primaria I o deficit dei perossisomi possono causare un aumento importante di ossalati con conseguenti danni a pelle, vasi sanguigni e tessuti ossei. In questi casi mantenendo elevati i livelli di magnesio e citrato urinario, si può aiutare l’espulsione dei calcoli e limitare le patologie da deposito di ossalati.",
       "hight": "L’eccesso di acido ossalico potrebbe essere associato a integrazione importante di vitamina C o infezione funginea e disbiosi. Se anche gli altri metaboliti degli ossalati (acido glicolico e acido glicerico) sono elevati è probabile che si tratti di una predisposizione genetica a iperossaluria; diversamente si può agire trattando in maniera specifica la flora batterica intestinale e limitare l’assunzione di ossalati e vit.C. Valutare integrazione di magnesio e citrato per favorire l’espulsione di calcoli renali."
     },
 
     "acidopantotenico": {
       "name": "Acido pantotenico",
+      "tname": "Pantotenico",
       "base": "L’acido pantotenico si riferisce alla vit. B5, vitamina idrosolubile necessaria per formare il coenzima-A , fondamentale per il metabolismo e la sintesi di carboidrati, proteine e grassi. Ha un ruolo importante nella regolazione del colesterolo nel sangue, nel mantenimento del sistema nervoso e dei livelli ormonali. Fonti alimentari di acido pantotenico sono la carne, le uova, i prodotti integrali, legumi, latte, frutta e verdura. Solitamente viene rilasciata rapidamente nelle urine.",
       "hight": "L'eccesso è associato a una supplementazione  in corso o passata di vit.B5.",
       "low": "Scarsi valori di acido pantotenico potrebbero riflettere carenza di vitamina B5, per il quale si consiglia di rivedere l'alimentazione abituale del paziente e valutare integrazione specifica."
@@ -756,24 +823,28 @@
 
     "acidoglutarico": {
       "name": "Acido glutarico",
+      "tname": "Glutarico*",
       "base": "L’acido glutarico è un prodotto intermedio del metabolismo di alcuni aminoacidi, tra cui lisina e triptofano. L'aumento indica carenza di riboflavina (vitamina B2) , cofattore necessario all'enzima glutaril-CoA deidrogenasi che dovrebbe convertire l'acido glutarico in Cotonil-CoA. Altri possibili fattori che aumentano i livelli di acido glutarico includono difetti di ossidazione degli acidi grassi ed effetti metabolici dell'acido valproico (Depakene) o celiachia.",
       "hight": "L'eccesso di acido glutarico potrebbe rappresentare carenza di vit.B2 o difetti di ossidazione.  Valori molto elevati di acido glutarico evidenziano la malattia genetica acidemia glutarica tipo I, in cui l'enzima che dovrebbe mediare il catabolismo amminoacidico non funziona correttamente."
     },
 
     "acidometilmalonico": {
       "name": "Acido metilmalonico",
+      "tname": "Metilmalonico*",
       "base": "L’acido metilmalonico è un metabolita formato a partire dal propionil-CoA derivato da valina, isoleucina, metionina, treonina e acidi grassi a catena dispari poi convertito in metilmalonil-CoA. Il metilmalonil-CoA ha due destini: il primo è quello di entrare nel ciclo di Krebs come succinil-CoA, tramite l'azione della metilmalonil-CoA mutasi , enzima che utilizza vit.B12 come cofattore ,il secondo destino è invece quello di essere convertito in acido metilmalonico e quindi eliminato tramite le urine.",
       "hight": "L'eccesso di acido metilmalonico riflette deficienza di vit.B12 principalmente, ma può anche individuare una rara deficienza enzimatica della metilmalonil-CoA mutasi. La deficienza di vit.B12 potrebbe essere causata da problemi di assorbimento intestinale , alcolismo e dieta strettamente vegana. Fonti alimentari di vitamina B12 sono principalmente di origine animale : fegato, latte e derivati, manzo e uova. Il livello di acido metilmalonico sembra essere un indicatore maggiormente sensibile alla carenza di vitamina B12 rispetto la quantificazione della vitamina B12 direttamente nel siero. E’ importante monitorare questo metabolita nella prevenzione del declino cognitivo e neuropatia."
     },
 
     "nacetilcisteina": {
       "name": "N-acetilcisteina",
+      "tname": "N-Acetil-L-Cisteina (NAC)",
       "base": "L’N-acetilcisteina è un potente antiossidante che aumenta le riserve di glutatione nel corpo. Insieme al glutatione, di cui è precursore, l'N-acetilcisteina si lega direttamente ai metaboliti tossici svolgendo anche un' azione citoprotettiva per la cellula. Sebbene l'N-acetilcisteina possa essere utile in determinate condizioni , l'uso eccessivo del supplemento potrebbe essere dannoso. L'integrazione di NAC viene spesso utilizzata in casi di sovradosaggio di paracetamolo, nel quale l'N-acetilcisteina agisce per mantenere o reintegrare le riserve di glutatione impoverite nel fegato e migliorare il metabolismo non tossico del paracetamolo. NAC viene utilizzato anche come agente mucolitico o antivirale in pazienti con HIV.",
       "hight": "L'eccesso di N-acetilcistina è dovuto a supplementazione in corso o passata."
     },
 
     "acidoascorbico": {
       "name": "Acido ascorbico",
+      "tname": "Ascorbico ( C )",
       "base": "L’acido ascorbico si trova naturalmente in frutta e verdura ed è un nutriente essenziale nella dieta umana. La forma biologicamente attiva dell'acido ascorbico è la vitamina C. Il corpo umano non è in grado di sintetizzarlo in autonomia, quindi è essenziale introdurlo tramite l'alimentazione. Fonti alimentari di vitamina C sono kiwi, fragole, agrumi, ananas, verdure e ortaggi freschi.  La vit.C funziona come agente riducente e coenzima di diverse vie metaboliche ( biosintesi carnitina e noradrenalina, metabolismo tirosina, idrossilazione del collagene e amidazione degli ormoni peptidici) . La sua capacità di donare elettroni lo rende un potente antiossidante solubile in acqua che elimina prontamente i radicali liberi come ossigeno molecolare, superossido, radicale idrossile e acido ipocloroso. In questo contesto, diversi meccanismi potrebbero spiegare un legame tra vit.C e malattie cardiache, in primis la relazione tra l'ossidazione del colesterolo LDL e vit.C ed E, oltre che i meccanismi che sembrano migliorare la vasodilatazione e reattività vascolare.",
       "hight": "L’eccesso nelle urine è correlato principalmente alla supplementazione di vit. C. L'eccesso di acido ascorbico potrebbe associarsi anche a iperossalemia.",
       "low": "Il suo deficit è associato a mancanza. E’ consigliabile supplementazione di vitamina C in questi casi."
@@ -781,6 +852,7 @@
 
     "acido4piridossico": {
       "name": "Acido 4-piridossico",
+      "tname": "4-Piridossico (B6)",
       "base": "L’acido 4-piridossico è un membro della classe di composti noti come metilpiridine ed è il prodotto catabolico della  vitamina B6. La vitamina B6 interviene nel processo di trasformazione di proteine, carboidrati e grassi e contribuisce alla formazione dell'emoglobina . E' inoltre importante per il normale sviluppo cerebrale e per il sistema immunitario . E' inoltre fondamentale per la sintesi della serotonina , che insieme ad altri neurotrasmettitori contibuisce a regolare l'umore, il sonno, l'appetito, la memoria e la capacità di concentrazione. Poiché alcuni individui possono richiedere dosi molto elevate di vitamina B6, valori elevati non indicano la necessità di ridurre l'assunzione di vitamina B6. Fonti alimentari di vitamina B6 sono carne, pesce, fegato, cereali integrali, uova , latte e formaggi , ma anche ceci , lenticchie e frutta secca.",
       "hight": "Valori molto alti sono associati a integrazione passata o in corso di vitamine del gruppo B.",
       "low": " Il deficit di acido 4-piridossico nelle urine potrebbe essere correlato a scarsi livelli di vit.B6, alti ossalati, bassi neurotrasmettitori o problemi di malassorbimento. Valutare integrazione di vitamina B6."
@@ -788,6 +860,7 @@
 
     "3idrossi3metilglutarico": {
       "name": "Acido 3-idrossi-3-metilglutarico (HMG)",
+      "tname": "3-Idrossi-3-Metilglutarico*",
       "base": "L’acido 3-idrossi-3-metilglutarico (HMG) rappresenta un intermedio chiave nella degradazione della leucina e funge da precursore metabolico per la sintesi di colesterolo, CoQ10 e 3-idrossibutirrato. Il 3-idrossi-3-metilglutaril-CoA può essere trasformato in acetil-CoA e acetoacetato a opera dell’enzima 3-idrossi-3-metilglutaril-CoA liasi, portando così alla formazione del corpo chetonico 3-idrossibutirrato, specialmente in condizioni di digiuno o ipoglicemia. In presenza di deficit enzimatici, questa conversione risulta inefficace, determinando un accumulo di HMG che può causare tossicità mitocondriale. Alcuni farmaci che interferiscono con l’attività della HMG-CoA liasi possono innalzare i livelli di HMG. Inoltre, l’HMG agisce come attivatore dell’enzima HMG-CoA reduttasi, responsabile della sintesi di acido mevalonico, precursore di colesterolo e CoQ10. Le statine e il riso rosso fermentato svolgono un ruolo inibitorio sulla HMG-CoA reduttasi, riducendo quindi la sintesi sia del colesterolo sia del CoQ10, mentre la risposta insulinica ne stimola l’attività.",
       "hight": "Valori elevati di acido 3-idrossi-3-metilglutarico (HMG) nelle urine possono essere indicativi di un'alterazione nel metabolismo della leucina, oppure di un blocco del ciclo mitocondriale a livello dell'enzima aconitasi, che può essere causato da una carenza di glutatione o ferro, oppure dalla presenza di metalli pesanti come alluminio, mercurio, arsenico e stagno. In alcuni casi, valori superiori al range di riferimento possono essere riscontrati in pazienti che assumono statine o riso rosso fermentato, poiché questi inibiscono l'enzima HMG-CoA reduttasi, con conseguente necessità di valutare l'integrazione di CoQ10. Deficit degli enzimi HMG-CoA liasi o reduttasi possono inoltre elevare i livelli di HMG, comportando carenza di CoQ10 e possibili disordini nello sviluppo o cardiomiopatie.",
       "low": "Una carenza di acido 3-idrossi-3-metilglutarico (HMG) nelle urine può indicare un ridotto apporto o una ridotta degradazione della leucina, oppure un'alterazione nel metabolismo energetico mitocondriale. Livelli bassi potrebbero riflettere un'insufficiente disponibilità di substrati per la sintesi di colesterolo, CoQ10 e corpi chetonici, condizioni che possono verificarsi in caso di diete particolarmente restrittive, deficit nutrizionali o alterazioni enzimatiche. In presenza di carenza, è opportuno valutare lo stato nutrizionale generale del paziente, l'apporto di amminoacidi essenziali e di cofattori vitaminici coinvolti nel metabolismo della leucina e dei corpi chetonici, come le vitamine del gruppo B e l'acido lipoico. In alcuni casi, la carenza può essere secondaria a patologie che compromettono l'assorbimento intestinale o la funzione epatica."
@@ -795,90 +868,108 @@
 
     "uracile": {
       "name": "Uracile",
+      "tname": "Uracile",
       "base": "Uracile e timina sono correlati al metabolismo dell'acido folico. L'acido folico è fondamentale per la replicazione del materiale genico in quanto ricopre un ruolo chiave nella biosintesi di purine e pirimidine (costituenti del DNA e dell'RNA) oltre che di aminoacidi : nell'uomo viene assimilato dalla dieta e non sintetizzato. La carenza di acido folico è implicata negativamente in questi processi di regolazione genomica o epigenetica. L'enzima 5,10-metiltetridrofolato reduttasi (5,10-MTHFR) è un enzima dipendente dall'acido folico che esiste in forma polimorfica. L'azione dell'enzima 5,10-MTHFR regola sia l'espressione fenotipica del DNA che il metabolismo dell'omocisteina. A fronte di un corretto apporto nutrizionale di acido folico la presenza ottimale di 5,10-MTHFR protegge dal rischio di un non corretto sviluppo embriogenetico così come dallo sviluppo di molte malattie degenerative. Uracile e timina vengono liberati dal RNA e DNA , con aumento di instabilità genomica ed effetti epigenetici, nel caso di deficienza di acido folico.",
       "hight": "L'eccesso di uno o entrambi i metaboliti uracile e timina, è correlato a disturbi del metabolismo dell'acido folico, deficienza di acido folico e disturbi genetici del metabolismo delle pirimidine. Uno scarso apporto di acido folico e la conseguente ridotta produzione dell'enzima 5,10-MTHFR che interviene nella corretta conversione dalla dUMP (deossiuridina monofosfato) a dTMP (deossitimidina monofosfato), determina un aumento della mis-incorporazione dell'uracile nel DNA con un aumento dell'instabilità genomica. Ricerche dimostrano che i processi che intervengono nella morte cellulare programmata sono strettamente correlati con la presenza dell'acido folico circolante che è responsabile dell'integrità del genoma umano."
     },
 
     "timina": {
       "name": "Timina",
+      "tname": "Timina",
       "base": "Uracile e timina sono correlati al metabolismo dell'acido folico. L'acido folico è fondamentale per la replicazione del materiale genico in quanto ricopre un ruolo chiave nella biosintesi di purine e pirimidine (costituenti del DNA e dell'RNA) oltre che di aminoacidi : nell'uomo viene assimilato dalla dieta e non sintetizzato. La carenza di acido folico è implicata negativamente in questi processi di regolazione genomica o epigenetica. L'enzima 5,10-metiltetridrofolato reduttasi (5,10-MTHFR) è un enzima dipendente dall'acido folico che esiste in forma polimorfica. L'azione dell'enzima 5,10-MTHFR regola sia l'espressione fenotipica del DNA che il metabolismo dell'omocisteina. A fronte di un corretto apporto nutrizionale di acido folico la presenza ottimale di 5,10-MTHFR protegge dal rischio di un non corretto sviluppo embriogenetico così come dallo sviluppo di molte malattie degenerative. Uracile e timina vengono liberati dal RNA e DNA , con aumento di instabilità genomica ed effetti epigenetici, nel caso di deficienza di acido folico.",
       "hight": "L'eccesso di uno o entrambi i metaboliti uracile e timina, è correlato a disturbi del metabolismo dell'acido folico, deficienza di acido folico e disturbi genetici del metabolismo delle pirimidine. Uno scarso apporto di acido folico e la conseguente ridotta produzione dell'enzima 5,10-MTHFR che interviene nella corretta conversione dalla dUMP (deossiuridina monofosfato) a dTMP (deossitimidina monofosfato), determina un aumento della mis-incorporazione dell'uracile nel DNA con un aumento dell'instabilità genomica. Ricerche dimostrano che i processi che intervengono nella morte cellulare programmata sono strettamente correlati con la presenza dell'acido folico circolante che è responsabile dell'integrità del genoma umano."
     },
 
     "2idrossiippurico": {
       "name": "Acido 2-idrossiippurico",
+      "tname": "2-idrossiippurico",
       "base": "L'acido 2-idrossiippurico (acido salicilurico) è un coniugato dell'aminoacido glicina e dell'acido benzoico. Viene formato dall'organismo per eliminare i salicilati in eccesso derivanti dall'utilizzo di aspirina o dal consumo di dolcificanti a base di aspartame. L'acido 2-idrossiippurico può derivare anche dalla conversione di tirosina e fenilalanina a opera dei batteri gastrointestinali. Tassi molto elevati inibiscono la dopamina beta-idrossilasi con elevazione di HVA (acido omovanillico) e riduzione di VMA (acido vanilmandelico).",
-      "hight": "L'aumento nelle urine può essere correlato anche alla crescita di batteri gastrointestinali, all'utilizzo di dolcificanti artificiali contenenti aspartame o eccessivo utilizzo di aspirina."
+      "hight": "L'aumento nelle urine può essere correlato anche alla crescita di batteri gastrointestinali, all'utilizzo di dolcificanti artificiali contenenti aspartame o eccessivo utilizzo di aspirina.",
+      "note": "Salicilati di aspartame o batteri GI"
     },
 
     "acidoorotico": {
       "name": "Acido orotico",
+      "tname": "Orotico",
       "base": "L’acido orotico è un prodotto intermedio nella sintesi di nucleotidi ed è collegato al metabolismo dell’arginina come marcatore del bilanciamento di ammonio nel ciclo dell’urea. Nel caso in cui ci sia un'insufficiente capacità di detossificazione dell'ammonio mediante ciclo dell’urea, avviene la sintesi di orotato.",
-      "hight": "L’aumento nelle urine di questo metabolita è rappresentativo di una deficienza di arginina e in contemporanea di una diminuzione dell’efficienza di detossificare l' ammoniaca e una ridotta formazione di ossido nitrico. Errori innati del metabolismo possono aumentare i livelli di orotato e ammoniaca, oppure può derivare da eccessiva crescita batterica intestinale. Anche un forte utilizzo di latticini e latte di mucca induce innalzamento di orotato nelle urine, eccessivo utilizzo di proteine nella dieta o abuso di alcol. Farmaci come allopurinolo e 6-azauridina sembrano essere correlati con la sintesi di pirimidine e quindi di orotato. Valutare integrazione con arginina e magnesio."
+      "hight": "L’aumento nelle urine di questo metabolita è rappresentativo di una deficienza di arginina e in contemporanea di una diminuzione dell’efficienza di detossificare l' ammoniaca e una ridotta formazione di ossido nitrico. Errori innati del metabolismo possono aumentare i livelli di orotato e ammoniaca, oppure può derivare da eccessiva crescita batterica intestinale. Anche un forte utilizzo di latticini e latte di mucca induce innalzamento di orotato nelle urine, eccessivo utilizzo di proteine nella dieta o abuso di alcol. Farmaci come allopurinolo e 6-azauridina sembrano essere correlati con la sintesi di pirimidine e quindi di orotato. Valutare integrazione con arginina e magnesio.",
+      "note": "Eccesso di ammonio"
     },
 
     "acidopiroglutammico": {
       "name": "Acido piroglutamico",
+      "tname": "Piroglutamico",
       "base": "L’acido piroglutammico , anche chiamato 5-oxoprolina , è prodotto e utilizzato da GGT (gamma-glutamil transferasi) per la produzione e riciclo di glutatione , fondamentale antiossidante. Il glutatione è un tripeptide formato da glutammina, glicina e cisteina. Il piroglutammato è un precursore del glutatione tramite il quale riesce ad avvenire l’unione dei tre amminoacidi . Questa azione è mediata da cofattori quali magnesio e ATP.  In condizioni fisiologiche, è presente una modesta quantità di piroglutammato nelle urine.",
       "hight": "Le condizioni patologiche nel quale avviene aumento di piroglutammato nelle urine sono dovute all’alterazione di uno o più enzimi che collaborano nel ciclo per la sua sintesi o una disfunzione mitocondriale per stress ossidativo oppure per cause alimentari (restrizione glicina, cisteina, glutammina e magnesio o integrazione di taurina) o farmacologiche ( farmaci che richiedono coniugazione con glutatione). Anche condizioni di deficienza di glutatione, a es. a causa di tossicità da acetomifene, conducono a elevati livelli di piroglutammato. Valutare integrazione con glutatione, NAC e amminoacidi (metionina e glicina).",
-      "low": "Il deficit evidenzia carenza di glutatione o dei cofattori necessari per la sua sintesi ( glutammina , glicina e cisteina)."
+      "low": "Il deficit evidenzia carenza di glutatione o dei cofattori necessari per la sua sintesi ( glutammina , glicina e cisteina).",
+      "note": "Glutatione"
     },
 
     "acido2idrossibutirrico": {
       "name": "Acido 2-idrossibutirrico",
+      "tname": "2-idrossibutirrico",
       "base": "L'acido 2-idrossibutirrico è un prodotto dei tessuti mammiferi (soprattutto epatici) che catabolizzano la L-treonina o sintetizzano il glutatione, pertanto viene considerato un marcatore dello stress ossidativo. L'acido 2-idrossibutirrico è un acido organico prodotto da alfa-chetobutirrato ( sottoprodotto nella via di sintesi del glutatione) attraverso gli enzimi lattato deidrogenasi (LDH) o alfa-idrossibutirrato deidrogenasi (HBDH), enzimi catalizzati dal NADH. In caso di stress metabolico, è fondamentale avere forniture importanti di L-cisteina per la sintesi di glutatione, quindi l'omocisteina viene deviata alla via di transolforazione formando cistationina. Dalla scissione di cistationina in cisteina, si viene a formare  alfa-chetobutirrato e poi l'acido 2-idrossibutirrico.  Anche lo stress ossidativo indotto da insulino-resistenza aumenta il tasso di sintesi epatica del glutatione, pertanto potrebbe essere utilizzato come biomarcatore di stadi prediabetici.",
       "hight": "Elevati livelli di 2-idrossibutirrico sono associati a condizioni nel quale la sintesi epatica di glutatione a partire dalla metionina sono aumentati per cause di stress ossidativo o funzioni di disintossicazione. Condizioni di cattiva alimentazione, fumo, mancanza di esercizio inibiscono l'azione dell' alfa-idrossibutirrato deidrogenasi (HBDH) che catalizza la conversione del 2-idrossibutirrato in acetato, causandone quindi un aumento a livello urinario.  Si può associare a stadi prediabetici oppure si trova elevato in malattie infettive come il morbillo. In caso di asfissia alla nascita o malattie metaboliche ereditarie, potrebbe apparire elevato."
     },
 
     "acido4metil2ossovalerico": {
       "name": "Acido 4-metil-2-ossovalerico",
+      "tname": "4-metil-2-ossovalerico",
       "base": "L’acido 4-metil-2-ossovalerico, anche detto chetoleucina, è un metabolita anomalo che deriva dalla scomposizione incompleta degli aminoacidi a catena ramificata. Isoleucina, leucina e valina sono tre aminoacidi essenziali a catena ramificata (BCAA) che vengono assunti tramite l'uso di proteine o integratori sportivi, fornendo energia pronta all'utilizzo. Il muscolo scheletrico catabolizza questi aminoacidi BCAA tramite enzimi aminotransferasi per formare chetoacidi nel sangue in modo che poi vengono metabolizzati successivamente dal fegato. I BCAA sono substrati per la sintesi proteica, la produzione di energia , produzione di neurotrasmettitori e altri processi metabolici. I chetoacidi richiedono un complesso enzimatico chiamato alfa-chetoacido deidrogenasi a catena ramificata (BCKD) per essere metabolizzati, complesso enzimatico che richiede cofattori vitaminici quali vit. B1,B2,B3,B5 e acido lipoico.  I chetoacidi se non vengono metabolizzati si accumulano diventando nerutossiche e metabotossiche. Una neurotossina provoca danni alle cellule nervose e ai tessuti nervosi. Una metabotossina è un metabolita endogeno che provoca effetti negativi sulla salute a livelli cronicamente elevati. Livelli cronicamente elevati di chetoleucina sono associati alla malattia delle urine a sciroppo d'acero , malattia metabolica causata da una carenza del complesso alfa-chetoacido deidrogenasi a catena ramificata (BCKD) che porta all'accumulo degli aminoacidi a catena ramificata (leucina, isoleucina e valina) e dei loro sottoprodotti tossici ( chetoacidi) nel sangue e nelle urine.",
       "hight": "L'eccesso dell'acido 4-metil-2-ossovalerico potrebbe evidenziare insufficienza di tiamina, vitamine del gruppo B in generale e acido lipoico, integrazioni da effettuare in questi casi. Inoltre sarebbe opportuno indagare le abitudini alimentari del paziente."
     },
     "acidomandelico": {
       "name": "Acido mandelico",
+      "tname": "Mandelico",
       "base": "L’acido mandelico è un derivato della fenilalanina e del metabolismo di adrenalina e noradrenalina. L'acido mandelico può essere anche prodotto dall'esposizione allo stirene, un composto ambientale tossico. Ha anche proprietà antibatteriche e lenitive, per il quale viene utilizzato spesso nella cosmesi.",
       "hight": "L’eccesso di acido mandelico è correlato spesso al metabolismo della fenilalanina oppure all'esposizione a elementi tossici. Inoltre può essere elevato in caso di malattie genetiche PKU e tirosinemia."
     },
 
     "acidoomogentisico": {
       "name": "Acido omogentisico",
+      "tname": "Omogentisico",
       "base": "L'acido omogentisico, noto anche come acido melanico,  è un metabolita implicato nel processo di degradazione di tirosina e fenilalanina, mediato dall'enzima omogentisica ossidasi e dal cofattore ferro.  Se l'enzima è mutato,  avviene eccesso di acido omogentisico e manifestazione dei segni clinici di alcaptonuria, rara malattia metabolica: cambio di colore delle urine, artrite, nefrolitiasi, patologie della valvola cardiaca, ecc.. Può considerarsi un possibile marker di rischio coronarico per stress ossidativo, oltre che una osteotossina e tossina renale, provocando danni a ossa, articolazioni e/o reni. Difatti l'accumulo di acido omogentisico provoca danni alla cartilagine e alle valvole cardiache, oltre a precipitare come calcoli renali. La conversione dell'acido omogentisico ad acido acetico benzochinone, porta alla formazione di polimeri che si depositano nel collagene cartilagineo  provocando ocronosi e poi osteoartrite.",
       "hight": "L'eccesso è raro e generalmente associato ad alcaptonuria . Se il valore è leggermente alterato, integrare il cofattore enzimatico ferro e l'antiossidante vit.C, quindi ricontrollare nel tempo indagando le funzionalità cardiache, renali e articolari. Valutare una dieta a basso contenuto proteico."
     },
 
     "acido2idrossiisocaproico": {
       "name": "Acido 2-idrossiisocaproico",
+      "tname": "2-idrossiisocaproico",
       "base": "L'acido 2-idrossiisocaproico è un prodotto finale del metabolismo della leucina . Viene ampiamente utilizzato dalla comunità del body building . Da studi recenti , sembra dimostrato che nei pazienti con la malattia dello sciroppo d'acero acceleri la perossidazione lipidica.  L'acido 2-idrossiisocaproico è anche prodotto da Lactobacilli e altre specie funginee.",
       "hight": "L'eccesso moderato dell'acido 2-idrossiisocaproico si associa a integrazione di leucina oppure a sovracrescita funginea. Se in forte eccesso, indagare se si tratta di malattia di sciroppo d'acero (MSUD), una malattia metabolica ereditaria prevalentemente caratterizzata da disfunzione neurologica , psicomotoria e  ritardo mentale."
     },
 
     "acidoNacetilaspartico": {
       "name": "Acido N-acetilaspartico",
+      "tname": "N-acetilaspartico",
       "base": "L’acido N-acetilaspartico è un derivato dell'acido aspartico, amminoacido presente in dolcificanti con aspartame , integratori con acido aspartico o sali derivati oppure in fonti vegetali e animali in minor misura . L'acido N-acetilaspartico è la seconda molecola più concentrata nel cervello dopo l'amminoacido glutammato. Le varie funzioni svolte dall'acido N-acetilaspartico sono ancora in fase di studio, ma le principali funzioni proposte includono (1) agire come osmolita neuronale coinvolto nell'equilibrio dei fluidi nel cervello, (2) servire come fonte di acetato per la sintesi di lipidi e mielina negli oligodendrociti , (3) servire come precursore per la sintesi dell'importante neurotrasmettitore dipeptide N-acetilaspartilglutammato (NAAG), e (4) svolgere un ruolo potenziale nella produzione di energia dall'aminoacido glutammato nei mitocondri neuronali. Alti livelli di acido N-acetilaspartico possono portare a segnali neurali anormali, sviluppo intellettuale ritardato o arrestato e difficoltà con le capacità motorie generali. Quando presente in livelli sufficientemente elevati, l'acido N-acetilaspartico può essere una neurotossina, un acidogeno e una metabotossina. Questa situazione si manifesta in caso di disturbi genetici , come la malattia di Canavan , provocando degenerazione cerebrale.",
       "hight": "Il leggero eccesso di acido N-acetilaspartico potrebbe derivare da un forte uso di prodotti con aspartato (bevande o soia). Se molto superiore , seguire degli accertamenti a livello neuronale."
     },
 
     "acidomalonico": {
       "name": "Acido malonico",
+      "tname": "Malonico",
       "base": "L’acido malonico è coinvolto nella biosintesi degli acidi grassi , unendosi con l'acido acetico per la conversione in acido acetoacetico. L'acido malonico è stato rilevato in diversi alimenti come barbabietole rosse, mais, fagioli e latte di vacca. Ciò potrebbe rendere l'acido malonico un potenziale biomarcatore per il consumo di questi alimenti. L'acido malonico è stato trovato associato a diverse malattie come l'esofagite eosinofila, l'aciduria malonica e metilmalonica combinata e la preeclampsia precoce.",
       "hight": "L'eccesso dell'acido malonico potrebbe indicare l'assunzione importante di alcuni alimenti o collegato a malattie riportate precedentemente."
     },
 
     "acido4idrossifenilpiruvico": {
       "name": "Acido 4-idrossifenilpiruvico",
+      "tname": "4-idrossifenilpiruvico",
       "base": " L’acido 4-idrossifenilpiruvico è un chetoacido coinvolto nella via del catabolismo della tirosina, che viene poi convertito in acido omogentisico dall'enzima 4-idrossifenilpiruvico acido diossigenasi (HPD). Il deficit dell'enzima HPD provoca fenilchetonuria, un errore congenito metabolico.",
       "hight": "Il forte eccesso è correlato a una malattia autosomica recessiva caratterizzata da elevati livelli di tirosina nel sangue e massiccia escrezione di derivati."
     },
 
     "acido2idrossi3metilbutirrico": {
       "name": "Acido 2-idrossi-3-metilbutirrico",
+      "tname": "2-idrossi-3-metilbutirrico",
       "base": "L'acido 2-idrossi-3-metilbutirrico ha origine principalmente dalla chetogenesi e dal metabolismo della valina, leucina e isoleucina . E' presente in pazienti con fenilchetonuria, acidemia, malattia dello sciroppo d'acero e altre patologie metaboliche congenite oppure in casi di chetoacidosi.",
       "hight": "L'eccesso minimo evidenzia stati di acidosi lattica o chetoacidosi. Nel casi in cui i livelli siano di molto superiori al range di riferimento, si tratta di patologie congenite importanti."
     },
 
     "creatinina": {
       "name": "Creatinina",
+      "tname": "Creatinina",
       "base": "",
       "hight": "La creatinina viene comunemente calcolata per la valutazione degli analiti urinari. La sua escrezione è influenzata dal muscolo scheletrico e stato corporeo. L’introito di proteine alimentari contenenti arginina e glicina ( precursori della creatinina) e supplementazione di creatinina stessa possono aumentarne i livelli. Anche lo stato di idratazione gioca un ruolo importante. L’eccesso di creatinina può evidenziare anche una disfunzione renale.",
       "low": "La creatinina viene comunemente calcolata per la valutazione degli analiti urinari. La sua escrezione è influenzata dal muscolo scheletrico e stato corporeo. Il suo deficit viene solitamente correlato a una massa muscolare troppo scarsa. Un valore basso potrebbe anche indicare un aumento della velocità di filtrazione glomerulare (eGFR)."

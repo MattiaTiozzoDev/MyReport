@@ -7,6 +7,7 @@ import { FileTypeService } from './file-type.service';
 import { GUTSYS_NAMES } from '../configs/gutsys-names';
 import { VLSCFA_NAMES } from '../configs/vlscfa-names';
 import { VLSCFA_LIMITS } from '../configs/vlascfa-limits';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root',
@@ -258,12 +259,13 @@ export class CustomersDataService {
   }
 
   private parseDecimal(value) {
+    if (value == undefined && value == null) return null;
     if (typeof value !== 'string') return value;
 
     const normalized = value.replace(',', '.');
     const number = parseFloat(normalized);
 
-    if (isNaN(number)) return NaN;
+    if (isNaN(number)) return 'N.D.';
 
     return Math.round(number * 100) / 100;
   }

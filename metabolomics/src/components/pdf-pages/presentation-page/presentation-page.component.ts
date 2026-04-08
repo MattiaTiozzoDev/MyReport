@@ -7,10 +7,10 @@ import { FileTypeService } from '../../../services/file-type.service';
 import { FileType } from '../../../enums/file-type.enum';
 
 const TITLES = {
-  METABO: 'Profilo Metabolomico degli Acidi Organici',
-  ISTFEC: 'Istamina Fecale',
-  GUTSYS: 'Gut Screening®',
-  VLSCFA: 'Metaboliti del microbiota',
+  METABO: 'pdfpages.presentation.METABO',
+  ISTFEC: 'pdfpages.presentation.ISTFEC',
+  GUTSYS: 'pdfpages.presentation.GUTSYS',
+  VLSCFA: 'pdfpages.presentation.VLSCFA',
 };
 
 @Component({

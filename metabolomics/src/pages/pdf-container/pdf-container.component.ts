@@ -64,6 +64,7 @@ export class PdfContainerComponent implements OnInit {
   public tenant: any;
   public fileType: FileType;
   public fileTypeEnum = FileType;
+  public lang: string = '';
 
   constructor(
     private readonly staticDataService: StaticDataService,
@@ -78,7 +79,7 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIstaminaExample(),
+      example: this.staticDataService.loadMetabolitesExample(),
     }).subscribe(({ example, explanations }) => {
       this.explanations =
         this.fileType === FileType.METABO
@@ -91,7 +92,12 @@ export class PdfContainerComponent implements OnInit {
       this.fileType = null;
       this.tenant = this.tenantService.tenant ?? 'valsambro';
       this.fileType = this.fileTypeService.fileType;
+      this.explanations =
+        this.fileType === FileType.METABO
+          ? METABO_ELEMENTS_EXP
+          : VLSCFA_ELEMENTS_EXP;
       this.customer = { ...data?.customer };
+      this.lang = this.customer.available === 1 ? '_en' : '';
       if (
         this.explanations &&
         (this.fileType === FileType.METABO || this.fileType === FileType.VLSCFA)

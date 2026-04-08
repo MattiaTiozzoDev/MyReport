@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "desc": "Piruvico",
+    "desc": "exp.piruvico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 4.07,
@@ -20,7 +20,7 @@
   },
   {
     "id": 2,
-    "desc": "Lattico",
+    "desc": "exp.lattico.tname",
     "mYellInf": 2.1,
     "mSign": "-",
     "mYellSup": 9.15,
@@ -39,7 +39,7 @@
   },
   {
     "id": 3,
-    "desc": "Sebacico",
+    "desc": "exp.acidosebacico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.17,
@@ -58,7 +58,7 @@
   },
   {
     "id": 4,
-    "desc": "Adipico",
+    "desc": "exp.acidoadipico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 3.18,
@@ -77,7 +77,7 @@
   },
   {
     "id": 5,
-    "desc": "Suberico",
+    "desc": "exp.acidosuberico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.08,
@@ -96,7 +96,7 @@
   },
   {
     "id": 6,
-    "desc": "Etilmalonico",
+    "desc": "exp.etilmalonico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 3.98,
@@ -115,7 +115,7 @@
   },
   {
     "id": 7,
-    "desc": "3-Idrossibutirrico",
+    "desc": "exp.acido3idrossibutirrico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.57,
@@ -134,7 +134,7 @@
   },
   {
     "id": 8,
-    "desc": "Citrico",
+    "desc": "exp.acidocitrico.tname",
     "mYellInf": 43.03,
     "mSign": "-",
     "mYellSup": 440.42,
@@ -153,7 +153,7 @@
   },
   {
     "id": 9,
-    "desc": "Aconitico",
+    "desc": "exp.acidoaconitico.tname",
     "mYellInf": 4.25,
     "mSign": "-",
     "mYellSup": 53.55,
@@ -172,7 +172,7 @@
   },
   {
     "id": 10,
-    "desc": "Isocitrico",
+    "desc": "exp.acidoisocitrico.tname",
     "mYellInf": 9.34,
     "mSign": "-",
     "mYellSup": 45.82,
@@ -191,7 +191,7 @@
   },
   {
     "id": 11,
-    "desc": "2-Ossoglutarico",
+    "desc": "exp.acido2ossoglutarico.tname",
     "mYellInf": 2.45,
     "mSign": "-",
     "mYellSup": 14.52,
@@ -210,7 +210,7 @@
   },
   {
     "id": 12,
-    "desc": "Succinico",
+    "desc": "exp.acidosuccinico.tname",
     "mYellInf": 0.5,
     "mSign": "-",
     "mYellSup": 4.57,
@@ -229,7 +229,7 @@
   },
   {
     "id": 13,
-    "desc": "Fumarico",
+    "desc": "exp.acidofumarico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.25,
@@ -248,7 +248,7 @@
   },
   {
     "id": 14,
-    "desc": "Malico",
+    "desc": "exp.acidomalico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.17,
@@ -267,7 +267,7 @@
   },
   {
     "id": 15,
-    "desc": "2-Idrossiglutarico",
+    "desc": "exp.acido2idrossiglutarato.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 6.49,
@@ -283,11 +283,11 @@
     "cYellSup": 11.32,
     "cGrInf": 4.77,
     "cGrSup": 9.14,
-    "note": "Metaboliti legati ai difetti genetici del ciclo mitocondriale"
+    "note": "exp.acido2idrossiglutarato.note"
   },
   {
     "id": 16,
-    "desc": "Omovanillico (HVA)",
+    "desc": "exp.acidoomovanillico.tname",
     "mYellInf": 0.35,
     "mSign": "-",
     "mYellSup": 2.15,
@@ -306,7 +306,7 @@
   },
   {
     "id": 17,
-    "desc": "Vanilmandelico (VMA)",
+    "desc": "exp.acidomanilvandelico.tname",
     "mYellInf": 0.39,
     "mSign": "-",
     "mYellSup": 1.84,
@@ -325,7 +325,7 @@
   },
   {
     "id": 18,
-    "desc": "Ratio HVA/VMA",
+    "desc": "exp.hvavma.tname",
     "mYellInf": 0.4,
     "mSign": "-",
     "mYellSup": 1.95,
@@ -344,7 +344,7 @@
   },
   {
     "id": 19,
-    "desc": "3,4-Diidrossifenilacetico",
+    "desc": "exp.34diidrossifenilacetico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.2,
@@ -363,7 +363,7 @@
   },
   {
     "id": 20,
-    "desc": "Triptofano",
+    "desc": "exp.triptofano.tname",
     "mYellInf": 1.1,
     "mSign": "-",
     "mYellSup": 7.4,
@@ -382,7 +382,7 @@
   },
   {
     "id": 21,
-    "desc": "N-Acetilserotonina",
+    "desc": "exp.nacetil5idrossitriptamina.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 2.9,
@@ -401,7 +401,7 @@
   },
   {
     "id": 22,
-    "desc": "Serotonina",
+    "desc": "exp.serotonina.tname",
     "mYellInf": 6.4,
     "mSign": "-",
     "mYellSup": 119.6,
@@ -420,7 +420,7 @@
   },
   {
     "id": 23,
-    "desc": "Melatonina",
+    "desc": "exp.melatonina.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 2.2,
@@ -439,7 +439,7 @@
   },
   {
     "id": 24,
-    "desc": "5-Idrossiindolacetico",
+    "desc": "exp.acido5idrossindolacetico.tname",
     "mYellInf": 0.23,
     "mSign": "-",
     "mYellSup": 2.26,
@@ -458,7 +458,7 @@
   },
   {
     "id": 25,
-    "desc": "Kinurenina",
+    "desc": "exp.chinurenina.tname",
     "mYellInf": 0.1,
     "mSign": "-",
     "mYellSup": 0.7,
@@ -477,7 +477,7 @@
   },
   {
     "id": 26,
-    "desc": "Chinurenico",
+    "desc": "exp.acidochinurenico.tname",
     "mYellInf": 0.27,
     "mSign": "-",
     "mYellSup": 1.29,
@@ -496,7 +496,7 @@
   },
   {
     "id": 27,
-    "desc": "Chinolinico",
+    "desc": "exp.acidochinolinico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 3.33,
@@ -515,7 +515,7 @@
   },
   {
     "id": 28,
-    "desc": "Triptamina",
+    "desc": "exp.triptamina.tname",
     "mYellInf": 6.4,
     "mSign": "-",
     "mYellSup": 60.3,
@@ -534,7 +534,7 @@
   },
   {
     "id": 29,
-    "desc": "Citramalico",
+    "desc": "exp.acidocitramalico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 2.97,
@@ -553,7 +553,7 @@
   },
   {
     "id": 30,
-    "desc": "5-Idrossimetil-2-Furancarbossilico",
+    "desc": "exp.5idrossimetil2furancarbossilico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.6,
@@ -572,7 +572,7 @@
   },
   {
     "id": 31,
-    "desc": "Tartarico",
+    "desc": "exp.acidotartarico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 31.98,
@@ -591,7 +591,7 @@
   },
   {
     "id": 32,
-    "desc": "Furancarbonilglicina",
+    "desc": "exp.furancarbonilglicina.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.5,
@@ -610,7 +610,7 @@
   },
   {
     "id": 33,
-    "desc": "Tricarballilico",
+    "desc": "exp.acidotricarballilico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.32,
@@ -629,7 +629,7 @@
   },
   {
     "id": 34,
-    "desc": "Arabinosio",
+    "desc": "exp.arabinosio.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 44.76,
@@ -648,7 +648,7 @@
   },
   {
     "id": 35,
-    "desc": "Arabitolo",
+    "desc": "exp.arabitolo.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 20.95,
@@ -667,7 +667,7 @@
   },
   {
     "id": 36,
-    "desc": "Furan-2,5-Dicarbossilico",
+    "desc": "exp.acido25furandicarbossilico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 2.48,
@@ -686,7 +686,7 @@
   },
   {
     "id": 37,
-    "desc": "4-Idrossiippurico",
+    "desc": "exp.acido4idrossiippurico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 5.34,
@@ -705,7 +705,7 @@
   },
   {
     "id": 38,
-    "desc": "Ippurico",
+    "desc": "exp.acidoippurico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 173.5,
@@ -724,7 +724,7 @@
   },
   {
     "id": 39,
-    "desc": "Benzoico",
+    "desc": "exp.acidobenzoico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.07,
@@ -743,7 +743,7 @@
   },
   {
     "id": 40,
-    "desc": "Indacano",
+    "desc": "exp.indacano.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 20.0,
@@ -762,7 +762,7 @@
   },
   {
     "id": 41,
-    "desc": "4-Idrossifenilacetico",
+    "desc": "exp.acido4idrossifenilacetico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 10.2,
@@ -781,7 +781,7 @@
   },
   {
     "id": 42,
-    "desc": "3-Indolacetico",
+    "desc": "exp.acido3indoloacetico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.52,
@@ -800,7 +800,7 @@
   },
   {
     "id": 43,
-    "desc": "P-Cresolo",
+    "desc": "exp.pcresolo.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 6.2,
@@ -819,7 +819,7 @@
   },
   {
     "id": 44,
-    "desc": "3-Idrossifenilacetico",
+    "desc": "exp.3idrossifenilacetico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 2.86,
@@ -838,7 +838,7 @@
   },
   {
     "id": 45,
-    "desc": "HPHPA",
+    "desc": "exp.HPHPA.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 8.67,
@@ -857,7 +857,7 @@
   },
   {
     "id": 46,
-    "desc": "Glicolico",
+    "desc": "exp.acidoglicolico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 30.37,
@@ -876,7 +876,7 @@
   },
   {
     "id": 47,
-    "desc": "Glicerico",
+    "desc": "exp.acidoglicerico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.53,
@@ -895,7 +895,7 @@
   },
   {
     "id": 48,
-    "desc": "Ossalico",
+    "desc": "exp.acidoossalico.tname",
     "mYellInf": 1.1,
     "mSign": "-",
     "mYellSup": 33.3,
@@ -914,7 +914,7 @@
   },
   {
     "id": 49,
-    "desc": "Pantotenico (B5)",
+    "desc": "exp.acidopantotenico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.19,
@@ -933,7 +933,7 @@
   },
   {
     "id": 50,
-    "desc": "Glutarico*",
+    "desc": "exp.acidoglutarico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.23,
@@ -952,7 +952,7 @@
   },
   {
     "id": 51,
-    "desc": "Metilmalonico*",
+    "desc": "exp.acidometilmalonico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 2.0,
@@ -971,7 +971,7 @@
   },
   {
     "id": 52,
-    "desc": "N-Acetil-L-Cisteina (NAC)",
+    "desc": "exp.nacetilcisteina.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.22,
@@ -990,7 +990,7 @@
   },
   {
     "id": 53,
-    "desc": "Ascorbico ( C )",
+    "desc": "exp.acidoascorbico.tname",
     "mYellInf": 3.8,
     "mSign": "-",
     "mYellSup": 40.91,
@@ -1009,7 +1009,7 @@
   },
   {
     "id": 54,
-    "desc": "4-Piridossico (B6)",
+    "desc": "exp.acido4piridossico.tname",
     "mYellInf": 0.2,
     "mSign": "-",
     "mYellSup": 1.08,
@@ -1028,7 +1028,7 @@
   },
   {
     "id": 55,
-    "desc": "3-Idrossi-3-Metilglutarico*",
+    "desc": "exp.3idrossi3metilglutarico.tname",
     "mYellInf": 0.41,
     "mSign": "-",
     "mYellSup": 2.81,
@@ -1047,7 +1047,7 @@
   },
   {
     "id": 56,
-    "desc": "Uracile",
+    "desc": "exp.uracile.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 1.93,
@@ -1066,7 +1066,7 @@
   },
   {
     "id": 57,
-    "desc": "Timina",
+    "desc": "exp.timina.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.17,
@@ -1085,7 +1085,7 @@
   },
   {
     "id": 58,
-    "desc": "2-Idrossiippurico",
+    "desc": "exp.2idrossiippurico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 4.2,
@@ -1101,11 +1101,11 @@
     "cYellSup": 12.4,
     "cGrInf": 1.6,
     "cGrSup": 8.8,
-    "note": "Salicilati di aspartame o batteri GI"
+    "note": "exp.2idrossiippurico.note"
   },
   {
     "id": 59,
-    "desc": "Orotico",
+    "desc": "exp.acidoorotico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.27,
@@ -1121,11 +1121,11 @@
     "cYellSup": 0.38,
     "cGrInf": 0.16,
     "cGrSup": 0.31,
-    "note": "Eccesso di ammonio"
+    "note": "exp.acidoorotico.note"
   },
   {
     "id": 60,
-    "desc": "Piroglutammico",
+    "desc": "exp.acidopiroglutammico.tname",
     "mYellInf": 3.04,
     "mSign": "-",
     "mYellSup": 20.75,
@@ -1141,11 +1141,11 @@
     "cYellSup": 34.13,
     "cGrInf": 11.89,
     "cGrSup": 26.71,
-    "note": "Glutatione"
+    "note": "exp.acidopiroglutammico.note"
   },
   {
     "id": 61,
-    "desc": "2-Idrossibutirrico",
+    "desc": "exp.acido2idrossibutirrico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.71,
@@ -1164,7 +1164,7 @@
   },
   {
     "id": 62,
-    "desc": "4-Metil-2-Ossovalerico",
+    "desc": "exp.acido4metil2ossovalerico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.13,
@@ -1183,7 +1183,7 @@
   },
   {
     "id": 63,
-    "desc": "Mandelico",
+    "desc": "exp.acidomandelico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.35,
@@ -1202,7 +1202,7 @@
   },
   {
     "id": 64,
-    "desc": "Omogentisico",
+    "desc": "exp.acidoomogentisico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.32,
@@ -1221,7 +1221,7 @@
   },
   {
     "id": 65,
-    "desc": "2-Idrossiisocaproico",
+    "desc": "exp.acido2idrossiisocaproico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.13,
@@ -1240,7 +1240,7 @@
   },
   {
     "id": 66,
-    "desc": "N-Acetilaspartico",
+    "desc": "exp.acidoNacetilaspartico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 3.21,
@@ -1259,7 +1259,7 @@
   },
   {
     "id": 67,
-    "desc": "Malonico",
+    "desc": "exp.acidomalonico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.46,
@@ -1278,7 +1278,7 @@
   },
   {
     "id": 68,
-    "desc": "4-Idrossifenilpiruvico",
+    "desc": "exp.acido4idrossifenilpiruvico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.38,
@@ -1297,7 +1297,7 @@
   },
   {
     "id": 69,
-    "desc": "2-Idrossi-3-Metilbutirrico",
+    "desc": "exp.acido2idrossi3metilbutirrico.tname",
     "mYellInf": 0,
     "mSign": "≤",
     "mYellSup": 0.32,
@@ -1316,7 +1316,7 @@
   },
   {
     "id": 70,
-    "desc": "Creatinina",
+    "desc": "exp.creatinina.tname",
     "mYellInf": 40.0,
     "mSign": "-",
     "mYellSup": 278.0,

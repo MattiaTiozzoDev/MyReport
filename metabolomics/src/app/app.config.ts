@@ -33,7 +33,7 @@ export const appConfig: ApplicationConfig = {
           useClass: TranslateHttpLoader,
         },
         fallbackLang: 'it',
-      })
+      }),
     ),
   ],
 };

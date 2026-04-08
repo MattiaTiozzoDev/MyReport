@@ -38,17 +38,17 @@
                     </div>
                 </div>
                 <div class="w-15 flex align-center">
-                    @if(row.value < row.yellInf){
+                    @if(!!row.value && (row.value < row.yellInf)){
                         <div class="circle red-circle mr-5px">
                             <h5 class="bold white">L</h5>
                         </div>
                     }
-                    @if(row.value > row.yellSup){
+                    @if(!!row.value && (row.value > row.yellSup)){
                         <div class="circle red-circle mr-5px">
                             <h5 class="bold white">H</h5>
                         </div>
                     }
-                <h5 [ngClass]="{ 'red bold': row.value < row.yellInf || row.value > row.yellSup }">{{row.value | roundedValue:row.yellSup}}</h5>  
+                <h5 [ngClass]="{ 'red bold': !!row.value && (row.value < row.yellInf || row.value > row.yellSup) }">{{row.value | roundedValue:row.yellSup}}</h5>  
                 </div>             
                     @if(row.id == 40 || row.id == 70){
                         <div class="w-15">

@@ -2,7 +2,11 @@ import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { FileReaderService } from '../../services/file-reader.service';
 import { PdfService } from '../../services/file-export.service';
 import { firstValueFrom, Subscription, take } from 'rxjs';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslatePipe,
+  TranslateService,
+} from '@ngx-translate/core';
 import { StaticDataService } from '../../services/static-data.service';
 import { IndexPageComponent } from '../../components/pdf-pages/index-page/index-page.component';
 import { PresentationPageComponent } from '../../components/pdf-pages/presentation-page/presentation-page.component';
@@ -58,7 +62,14 @@ export class FileManagerComponent implements OnDestroy {
     private fileTypeService: FileTypeService,
     private toastService: ToastService,
     private zone: NgZone,
+    private translateService: TranslateService,
   ) {}
+
+  public setLang(customer: any) {
+    if (customer.available != undefined) {
+      this.translateService.use(customer.available === 1 ? 'en' : 'it');
+    }
+  }
 
   onFileSelected(event: Event) {
     this.loadSubscription = this.fileReaderService
@@ -68,6 +79,8 @@ export class FileManagerComponent implements OnDestroy {
         this.file = data.json;
         this.inputFileName = data.fileName;
         this.customersDataService.setData(this.file);
+        let customer = this.customersDataService.getCustomer();
+        this.setLang(customer);
       });
   }
 
@@ -99,6 +112,8 @@ export class FileManagerComponent implements OnDestroy {
         this.file = data.json;
         this.inputFileName = data.fileName;
         this.customersDataService.setData(this.file);
+        let customer = this.customersDataService.getCustomer();
+        this.setLang(customer);
       });
   }
 
@@ -116,6 +131,7 @@ export class FileManagerComponent implements OnDestroy {
         this.customersDataService.setCustomer();
         this.setOutputFileName();
         let customer = this.customersDataService.getCustomer();
+        this.setLang(customer);
         await firstValueFrom(this.zone.onStable);
         const filePath = await this.pdfService.exportElementById(
           'pdf-section',

@@ -28,43 +28,35 @@ export class StaticDataService {
     );
   }
 
-  loadMetabolitesExample(): Observable<Explanations[]> {
-    return this.http
-      .get<Explanations[]>('assets/jsons/metaboliti.example.json')
-      .pipe(
-        tap((data) => {
-          this.example = data;
-        }),
-      );
+  loadMetabolitesExample(): Observable<any[]> {
+    return this.http.get<any[]>('assets/jsons/metaboliti.example.json').pipe(
+      tap((data) => {
+        this.example = data;
+      }),
+    );
   }
 
-  loadIstaminaExample(): Observable<Explanations[]> {
-    return this.http
-      .get<Explanations[]>('assets/jsons/istamina.example.json')
-      .pipe(
-        tap((data) => {
-          this.example = data;
-        }),
-      );
+  loadIstaminaExample(): Observable<any[]> {
+    return this.http.get<any[]>('assets/jsons/istamina.example.json').pipe(
+      tap((data) => {
+        this.example = data;
+      }),
+    );
   }
 
-  loadGutSysExample(): Observable<Explanations[]> {
-    return this.http
-      .get<Explanations[]>('assets/jsons/gutsys.example.json')
-      .pipe(
-        tap((data) => {
-          this.example = data;
-        }),
-      );
+  loadGutSysExample(): Observable<any[]> {
+    return this.http.get<any[]>('assets/jsons/gutsys.example.json').pipe(
+      tap((data) => {
+        this.example = data;
+      }),
+    );
   }
 
-  loadVlscfaExample(): Observable<Explanations[]> {
-    return this.http
-      .get<Explanations[]>('assets/jsons/vlscfa.example.json')
-      .pipe(
-        tap((data) => {
-          this.example = data;
-        }),
-      );
+  loadVlscfaExample(): Observable<any[]> {
+    return this.http.get<any[]>('assets/jsons/vlscfa.example.json').pipe(
+      tap((data) => {
+        this.example = data;
+      }),
+    );
   }
 }
