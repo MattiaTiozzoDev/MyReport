@@ -40,7 +40,7 @@ export class ExplanationPageComponent implements OnChanges, OnInit {
   @Input() page: string;
   @Input() profile: any;
   @Input() customer: any;
-  @Input() basicIndex: any;
+  @Input() basicIndex: number;
 
   constructor(
     private explanationService: ExplanationService,

@@ -68,6 +68,8 @@ export class FileManagerComponent implements OnDestroy {
   public setLang(customer: any) {
     if (customer.available != undefined) {
       this.translateService.use(customer.available === 1 ? 'en' : 'it');
+    } else {
+      this.translateService.use('it');
     }
   }
 

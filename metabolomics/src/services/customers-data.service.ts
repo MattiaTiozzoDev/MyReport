@@ -86,7 +86,7 @@ export class CustomersDataService {
         var limit = this.getLimits(key, type);
         values.push({
           id: key,
-          value: this.parseDecimal(data[key]),
+          value: data[key],
           ...limit,
         });
       }
@@ -259,11 +259,14 @@ export class CustomersDataService {
   }
 
   private parseDecimal(value) {
-    if (value == undefined && value == null) return null;
-    if (typeof value !== 'string') return value;
+    if (value == undefined && value == null) return 'N.D.';
+    var normalized = null;
+    if (typeof value == 'string') {
+      normalized = value?.replace(',', '.');
+      normalized = Number(normalized);
+    }
 
-    const normalized = value.replace(',', '.');
-    const number = parseFloat(normalized);
+    const number = parseFloat(normalized ?? value);
 
     if (isNaN(number)) return 'N.D.';
 
