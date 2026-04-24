@@ -9,6 +9,17 @@ import { VLSCFA_NAMES } from '../configs/vlscfa-names';
 import { VLSCFA_LIMITS } from '../configs/vlascfa-limits';
 import { TranslateService } from '@ngx-translate/core';
 
+const CUSTOMER_COLUMNS = [
+  'DATA_ACCETTAZIONE',
+  'CODICE_ORDINE',
+  'CODICE_FISCALE',
+  'VARIABILE_POPOLAZIONE',
+  'DISPONIBILE',
+  'NOME',
+  'NUMERO_ACCETTAZIONE',
+  'DATA_REFERTAZIONE',
+];
+
 @Injectable({
   providedIn: 'root',
 })
@@ -40,7 +51,9 @@ export class CustomersDataService {
   public setData(data: any): void {
     const fileType = this.fileTypeService.fileType;
     const filteredData = data.filter(
-      (el) => el['__EMPTY_3'] && [1, 2, 3].includes(Number(el['__EMPTY_3'])),
+      (el) =>
+        el['VARIABILE_POPOLAZIONE'] &&
+        [1, 2, 3].includes(Number(el['VARIABILE_POPOLAZIONE'])),
     );
     if (fileType === 'METABO') {
       this.customersData = filteredData.map((element: any) =>
@@ -65,24 +78,24 @@ export class CustomersDataService {
   private mapMetaboData(data): CustomerData {
     return {
       customer: {
-        accDate: data['__EMPTY'],
-        orderId: data['__EMPTY_1'],
-        fiscalCode: data['__EMPTY_2'],
-        type: Number(data['__EMPTY_3']),
-        available: data['__EMPTY_4'],
-        name: data['__EMPTY_6'],
-        accNumber: data['__EMPTY_7'],
-        refDate: data['__EMPTY_8'],
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
       },
-      values: this.mapValues(data, Number(data['__EMPTY_3'])),
+      values: this.mapValues(data, Number(data['VARIABILE_POPOLAZIONE'])),
     };
   }
 
   private mapValues(data, type): MappedValue[] {
     let values = [];
     Object.keys(data).forEach((key) => {
-      if (!key.startsWith('__EMPTY_')) {
-        if (key == '__EMPTY_3') data[key] = Number(data[key]);
+      if (!CUSTOMER_COLUMNS.includes(key)) {
+        if (key == 'VARIABILE_POPOLAZIONE') data[key] = Number(data[key]);
         var limit = this.getLimits(key, type);
         values.push({
           id: key,
@@ -152,11 +165,15 @@ export class CustomersDataService {
     let hight = [];
     let low = [];
     values.forEach((el) => {
-      if (el.value < el.inf) {
-        low.push(el.id);
-      }
-      if (el.value > el.sup) {
+      if (el.id == 10 && el.value > el.inf) {
         hight.push(el.id);
+      } else {
+        if (el.value < el.inf) {
+          low.push(el.id);
+        }
+        if (el.value > el.sup) {
+          hight.push(el.id);
+        }
       }
     });
     return { hight, low };
@@ -165,30 +182,30 @@ export class CustomersDataService {
   private mapIstaminaData(data): CustomerData {
     return {
       customer: {
-        accDate: data['__EMPTY'],
-        orderId: data['__EMPTY_1'],
-        fiscalCode: data['__EMPTY_2'],
-        type: Number(data['__EMPTY_3']),
-        available: data['__EMPTY_4'],
-        name: data['__EMPTY_6'],
-        accNumber: data['__EMPTY_7'],
-        refDate: data['__EMPTY_8'],
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
       },
-      result: data['__EMPTY_20'],
+      result: data['1'],
     };
   }
 
   private mapGutsysData(data): CustomerData {
     return {
       customer: {
-        accDate: data['__EMPTY'],
-        orderId: data['__EMPTY_1'],
-        fiscalCode: data['__EMPTY_2'],
-        type: Number(data['__EMPTY_3']),
-        available: data['__EMPTY_4'],
-        name: data['__EMPTY_6'],
-        accNumber: data['__EMPTY_7'],
-        refDate: data['__EMPTY_8'],
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
       },
       values: this.mapGutsysValues(data),
     };
@@ -197,8 +214,8 @@ export class CustomersDataService {
   private mapGutsysValues(data) {
     let values = [];
     Object.keys(data).forEach((key) => {
-      if (!key.startsWith('__EMPTY_')) {
-        if (key == '__EMPTY_3') data[key] = Number(data[key]);
+      if (!CUSTOMER_COLUMNS.includes(key)) {
+        if (key == 'VARIABILE_POPOLAZIONE') data[key] = Number(data[key]);
         values.push({
           id: key,
           value: data[key],
@@ -212,14 +229,14 @@ export class CustomersDataService {
   private mapVlscfaData(data): CustomerData {
     return {
       customer: {
-        accDate: data['__EMPTY'],
-        orderId: data['__EMPTY_1'],
-        fiscalCode: data['__EMPTY_2'],
-        type: Number(data['__EMPTY_3']),
-        available: data['__EMPTY_4'],
-        name: data['__EMPTY_6'],
-        accNumber: data['__EMPTY_7'],
-        refDate: data['__EMPTY_8'],
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
       },
       values: this.mapVlscfaValues(data),
     };
@@ -227,9 +244,9 @@ export class CustomersDataService {
 
   private mapVlscfaValues(data) {
     let values = [];
-    let population = Number(data['__EMPTY_3']);
+    let population = Number(data['VARIABILE_POPOLAZIONE']);
     Object.keys(data).forEach((key) => {
-      if (!key.startsWith('__EMPTY_')) {
+      if (!CUSTOMER_COLUMNS.includes(key)) {
         if (key == '19') {
           values.push({
             id: key,

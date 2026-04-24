@@ -489,7 +489,7 @@
     "wGrInf": 0.54,
     "wGrSup": 1.17,
     "cYellInf": 0,
-    "cSign": "-",
+    "cSign": "≤",
     "cYellSup": 2.45,
     "cGrInf": 1.04,
     "cGrSup": 1.98

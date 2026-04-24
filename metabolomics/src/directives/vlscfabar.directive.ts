@@ -32,13 +32,15 @@ export class VlscfabarDirective {
         color = '#29AABC';
       }
     }
-    if (this.val < this.inf) {
+    if (this.val == this.inf) {
       width = 2;
     } else if (this.val > this.sup) {
       width = 100;
     } else {
       width = ((this.val - this.inf) / (this.sup - this.inf)) * 100;
     }
+
+    if (width < 2) width = 2;
 
     this.renderer.setStyle(
       this.el.nativeElement,

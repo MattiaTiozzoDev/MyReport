@@ -30,7 +30,12 @@ export class GutsysParasitePage {
 
   public getParasites(data: any[]): void {
     data.forEach((el) => {
-      if (el.value == 'P' && this.parasites.length < 2) {
+      if (
+        el.value == 'P' &&
+        this.parasites.length < 2 &&
+        el.id >= 33 &&
+        el.id <= 47
+      ) {
         this.parasites.push(el);
       }
     });
