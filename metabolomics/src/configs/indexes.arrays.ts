@@ -323,3 +323,93 @@ export const VLSCFA_INDEXES_ARRAY = [
     ],
   },
 ];
+
+export const IGGINT_INDEXES_ARRAY_180 = [
+  {
+    sectionTitle: 'pdfpages.indexpage.iggint.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.iggint.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.iggint.index2',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.iggint.index3',
+        page: '03',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.iggint.subtitle2',
+    page: '04',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.iggint.index4',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.iggint.subtitle3',
+    page: '11',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.iggint.index5',
+        page: '11',
+      },
+      {
+        title: 'pdfpages.indexpage.iggint.index6',
+        page: '11',
+      },
+    ],
+  },
+];
+
+export const IGGINT_INDEXES_ARRAY_90 = [
+  {
+    sectionTitle: 'pdfpages.indexpage.iggint.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.iggint.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.iggint.index2',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.iggint.index3',
+        page: '03',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.iggint.subtitle2',
+    page: '04',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.iggint.index4',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.iggint.subtitle3',
+    page: '9',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.iggint.index5',
+        page: '9',
+      },
+      {
+        title: 'pdfpages.indexpage.iggint.index6',
+        page: '9',
+      },
+    ],
+  },
+];

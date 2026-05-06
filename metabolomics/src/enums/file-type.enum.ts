@@ -3,4 +3,5 @@ export enum FileType {
   ISTFEC = 'ISTFEC',
   GUTSYS = 'GUTSYS',
   VLSCFA = 'VLSCFA',
+  IGGINT = 'IGGINT',
 }

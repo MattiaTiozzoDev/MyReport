@@ -59,4 +59,12 @@ export class StaticDataService {
       }),
     );
   }
+
+  loadIggintExample(): Observable<any[]> {
+    return this.http.get<any[]>('assets/jsons/iggint.example.json').pipe(
+      tap((data) => {
+        this.example = data;
+      }),
+    );
+  }
 }

@@ -21,6 +21,8 @@ import {
   GUTSYS_INDEXES_ARRAY_2,
   GUTSYS_INDEXES_ARRAY_1,
   VLSCFA_INDEXES_ARRAY,
+  IGGINT_INDEXES_ARRAY_180,
+  IGGINT_INDEXES_ARRAY_90,
 } from '../../../configs/indexes.arrays';
 
 @Component({
@@ -68,6 +70,16 @@ export class IndexPageComponent implements OnInit, OnChanges {
         changes['type'].currentValue,
       );
     }
+
+    if (
+      changes['type'] &&
+      changes['type'].currentValue &&
+      this.fileTypeService.fileType === FileType.IGGINT
+    ) {
+      this.indexesArray = this.getIggintIndexesArray(
+        changes['type'].currentValue,
+      );
+    }
   }
 
   public getGutsysIndexesArray(type) {
@@ -78,6 +90,17 @@ export class IndexPageComponent implements OnInit, OnChanges {
         return GUTSYS_INDEXES_ARRAY_2;
       case 3:
         return GUTSYS_INDEXES_ARRAY_3;
+      default:
+        return [];
+    }
+  }
+
+  public getIggintIndexesArray(type) {
+    switch (type) {
+      case 1:
+        return IGGINT_INDEXES_ARRAY_90;
+      case 2:
+        return IGGINT_INDEXES_ARRAY_180;
       default:
         return [];
     }

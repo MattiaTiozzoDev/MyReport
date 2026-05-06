@@ -1,0 +1,104 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{ 'pdfpages.iggintresultpage.title' | translate }}</h2> 
+        <h4 class=" mt-3px light-blue subtitle">{{ 'pdfpages.iggintresultpage.subtitle' | translate }}</h4> 
+        <div class="table-header flex align-center px-20px mb-1px mt-20px">
+        <div class="w-25">
+            <h5 class="white">Livello</h5>
+        </div>
+        <div class="w-45">
+            <h5 class="white">Alimenti Interessati</h5>
+        </div>
+        <div class="w-30">
+            <h5 class="white">Indicazione </h5>
+        </div>
+    </div>
+    <div class="table-body w-100 flex col px-10px">
+        <div class="flex align-center py-10px">
+            <div class="w-25">
+                <div class="box red-bg w-80 text-center py-5px">
+                    <h5 class="white bold">ELEVATO</h5>
+                </div>
+            </div>
+            <div class="w-45 pr-10px">
+                <h5>
+                    @for(el of high;track el){
+                        {{el}}, 
+                    }
+                </h5>
+            </div>
+            <div class="w-30">
+                <h5 >Escludere completamente dalla dieta per almeno 2 mesi </h5>
+            </div>
+        </div>
+        <hr class="w-100">
+                <div class="flex align-center py-10px">
+            <div class="w-25">
+                <div class="box orange-bg w-80 text-center py-5px">
+                    <h5 class="white bold">MODERATO</h5>
+                </div>
+            </div>
+           <div class="w-45 pr-10px">
+                <h5>
+                    @for(el of medium;track el){
+                        {{el}}, 
+                    }
+                </h5>
+            </div>
+            <div class="w-30">
+                <h5 >Escludere completamente dalla dieta per almeno 2 mesi </h5>
+            </div>
+        </div>
+        <hr class="w-100">
+                <div class="flex align-center py-10px">
+            <div class="w-25">
+                <div class="box yellow-bg w-80 text-center py-5px">
+                    <h5 class="white bold">LIEVE</h5>
+                </div>
+            </div>
+            <div class="w-45 pr-10px">
+                <h5>
+                    @for(el of low;track el){
+                        {{el}}, 
+                    }
+                </h5>
+            </div>
+            <div class="w-30">
+                <h5 >Consumo consentito al massimo 1 volta a settimana</h5>
+            </div>
+        </div>
+        <hr class="w-100">
+
+    </div>
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.iggintresultpage.sectiontitle1' | translate}}</h4>
+            </div>
+        </div>
+        <p class="my-15px">
+            {{'pdfpages.iggintresultpage.text1' | translate}} 
+        </p>
+        <p class="my-15px">
+            <span class="light-blue bold">{{'pdfpages.iggintresultpage.text2' | translate}}</span>
+            <span class="bold">{{'pdfpages.iggintresultpage.text3' | translate}}</span>
+            {{'pdfpages.iggintresultpage.text4' | translate}}
+        </p>
+        <p class="my-15px">
+            <span class="light-blue bold">{{'pdfpages.iggintresultpage.text5' | translate}}</span>
+            <span class="bold">{{'pdfpages.iggintresultpage.text6' | translate}}</span>
+            {{'pdfpages.iggintresultpage.text7' | translate}}
+        </p>
+        <p class="my-15px">
+            <span class="light-blue bold">{{'pdfpages.iggintresultpage.text8' | translate}}</span>
+            <span class="bold">{{'pdfpages.iggintresultpage.text9' | translate}}</span>
+            {{'pdfpages.iggintresultpage.text10' | translate}}
+        </p>
+        <p class="my-15px">
+            <span class="light-blue bold">{{'pdfpages.iggintresultpage.text11' | translate}}</span>
+            <span class="bold">{{'pdfpages.iggintresultpage.text12' | translate}}</span>
+            {{'pdfpages.iggintresultpage.text13' | translate}}
+        </p>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

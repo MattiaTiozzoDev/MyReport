@@ -96,3 +96,28 @@
     <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'08'" [reportType]="'vlscfa'"></metabolomics-profile-page>
     <metabolomics-explanation-page [profile]="profile" [customer]="customer" [basicIndex]="9"></metabolomics-explanation-page>
 }
+
+@if(fileType === fileTypeEnum.IGGINT) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer" [type]="customer?.type"></index-page>
+    <iggint-intro-page [page]="'03'"></iggint-intro-page>
+    @if(customer?.type == 2){
+        <iggint-table-page [tables]="[0,1]" [page]="'04'"></iggint-table-page>
+        <iggint-table-page [tables]="[3]" [page]="'05'"></iggint-table-page>
+        <iggint-table-page [tables]="[4]" [page]="'06'"></iggint-table-page>
+        <iggint-table-page [tables]="[5,6]" [page]="'07'"></iggint-table-page>
+        <iggint-table-page [tables]="[7]" [page]="'08'"></iggint-table-page>
+        <iggint-table-page [tables]="[8]" [page]="'09'"></iggint-table-page>
+        <iggint-table-page [tables]="[9,10]" [page]="'10'" [last]="true" [customer]="customer" ></iggint-table-page>
+        <iggint-result-page [page]="'11'"></iggint-result-page>
+    }@else {
+        <iggint-table-page [tables]="[0,1]" [page]="'04'"></iggint-table-page>
+        <iggint-table-page [tables]="[3]" [page]="'05'"></iggint-table-page>
+        <iggint-table-page [tables]="[4,5]" [page]="'06'"></iggint-table-page>
+        <iggint-table-page [tables]="[6,7]" [page]="'07'"></iggint-table-page>
+        <iggint-table-page [tables]="[8,9]" [page]="'08'" [last]="true" [customer]="customer" ></iggint-table-page>
+        <iggint-result-page [page]="'9'"></iggint-result-page>
+    }
+
+    <ending-page></ending-page>
+}

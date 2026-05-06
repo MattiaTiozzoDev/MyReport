@@ -1,0 +1,20 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        @if(page == '04'){
+            <h2 class=" mt-20px dark-blue">{{ 'pdfpages.igginttablepage.title' | translate }}</h2> 
+            <h4 class=" mt-3px light-blue subtitle">{{ 'pdfpages.igginttablepage.subtitle' | translate }}</h4> 
+        }
+        @for (table of tables; track $index) {
+            <iggint-table [tableId]="table"></iggint-table>
+        }
+        @if(last){
+            <div class="flex col mt-25px pos-abs">
+                <h6 >Metodologia: ELISA microarray</h6>
+                <h6 class="mt-15px">Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche</h6>
+                <h6 class="mt-15px">Firmato digitalmente dal dott Alberto Santini il: {{customer?.refDate | dateTransform}}</h6>
+            </div>      
+        }
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

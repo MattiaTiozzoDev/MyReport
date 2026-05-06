@@ -1,6 +1,6 @@
 export type CustomerData = {
   customer: Customer;
-  values?: MappedValue[];
+  values?: MappedValue[] | any;
   result?: string | number;
 };
 

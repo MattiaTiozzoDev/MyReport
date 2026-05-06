@@ -1,0 +1,62 @@
+:host {
+    display: block;
+    width: 595px;
+    height: 842px;
+}
+
+hr{
+    height: 0.5px;
+    background: #29abbc83;
+    margin: 1px 0;
+    border: none;
+}
+
+p {
+    font-weight: 400;
+    font-size: 9px;
+    color: #383838;
+    line-height: 14px;
+    text-align: justify;
+}
+
+.subtitle{
+    font-weight: 500;
+}
+
+.section-header{
+    width: 595px !important;
+    height: 30px;
+    margin-left: -40px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+}
+
+.param{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+.red-bg{
+    background-color: rgba(230, 33, 56, 1);
+}
+
+.orange-bg{
+    background-color: rgba(239, 130, 6, 1)
+}
+
+.yellow-bg{
+    background-color: rgba(224, 180, 5, 1)
+}
+.green-bg{
+    background-color: rgba(109, 179, 120, 1)
+}
+
+.red{
+    color: rgba(230, 33, 56, 1);
+}
+
+.orange{
+    color: rgba(239, 130, 6, 1)
+}

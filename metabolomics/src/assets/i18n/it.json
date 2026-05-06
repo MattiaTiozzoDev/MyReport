@@ -34,6 +34,8 @@
       "ISTFEC": "Istamina Fecale",
       "GUTSYS": "Gut Screening®",
       "VLSCFA": "Metaboliti del microbiota",
+      "IGGINT90": "Test IGG 90 Alimenti",
+      "IGGINT180": "Test IGG 180 Alimenti",
       "title": "Diagnostica di precisione per una salute personalizzata",
       "subtitle": "I nostri referti nascono dall’integrazione di tecnologie diagnostiche avanzate e metodologie scientifiche validate, con l’obiettivo di fornire dati accurati e affidabili a supporto di valutazioni cliniche personalizzate.",
       "director": "Direttore sanitario:"
@@ -93,6 +95,17 @@
         "index7": "Composti organici derivanti da sovracrescita microbica intestinale (disbiosi)",
         "index8": "Metaboliti intestinali e implicazioni sistemiche",
         "index9": "Spiegazione dei metaboliti alterati"
+      },
+      "iggint": {
+        "subtitle1": "Introduzione e indicazioni generali",
+        "subtitle2": "Riepilogo completo alimenti reattivi",
+        "subtitle3": "Indicazioni dietetiche ",
+        "index1": "Che cos’è il test IGG Alimenti? ",
+        "index2": "Note e avvertenze",
+        "index3": "Informazioni sul Test",
+        "index4": "Riepilogo completo alimenti reattivi",
+        "index5": "Indicazioni dietetiche",
+        "index6": "Protocollo di reintroduzione"
       },
       "fiscalcode": "Codice fiscale:"
     },
@@ -413,6 +426,46 @@
           "sectiontitle2": "microbica intestinale (disbiosi)"
         }
       }
+    },
+    "iggintintroductionpage": {
+      "title": "Test IGG Alimenti",
+      "subtitle": "Introduzione e indicazioni generali",
+      "sectiontitle1": "Che cos’è il Test IGG Alimenti?",
+      "sectiontitle2": "Note e avvertenze",
+      "sectiontitle3": "Informazioni sul Test",
+      "text1": "Il Test IGG è un esame del sangue che misura la presenza di anticorpi di tipo IgG specifici per diversi alimenti. Gli anticorpi IgG appartengono al sistema immunitario e, quando si trovano in quantità elevata contro determinati cibi, possono essere associati a reazioni di intolleranza alimentare di tipo ritardato.",
+      "text2": "A differenza delle allergie alimentari classiche (mediate da IgE), che provocano sintomi rapidi e immediati, le intolleranze IgG-mediate possono manifestarsi con ritardo anche di ore o giorni dopo l'assunzione dell'alimento, rendendo difficile l'identificazione del cibo responsabile.",
+      "text3": "Il presente referto ha esclusivamente scopo informativo. I valori rilevati non costituiscono diagnosi medica. Si raccomanda di consultare un medico o un nutrizionista per l'interpretazione clinica dei risultati e per eventuali modifiche alla dieta. In caso di reattivita elevata a piu alimenti della stessa famiglia (es. cereali contenenti glutine, latticini), si suggerisce una valutazione specialistica per escludere patologie associate (celiachia, intolleranza al lattosio, ecc.).",
+      "text4": "Il test misura la concentrazione di anticorpi IgG specifici verso diversi alimenti nel siero del paziente. ",
+      "text5": "Un valore elevato indica una maggiore reattivita immunitaria verso quell'alimento, che puo essere associata a intolleranza alimentare di tipo ritardato.",
+      "text6": "La scala di interpretazione è la seguente:",
+      "text7": "Si raccomanda di prestare particolare attenzione agli alimenti con reattività ",
+      "text8": "Elevato",
+      "text9": " e ",
+      "text10": "Moderato",
+      "text11": ", poiché una loro riduzione o esclusione temporanea dalla dieta può portare a benefici significativi."
+    },
+    "igginttablepage": {
+      "title": "Test IGG Alimenti",
+      "subtitle": "Riepilogo completo alimenti reattivi"
+    },
+    "iggintresultpage": {
+      "title": "Test IGG Alimenti",
+      "subtitle": "Indicazioni dietetiche",
+      "sectiontitle1": "Protocollo di reintroduzione",
+      "text1": "Al termine del periodo di astensione di almeno 2 mesi, seguire il seguente protocollo per la reintroduzione degli alimenti esclusi:",
+      "text2": "Fase 1",
+      "text3": " Periodo di astensione: ",
+      "text4": "eliminare completamente tutti gli alimenti con reattivita Elevata e Moderata per almeno 2 mesi. Gli alimenti con reattivita Lieve possono essere consumati al massimo 1 volta a settimana. ",
+      "text5": "Fase 2",
+      "text6": " Reintroduzione graduale: ",
+      "text7": "dopo il periodo di astensione, reintrodurre un solo alimento alla volta, con una frequenza di uno alla settimana. Osservare eventuali reazioni (gonfiore, stanchezza, disturbi digestivi, eruzioni cutanee) nelle 72 ore successive all'assunzione.",
+      "text8": "Fase 3",
+      "text9": " Valutazione della risposta: ",
+      "text10": " se la reintroduzione di un alimento provoca sintomi, escluderlo nuovamente e procedere con il successivo. Se non vi sono reazioni, l'alimento puo essere gradualmente reinserito nella dieta con moderazione.",
+      "text11": "Fase 4",
+      "text12": " Monitoraggio nel tempo: ",
+      "text13": "si consiglia di ripetere il test dopo 6-12 mesi per rivalutare i livelli di reattivita, in quanto le intolleranze IgG-mediate possono ridursi significativamente con il corretto periodo di astensione e rotazione alimentare."
     }
   },
   "exp": {

@@ -1,0 +1,46 @@
+<div>
+     <div class="section-header flex justify-end align-center px-40px my-30px">
+                <h4 class="white" >{{ IGGINT_TABLES[tableId].title }}</h4>
+            </div>
+    <div class="table-header flex align-center px-20px mb-1px mt-20px">
+        <div class="w-25">
+            <h5 class="white">Alimento</h5>
+        </div>
+        <div class="w-35">
+            <h5 class="white">Categoria</h5>
+        </div>
+        <div class="w-20">
+            <h5 class="white">Valore IGG</h5>
+        </div>
+        <div class="w-20">
+            <h5 class="white">Livello di reattività </h5>
+        </div>
+    </div>
+    <div class="table-body w-100 flex col px-10px">
+        @for(row of rows; track row.id){
+            <div class="table-row flex align-center px-10px py-2px">
+                <div class="w-25 flex align-center">
+                    <h5>{{ row.name }}</h5>
+                </div>
+                 <div class="w-35 flex align-center">
+                    <h5>{{ IGGINT_TABLES[tableId].title }}</h5>
+                </div>
+                 <div class="w-20 flex align-center">
+                    <h5 class="pl-2px">{{ row.value }}</h5>
+                </div>
+                 <div class="w-20 flex align-center">
+                    @if(row.value == 0){
+                        <h5 class="pl-2px bold green">Negativo</h5> 
+                    }@else if(row.value > 0 && row.value <= 10){
+                        <h5 class="pl-2px bold yellow"> Lieve</h5>
+                    }@else if(row.value > 10 && row.value <= 30){
+                        <h5 class="pl-2px bold orange"> Moderato</h5>
+                    }@else if(row.value > 30){
+                        <h5 class="pl-2px bold red"> Elevato</h5>
+                    }
+                </div>
+            </div>
+            <hr class="w-100">
+        }
+    </div>
+</div>

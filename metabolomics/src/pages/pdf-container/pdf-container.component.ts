@@ -28,6 +28,9 @@ import { VlscfaIntro2Page } from '../../components/pdf-pages/vlscfa-intro-2-page
 import { VlscfaTablePage } from '../../components/pdf-pages/vlscfa-table-page/vlscfa-table-page';
 import { VLSCFA_ELEMENTS_EXP } from '../../configs/vlscfa-explanations';
 import { METABO_ELEMENTS_EXP } from '../../configs/metabolomics-explanations';
+import { IggintIntroPage } from '../../components/pdf-pages/iggint-intro-page/iggint-intro-page';
+import { IggintTablePage } from '../../components/pdf-pages/iggint-table-page/iggint-table-page';
+import { IggintResultPage } from '../../components/pdf-pages/iggint-result-page/iggint-result-page';
 
 @Component({
   selector: 'metabolomics-pdf-container',
@@ -53,6 +56,9 @@ import { METABO_ELEMENTS_EXP } from '../../configs/metabolomics-explanations';
     VlscfaIntro1Page,
     VlscfaIntro2Page,
     VlscfaTablePage,
+    IggintIntroPage,
+    IggintTablePage,
+    IggintResultPage,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',
@@ -79,7 +85,7 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadMetabolitesExample(),
+      example: this.staticDataService.loadIggintExample(),
     }).subscribe(({ example, explanations }) => {
       this.explanations =
         this.fileType === FileType.METABO

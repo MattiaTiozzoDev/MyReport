@@ -8,6 +8,8 @@ import { GUTSYS_NAMES } from '../configs/gutsys-names';
 import { VLSCFA_NAMES } from '../configs/vlscfa-names';
 import { VLSCFA_LIMITS } from '../configs/vlascfa-limits';
 import { TranslateService } from '@ngx-translate/core';
+import { IGGINT_NAMES } from '../configs/iggint-names';
+import { IGGINT_TABLES } from '../configs/iggint-tables';
 
 const CUSTOMER_COLUMNS = [
   'DATA_ACCETTAZIONE',
@@ -70,6 +72,10 @@ export class CustomersDataService {
     } else if (fileType === 'VLSCFA') {
       this.customersData = filteredData.map((element: any) =>
         this.mapVlscfaData(element),
+      );
+    } else if (fileType === 'IGGINT') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapIggintData(element),
       );
     }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
@@ -191,7 +197,7 @@ export class CustomersDataService {
         accNumber: data['NUMERO_ACCETTAZIONE'],
         refDate: data['DATA_REFERTAZIONE'],
       },
-      result: data['1'],
+      result: this.parseDecimal(data['1']),
     };
   }
 
@@ -269,10 +275,56 @@ export class CustomersDataService {
     return values;
   }
 
-  mapNullValVlscfa(val, id) {
+  private mapNullValVlscfa(val, id) {
     if (val) return val;
     if (id == '17' || id == '18') return 0.01;
     return 0.1;
+  }
+
+  private mapIggintData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
+      },
+      values: this.mapIggintValues(data),
+    };
+  }
+  mapIggintValues(data: any) {
+    let values = [];
+    Object.keys(data).forEach((key) => {
+      values.push({
+        id: key,
+        value: this.parseDecimal(data[key]),
+        name: IGGINT_NAMES[key] ? IGGINT_NAMES[key] : '',
+        group: this.IggintFindGroup(Number(key)),
+      });
+    });
+    return values;
+  }
+
+  private IggintFindGroup(id) {
+    for (const group of IGGINT_TABLES) {
+      const ranges = [group.Id90, group.Id180];
+
+      for (const range of ranges) {
+        if (!range) continue;
+
+        const [min, max] = range.split('-').map(Number);
+
+        if (id >= min && id <= max) {
+          return group.groupId;
+        }
+      }
+    }
+
+    return null;
   }
 
   private parseDecimal(value) {
