@@ -10,8 +10,8 @@ export class RoundedValuePipe implements PipeTransform {
     return idx >= 0 ? str.length - idx - 1 : 0;
   }
 
-  transform(value: any, reference: number | string): number | string {
-    if (value == null || reference == null) return 'N.D';
+  transform(value: any, reference?: number | string | null): number | string {
+    if (value == null) return 'N.D';
     console.log(value);
     if (typeof value == 'string') value = Number(value);
     const decimals = 2;

@@ -34,7 +34,7 @@
                     'yellow-bg': result >= 600 && result < 900,                     
                     'orange-bg': result >= 900 && result < 15000,
                     'red-bg': result >= 15000}">
-                    {{result >= 15000 ? '>15000' : result}}
+                    {{result >= 15000 ? '>15000' : result | roundedValue}}
                 </div>
             </div>
             <h5 class="w-20 black">μg/g</h5>

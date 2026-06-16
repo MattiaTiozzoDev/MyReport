@@ -1,0 +1,127 @@
+.table-header {
+  width: 512px;
+  height: 20px;
+  border-radius: 3px;
+  background: var(--brand-color, #29AABC);
+}
+
+.w-34 { width: 34%; }
+.w-48 { width: 48%; }
+.w-60px { width: 60px; }
+.w-70px { width: 70px; }
+.w-badge { width: 22px; flex-shrink: 0; }
+.w-50px { width: 50px; }
+.w-100 { width: 100%; }
+.flex-1 { flex: 1; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+h5 {
+  font-weight: 500;
+  font-size: 6px;
+  line-height: 1;
+}
+
+hr {
+  height: 0.5px;
+  background: #29abbc83;
+  margin: 1px 0;
+  border: none;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  font-size: 7px;
+  background-color: var(--brand-color, #29AABC);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.name {
+  font-size: 7.5px;
+  font-weight: 500;
+  color: #383838;
+  line-height: 1.2;
+}
+
+/* Bar gradient variants */
+.container-graphic {
+  width: 100%;
+  height: 12px;
+  padding-top: 2px;
+  border-radius: 6px;
+}
+
+.bar-green {
+  background: linear-gradient(90deg, #0D8A50 0%, #5BBD8D 50%, #B8E4CC 100%);
+}
+
+.bar-binary {
+  background: linear-gradient(90deg, #0B9667 0%, #E62138 100%);
+}
+
+.bar-abcde {
+  background: linear-gradient(90deg, #0B9667 0%, #FBD500 48.08%, #E62138 98.56%);
+}
+
+/* Pointer diamond */
+.pointer {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border: 0.75px solid #024F84;
+  transform: rotate(45deg);
+}
+
+.ml-3px   { margin-left: 3px; }
+.ml-55px  { margin-left: 55px; }
+.ml-107px { margin-left: 107px; }
+.ml-115px { margin-left: 115px; }
+.ml-159px { margin-left: 159px; }
+.ml-172px { margin-left: 172px; }
+.ml-210px { margin-left: 210px; }
+.ml-225px { margin-left: 226px; }
+
+.text-val {
+  font-size: 6px;
+  font-weight: 400;
+  color: #383838;
+}
+
+/* T/U/E badge */
+.badge {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 1px solid var(--brand-color, #29AABC);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--brand-color, #29AABC);
+  font-size: 7px;
+  font-weight: 700;
+}
+
+/* Box-style title for Altri patogeni (tableId 3) */
+.box-title {
+  display: inline-block;
+  border: 1px solid var(--brand-color, #29AABC);
+  color: var(--brand-color, #29AABC) !important;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+:host-context(.homica) .table-header {
+  background: #6B4C99;
+}
+
+:host-context(.homica) .circle {
+  background-color: #6B4C99;
+}
+

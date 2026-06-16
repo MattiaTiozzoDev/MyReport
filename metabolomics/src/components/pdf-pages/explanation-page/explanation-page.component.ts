@@ -10,23 +10,15 @@ import { PageFooter } from '../../shared/page-footer/page-footer';
 import { TranslatePipe } from '@ngx-translate/core';
 import { METABOLOMICS_EXPLANATIONS } from '../../../configs/metabolomics-explanations';
 import { ExplanationService } from '../../../services/explanation.service';
-import { EndingPageComponent } from '../ending-page/ending-page.component';
 import { TenantType } from '../../../enums/tenant.enum';
 import { TenantService } from '../../../services/tenant.service';
-import { NgClass } from '@angular/common';
 import { FileTypeService } from '../../../services/file-type.service';
 import { FileType } from '../../../enums/file-type.enum';
 import { VLSCFA_EXPLANATIONS } from '../../../configs/vlscfa-explanations';
 
 @Component({
   selector: 'metabolomics-explanation-page',
-  imports: [
-    PageHeader,
-    PageFooter,
-    TranslatePipe,
-    EndingPageComponent,
-    NgClass,
-  ],
+  imports: [PageHeader, PageFooter, TranslatePipe],
   templateUrl: './explanation-page.component.html',
   styleUrl: './explanation-page.component.scss',
 })

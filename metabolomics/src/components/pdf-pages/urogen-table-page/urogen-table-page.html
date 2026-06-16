@@ -1,0 +1,103 @@
+<div class="page-container">
+  <metabolomics-page-header></metabolomics-page-header>
+  <div class="page-content">
+
+    <div class="pt-10px">
+      <div class="section-header flex justify-end align-center px-40px">
+        <h4 class="white">{{ table.sectionTitle }}</h4>
+      </div>
+    </div>
+
+    <urogen-table
+      [elements]="table?.elementsIds"
+      [title]="table?.title"
+      [tableId]="pageId">
+    </urogen-table>
+
+    <!-- Page 0: Flora Lattobacillare Vaginale -->
+    @if (pageId === 0) {
+      <p class="pt-15px">
+        I <strong class="light-blue">lattobacilli</strong> rappresentano la componente dominante del microbiota vaginale in condizioni di eubiosi. Producendo acido lattico e perossido di idrogeno, mantengono un pH acido (3,8–4,5) che inibisce la colonizzazione da parte di microrganismi patogeni e protegge l'integrità della mucosa. Una riduzione significativa di questa flora può alterare l'equilibrio dell'ecosistema vaginale, favorendo l'insorgenza di disbiosi e aumentando la suscettibilità a infezioni batteriche e fungine. I valori rilevati devono essere interpretati nel contesto clinico complessivo della paziente e in relazione agli altri parametri dell'Urogenital Screening.
+      </p>
+      <div class="legenda flex justify-between py-8px px-20px mt-10px">
+        <div class="w-15">
+          <h5 class="legenda-text bold">Legenda</h5>
+        </div>
+        <div class="w-83 flex col gap-3px">
+          <h5 class="grey-text"><strong class="light-blue">A </strong> Concentrazione ottimale (> 10⁵ u.f.c./mL). La specie è presente in quantità fisiologica e svolge pienamente la sua funzione protettiva.</h5>
+          <h5 class="grey-text"><strong class="light-blue">B </strong> Concentrazione lievemente inferiore alla norma (fino a 10⁴ u.f.c./mL). La flora è parzialmente ridotta.</h5>
+          <h5 class="grey-text"><strong class="light-blue">C </strong> Concentrazione significativamente bassa (< 10⁴ u.f.c./mL). La riduzione può favorire un disequilibrio dell'ecosistema vaginale. </h5>
+          <p class="grey-text italic">Una specie assente o fortemente ridotta non implica necessariamente una patologia: il risultato va sempre valutato nel contesto clinico complessivo.</p>
+        </div>
+      </div>
+    }
+
+    <!-- Page 1: Candida -->
+    @if (pageId === 1) {
+      <p class="pt-15px">
+        La <strong class="light-blue">Candida</strong>  è un lievito opportunista fisiologicamente presente in basse concentrazioni nel tratto urogenitale. In condizioni di squilibrio del microbiota, stress o alterazioni ormonali, può proliferare eccessivamente causando candidosi vulvovaginale, caratterizzata da prurito, bruciore e perdite anomale. Il test identifica e quantifica sette specie di Candida, alcune delle quali mostrano ridotta sensibilità ai comuni antimicotici, consentendo allo specialista di orientare il trattamento in modo mirato ed efficace. I valori rilevati devono essere interpretati nel contesto clinico complessivo della paziente e in relazione agli altri parametri dell'Urogenital Screening.
+      </p>
+      <div class="teu-bar flex align-center px-15px mt-10px">
+        <span class="teu-item"><strong class="white">T</strong><span class="white teu-text"> Rilevato su tampone</span></span>
+        <span class="teu-item"><strong class="white">U</strong><span class="white teu-text"> Rilevato nelle urine</span></span>
+        <span class="teu-item"><strong class="white">E</strong><span class="white teu-text"> Rilevato su entrambi</span></span>
+      </div>
+      <div class="legenda flex justify-between py-8px px-10px mt-5px">
+        <div class="w-15">
+          <h5 class="legenda-text bold">Legenda</h5>
+        </div>
+        <div class="w-90 flex col gap-3px">
+          <h5 class="grey-text"><strong  class="light-blue">A </strong>La specie è assente o presente in quantità talmente ridotta da non causare problemi clinici.</h5>
+          <h5 class="grey-text"><strong  class="light-blue">P </strong> La specie è presente in quantità significativa. Il dato va correlato con i sintomi clinici: il medico valuterà se trattare e con quale terapia.</h5>
+          <p class="grey-text italic">Una specie assente o fortemente ridotta non implica necessariamente una patologia: il risultato va sempre valutato nel contesto clinico complessivo.</p>
+        </div>
+      </div>
+    }
+
+    <!-- Page 2: Patogeni sessuali -->
+    @if (pageId === 2) {
+      <p class="pt-15px">
+        La <strong class="light-blue">flora patogena</strong> urogenitale comprende microrganismi che, anche in assenza di sintomi conclamati, possono alterare l'equilibrio del microbiota e causare complicanze a lungo termine. Il test distingue due categorie principali.
+        <br><br>
+        I <strong class="light-blue">patogeni a trasmissione sessuale (IST)</strong>— tra cui Chlamydia trachomatis, Neisseria gonorrhoeae e Trichomonas vaginalis — sono identificati mediante analisi molecolare ad alta sensibilità. Spesso asintomatici, possono causare malattia infiammatoria pelvica, infertilità e aumentata suscettibilità ad altre infezioni. L'identificazione precoce consente di interrompere la catena di trasmissione e impostare una terapia mirata.
+        <br><br>
+        Gli <strong class="light-blue">altri patogeni urogenitali</strong> — tra cui Gardnerella vaginalis, Escherichia coli, Klebsiella, Mycoplasma e Ureaplasma — in caso di sovracrescita alterano l'equilibrio del microbiota, favorendo vaginosi batteriche, cistiti e infezioni delle vie urinarie.
+I valori rilevati devono essere interpretati nel contesto clinico complessivo della paziente e in relazione agli altri parametri dell'Urogenital Screening.
+      </p>
+      <div class="legenda legenda-wide flex justify-between py-8px px-20px mt-10px">
+        <div class="w-12">
+          <h5 class="legenda-text bold">Legenda</h5>
+        </div>
+        <div class="w-90 flex col gap-3px">
+          <h5 class="grey-text"><strong  class="light-blue">A </strong>La specie è assente o presente in quantità talmente ridotta da non causare problemi clinici.</h5>
+          <h5 class="grey-text"><strong  class="light-blue">P </strong> La specie è presente in quantità significativa. Il dato va correlato con i sintomi clinici: il medico valuterà se trattare e con quale terapia.</h5>
+          <p class="grey-text italic">Una specie assente o fortemente ridotta non implica necessariamente una patologia: il risultato va sempre valutato nel contesto clinico complessivo.</p>
+        </div>
+      </div>
+    }
+
+    <!-- Page 3: Altri patogeni urogenitali -->
+    @if (pageId === 3) {
+      <div class="teu-bar flex align-center px-15px mt-8px bottom-150px">
+        <span class="teu-item"><strong class="white">T</strong><span class="white teu-text"> Rilevato su tampone</span></span>
+        <span class="teu-item"><strong class="white">U</strong><span class="white teu-text"> Rilevato nelle urine</span></span>
+        <span class="teu-item"><strong class="white">E</strong><span class="white teu-text"> Rilevato su entrambi</span></span>
+      </div>
+      <div class="legenda legenda-wide flex justify-between py-8px px-20px mt-5px ">
+        <div class="w-12">
+          <h5 class="legenda-text bold">Legenda</h5>
+        </div>
+        <div class="w-86 flex col gap-3px">
+          <h5 class="grey-text"><strong class="light-blue">A</strong> ASSENTE - Il microrganismo non è rilevabile nel campione: risultato negativo.</h5>
+          <h5 class="grey-text"><strong class="light-blue">B</strong> 350.000 u.f.c. - Presenza molto bassa; in molti casi si tratta di semplice colonizzazione.</h5>
+          <h5 class="grey-text"><strong class="light-blue">C</strong> 750.000 u.f.c. - Presenza moderata. Da valutare sintomatologia clinica.</h5>
+          <h5 class="grey-text"><strong class="light-blue">D</strong> 1 mil. u.f.c. - Carica batterica elevata; spesso associata a sintomatologia clinica.</h5>
+          <h5 class="grey-text"><strong class="light-blue">E</strong> >1 mil. u.f.c. - Carica batterica molto elevata; richiede intervento terapeutico mirato.</h5>
+          <p class="grey-text italic">La carica batterica (espressa in unità formanti colonie per mL) è fondamentale per distinguere una colonizzazione fisiologica da un'infezione attiva.</p>
+        </div>
+      </div>
+    }
+
+  </div>
+  <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

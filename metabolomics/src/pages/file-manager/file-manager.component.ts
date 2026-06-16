@@ -42,7 +42,7 @@ export class FileManagerComponent implements OnDestroy {
   public company: string;
   public tenantType = TenantType;
   public file: any;
-  public folderPath: string = '';
+  public folderPath: any = '';
   public inputFileName: string;
   public outputFileName = 'output.pdf';
   public isDragOver: boolean = false;

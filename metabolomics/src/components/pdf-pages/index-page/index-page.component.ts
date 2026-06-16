@@ -11,7 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { CustomersDataService } from '../../../services/customers-data.service';
 import { TenantType } from '../../../enums/tenant.enum';
 import { TenantService } from '../../../services/tenant.service';
-import { NgClass, UpperCasePipe } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
 import { FileTypeService } from '../../../services/file-type.service';
 import { FileType } from '../../../enums/file-type.enum';
 import {
@@ -23,11 +23,13 @@ import {
   VLSCFA_INDEXES_ARRAY,
   IGGINT_INDEXES_ARRAY_180,
   IGGINT_INDEXES_ARRAY_90,
+  GUTSYS_INDEXES_ARRAY_4,
+  UROGEN_INDEXES_ARRAY,
 } from '../../../configs/indexes.arrays';
 
 @Component({
   selector: 'index-page',
-  imports: [PageHeader, PageFooter, TranslatePipe, NgClass, UpperCasePipe],
+  imports: [PageHeader, PageFooter, TranslatePipe, UpperCasePipe],
   templateUrl: './index-page.component.html',
   styleUrl: './index-page.component.scss',
 })
@@ -56,6 +58,9 @@ export class IndexPageComponent implements OnInit, OnChanges {
         break;
       case FileType.VLSCFA:
         this.indexesArray = VLSCFA_INDEXES_ARRAY;
+        break;
+      case FileType.UROGEN:
+        this.indexesArray = UROGEN_INDEXES_ARRAY;
         break;
     }
   }
@@ -90,6 +95,8 @@ export class IndexPageComponent implements OnInit, OnChanges {
         return GUTSYS_INDEXES_ARRAY_2;
       case 3:
         return GUTSYS_INDEXES_ARRAY_3;
+      case 4:
+        return GUTSYS_INDEXES_ARRAY_4;
       default:
         return [];
     }

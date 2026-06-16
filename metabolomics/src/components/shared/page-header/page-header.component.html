@@ -1,4 +1,4 @@
-<div class="header-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+<div class="header-container" >
     @if(tenant === TenantType.HOMICA){
         <img src="assets/img/homica_logo.svg" alt="" height="67px" width="95px">
     }@else {
@@ -20,6 +20,15 @@
                 </div>
                 <hr>
             </div>
+            @if(tenant === TenantType.VALSAMBRO){    
+            <div class="flex col w-140px">
+                <div class="flex w-100 justify-between">
+                    <h5 class="white pb-4px">Nome:</h5>
+                    <h5 class="white pb-4px">{{ name | titlecase}}</h5>
+                </div>
+                <hr>
+            </div>                
+            }
         </div>
         <div class="flex row justify-between">
             <div class="flex col w-140px">
@@ -36,6 +45,15 @@
                 </div>
                 <hr>
             </div>
+            @if(tenant === TenantType.VALSAMBRO){
+            <div class="flex col w-140px">
+                <div class="flex w-100 justify-between">
+                    <h5 class="white pb-4px">Cognome:</h5>
+                    <h5 class="white pb-4px">{{ surname | titlecase}}</h5>
+                </div>
+                <hr>
+            </div>
+            }
         </div>
     </div>
 </div>

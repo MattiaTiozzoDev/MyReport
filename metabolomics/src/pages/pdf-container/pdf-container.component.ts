@@ -7,7 +7,6 @@ import { forkJoin, Subscription } from 'rxjs';
 import { StaticDataService } from '../../services/static-data.service';
 import { ProfilePageComponent } from '../../components/pdf-pages/profile-page/profile-page.component';
 import { ExplanationPageComponent } from '../../components/pdf-pages/explanation-page/explanation-page.component';
-import { EndingPageComponent } from '../../components/pdf-pages/ending-page/ending-page.component';
 import { ImagePageComponent } from '../../components/pdf-pages/image-page/image-page.component';
 import { TenantService } from '../../services/tenant.service';
 import { FileTypeService } from '../../services/file-type.service';
@@ -22,7 +21,9 @@ import { GutsysParasitePage } from '../../components/pdf-pages/gutsys-parasite-p
 import { GutsysAromaPage } from '../../components/pdf-pages/gutsys-aroma-page/gutsys-aroma-page';
 import { GutsysFungusPage } from '../../components/pdf-pages/gutsys-fungus-page/gutsys-fungus-page';
 import { GutsysIndicationPage } from '../../components/pdf-pages/gutsys-indication-page/gutsys-indication-page';
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
+import { TenantType } from '../../enums/tenant.enum';
+import { REPORTS } from '../../configs/constants.utils';
 import { VlscfaIntro1Page } from '../../components/pdf-pages/vlscfa-intro-1-page/vlscfa-intro-1-page';
 import { VlscfaIntro2Page } from '../../components/pdf-pages/vlscfa-intro-2-page/vlscfa-intro-2-page';
 import { VlscfaTablePage } from '../../components/pdf-pages/vlscfa-table-page/vlscfa-table-page';
@@ -31,11 +32,18 @@ import { METABO_ELEMENTS_EXP } from '../../configs/metabolomics-explanations';
 import { IggintIntroPage } from '../../components/pdf-pages/iggint-intro-page/iggint-intro-page';
 import { IggintTablePage } from '../../components/pdf-pages/iggint-table-page/iggint-table-page';
 import { IggintResultPage } from '../../components/pdf-pages/iggint-result-page/iggint-result-page';
+import { IggintResultPage2 } from '../../components/pdf-pages/iggint-result-page-2/iggint-result-page-2';
+import { UrogenIntroductionPage } from '../../components/pdf-pages/urogen-introduction-page/urogen-introduction-page';
+import { UrogenTablePage } from '../../components/pdf-pages/urogen-table-page/urogen-table-page';
+import { UrogenDescriptions } from '../../components/shared/urogen-descriptions/urogen-descriptions';
+import { UrogenAromaPage } from '../../components/pdf-pages/urogen-aroma-page/urogen-aroma-page';
+import { UrogenEndingPage } from '../../components/pdf-pages/urogen-ending-page/urogen-ending-page';
 
 @Component({
   selector: 'metabolomics-pdf-container',
   imports: [
     NgClass,
+    NgStyle,
     PresentationPageComponent,
     IndexPageComponent,
     TablePageComponent,
@@ -43,7 +51,6 @@ import { IggintResultPage } from '../../components/pdf-pages/iggint-result-page/
     ExplanationPageComponent,
     ImagePageComponent,
     IstfecIntroductionPageComponent,
-    EndingPageComponent,
     IstfecExplanationPageComponent,
     IstfecResultPageComponent,
     GutsysIntroductionPageComponent,
@@ -59,6 +66,12 @@ import { IggintResultPage } from '../../components/pdf-pages/iggint-result-page/
     IggintIntroPage,
     IggintTablePage,
     IggintResultPage,
+    IggintResultPage2,
+    UrogenIntroductionPage,
+    UrogenTablePage,
+    UrogenDescriptions,
+    UrogenAromaPage,
+    UrogenEndingPage,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',
@@ -71,6 +84,12 @@ export class PdfContainerComponent implements OnInit {
   public fileType: FileType;
   public fileTypeEnum = FileType;
   public lang: string = '';
+
+  get reportColor(): string {
+    if (this.tenant === TenantType.HOMICA) return '#6B4C99';
+    if (this.fileType === FileType.IGGINT) return REPORTS.IGGINT90.color;
+    return REPORTS[this.fileType]?.color ?? '#024F84';
+  }
 
   constructor(
     private readonly staticDataService: StaticDataService,
@@ -85,8 +104,8 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIggintExample(),
-    }).subscribe(({ example, explanations }) => {
+      example: this.staticDataService.loadUrogenExample(),
+    }).subscribe(({ example }) => {
       this.explanations =
         this.fileType === FileType.METABO
           ? METABO_ELEMENTS_EXP

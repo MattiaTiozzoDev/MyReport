@@ -2,23 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TenantService } from '../../../services/tenant.service';
 import { TenantType } from '../../../enums/tenant.enum';
-import { NgClass } from '@angular/common';
+import { REPORTS } from '../../../configs/constants.utils';
 import { FileTypeService } from '../../../services/file-type.service';
 import { FileType } from '../../../enums/file-type.enum';
 import { CustomersDataService } from '../../../services/customers-data.service';
 
-const TITLES = {
-  METABO: 'pdfpages.presentation.METABO',
-  ISTFEC: 'pdfpages.presentation.ISTFEC',
-  GUTSYS: 'pdfpages.presentation.GUTSYS',
-  VLSCFA: 'pdfpages.presentation.VLSCFA',
-  IGGINT90: 'pdfpages.presentation.IGGINT90',
-  IGGINT180: 'pdfpages.presentation.IGGINT180',
-};
-
 @Component({
   selector: 'presentation-page',
-  imports: [TranslatePipe, NgClass],
+  imports: [TranslatePipe],
   templateUrl: './presentation-page.component.html',
   styleUrl: './presentation-page.component.scss',
 })
@@ -28,6 +19,8 @@ export class PresentationPageComponent implements OnInit {
   public fileType: FileType;
   public TITLE: any;
   public population: any;
+  public name: string;
+  SUBTITLE: string;
 
   constructor(
     public tenantService: TenantService,
@@ -40,11 +33,19 @@ export class PresentationPageComponent implements OnInit {
     this.fileType = this.fileTypeService.fileType;
     this.customersDataService.$customerData.subscribe((data) => {
       if (data) {
+        this.name = data.customer.name;
         if (this.fileType === FileType.IGGINT) {
           this.TITLE =
-            data.customer.type == 1 ? TITLES.IGGINT90 : TITLES.IGGINT180;
+            data.customer.type == 1
+              ? REPORTS.IGGINT90.title
+              : REPORTS.IGGINT180.title;
+          this.SUBTITLE =
+            data.customer.type == 1
+              ? REPORTS.IGGINT90.subtitle
+              : REPORTS.IGGINT180.subtitle;
         } else {
-          this.TITLE = TITLES[this.fileType];
+          this.TITLE = REPORTS[this.fileType].title;
+          this.SUBTITLE = REPORTS[this.fileType].subtitle;
         }
       }
     });

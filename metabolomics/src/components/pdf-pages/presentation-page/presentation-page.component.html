@@ -1,27 +1,30 @@
-<div class="page-container pt-85px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+<div class="page-container pt-55px">
     @if(tenant === TenantType.HOMICA){
         <div class="logo-container homica-container flex col justify-center align-center" >
             <img src="assets/img/homica_logo.svg" alt="Homica Logo" width="365px" height="257" class="mb-30px">
-            <div class="cf-container homica flex align-center justify-center px-15px my-15px" >
+            <div class="cf-container flex align-center justify-center px-15px my-15px" >
               <h3 class="white">{{TITLE | translate}}</h3>
             </div>
         </div>          
     }@else {
         <div class="logo-container flex col justify-end">       
             <img src="assets/img/Logo_Valsambro.svg" alt="Valsambro Logo" width="365px" height="257" class="mb-30px">
-        <div class="cf-container flex align-center px-15px my-15px" >
+            <div class="cf-container flex align-center px-15px my-15px" >
               <h3 class="white">{{TITLE | translate}}</h3>
-        </div>
-            <h4 class="light-blue bold">{{'pdfpages.presentation.title' | translate}}</h4>       
+            </div>
+            <h4 class="light-blue bold">{{SUBTITLE | translate}}</h4>       
         </div>
         <div class="w-360px mx-20px mb-30px mt-15px">
             <h6 class="light-blue">
                 {{'pdfpages.presentation.subtitle' | translate}}
             </h6>
         </div>
+        <div class="cf-container w-60 small flex align-center px-15px my-15px mx-25px" >
+              <h3 class="white fs-8px">{{name}}</h3>
+        </div>
     }
     <div class="mx-20px mb-5px mt-25px">
-        <h6 [ngClass]="{'white': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">
+        <h6 class="director-info">
             <span class="bold">{{'pdfpages.presentation.director' | translate}}</span> Alberto Santini
         </h6>
     </div>
@@ -52,7 +55,7 @@
         </div>
 
         }@else {
-            <div class="w-100 flex col align-end gap-5px">
+        <div class="w-100 flex col align-end gap-5px">
             <div class="flex align-center gap-10px">
                 <h6 class="small-text light-blue" >Val Sambro Laboratorio Analisi</h6>
                 <img src="assets/img/facebook_icon.svg" alt="">
@@ -73,8 +76,6 @@
                     <h6 class="small-text light-blue">valsambro_laboratorio_analisi</h6>
                     <img src="assets/img/instagram_icon.svg" alt="">
                 </div>
-            </div>
+            </div>  
         </div>
         }
-    </div>
-</div>

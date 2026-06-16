@@ -5,6 +5,12 @@
 @import "../src/styles/flex.scss";
 @import "../src/styles/spacing.scss";
 
+.homica {
+  --brand-color: #6B4C99;
+  --brand-color-alpha: rgba(107, 76, 153, 0.51);
+}
+
+
 @font-face {
   font-family: 'Montserrat';
     src: url('assets/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
@@ -65,7 +71,7 @@ html, body {
 }
 
 .dark-blue{
-  color: #024F84;
+  color: var(--report-color, #024F84);
 }
 
 .dark-purple{
@@ -85,7 +91,7 @@ html, body {
 }
 
 .light-blue {
-  color: #29AABC !important;
+  color: var(--brand-color, #29AABC) !important;
 }
 
 .light-purple {
@@ -189,7 +195,7 @@ h6{
   pointer-events: none;
 }
 
-.page-container.homica::before {
+.homica .page-container::before {
   background-position: top 70% right 0; /* es: top left, 50% 20% */
   background-size: 430px 576px; /* oppure cover */
   background-image: url("assets/img/pdf_page_background_homica.svg");

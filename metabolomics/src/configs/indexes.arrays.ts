@@ -96,6 +96,63 @@ export const ISTAMINA_INDEXES_ARRAY = [
   },
 ];
 
+export const GUTSYS_INDEXES_ARRAY_4 = [
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index2',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle2',
+    page: '05',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index3',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index4',
+        page: '06',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index5',
+        page: '09',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index6',
+        page: '10',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.gutsys.subtitle3',
+    page: '11',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.gutsys.index8',
+        page: '11',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index9',
+        page: '12',
+      },
+      {
+        title: 'pdfpages.indexpage.gutsys.index10',
+        page: '13',
+      },
+    ],
+  },
+];
+
 export const GUTSYS_INDEXES_ARRAY_3 = [
   {
     sectionTitle: 'pdfpages.indexpage.gutsys.subtitle1',
@@ -363,7 +420,7 @@ export const IGGINT_INDEXES_ARRAY_180 = [
       },
       {
         title: 'pdfpages.indexpage.iggint.index6',
-        page: '11',
+        page: '12',
       },
     ],
   },
@@ -408,7 +465,68 @@ export const IGGINT_INDEXES_ARRAY_90 = [
       },
       {
         title: 'pdfpages.indexpage.iggint.index6',
-        page: '9',
+        page: '10',
+      },
+    ],
+  },
+];
+
+export const UROGEN_INDEXES_ARRAY = [
+  {
+    sectionTitle: 'pdfpages.indexpage.urogen.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.urogen.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index2',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index3',
+        page: '04',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.urogen.subtitle2',
+    page: '05',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.urogen.index4',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index5',
+        page: '06',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index6',
+        page: '07',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index7',
+        page: '09',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.urogen.subtitle3',
+    page: '12',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.urogen.index8',
+        page: '13',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index9',
+        page: '13',
+      },
+      {
+        title: 'pdfpages.indexpage.urogen.index10',
+        page: '13',
       },
     ],
   },

@@ -23,13 +23,13 @@ export class IggintResultPage implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.sub = this.customerService.$customerData.subscribe((data) => {
       this.low = data.values
-        .filter((el) => el.value >= 1 && el.value <= 10)
+        .filter((el) => el.group && el.value >= 1 && el.value <= 10)
         .map((el) => el.name);
       this.medium = data.values
-        .filter((el) => el.value > 10 && el.value <= 30)
+        .filter((el) => el.group && el.value > 10 && el.value <= 30)
         .map((el) => el.name);
       this.high = data.values
-        .filter((el) => el.value > 30)
+        .filter((el) => el.group && el.value > 30)
         .map((el) => el.name);
     });
   }

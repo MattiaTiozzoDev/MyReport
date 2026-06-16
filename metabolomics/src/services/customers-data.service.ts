@@ -7,9 +7,9 @@ import { FileTypeService } from './file-type.service';
 import { GUTSYS_NAMES } from '../configs/gutsys-names';
 import { VLSCFA_NAMES } from '../configs/vlscfa-names';
 import { VLSCFA_LIMITS } from '../configs/vlascfa-limits';
-import { TranslateService } from '@ngx-translate/core';
 import { IGGINT_NAMES } from '../configs/iggint-names';
 import { IGGINT_TABLES } from '../configs/iggint-tables';
+import { UROGEN_DESC, UROGEN_NAMES } from '../configs/urogen-names';
 
 const CUSTOMER_COLUMNS = [
   'DATA_ACCETTAZIONE',
@@ -76,6 +76,10 @@ export class CustomersDataService {
     } else if (fileType === 'IGGINT') {
       this.customersData = filteredData.map((element: any) =>
         this.mapIggintData(element),
+      );
+    } else if (fileType === 'UROGEN') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapUrogenData(element),
       );
     }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
@@ -325,6 +329,38 @@ export class CustomersDataService {
     }
 
     return null;
+  }
+
+  private mapUrogenData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
+      },
+      values: this.mapUrogenValues(data),
+    };
+  }
+
+  private mapUrogenValues(data) {
+    let values = [];
+    Object.keys(data).forEach((key) => {
+      if (!CUSTOMER_COLUMNS.includes(key)) {
+        if (key == 'VARIABILE_POPOLAZIONE') data[key] = Number(data[key]);
+        values.push({
+          id: key,
+          value: data[key],
+          name: UROGEN_NAMES[key] ? UROGEN_NAMES[key] : '',
+          desc: UROGEN_DESC[key] ? UROGEN_DESC[key] : null,
+        });
+      }
+    });
+    return values;
   }
 
   private parseDecimal(value) {

@@ -1,23 +1,23 @@
 @for(expPage of pages; track $index){
-    <div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+    <div class="page-container">
     <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content">
         @for(element of expPage; track $index){
         @if(element.type == 'general'){
             <div class="pt-20px">
-                <div class="section-header flex justify-end align-center px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+                <div class="section-header flex justify-end align-center px-40px">
                     <h4 class="white" >{{element.title | translate}}</h4>
                 </div>
             </div>
             <p class="my-15px">
                 {{element.general | translate}}
             </p>
-            <hr [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+            <hr>
         }
         @if(element.type == 'metabolite'){
                 <div class="flex align-center">
-                    <div class="circle row-id mr-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">{{element.id}}</div>
-                    <h4 class="py-15px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+                    <div class="circle row-id mr-5px">{{element.id}}</div>
+                    <h4 class="py-15px">
                         {{element.name | translate}}
                     </h4>
                 </div>               
@@ -38,11 +38,10 @@
                         </p>
                     </div>           
                 </div>
-                <hr [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+                <hr>
         }
       }
     </div>
     <metabolomics-page-footer [page]="$index + basicIndex"></metabolomics-page-footer>
     </div>
 }
-<ending-page></ending-page>

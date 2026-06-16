@@ -2,11 +2,19 @@
     display: block;
     width: 595px;
     height: 842px;
-    background: linear-gradient(180deg, #29AABC 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, var(--brand-color, #29AABC) 0%, rgba(255, 255, 255, 0) 50%);
 }
 
-.homica{
+:host-context(.homica) {
     background: linear-gradient(180deg, #141328 0%, #6B4B99 100%);
+}
+
+.director-info {
+    color: var(--brand-color, #29AABC);
+}
+
+:host-context(.homica) .director-info {
+    color: white;
 }
 
 .page-container::before {
@@ -24,8 +32,16 @@
 .cf-container {
     height: 30px;
     width: 100%;
-    background-color: #29AABC;
+    background-color: var(--report-color, var(--brand-color, #29AABC));
     border-radius: 15px;
+}
+
+.fs-8px{
+    font-size: 8px;
+}
+
+.w-60{
+    width: 60%;
 }
 
 .w-360px{

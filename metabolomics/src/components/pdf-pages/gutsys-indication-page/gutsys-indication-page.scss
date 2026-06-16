@@ -19,7 +19,7 @@ p {
     width: 595px !important;
     height: 30px;
     margin-left: -40px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
 }
 
 .grey-text{

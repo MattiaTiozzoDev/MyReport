@@ -4,4 +4,5 @@ export enum FileType {
   GUTSYS = 'GUTSYS',
   VLSCFA = 'VLSCFA',
   IGGINT = 'IGGINT',
+  UROGEN = 'UROGEN',
 }

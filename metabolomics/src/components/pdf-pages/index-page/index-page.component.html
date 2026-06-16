@@ -1,20 +1,20 @@
-<div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+<div class="page-container">
     <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content">
-        <h2 class=" mt-20px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{ 'pdfpages.indexpage.title' | translate }}</h2>
+        <h2 class="mt-20px dark-blue">{{ 'pdfpages.indexpage.title' | translate }}</h2>
         @for(section of indexesArray; track section){
             <div class="w-100 flex justify-between mt-20px">
-                <h4 class="bold " [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{ section.sectionTitle | translate }}</h4>
-                <h6 class="black">pag {{section.page}}</h6>           
+                <h4 class="bold section-title">{{ section.sectionTitle | translate }}</h4>
+                <h6 class="black">pag {{section.page}}</h6>
             </div>
-            <hr class="mt-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+            <hr class="mt-5px">
             <div class="w-100 flex col align-end">
                 @for(index of section.indexes; track index){
                     <div class="w-80 flex justify-between mt-20px">
                         <h6 class="black">{{ index.title |  translate }}</h6>
-                        <h6 class="black">pag {{index.page}}</h6>   
-                    </div> 
-                    <hr class="w-80 mt-5px" [ngClass]="{'homica': tenant === TenantType.HOMICA}"> 
+                        <h6 class="black">pag {{index.page}}</h6>
+                    </div>
+                    <hr class="w-80 mt-5px">
                 }
             </div>
         }

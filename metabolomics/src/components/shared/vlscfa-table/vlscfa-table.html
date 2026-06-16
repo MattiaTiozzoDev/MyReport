@@ -78,12 +78,7 @@
                         <h5 [ngClass]="{ 'red bold': row.value < row.inf || row.value > row.sup }">{{row.value | roundedValue:row.sup}}</h5>
                     } 
                 </div>             
-                    @if(row.id == 17){
-                        <div class="w-15">
-                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt_2'| translate}}</h5>
-                        </div>
-                    }
-                    @else if(row.id == 19){
+                    @if(row.id == 19){
                          <div class="w-15">
                             <h5 class="small">g/L</h5>
                         </div>
@@ -95,7 +90,7 @@
                     }
                     @else {
                         <div class="w-15">
-                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt'| translate}}</h5>
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt_3'| translate}}</h5>
                             <h5 class="small">{{'pdfpages.metabolomicstable.creatine_cre'| translate}}</h5>
                         </div>
                     }

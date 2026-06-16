@@ -5,7 +5,7 @@ import { TenantType } from '../enums/tenant.enum';
   providedIn: 'root',
 })
 export class TenantService {
-  private ten: TenantType = TenantType.VALSAMBRO;
+  private ten: TenantType = TenantType.HOMICA;
 
   get tenant(): TenantType {
     return this.ten;

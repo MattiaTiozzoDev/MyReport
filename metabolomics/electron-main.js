@@ -5,9 +5,10 @@ const { startAssetServer, stopAssetServer } = require("./server");
 
 let assetPort;
 let filePaths;
+let mainWindow;
 
 function createWindow() {
-  const win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1080,
     height: 760,
     fullscreenable: false,
@@ -21,6 +22,7 @@ function createWindow() {
       preload: path.join(__dirname, "electron.preload.js"),
       nodeIntegration: false,
       contextIsolation: true,
+      sandbox: true,
     },
   });
 
@@ -29,22 +31,23 @@ function createWindow() {
   // Punta alla build di Angular
   if (app.isPackaged) {
     // ✅ PRODUZIONE (app.asar)
-    win.loadFile(path.join(__dirname, "dist/my_report/browser/index.html"));
-    //win.webContents.openDevTools();
+    mainWindow.loadFile(path.join(__dirname, "dist/my_report/browser/index.html"));
+    //mainWindow.webContents.openDevTools();
   } else {
     // ✅ SVILUPPO
-    win.loadURL("http://localhost:4200");
-    win.webContents.openDevTools();
+    mainWindow.loadURL("http://localhost:4200");
+    mainWindow.webContents.openDevTools();
   }
+
+  return mainWindow;
 }
 
-ipcMain.handle("opend-export-folder", async (event, payload) => {
-  const result = await dialog.showOpenDialog({
+ipcMain.handle("open-export-folder", async (event, payload) => {
+  const result = await dialog.showOpenDialog(mainWindow, {
     properties: ["openDirectory"],
   });
 
   if (result.canceled || !result.filePaths.length) {
-    pdfWin.close();
     throw new Error("Salvataggio annullato");
   }
 
@@ -52,7 +55,7 @@ ipcMain.handle("opend-export-folder", async (event, payload) => {
   return filePaths;
 });
 
-// --- Qui inserisci l'handler IPC ---
+// Handler per esportare PDF
 ipcMain.handle("export-pdf", async (event, payload) => {
   const { htmlContent, fileName } = payload;
 
@@ -61,26 +64,42 @@ ipcMain.handle("export-pdf", async (event, payload) => {
 
   const pdfWin = new BrowserWindow({
     show: false,
-    webPreferences: { sandbox: false, devTools: false },
+    webPreferences: {
+      sandbox: true,
+      devTools: false,
+      contextIsolation: true,
+    },
   });
 
-  await pdfWin.loadURL(
-    `data:text/html;charset=utf-8,${encodeURIComponent(finalHtml)}`,
-  );
+  try {
+    await pdfWin.loadURL(
+      `data:text/html;charset=utf-8,${encodeURIComponent(finalHtml)}`,
+    );
 
-  const pdfPath = path.join(filePaths[0], fileName);
+    // Attendi che la pagina sia caricata
+    await new Promise(resolve => setTimeout(resolve, 500));
 
-  const pdfData = await pdfWin.webContents.printToPDF({
-    printBackground: true,
-    marginsType: 2,
-    pageSize: "A4",
-    preferCSSPageSize: true,
-  });
+    if (!filePaths || !filePaths[0]) {
+      throw new Error("Cartella di export non selezionata");
+    }
 
-  fs.writeFileSync(pdfPath, pdfData);
-  pdfWin.close();
+    const pdfPath = path.join(filePaths[0], fileName);
 
-  return pdfPath;
+    const pdfData = await pdfWin.webContents.printToPDF({
+      printBackground: true,
+      marginsType: 2,
+      pageSize: "A4",
+      preferCSSPageSize: true,
+    });
+
+    fs.writeFileSync(pdfPath, pdfData);
+    return pdfPath;
+  } finally {
+    // Assicurati che la finestra PDF sia chiusa
+    if (!pdfWin.isDestroyed()) {
+      pdfWin.close();
+    }
+  }
 });
 
 function buildPrintableHtml(bodyHtml) {
@@ -88,13 +107,24 @@ function buildPrintableHtml(bodyHtml) {
   const distRoot = path.join(__dirname, "dist/my_report/browser");
   const styles = getAngularStyles(distRoot);
 
-  const cssLink = `${assetBaseUrl}/${styles[0]}`;
+  if (styles.length === 0) {
+    console.warn("Attenzione: Nessun file CSS trovato in dist/my_report/browser");
+  }
+
+  const cssLink = styles.length > 0 ? `${assetBaseUrl}/${styles[0]}` : '';
+
+  // Carica i font come data URI per includerli nel PDF
+  const fontRegular = loadFontAsDataUri(path.join(distRoot, "assets/fonts/montserrat/Montserrat-Regular.woff2"));
+  const fontBold = loadFontAsDataUri(path.join(distRoot, "assets/fonts/montserrat/Montserrat-Bold.woff2"));
+  const fontMedium = loadFontAsDataUri(path.join(distRoot, "assets/fonts/montserrat/Montserrat-Medium.woff2"));
+
   return `
+  <!DOCTYPE html>
   <html>
      <head>
         <base href="${assetBaseUrl}">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="${cssLink}">
+        ${cssLink ? `<link rel="stylesheet" href="${cssLink}">` : ''}
         <style>
           @page {
             size: A4;
@@ -102,7 +132,45 @@ function buildPrintableHtml(bodyHtml) {
           }
 
           body {
-            zoom: 1.33333333333333333333333333333333333333333333333;
+            zoom: 1.333; /* 4/3 per scalare il PDF all'altezza corretta */
+            margin: 0;
+            padding: 0;
+          }
+
+          /* Font Montserrat Regular */
+          @font-face {
+            font-family: 'Montserrat';
+            src: url('data:application/font-woff2;charset=utf-8;base64,${fontRegular}') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          /* Font Montserrat Medium */
+          @font-face {
+            font-family: 'Montserrat';
+            src: url('data:application/font-woff2;charset=utf-8;base64,${fontMedium}') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          /* Font Montserrat Bold */
+          @font-face {
+            font-family: 'Montserrat';
+            src: url('data:application/font-woff2;charset=utf-8;base64,${fontBold}') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          /* Font di fallback */
+          html, body {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+          }
+
+          * {
+            font-family: inherit;
           }
         </style>
     </head>
@@ -111,6 +179,23 @@ function buildPrintableHtml(bodyHtml) {
     </body>
   </html>
   `;
+}
+
+/**
+ * Carica un font file e lo converte in base64
+ */
+function loadFontAsDataUri(fontPath) {
+  try {
+    if (!fs.existsSync(fontPath)) {
+      console.warn(`Font non trovato: ${fontPath}`);
+      return '';
+    }
+    const fontBuffer = fs.readFileSync(fontPath);
+    return fontBuffer.toString('base64');
+  } catch (error) {
+    console.error(`Errore nel caricamento del font ${fontPath}:`, error);
+    return '';
+  }
 }
 
 function getAngularStyles(distRoot) {
@@ -148,6 +233,22 @@ app.on("activate", () => {
   }
 });
 
-app.on("before-quit", () => {
+// Pulisci risorse prima di uscire
+app.on("before-quit", async () => {
+  await stopAssetServer();
+
+  // Chiudi tutte le finestre aperte
+  const windows = BrowserWindow.getAllWindows();
+  windows.forEach(win => {
+    if (!win.isDestroyed()) {
+      win.close();
+    }
+  });
+});
+
+// Gestisci errori e cleanup in caso di crash
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
   stopAssetServer();
+  process.exit(1);
 });

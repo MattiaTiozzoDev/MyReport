@@ -119,8 +119,10 @@
       "child": "under 13 years of age",
       "man": "males over 13 years of age",
       "woman": "females over 13 years of age",
+      "mesure": "mg/L",
       "creatine": "µmol/mmol of creatinine",
       "creatine_alt": "mg/dL of",
+      "creatine_alt_3": "umol/g of",
       "creatine_cre": "creatinine",
       "creatine_alt_2": "nmol/mmol of creatinine",
       "groups": {
@@ -761,7 +763,8 @@
       "name": "4-Hydroxyphenylacetic acid",
       "tname": "4-Hydroxyphenylacetic",
       "base": "4-Hydroxyphenylacetic acid is a microbial metabolite produced by Acinetobacter, Clostridium, Klebsiella, Pseudomonas and Proteus. This metabolite is produced from Tyrosine and can be converted into Cresol. Important food sources such as soy, turkey, chicken, almonds, pumpkin seeds make this metabolite biomarker of the use of these foods.",
-      "hight": "Excess of this metabolite is associated with the overgrowth of small gut bacteria from Clostridia species including C. difficile, C.  stricklandii, C.  lituseburense, C.  subterminal, C.  putrefaciens and C.  propionicum. Giardia Lamblia infection, small intestine diseases, use of antibiotics against aerobic bacteria, cystic fibrosis, transient lactose intolerance can also induce an increase in this metabolite."
+      "hight": "Excess of this metabolite is associated with the overgrowth of small gut bacteria from Clostridia species including C. difficile, C.  stricklandii, C.  lituseburense, C.  subterminal, C.  putrefaciens and C.  propionicum. Giardia Lamblia infection, small intestine diseases, use of antibiotics against aerobic bacteria, cystic fibrosis, transient lactose intolerance can also induce an increase in this metabolite.",
+      "low": "A deficiency of 4-hydroxyphenylacetic acid in urine may indicate reduced activity of the intestinal microbiota, particularly of the bacteria involved in the degradation of tyrosine. This condition may be observed in the presence of a depleted gut microbiota, following prolonged antibiotic therapy, in diets particularly low in protein, or when intestinal absorption of aromatic amino acids is highly efficient, leaving little substrate available for the production of this metabolite. In rare cases, low urinary excretion may also reflect congenital or acquired alterations in tyrosine metabolism."
     },
 
     "acido3indoloacetico": {
@@ -782,7 +785,8 @@
       "name": "3-Hydroxyphenylacetic acid",
       "tname": "3-Hydroxyphenylacetic",
       "base": "3-hydroxyphenylacetic acid is produced by amino acid fermentation (purely tyrosine) caused by poor digestion and absorption. It is often used as a marker for protein malabsorption. Also, the intake of food polyphenols (wine, green tea, grapes) causes the appearance of this metabolite in the urine. Its presence in the urine also depends on infection caused by Clostridia or Klebsiella.",
-      "hight": "While in healthy subjects these residues are limited, they can be numerous in phenylketonuria, a rare metabolic disease. It can also be a marker of the use of foods with polyphenols, protein malabsorption and strong dysbiosis caused by Clostridia or Klebsiella."
+      "hight": "While in healthy subjects these residues are limited, they can be numerous in phenylketonuria, a rare metabolic disease. It can also be a marker of the use of foods with polyphenols, protein malabsorption and strong dysbiosis caused by Clostridia or Klebsiella.",
+      "low": "A deficiency of 3-hydroxyphenylacetic acid in urine may indicate reduced activity of the intestinal microbiota, particularly of those bacteria responsible for the degradation of tyrosine and other aromatic amino acids. This condition may occur in the presence of a depleted gut microbiota, diets particularly low in protein, or enhanced intestinal absorption of amino acids, which leaves less substrate available for the production of this metabolite. In some cases, low urinary excretion may also reflect congenital or acquired metabolic alterations affecting the pathways involved in tyrosine metabolism."
     },
 
     "HPHPA": {

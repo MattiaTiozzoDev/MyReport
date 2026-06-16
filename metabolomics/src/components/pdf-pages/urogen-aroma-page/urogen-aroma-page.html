@@ -1,0 +1,58 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+               <h2 class=" mt-20px dark-blue">Urogenitals<sup>®</sup></h2> 
+        <h4 class=" mt-3px light-blue subtitle">Test di sensibilità antimicrobica</h4> 
+       
+        <div class="flex justify-between">
+            <div class="w-32">
+                <div class="mt-10px">
+                    <gutsys-aroma-table [title]="'Antimicogramma' | translate" [rows]="group1"></gutsys-aroma-table>
+                </div>
+
+
+                @if(addedText){
+                    <div class="par-header mt-20px">
+                        <h6 class="white text-center">{{addedText}}</h6>
+                    </div>
+                }
+                <div class="mt-10px">
+                    <gutsys-aroma-table [title]="'Antibiogramma' | translate" [rows]="group4"></gutsys-aroma-table>
+                </div>
+            </div>
+            <div class="w-32">
+                <div class="mt-10px">
+                    <gutsys-aroma-table [title]="'Antibiogramma dedicato a Micoplasmi/ Ureaplasmi' | translate" [rows]="group2"></gutsys-aroma-table>
+                </div>
+                <div class="mt-10px">
+                    <gutsys-aroma-table [title]="'Antibiogramma' | translate" [rows]="group5"></gutsys-aroma-table>
+                </div>
+            </div>
+            <div class="w-32">
+                <div class="mt-10px">
+                    <gutsys-aroma-table [title]="'Aromatogramma' | translate" [rows]="group3"></gutsys-aroma-table>
+                </div>
+            </div>
+        </div>
+         <div class="legenda flex justify-between align-center py-10px px-20px">
+                <h5 class="dark-blue bold">Legenda</h5>
+                <div class=" flex ">
+                        <div class="square mx-1px "></div>
+                        <div class="square mx-1px "></div>
+                        <div class="square mx-1px "></div>
+                        <h5 class="grey-text mx-3px ">Sensibile</h5>                       
+                </div>
+                 <div class=" flex ">
+                        <div class="square mx-1px "></div>
+                        <div class="square mx-1px "></div>
+                        <h5 class="grey-text mx-3px ">Medio sensibile</h5>                       
+                </div>
+                 <div class=" flex ">
+                        <div class="square mx-1px "></div>
+                        <h5 class="grey-text mx-3px ">Lieve sensibile</h5>                       
+                </div>
+                <h5 class="grey-text mx-3px ">Sensibilità = Efficacia</h5>  
+            </div>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

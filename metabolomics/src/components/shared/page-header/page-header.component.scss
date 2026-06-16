@@ -4,14 +4,14 @@
 
 .header-container {
     height: 110px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
 
-.header-container.homica {
+:host-context(.homica) .header-container {
     background: linear-gradient(90deg, #6B4C99 0%, #141328 90%);
 }
 
@@ -23,7 +23,7 @@ hr{
 }
 
 .w-140px{
-    width: 140px;
+    width: 120px;
 }
 
 .gap-20px{

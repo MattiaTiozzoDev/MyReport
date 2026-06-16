@@ -5,10 +5,18 @@ import { PageHeader } from '../../shared/page-header/page-header.component';
 import { CustomersDataService } from '../../../services/customers-data.service';
 import { DateTransformPipe } from '../../../pipes/date-transform.pipe';
 import { NgClass } from '@angular/common';
+import { RoundedValuePipe } from '../../../pipes/rounded-value.pipe';
 
 @Component({
   selector: 'istfec-result-page',
-  imports: [PageHeader, PageFooter, TranslatePipe, DateTransformPipe, NgClass],
+  imports: [
+    PageHeader,
+    PageFooter,
+    TranslatePipe,
+    DateTransformPipe,
+    NgClass,
+    RoundedValuePipe,
+  ],
   templateUrl: './istfec-result-page.component.html',
   styleUrl: './istfec-result-page.component.scss',
 })

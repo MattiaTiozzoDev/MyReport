@@ -1,31 +1,31 @@
 export const VLSCFA_LIMITS = {
   '1': {
-    inf: 17.71,
-    sup: 102.34,
+    inf: 17.7,
+    sup: 169.1,
   },
   '2': {
-    inf: 12.36,
-    sup: 112.79,
+    inf: 30.8,
+    sup: 75.2,
   },
   '3': {
-    inf: 0.53,
-    sup: 1.74,
+    inf: 0.5,
+    sup: 1.2,
   },
   '4': {
-    inf: 0.66,
-    sup: 2.57,
+    inf: 0.7,
+    sup: 2.1,
   },
   '5': {
-    inf: 0.15,
-    sup: 1.49,
+    inf: 0.49,
+    sup: 1.58,
   },
   '6': {
-    inf: 0.11,
-    sup: 0.41,
+    inf: 0.13,
+    sup: 0.32,
   },
   '7': {
     inf: 0,
-    sup: 0.4,
+    sup: 0.25,
   },
   '8': {
     inf: 0,
@@ -33,7 +33,7 @@ export const VLSCFA_LIMITS = {
   },
   '9': {
     inf: 0,
-    sup: 0.25,
+    sup: 0.43,
   },
   '10': {
     inf: 20,
@@ -41,27 +41,27 @@ export const VLSCFA_LIMITS = {
   },
   '11': {
     inf: 0,
-    sup: 0.39,
+    sup: 0.44,
   },
   '12': {
     inf: 0,
-    sup: 0.55,
+    sup: 0.5,
   },
   '13': {
-    inf: 40.74,
-    sup: 220.88,
+    inf: 35.8,
+    sup: 129.8,
   },
   '14': {
-    inf: 6.85,
-    sup: 57.25,
+    inf: 6.7,
+    sup: 47.8,
   },
   '15': {
-    inf: 20.68,
-    sup: 81.37,
+    inf: 16.0,
+    sup: 70.5,
   },
   '16': {
     inf: 0,
-    sup: 36.44,
+    sup: 25.3,
   },
   '17': {
     inf: 0,

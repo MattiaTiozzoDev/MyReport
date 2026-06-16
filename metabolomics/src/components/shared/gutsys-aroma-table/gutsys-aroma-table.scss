@@ -1,5 +1,5 @@
 .par-header{
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
     border-radius: 5px;
     height: 20px;
 }
@@ -16,7 +16,7 @@ h5{
 .square{
     width: 10px;
     height: 10px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
 hr{

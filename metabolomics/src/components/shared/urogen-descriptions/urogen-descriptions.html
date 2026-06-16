@@ -1,0 +1,21 @@
+<h4 class="bold mt-20px light-blue" >{{ title }}</h4>
+<div class="table-header mt-10px flex align-center pl-10px">
+  <div class="w-34">
+    <h5 class="white">Nome</h5>
+  </div>
+  <div class="w-65">
+    <h5 class="white">Descrizione</h5>
+  </div>
+</div>
+@for (row of rows; track row.id) {
+  <div class="flex px-10px py-3px align-center">
+    <div class="w-35 flex align-center">
+      <div class="circle mr-5px">{{ row.id }}</div>
+      <h4 class="name light-blue bold">{{ row.name }}</h4>
+    </div>
+    <div class="w-65">
+      <p class="fs-8px">{{row.desc }}</p>
+    </div>
+  </div>
+  <hr>
+}

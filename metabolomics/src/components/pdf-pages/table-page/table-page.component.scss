@@ -8,11 +8,27 @@
     width: 595px !important;
     height: 30px;
     margin-left: -40px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
 }
 
-.section-header.homica{
+.homica .section-header{
     background: linear-gradient(90deg, #6B4C99 0%, #141428 90%);
+}
+
+h2 {
+    color: #024F84;
+}
+
+.homica h2 {
+    color: #141428;
+}
+
+h4 {
+    color: var(--brand-color, #29AABC) !important;
+}
+
+.homica h4 {
+    color: #6B4C99 !important;
 }
 
 h6{

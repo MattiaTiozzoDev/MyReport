@@ -2,22 +2,30 @@
     display: block;
 }
 
+.group-title {
+    color: var(--brand-color, #29AABC) !important;
+}
+
+.homica .group-title {
+    color: #6B4C99 !important;
+}
+
 .table-header{
     height: 30px;
     border-radius: 15px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
-.table-header.homica{
+.homica .table-header{
     background-color: #6B4C99;
 }
 
 .note-container{
     height: 10px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
-.note-container.homica{
+.homica .note-container{
     background-color: #6B4C99;
 }
 
@@ -49,15 +57,15 @@
     color: white;
 }
 
-.circle.homica{
+.homica .circle{
     background-color: #6B4C99;
 }
 
 .row-id{
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
-.row-id.homica{
+.homica .row-id{
     background-color: #6B4C99;
 }
 
@@ -90,6 +98,6 @@ hr{
     border: none;
 }
 
-hr.homica{
+.homica hr{
     background: #6B4C99;
 }

@@ -31,11 +31,19 @@
   "pdfpages": {
     "presentation": {
       "METABO": "Profilo Metabolomico degli Acidi Organici",
+      "METABO_SUBTITLE": "Analisi metabolomica urinaria per la valutazione dei pathway biochimici cellulari",
       "ISTFEC": "Istamina Fecale",
+      "ISTFEC_SUBTITLE": "Misurazione dell'attività istaminergica intestinale per la valutazione del grado di disbiosi e infiammazione mucosale",
       "GUTSYS": "Gut Screening®",
+      "GUTSYS_SUBTITLE": "Analisi completa e integrata del microbiota intestinale attraverso metodologie molecolari e colturali sinergiche",
       "VLSCFA": "Metaboliti del microbiota",
+      "VLSCFA_SUBTITLE": "Analisi quantitativa dei metaboliti del microbiota per la valutazione della disbiosi",
       "IGGINT90": "Test IGG 90 Alimenti",
+      "IGGINT90_SUBTITLE": "Rilevazione quantitativa delle immunoglobuline IgG specifiche per antigeni alimentari",
       "IGGINT180": "Test IGG 180 Alimenti",
+      "IGGINT180_SUBTITLE": "Rilevazione quantitativa delle immunoglobuline IgG specifiche per antigeni alimentari",
+      "UROGEN": "Urogenital®",
+      "UROGEN_SUBTITLE": "Diagnostica di precisione per l’apparato urogenitale",
       "title": "Diagnostica di precisione per una salute personalizzata",
       "subtitle": "I nostri referti nascono dall’integrazione di tecnologie diagnostiche avanzate e metodologie scientifiche validate, con l’obiettivo di fornire dati accurati e affidabili a supporto di valutazioni cliniche personalizzate.",
       "director": "Direttore sanitario:"
@@ -104,8 +112,23 @@
         "index2": "Note e avvertenze",
         "index3": "Informazioni sul Test",
         "index4": "Riepilogo completo alimenti reattivi",
-        "index5": "Indicazioni dietetiche",
+        "index5": "Alimenti rilevati",
         "index6": "Protocollo di reintroduzione"
+      },
+      "urogen": {
+        "subtitle1": "Diagnostica completa del Tratto Urogenitale Femminile",
+        "subtitle2": "Risultati microbiologici",
+        "subtitle3": "Test di sensibilità antimicrobica",
+        "index1": "Cos’è il Test Urogenital ",
+        "index2": "Infezioni uro-genitali a bassa carica",
+        "index3": "Implicazioni sistemiche al Tratto Urogenitale",
+        "index4": "Flora Lattobacillare Vaginale",
+        "index5": "Candida",
+        "index6": "Flora Patogena",
+        "index7": "Guida ai microrganismi analizzati",
+        "index8": "Antibiogramma",
+        "index9": "Antimicogramma",
+        "index10": "Aromatogramma"
       },
       "fiscalcode": "Codice fiscale:"
     },
@@ -132,8 +155,10 @@
       "child": "minore di 13 anni",
       "man": "uomo maggiore di 13 anni",
       "woman": "donna maggiore di 13 anni",
+      "measure": "mg/L",
       "creatine": "µmoli/mmoli di creatinina",
       "creatine_alt": "mg/dL di",
+      "creatine_alt_3": "umol/g di",
       "creatine_cre": "creatinina",
       "creatine_alt_2": "nmoli/mmoli di creatinina",
       "groups": {
@@ -814,7 +839,8 @@
       "name": "Acido 4-idrossifenilacetico",
       "tname": "4-Idrossifenilacetico",
       "base": "L’acido 4-idrossifenilacetico è un metabolita microbico prodotto da Acinetobacter, Clostridium, Klebsiella, Pseudomonas e Proteus. Questo metabolita viene prodotto a partire dalla Tirosina e può essere convertito in Cresolo. Fonti importanti alimentari come soia, tacchino, pollo, mandorle, semi di zucca rendono questo metabolita biomarcatore dell'utilizzo di questi alimenti.",
-      "hight": "L'eccesso di questo metabolita è associato alla crescita eccessiva di piccoli batteri intestinali da specie Clostridia tra cui C. difficile, C. stricklandii, C. lituseburense, C. subterminale, C. putrefaciens e C. propionicum. Anche l'infezione da Giardia Lamblia, patologie del piccolo intestino, utilizzo di antibiotici contro batteri aerobici, fibrosi cistica, intolleranza transitoria al lattosio possono indurre aumento di questo metabolita."
+      "hight": "L'eccesso di questo metabolita è associato alla crescita eccessiva di piccoli batteri intestinali da specie Clostridia tra cui C. difficile, C. stricklandii, C. lituseburense, C. subterminale, C. putrefaciens e C. propionicum. Anche l'infezione da Giardia Lamblia, patologie del piccolo intestino, utilizzo di antibiotici contro batteri aerobici, fibrosi cistica, intolleranza transitoria al lattosio possono indurre aumento di questo metabolita.",
+      "low": "Una carenza di acido 4-idrossifenilacetico nelle urine può essere indice di una ridotta attività del microbiota intestinale, in particolare dei batteri coinvolti nella degradazione della tirosina. Tale condizione si può osservare in presenza di una flora intestinale impoverita, a seguito di terapie antibiotiche prolungate, diete particolarmente povere di proteine o di un assorbimento intestinale molto efficiente degli amminoacidi aromatici, che lascia poco substrato disponibile per la produzione di questo metabolita. In rari casi, una bassa escrezione urinaria può anche riflettere alterazioni congenite o acquisite del metabolismo della tirosina."
     },
 
     "acido3indoloacetico": {
@@ -835,9 +861,9 @@
       "name": "Acido 3-idrossifenilacetico",
       "tname": "3-Idrossifenilacetico",
       "base": "L’acido 3-idrossifenilacetico viene prodotto per fermentazione aminoacidica (prettamente tirosina) causata da cattiva digestione e assorbimento. Spesso viene utilizzato come marcatore per malassorbimento proteico . Anche l’introito di polifenoli alimentari ( vino, te verde, uva) provoca la comparsa di questo metabolita nelle urine. La sua presenza nelle urine dipende anche da infezione causata da Clostridi oppure da Klebsiella.",
-      "hight": "Mentre in soggetti sani questi residui sono limitati, possono essere numerosi in caso di fenilchetonuria, rara patologia metabolica. Può essere anche un marcatore dell’utilizzo di alimenti con polifenoli , del malassorbimento proteico e forte disbiosi causata da Clostridi o Klebsiella."
+      "hight": "Mentre in soggetti sani questi residui sono limitati, possono essere numerosi in caso di fenilchetonuria, rara patologia metabolica. Può essere anche un marcatore dell’utilizzo di alimenti con polifenoli , del malassorbimento proteico e forte disbiosi causata da Clostridi o Klebsiella.",
+      "low": "Una carenza di acido 3-idrossifenilacetico nelle urine può essere indice di una ridotta attività del microbiota intestinale, in particolare di quei batteri responsabili della degradazione della tirosina e di altri amminoacidi aromatici. Tale condizione può manifestarsi in presenza di una flora intestinale impoverita, di diete particolarmente povere di proteine o di un assorbimento migliorato degli amminoacidi a livello intestinale, che lascia meno substrato disponibile per la produzione di questo metabolita. In alcuni casi, una bassa escrezione urinaria può riflettere anche alterazioni metaboliche congenite o acquisite che coinvolgono le vie di trasformazione della tirosina."
     },
-
     "HPHPA": {
       "name": "HPHPA",
       "tname": "HPHPA",
@@ -950,8 +976,8 @@
     },
 
     "acidopiroglutammico": {
-      "name": "Acido piroglutamico",
-      "tname": "Piroglutamico",
+      "name": "Acido piroglutammico",
+      "tname": "Piroglutammico",
       "base": "L’acido piroglutammico , anche chiamato 5-oxoprolina , è prodotto e utilizzato da GGT (gamma-glutamil transferasi) per la produzione e riciclo di glutatione , fondamentale antiossidante. Il glutatione è un tripeptide formato da glutammina, glicina e cisteina. Il piroglutammato è un precursore del glutatione tramite il quale riesce ad avvenire l’unione dei tre amminoacidi . Questa azione è mediata da cofattori quali magnesio e ATP.  In condizioni fisiologiche, è presente una modesta quantità di piroglutammato nelle urine.",
       "hight": "Le condizioni patologiche nel quale avviene aumento di piroglutammato nelle urine sono dovute all’alterazione di uno o più enzimi che collaborano nel ciclo per la sua sintesi o una disfunzione mitocondriale per stress ossidativo oppure per cause alimentari (restrizione glicina, cisteina, glutammina e magnesio o integrazione di taurina) o farmacologiche ( farmaci che richiedono coniugazione con glutatione). Anche condizioni di deficienza di glutatione, a es. a causa di tossicità da acetomifene, conducono a elevati livelli di piroglutammato. Valutare integrazione con glutatione, NAC e amminoacidi (metionina e glicina).",
       "low": "Il deficit evidenzia carenza di glutatione o dei cofattori necessari per la sua sintesi ( glutammina , glicina e cisteina).",

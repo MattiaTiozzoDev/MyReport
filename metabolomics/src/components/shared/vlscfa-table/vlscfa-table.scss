@@ -5,12 +5,12 @@
 .table-header{
     height: 30px;
     border-radius: 15px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
 .note-container{
     height: 10px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
 .note{
@@ -48,7 +48,7 @@
 }
 
 .row-id{
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
 .red-circle{

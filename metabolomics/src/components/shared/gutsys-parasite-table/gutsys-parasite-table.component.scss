@@ -1,5 +1,5 @@
 .par-header{
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
     border-radius: 5px 5px 0 0;
     height: 20px;
 }
@@ -10,19 +10,19 @@ h5{
 }
 
 .border{
-    border: #29AABC83 0.5px solid;
+    border: var(--brand-color-alpha, rgba(41,170,188,0.51)) 0.5px solid;
 }
 
 .border-bottom{
-    border-bottom: #29AABC83 0.5px solid;
+    border-bottom: var(--brand-color-alpha, rgba(41,170,188,0.51)) 0.5px solid;
 }
 
 .border-left{
-    border-left: #29AABC83 0.5px solid;
+    border-left: var(--brand-color-alpha, rgba(41,170,188,0.51)) 0.5px solid;
 }
 
 .border-right{
-    border-right: #29AABC83 0.5px solid;
+    border-right: var(--brand-color-alpha, rgba(41,170,188,0.51)) 0.5px solid;
 }
 
 .pointer {
@@ -37,7 +37,7 @@ h5{
     width: 12px;
     height: 12px;
     font-size: 8px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
     border-radius: 50%;
     display: flex;
     justify-content: center;

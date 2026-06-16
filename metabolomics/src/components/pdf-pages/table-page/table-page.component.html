@@ -1,13 +1,13 @@
-<div class="page-container" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+<div class="page-container">
     <metabolomics-page-header ></metabolomics-page-header>
     <div class="page-content" >
         @if(pageId === 0){
-            <h2 class="mt-10px" [ngClass]="{'dark-purple': tenant === TenantType.HOMICA, 'dark-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.metabolomicstable.tablepage.title" | translate}}</h2>
-            <h4 class="mt-5px" [ngClass]="{'light-purple': tenant === TenantType.HOMICA, 'light-blue':tenant === TenantType.VALSAMBRO}">{{"pdfpages.metabolomicstable.tablepage.subtitle" | translate}}</h4>
+            <h2 class="mt-10px">{{"pdfpages.metabolomicstable.tablepage.title" | translate}}</h2>
+            <h4 class="mt-5px">{{"pdfpages.metabolomicstable.tablepage.subtitle" | translate}}</h4>
         }
         @for(table of tables; track table.groupId){
             @if(!!table.sectionTitle){
-                <div class="section-header flex justify-end align-center mt-20px px-40px" [ngClass]="{'homica': tenant === TenantType.HOMICA}">
+                <div class="section-header flex justify-end align-center mt-20px px-40px">
                     <h4 class="white">{{table.sectionTitle | translate}}</h4>
                 </div>
             }

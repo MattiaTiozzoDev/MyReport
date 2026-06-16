@@ -139,9 +139,9 @@ export class FileReaderService {
   }
 
   private setFileType(fileName: string): void {
-    var type = fileName.slice(0, 6);
-    this.fileTypeService.fileType =
-      type === 'HO_MET' ? FileType.METABO : FileType[type];
+    const name = fileName.split('.')[0];
+    const key = name.startsWith('HO_') ? name.slice(3) : name.slice(0, 6);
+    this.fileTypeService.fileType = FileType[key] ?? null;
   }
 
   private isCorrectName(fileName: string): boolean {

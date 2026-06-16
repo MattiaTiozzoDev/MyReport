@@ -1,5 +1,7 @@
 
-@if(fileType === fileTypeEnum.METABO && tenant === 'valsambro') {
+<div [ngClass]="tenant" [ngStyle]="{'--report-color': reportColor}">
+
+@if(fileType === fileTypeEnum.METABO) {
     <presentation-page></presentation-page>
     <index-page [customer]="customer"></index-page>
     <metabolomics-table-page [pageId]="0" [customer]="customer" [page]="'03'"></metabolomics-table-page>
@@ -24,43 +26,17 @@
     </metabolomics-image-page>
     <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'13'"></metabolomics-profile-page>
     <metabolomics-explanation-page [profile]="profile" [customer]="customer" [basicIndex]="14"></metabolomics-explanation-page>
-} 
-@if(fileType === fileTypeEnum.METABO && tenant === 'homica') {
-    <presentation-page></presentation-page>
-    <index-page [customer]="customer"></index-page>
-    <metabolomics-table-page [pageId]="0" [customer]="customer" [page]="'03'"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'pdfpages.imagepage.metabo.1'" [page]="'04'">
-        <img class="image-container" src="{{'assets/img/ciclo_energia_cellulare_' +  tenant + lang + '.svg'}}" alt="">
-    </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="1" [customer]="customer" [page]="'05'"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'pdfpages.imagepage.metabo.2'" [page]="'06'">
-        <img class="image-container" src="{{'assets/img/pathway_neurotrasmettitori_' + tenant + lang + '.svg'}}" alt="">
-    </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="2" [customer]="customer" [page]="'07'"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'pdfpages.imagepage.metabo.3'" [page]="'08'">
-        <img class="image-container" src="{{'assets/img/metaboliti_intestinali_' + tenant + lang + '.svg'}}" alt="">
-    </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="3" [customer]="customer" [page]="'09'"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'pdfpages.imagepage.metabo.4'" [page]="'10'">
-        <img class="image-container glicemia" src="{{'assets/img/risposta_glicemica_' + tenant + lang + '.svg'}}" alt="">
-    </metabolomics-image-page>
-    <metabolomics-table-page [pageId]="4" [customer]="customer" [page]="'11'"></metabolomics-table-page>
-    <metabolomics-image-page [customer]="customer" [title]="'pdfpages.imagepage.metabo.5'" [page]="'12'">
-        <img class="image-container" src="{{'assets/img/pathway_metilazione_' + tenant + lang + '.svg'}}" alt="">
-    </metabolomics-image-page>
-    <metabolomics-profile-page [profile]="profile" [customer]="customer" [page]="'13'"></metabolomics-profile-page>
-    <metabolomics-explanation-page [profile]="profile" [customer]="customer" [basicIndex]="14"></metabolomics-explanation-page>
-} 
+}
+
 @if(fileType === fileTypeEnum.ISTFEC) {
     <presentation-page></presentation-page>
     <index-page [customer]="customer"></index-page>
     <istfec-introduction-page [page]="'03'"></istfec-introduction-page>
     <istfec-explanation-page [page]="'04'"></istfec-explanation-page>
-    <metabolomics-image-page [customer]="customer" [title]="'Effetti biologici dell’istamina e recettori coinvolti'" [page]="'05'">
+    <metabolomics-image-page [customer]="customer" [title]="'Effetti biologici dell\'istamina e recettori coinvolti'" [page]="'05'">
         <img class="image-container pt-10px" src="{{'assets/img/effetti_biologici_istamina.svg'}}" alt="">
     </metabolomics-image-page>
     <istfec-result-page [page]="'06'"></istfec-result-page>
-    <ending-page></ending-page>
 }
 
 @if(fileType === fileTypeEnum.GUTSYS) {
@@ -76,11 +52,10 @@
     <gutsys-table-page [pageId]="2" [page]="'08'"></gutsys-table-page>
     <gutsys-table-page [pageId]="3" [page]="'09'"></gutsys-table-page>
     <gutsys-table-page [pageId]="4" [page]="'10'"></gutsys-table-page>
-    <gutsys-parasite-page [page]="'11'" [ngClass]="{'hide': customer?.type == 1}"></gutsys-parasite-page>
+    <gutsys-parasite-page [page]="'11'" [ngClass]="{'hide': customer?.type == 1 || customer?.type == 4}"></gutsys-parasite-page>
     <gutsys-aroma-page [page]="customer?.type == 2 || customer?.type == 3 ? '12' : '11'"></gutsys-aroma-page>
-    <gutsys-fungus-page [page]="'13'" [ngClass]="{'hide': customer?.type == 1|| customer?.type == 2}"></gutsys-fungus-page>
+    <gutsys-fungus-page [page]=" customer?.type == 3 ? '13' : '12'" [ngClass]="{'hide': customer?.type == 1|| customer?.type == 2}"></gutsys-fungus-page>
     <gutsys-indication-page [page]="customer?.type != 1 ? customer?.type == 3 ? '14' : '13' : '12'" [date]="customer?.refDate"></gutsys-indication-page>
-    <ending-page></ending-page>
 }
 
 @if(fileType === fileTypeEnum.VLSCFA) {
@@ -110,6 +85,7 @@
         <iggint-table-page [tables]="[8]" [page]="'09'"></iggint-table-page>
         <iggint-table-page [tables]="[9,10]" [page]="'10'" [last]="true" [customer]="customer" ></iggint-table-page>
         <iggint-result-page [page]="'11'"></iggint-result-page>
+        <iggint-result-page-2 [page]="'12'"></iggint-result-page-2>
     }@else {
         <iggint-table-page [tables]="[0,1]" [page]="'04'"></iggint-table-page>
         <iggint-table-page [tables]="[3]" [page]="'05'"></iggint-table-page>
@@ -117,7 +93,36 @@
         <iggint-table-page [tables]="[6,7]" [page]="'07'"></iggint-table-page>
         <iggint-table-page [tables]="[8,9]" [page]="'08'" [last]="true" [customer]="customer" ></iggint-table-page>
         <iggint-result-page [page]="'9'"></iggint-result-page>
+        <iggint-result-page-2 [page]="'10'"></iggint-result-page-2>
     }
-
-    <ending-page></ending-page>
 }
+
+
+@if(fileType === fileTypeEnum.UROGEN) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer" ></index-page>
+    <urogen-introduction-page [page]="'03'"></urogen-introduction-page>
+     <metabolomics-image-page [customer]="customer" [title]="'Implicazioni sistemiche del Tratto Urogenitale'" [page]="'04'">
+        <img class="image-container" src="{{'assets/img/implicazioni_sistemiche_urogen_' + tenant + '.svg'}}" alt="" >
+    </metabolomics-image-page>
+    <urogen-table-page [pageId]="0" [page]="'05'"></urogen-table-page>
+    <urogen-table-page [pageId]="1" [page]="'06'"></urogen-table-page>
+    <urogen-table-page [pageId]="2" [page]="'07'"></urogen-table-page>
+    <urogen-table-page [pageId]="3" [page]="'08'"></urogen-table-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Guida ai microrganismi analizzati'" [page]="'09'">
+        <urogen-descriptions  [title]="'Flora Lattobacillare Vaginale'" [elements]="'1-4'"></urogen-descriptions>
+        <urogen-descriptions  [title]="'Candida'" [elements]="'5-11'"></urogen-descriptions>
+    </metabolomics-image-page>
+        <metabolomics-image-page [customer]="customer" [title]="'Guida ai microrganismi analizzati'" [page]="'10'">
+        <urogen-descriptions  [title]="'Patogeni sessuali (Infezioni a Trasmissione Sessuale IST)'" [elements]="'12-14'"></urogen-descriptions>
+        <urogen-descriptions  [title]="'Altri patogeni urogenitali'" [elements]="'15-27'"></urogen-descriptions>
+    </metabolomics-image-page>
+        <metabolomics-image-page [customer]="customer" [title]="'Guida ai microrganismi analizzati'" [page]="'11'">
+        <urogen-descriptions  [title]="'Altri patogeni urogenitali'" [elements]="'28-31'"></urogen-descriptions>
+    </metabolomics-image-page>
+    <urogen-aroma-page [page]="'12'"></urogen-aroma-page>
+    <urogen-ending-page [page]="'13'"></urogen-ending-page>
+    <gutsys-indication-page [page]="'14'" [date]="customer?.refDate"></gutsys-indication-page>
+}
+
+</div>

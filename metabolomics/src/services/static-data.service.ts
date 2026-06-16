@@ -67,4 +67,12 @@ export class StaticDataService {
       }),
     );
   }
+
+  loadUrogenExample(): Observable<any[]> {
+    return this.http.get<any[]>('assets/jsons/urogen.example.json').pipe(
+      tap((data) => {
+        this.example = data;
+      }),
+    );
+  }
 }

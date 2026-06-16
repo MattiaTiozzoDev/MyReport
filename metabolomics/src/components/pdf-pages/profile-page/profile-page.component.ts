@@ -8,8 +8,6 @@ import {
 import { PageHeader } from '../../shared/page-header/page-header.component';
 import { PageFooter } from '../../shared/page-footer/page-footer';
 import { TranslatePipe } from '@ngx-translate/core';
-import { TenantType } from '../../../enums/tenant.enum';
-import { TenantService } from '../../../services/tenant.service';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -19,16 +17,12 @@ import { NgClass } from '@angular/common';
   styleUrl: './profile-page.component.scss',
 })
 export class ProfilePageComponent implements OnInit, OnChanges {
-  public tenant: TenantType;
-  public TenantType = TenantType;
   public smallText = false;
   public hideHeaders = false;
   @Input() profile: any;
   @Input() customer: any;
   @Input() page: string;
   @Input() reportType: any;
-
-  constructor(public tenantService: TenantService) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (
@@ -46,7 +40,5 @@ export class ProfilePageComponent implements OnInit, OnChanges {
     }
   }
 
-  ngOnInit(): void {
-    this.tenant = this.tenantService.tenant;
-  }
+  ngOnInit(): void {}
 }

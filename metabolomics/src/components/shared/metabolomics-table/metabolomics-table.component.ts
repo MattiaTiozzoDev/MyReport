@@ -3,18 +3,13 @@ import {
   Component,
   Input,
   OnChanges,
-  OnDestroy,
   OnInit,
   SimpleChanges,
 } from '@angular/core';
 import { MetabolomicsBarComponent } from './metabolomics-bar/metabolomics-bar.component';
-import { CustomersDataService } from '../../../services/customers-data.service';
-import { Subscription } from 'rxjs';
 import { CustomerType } from '../../../enums/customerType.enum';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RoundedValuePipe } from '../../../pipes/rounded-value.pipe';
-import { TenantType } from '../../../enums/tenant.enum';
-import { TenantService } from '../../../services/tenant.service';
 
 @Component({
   selector: 'metabolomics-table',
@@ -24,18 +19,12 @@ import { TenantService } from '../../../services/tenant.service';
 })
 export class MetabolomicsTableComponent implements OnChanges, OnInit {
   public customerType = CustomerType;
-  public tenant: TenantType;
-  public TenantType = TenantType;
   public typeText: string;
 
   @Input() data: any;
   @Input() type: number;
 
-  constructor(public tenantService: TenantService) {}
-
-  ngOnInit(): void {
-    this.tenant = this.tenantService.tenant;
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['type'] && changes['type'].currentValue) {

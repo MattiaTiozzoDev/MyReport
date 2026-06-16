@@ -26,23 +26,23 @@ p {
     width: 595px !important;
     height: 30px;
     margin-left: -40px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #29AABC 52.88%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
 }
 
 
 .table-header{
     height: 30px;
     border-radius: 15px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
 }
 
 
 .table-header h5{
-    font-size: 8px;
+    font-size: 9px;
 }
 
 .table-body h5 {
-    font-size: 8px;
+    font-size: 9px;
     color: #383838
 }
 

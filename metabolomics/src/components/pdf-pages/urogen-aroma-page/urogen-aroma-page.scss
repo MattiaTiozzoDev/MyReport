@@ -1,0 +1,62 @@
+:host {
+    display: block;
+    width: 595px;
+    height: 842px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 9px;
+    color: #383838;
+    line-height: 14px;
+}
+
+
+
+.subtitle{
+    font-weight: 500;
+}
+
+.section-header{
+    width: 595px !important;
+    height: 30px;
+    margin-left: -40px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
+}
+
+.w-32{
+    width: 32%;
+}
+
+.legenda{
+    position: absolute;
+    bottom: 100px;
+    width: 502px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #E5E4E4;
+}
+
+.grey-text{
+   color: #383838;
+   font-size: 6px;
+   font-weight: 400;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 70px;
+
+}
+
+.square{
+    width: 10px;
+    height: 10px;
+    background-color: var(--brand-color, #29AABC);
+}
+
+.par-header{
+    background-color: var(--brand-color, #29AABC);
+    border-radius: 5px;
+    padding: 10px;
+}

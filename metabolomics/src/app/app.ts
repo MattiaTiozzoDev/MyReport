@@ -5,7 +5,8 @@ import { StaticDataService } from '../services/static-data.service';
 import { NavbarComponent } from '../components/shared/navbar/navbar.component';
 import { FooterComponent } from '../components/shared/footer/footer.component';
 import { CustomersDataService } from '../services/customers-data.service';
-import { forkJoin } from 'rxjs';
+import { forkJoin, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { ToastComponent } from '../components/shared/toast/toast.component';
 
 @Component({
@@ -15,6 +16,8 @@ import { ToastComponent } from '../components/shared/toast/toast.component';
   styleUrl: './app.scss',
 })
 export class App implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
+
   constructor(
     private translate: TranslateService,
     private readonly staticDataService: StaticDataService,
@@ -25,16 +28,23 @@ export class App implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    forkJoin({
-      limits: this.staticDataService.loadLimit(),
-      explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIggintExample(),
-    })
-      .pipe()
-      .subscribe(({ example }) => {
-        this.customersDataService.setData(example);
+    // Carica solo i dati necessari (example)
+    this.staticDataService
+      .loadUrogenExample()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (example) => {
+          this.customersDataService.setData(example);
+        },
+        error: (error) => {
+          console.error('Errore nel caricamento dei dati:', error);
+        },
       });
   }
 
-  ngOnDestroy(): void {}
+  ngOnDestroy(): void {
+    // Completa il subject per unsubscribe automatico da tutte le observable
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }

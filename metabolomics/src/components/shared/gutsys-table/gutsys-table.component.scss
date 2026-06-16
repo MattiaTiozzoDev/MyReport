@@ -2,7 +2,7 @@
     width: 512px;
     height: 20px;
     border-radius: 3px;
-    background: #29AABC
+    background: var(--brand-color, #29AABC)
 }
 
 .w-34{
@@ -29,7 +29,7 @@ hr{
     width: 12px;
     height: 12px;
     font-size: 8px;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
     border-radius: 50%;
     display: flex;
     justify-content: center;

@@ -11,14 +11,26 @@ hr{
     border: none;
 }
 
-hr.homica{
+.homica hr{
     background: #6B4C99;
+}
+
+.homica h2 {
+    color: #141428;
+}
+
+.section-title {
+    color: var(--brand-color, #29AABC) !important;
+}
+
+.homica .section-title {
+    color: #6B4C99 !important;
 }
 
 .cf-container {
     height: 30px;
     width: 100%;
-    background-color: #29AABC;
+    background-color: var(--brand-color, #29AABC);
     border-radius: 15px;
 }
 
