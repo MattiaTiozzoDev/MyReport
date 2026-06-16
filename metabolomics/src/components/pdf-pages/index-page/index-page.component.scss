@@ -11,11 +11,11 @@ hr{
     border: none;
 }
 
-.homica hr{
+:host-context(.homica) hr{
     background: #6B4C99;
 }
 
-.homica h2 {
+:host-context(.homica) h2 {
     color: #141428;
 }
 
@@ -23,7 +23,7 @@ hr{
     color: var(--brand-color, #29AABC) !important;
 }
 
-.homica .section-title {
+:host-context(.homica) .section-title {
     color: #6B4C99 !important;
 }
 

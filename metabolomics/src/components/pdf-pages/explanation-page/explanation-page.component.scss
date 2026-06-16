@@ -19,8 +19,9 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
 }
 
-.homica .section-header{
+:host-context(.homica) .section-header{
     background: linear-gradient(90deg, #6B4C99 0%, #141328 90%);
+    color: white !important;
 }
 
 h4{
@@ -29,7 +30,7 @@ h4{
     color: var(--brand-color, #29AABC);
 }
 
-.homica h4{
+:host-context(.homica) h4{
     color: #6B4C99;
 }
 
@@ -46,12 +47,12 @@ hr{
     border: none;
 }
 
-.homica hr{
+:host-context(.homica) hr{
     background: #6B4C99;
 }
 
 .white{
-    color: white;
+    color: white !important;
 }
 
 .circle{
@@ -70,6 +71,6 @@ hr{
     background-color: var(--brand-color, #29AABC);
 }
 
-.homica .row-id{
+:host-context(.homica) .row-id{
     background-color: #6B4C99;
 }

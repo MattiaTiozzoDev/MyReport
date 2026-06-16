@@ -6,7 +6,7 @@
     color: var(--brand-color, #29AABC) !important;
 }
 
-.homica .group-title {
+:host-context(.homica) .group-title {
     color: #6B4C99 !important;
 }
 
@@ -16,7 +16,7 @@
     background-color: var(--brand-color, #29AABC);
 }
 
-.homica .table-header{
+:host-context(.homica) .table-header{
     background-color: #6B4C99;
 }
 
@@ -25,7 +25,7 @@
     background-color: var(--brand-color, #29AABC);
 }
 
-.homica .note-container{
+:host-context(.homica) .note-container{
     background-color: #6B4C99;
 }
 
@@ -57,7 +57,7 @@
     color: white;
 }
 
-.homica .circle{
+:host-context(.homica) .circle{
     background-color: #6B4C99;
 }
 
@@ -65,7 +65,7 @@
     background-color: var(--brand-color, #29AABC);
 }
 
-.homica .row-id{
+:host-context(.homica) .row-id{
     background-color: #6B4C99;
 }
 
@@ -98,6 +98,6 @@ hr{
     border: none;
 }
 
-.homica hr{
+:host-context(.homica) hr{
     background: #6B4C99;
 }

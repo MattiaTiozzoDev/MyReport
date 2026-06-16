@@ -15,15 +15,16 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--brand-color, #29AABC) 52.88%);
 }
 
-.homica .section-header{
+:host-context(.homica) .section-header{
     background: linear-gradient(90deg, #6B4C99 0%, #141428 90%);
+    color: white !important;
 }
 
 h2 {
     color: #024F84;
 }
 
-.homica h2 {
+:host-context(.homica) h2 {
     color: #141428;
 }
 
@@ -31,8 +32,8 @@ h4 {
     color: var(--brand-color, #29AABC) !important;
 }
 
-.homica h4 {
-    color: #6B4C99 !important;
+:host-context(.homica) h4 {
+    color: #6B4C99 ;
 }
 
 h5{
@@ -67,7 +68,7 @@ h6.white{
     background: var(--brand-color, #29AABC);
 }
 
-.homica .table-header{
+:host-context(.homica) .table-header{
     background: #6B4C99;
 }
 
@@ -85,8 +86,12 @@ h6.white{
     height: 500px;
 }
 
-.homica .metabolites-table{
+:host-context(.homica) .metabolites-table{
    background: #6B4C9933;
+}
+
+.white{
+    color: white !important;
 }
 
 

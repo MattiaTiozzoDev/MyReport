@@ -26,11 +26,11 @@
     height: 100%;
 }
 
-.homica .page-container{
+:host-context(.homica) .page-container{
     padding-top: 25px;
 }
 
-.homica .logo-container {
+:host-context(.homica) .logo-container {
     height: 610px;
     background-image: none;
 }

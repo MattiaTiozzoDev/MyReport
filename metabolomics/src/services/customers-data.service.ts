@@ -55,7 +55,7 @@ export class CustomersDataService {
     const filteredData = data.filter(
       (el) =>
         el['VARIABILE_POPOLAZIONE'] &&
-        [1, 2, 3].includes(Number(el['VARIABILE_POPOLAZIONE'])),
+        [1, 2, 3, 4].includes(Number(el['VARIABILE_POPOLAZIONE'])),
     );
     if (fileType === 'METABO') {
       this.customersData = filteredData.map((element: any) =>

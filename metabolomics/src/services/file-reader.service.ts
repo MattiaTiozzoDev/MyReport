@@ -140,7 +140,7 @@ export class FileReaderService {
 
   private setFileType(fileName: string): void {
     const name = fileName.split('.')[0];
-    const key = name.startsWith('HO_') ? name.slice(3) : name.slice(0, 6);
+    const key = name.startsWith('HO_') ? name.slice(3, 9) : name.slice(0, 6);
     this.fileTypeService.fileType = FileType[key] ?? null;
   }
 

@@ -15,6 +15,6 @@
     margin-left: -40px;
 }
 
-.homica .section-header{
+:host-context(.homica) .section-header{
     background: linear-gradient(90deg, #6B4C99 0%, #141428 90%);
 }
