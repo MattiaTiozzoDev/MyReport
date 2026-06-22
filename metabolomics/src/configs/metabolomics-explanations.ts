@@ -328,6 +328,7 @@ export const METABO_ELEMENTS_EXP = [
     name: 'exp.acido4idrossifenilacetico.name',
     base: 'exp.acido4idrossifenilacetico.base',
     hight: 'exp.acido4idrossifenilacetico.hight',
+    low: 'exp.acido4idrossifenilacetico.low',
   },
   {
     id: 42,
@@ -346,6 +347,7 @@ export const METABO_ELEMENTS_EXP = [
     name: 'exp.3idrossifenilacetico.name',
     base: 'exp.3idrossifenilacetico.base',
     hight: 'exp.3idrossifenilacetico.hight',
+    low: 'exp.3idrossifenilacetico.low',
   },
   {
     id: 45,

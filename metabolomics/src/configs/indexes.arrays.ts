@@ -412,15 +412,15 @@ export const IGGINT_INDEXES_ARRAY_180 = [
   },
   {
     sectionTitle: 'pdfpages.indexpage.iggint.subtitle3',
-    page: '11',
+    page: '14',
     indexes: [
       {
         title: 'pdfpages.indexpage.iggint.index5',
-        page: '11',
+        page: '14',
       },
       {
         title: 'pdfpages.indexpage.iggint.index6',
-        page: '12',
+        page: '15',
       },
     ],
   },
@@ -457,15 +457,15 @@ export const IGGINT_INDEXES_ARRAY_90 = [
   },
   {
     sectionTitle: 'pdfpages.indexpage.iggint.subtitle3',
-    page: '9',
+    page: '10',
     indexes: [
       {
         title: 'pdfpages.indexpage.iggint.index5',
-        page: '9',
+        page: '10',
       },
       {
         title: 'pdfpages.indexpage.iggint.index6',
-        page: '10',
+        page: '11',
       },
     ],
   },

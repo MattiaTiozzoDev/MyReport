@@ -61,6 +61,7 @@ export const IGGINT_TABLES = [
   {
     groupId: 10,
     title: 'Frutta secca e semi',
+    Id90: '87-90',
     Id180: '174-181',
   },
 ];

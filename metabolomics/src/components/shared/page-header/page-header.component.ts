@@ -32,10 +32,10 @@ export class PageHeader implements OnInit {
     this.customerService.$customerData.subscribe((data) => {
       this.customer = data.customer;
       this.name = data.customer?.name
-        ? data.customer.name.split(' ')[0]
+        ? data.customer.name.split(' ')[1]
         : data.customer.name;
       this.surname = data.customer?.name
-        ? data.customer.name.split(' ')[1]
+        ? data.customer.name.split(' ')[0]
         : data.customer.name;
     });
   }
