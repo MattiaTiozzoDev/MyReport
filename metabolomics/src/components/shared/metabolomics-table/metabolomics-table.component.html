@@ -20,7 +20,8 @@
     </div>
     <div class="table-body w-100 flex col px-10px">
         @for(row of data.rows; track row.id){
-            @if(row.note){
+            @if (row.id !=43) {
+                 @if(row.note){
                 <div class="note-container flex align-center px-10px">
                     <h6 class="white note">{{row.note | translate}}</h6>
                 </div>
@@ -77,6 +78,7 @@
                 </div>
             </div>
             <hr class="w-100">
+            }         
         }
     </div>
 </div>

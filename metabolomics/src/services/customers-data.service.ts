@@ -104,7 +104,7 @@ export class CustomersDataService {
   private mapValues(data, type): MappedValue[] {
     let values = [];
     Object.keys(data).forEach((key) => {
-      if (!CUSTOMER_COLUMNS.includes(key)) {
+      if (!CUSTOMER_COLUMNS.includes(key) && key != '43') {
         if (key == 'VARIABILE_POPOLAZIONE') data[key] = Number(data[key]);
         var limit = this.getLimits(key, type);
         values.push({
