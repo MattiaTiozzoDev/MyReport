@@ -9,6 +9,7 @@ export const VALSAMBRO_FILENAME = [
   'VLSCFA',
   'IGGINT',
   'UROGEN',
+  'INTLUC',
 ];
 
 export const REPORTS = {

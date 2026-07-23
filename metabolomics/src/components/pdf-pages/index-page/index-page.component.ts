@@ -24,8 +24,11 @@ import {
   IGGINT_INDEXES_ARRAY_180,
   IGGINT_INDEXES_ARRAY_90,
   GUTSYS_INDEXES_ARRAY_4,
-  UROGEN_INDEXES_ARRAY,
   INTLUC_INDEXES_ARRAY,
+  GUTSYS_INDEXES_ARRAY_5,
+  GUTSYS_INDEXES_ARRAY_6,
+  UROGEN_INDEXES_ARRAY_1,
+  UROGEN_INDEXES_ARRAY_2,
 } from '../../../configs/indexes.arrays';
 
 @Component({
@@ -60,9 +63,6 @@ export class IndexPageComponent implements OnInit, OnChanges {
       case FileType.VLSCFA:
         this.indexesArray = VLSCFA_INDEXES_ARRAY;
         break;
-      case FileType.UROGEN:
-        this.indexesArray = UROGEN_INDEXES_ARRAY;
-        break;
       case FileType.INTLUC:
         this.indexesArray = INTLUC_INDEXES_ARRAY;
         break;
@@ -89,6 +89,16 @@ export class IndexPageComponent implements OnInit, OnChanges {
         changes['type'].currentValue,
       );
     }
+
+    if (
+      changes['type'] &&
+      changes['type'].currentValue &&
+      this.fileTypeService.fileType === FileType.UROGEN
+    ) {
+      this.indexesArray = this.getUrogenIndexesArray(
+        changes['type'].currentValue,
+      );
+    }
   }
 
   public getGutsysIndexesArray(type) {
@@ -101,6 +111,21 @@ export class IndexPageComponent implements OnInit, OnChanges {
         return GUTSYS_INDEXES_ARRAY_3;
       case 4:
         return GUTSYS_INDEXES_ARRAY_4;
+      case 5:
+        return GUTSYS_INDEXES_ARRAY_5;
+      case 6:
+        return GUTSYS_INDEXES_ARRAY_6;
+      default:
+        return [];
+    }
+  }
+
+  public getUrogenIndexesArray(type) {
+    switch (type) {
+      case 1:
+        return UROGEN_INDEXES_ARRAY_1;
+      case 2:
+        return UROGEN_INDEXES_ARRAY_2;
       default:
         return [];
     }
