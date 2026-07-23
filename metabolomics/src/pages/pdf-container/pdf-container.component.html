@@ -199,9 +199,14 @@
         <metabolomics-image-page [customer]="customer" [title]="'Guida ai microrganismi analizzati'" [page]="'11'">
         <urogen-descriptions  [title]="'Altri patogeni urogenitali'" [elements]="'28-31'"></urogen-descriptions>
     </metabolomics-image-page>
-    <urogen-aroma-page [page]="'12'"></urogen-aroma-page>
-    <urogen-ending-page [page]="'13'"></urogen-ending-page>
-    <gutsys-indication-page [page]="'14'" [date]="customer?.refDate"></gutsys-indication-page>
+    @if(customer?.type == 1){
+        <urogen-aroma-page [page]="'12'"></urogen-aroma-page>
+        <urogen-ending-page [page]="'13'"></urogen-ending-page>
+        <gutsys-indication-page [page]="'14'" [date]="customer?.refDate"></gutsys-indication-page>
+    }@else if(customer?.type == 2){
+        <gutsys-indication-page [page]="'12'" [date]="customer?.refDate"></gutsys-indication-page>
+    }
+
 }
 
 @if(fileType === fileTypeEnum.INTLUC ) {
