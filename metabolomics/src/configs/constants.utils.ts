@@ -47,4 +47,9 @@ export const REPORTS = {
     subtitle: 'pdfpages.presentation.UROGEN_SUBTITLE',
     color: '#DE6296',
   },
+  INTLUC: {
+    title: 'pdfpages.presentation.INTLUC',
+    subtitle: 'pdfpages.presentation.INTLUC_SUBTITLE',
+    color: '#5C9FCF',
+  },
 };

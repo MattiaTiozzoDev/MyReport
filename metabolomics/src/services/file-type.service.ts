@@ -5,7 +5,7 @@ import { FileType } from '../enums/file-type.enum';
   providedIn: 'root',
 })
 export class FileTypeService {
-  private type: FileType = FileType.IGGINT;
+  private type: FileType = FileType.INTLUC;
 
   get fileType(): FileType {
     return this.type;

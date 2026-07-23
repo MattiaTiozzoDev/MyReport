@@ -38,6 +38,12 @@ import { UrogenTablePage } from '../../components/pdf-pages/urogen-table-page/ur
 import { UrogenDescriptions } from '../../components/shared/urogen-descriptions/urogen-descriptions';
 import { UrogenAromaPage } from '../../components/pdf-pages/urogen-aroma-page/urogen-aroma-page';
 import { UrogenEndingPage } from '../../components/pdf-pages/urogen-ending-page/urogen-ending-page';
+import { IntlucIntroPage } from '../../components/pdf-pages/intluc-intro-page/intluc-intro-page';
+import { IntlucTablePage } from '../../components/pdf-pages/intluc-table-page/intluc-table-page';
+import { IntlucTablePage2 } from '../../components/pdf-pages/intluc-table-page-2/intluc-table-page-2';
+import { IntlucEndingPage1 } from '../../components/pdf-pages/intluc-ending-page-1/intluc-ending-page-1';
+import { IntlucEndingPage2 } from '../../components/pdf-pages/intluc-ending-page-2/intluc-ending-page-2';
+import { IntlucEndingPage3 } from '../../components/pdf-pages/intluc-ending-page-3/intluc-ending-page-3';
 
 @Component({
   selector: 'metabolomics-pdf-container',
@@ -72,6 +78,12 @@ import { UrogenEndingPage } from '../../components/pdf-pages/urogen-ending-page/
     UrogenDescriptions,
     UrogenAromaPage,
     UrogenEndingPage,
+    IntlucIntroPage,
+    IntlucTablePage,
+    IntlucTablePage2,
+    IntlucEndingPage1,
+    IntlucEndingPage2,
+    IntlucEndingPage3,
   ],
   templateUrl: './pdf-container.component.html',
   styleUrl: './pdf-container.component.scss',
@@ -104,7 +116,7 @@ export class PdfContainerComponent implements OnInit {
     forkJoin({
       limits: this.staticDataService.loadLimit(),
       explanations: this.staticDataService.loadExplanations(),
-      example: this.staticDataService.loadIggintExample(),
+      example: this.staticDataService.loadIntlucExample(),
     }).subscribe(({ example }) => {
       this.explanations =
         this.fileType === FileType.METABO

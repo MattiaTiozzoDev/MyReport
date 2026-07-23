@@ -1,0 +1,80 @@
+<div class="page-container">
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content" >
+        <h2 class="mt-10px dark-blue" > Interleuchine</h2>
+        <h4 class="mt-5px light-blue">Marcatori dell'infiammazione e della risposta immunitaria</h4>
+       
+        <div class="table-header flex align-center px-20px mb-1px mt-20px">
+            <div class="w-25">
+                <h5 class="white">Interleuchina <br> Salivare</h5>
+            </div>
+            <div class="w-15">
+                <h5 class="white">Valore <br>di Riferimento</h5>
+            </div>
+            <div class="w-15">
+                <h5 class="white">Valore <br>Paziente</h5>
+            </div>
+            <div class="w-15">
+                <h5 class="white">Unità <br> di Misura</h5>
+            </div>
+            <div class="w-30">
+            
+            </div>
+        </div>
+        <div class="table-body w-100 flex col px-10px">
+            @for(row of data; track data.id){
+                <div class="table-row flex align-center px-10px py-2px">
+                    <div class="w-25 flex align-center">
+                            <div class="circle row-id mr-5px" >{{row.id}}</div>
+                        @if(row.id == 1 || row.id == 7){
+                            <h5  [ngClass]="{ 'red':  row.value > row.sup }"><span class="fs-6px"> {{row?.name | titlecase}}</span></h5>
+                               
+                        }@else {
+                            <h5 [ngClass]="{ 'red':  row.value > row.sup }">{{row?.name | titlecase}}</h5>
+                        }
+                    </div>
+                    <div class="w-15 flex align-center justify-between">
+                        @if(row.id == 10){
+                        <div class="w-100 flex col">
+                            <h5 class="py-2px">< {{row.inf | roundedValue:row.sup}}</h5>
+                            <h5 class="pt-0px pb-4px">range ottimale</h5>
+                            <h5 class="py-2px">{{row.inf | roundedValue:row.sup }} - {{row.sup | roundedValue:row.sup}}</h5>
+                            <h5 class="pt-0px pb-4px">disbiosi moderata</h5>
+                            <h5 class="py-2px">> {{row.sup | roundedValue:row.sup}}</h5>
+                            <h5 class="pt-0px pb-3px">disbiosi grave</h5>
+                        </div>
+                        }@else {
+                        <div class="w-60 flex align-center justify-left">
+                            <h5 class="w-10 text-center mr-5px"><    </h5>
+                            <h5 class="w-30 text-center">{{row.sup | roundedValue:row.sup}}</h5>
+                        </div>
+                        }
+                    </div>
+                    <div class="w-15 flex align-center">
+                            @if(row.value > row.sup){
+                                <div class="circle red-circle mr-5px">
+                                    <h5 class="bold white">H</h5>
+                                </div>
+                            }
+                            <h5 [ngClass]="{ 'red bold':  row.value > row.sup }">{{row.value | roundedValue:row.sup}}</h5>
+                    </div>             
+                    <div class="w-15">
+                        <h5 class="small">pg/mL</h5>
+                    </div>
+                    <div class="w-30">
+                        <div class="bar-container" VlscfaBarDirective [inf]="row?.inf" [sup]="row?.sup" [val]="row?.value" [id]="row?.id"></div>
+                    </div>
+                </div>
+                <hr class="w-100">
+            }
+        </div>  
+        <p class="fs-9 ">Il presente referto è destinato esclusivamente a uso medico-diagnostico. I valori di riferimento si applicano a soggetti adulti sani, non fumatori, in assenza di terapie immunomodulanti. Il risultato deve essere interpretato sempre in relazione al quadro clinico, anamnestico e terapeutico del paziente da parte di uno specialista </p>
+        <div class="flex col mt-25px pos-abs">
+            <h6>Revisione Dati 16/07/2026</h6>
+            <h6 >Metodologia: EIA + qPCR</h6>
+            <h6 class="mt-15px">Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche</h6>
+            <h6 class="mt-15px">Firmato digitalmente dal dott Alberto Santini il: {{customer?.refDate | dateTransform}}</h6>
+        </div>        
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

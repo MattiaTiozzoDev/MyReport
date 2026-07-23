@@ -25,6 +25,7 @@ import {
   IGGINT_INDEXES_ARRAY_90,
   GUTSYS_INDEXES_ARRAY_4,
   UROGEN_INDEXES_ARRAY,
+  INTLUC_INDEXES_ARRAY,
 } from '../../../configs/indexes.arrays';
 
 @Component({
@@ -61,6 +62,9 @@ export class IndexPageComponent implements OnInit, OnChanges {
         break;
       case FileType.UROGEN:
         this.indexesArray = UROGEN_INDEXES_ARRAY;
+        break;
+      case FileType.INTLUC:
+        this.indexesArray = INTLUC_INDEXES_ARRAY;
         break;
     }
   }

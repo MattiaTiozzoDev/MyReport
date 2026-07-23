@@ -44,6 +44,8 @@
       "IGGINT180_SUBTITLE": "Rilevazione quantitativa delle immunoglobuline IgG specifiche per antigeni alimentari",
       "UROGEN": "Urogenital®",
       "UROGEN_SUBTITLE": "Diagnostica di precisione per l’apparato urogenitale",
+      "INTLUC": "Interleuchine",
+      "INTLUC_SUBTITLE": "Diagnostica di precisione per la modulazione personalizzata dell'infiammazione",
       "title": "Diagnostica di precisione per una salute personalizzata",
       "subtitle": "I nostri referti nascono dall’integrazione di tecnologie diagnostiche avanzate e metodologie scientifiche validate, con l’obiettivo di fornire dati accurati e affidabili a supporto di valutazioni cliniche personalizzate.",
       "director": "Direttore sanitario:"
@@ -129,6 +131,15 @@
         "index8": "Antibiogramma",
         "index9": "Antimicogramma",
         "index10": "Aromatogramma"
+      },
+      "intluc": {
+        "subtitle1": "Diagnostica di precisione per la modulazione personalizzata dell'infiammazione",
+        "subtitle2": "Marcatori dell'infiammazione e della risposta immunitaria",
+        "index1": "Cos'è il pannello Interleuchine?",
+        "index2": "Tecnologia analitica: EIA + qPCR",
+        "index3": "Come leggere il referto",
+        "index4": "Tabella sinottica citochina/funzione/cellule che la sintetizzano",
+        "index5": "Descrizioni cliniche dettagliate"
       },
       "fiscalcode": "Codice fiscale:"
     },

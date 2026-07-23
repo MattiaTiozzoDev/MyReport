@@ -1,0 +1,39 @@
+ <div class="page-container">
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content" >
+        <div class="pt-10px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >Tabella sinottica citochina/funzione/cellule che la sintetizzano</h4>
+            </div>
+        </div>
+        <div class="table-header flex align-center px-20px mb-1px mt-20px">
+            <div class="w-30">
+                <h5 class="white">Citochina</h5>
+            </div>
+            <div class="w-30">
+                <h5 class="white">Tipo</h5>
+            </div>
+            <div class="w-40">
+                <h5 class="white">Sorgente principale</h5>
+            </div>
+        </div>
+        <div class="table-body w-100 flex col px-10px">
+            @for(row of data; track data.id){
+                <div class="table-row flex align-center px-10px py-20px">
+                    <div class="w-30 flex align-center">
+                        <div class="circle row-id mr-5px" >{{row.id}}</div>
+                        <h5>{{row.name}}</h5>
+                    </div>
+                    <div class="w-30 flex align-center">
+                        <h5 class="w-80">{{row.tipe}}</h5>
+                    </div>
+                    <div class="w-40 flex align-center">
+                        <h5>{{row.source}}</h5>
+                    </div>             
+                </div>
+                <hr class="w-100">
+            }
+        </div>  
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

@@ -5,4 +5,5 @@ export enum FileType {
   VLSCFA = 'VLSCFA',
   IGGINT = 'IGGINT',
   UROGEN = 'UROGEN',
+  INTLUC = 'INTLUC',
 }

@@ -30,7 +30,7 @@ export class App implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Carica solo i dati necessari (example)
     this.staticDataService
-      .loadIggintExample()
+      .loadIntlucExample()
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (example) => {

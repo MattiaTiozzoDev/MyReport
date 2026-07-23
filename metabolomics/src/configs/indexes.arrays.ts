@@ -531,3 +531,38 @@ export const UROGEN_INDEXES_ARRAY = [
     ],
   },
 ];
+
+export const INTLUC_INDEXES_ARRAY = [
+  {
+    sectionTitle: 'pdfpages.indexpage.intluc.subtitle1',
+    page: '03',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.intluc.index1',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.intluc.index2',
+        page: '03',
+      },
+      {
+        title: 'pdfpages.indexpage.intluc.index3',
+        page: '03',
+      },
+    ],
+  },
+  {
+    sectionTitle: 'pdfpages.indexpage.intluc.subtitle2',
+    page: '04',
+    indexes: [
+      {
+        title: 'pdfpages.indexpage.intluc.index4',
+        page: '05',
+      },
+      {
+        title: 'pdfpages.indexpage.intluc.index5',
+        page: '06',
+      },
+    ],
+  },
+];

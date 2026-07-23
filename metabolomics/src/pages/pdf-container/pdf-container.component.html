@@ -79,11 +79,33 @@
     <gutsys-table-page [pageId]="2" [page]="'08'"></gutsys-table-page>
     <gutsys-table-page [pageId]="3" [page]="'09'"></gutsys-table-page>
     <gutsys-table-page [pageId]="4" [page]="'10'"></gutsys-table-page>
-    <gutsys-parasite-page [page]="'11'" [ngClass]="{'hide': customer?.type == 1 || customer?.type == 4}"></gutsys-parasite-page>
-    <gutsys-aroma-page [page]="customer?.type == 2 || customer?.type == 3 ? '12' : '11'"></gutsys-aroma-page>
-    <gutsys-fungus-page [page]=" customer?.type == 3 ? '13' : '12'" [ngClass]="{'hide': customer?.type == 1|| customer?.type == 2}"></gutsys-fungus-page>
-    <gutsys-indication-page [page]="customer?.type != 1 ? customer?.type == 3 ? '14' : '13' : '12'" [date]="customer?.refDate"></gutsys-indication-page>
+    @if(customer?.type == 1) {
+        <gutsys-aroma-page [page]="'11'"></gutsys-aroma-page>
+        <gutsys-indication-page [page]="'12'" [date]="customer?.refDate"></gutsys-indication-page>
+    }@else if(customer?.type == 2) {
+        <gutsys-parasite-page [page]="'11'" ></gutsys-parasite-page>
+        <gutsys-aroma-page [page]="'12'"></gutsys-aroma-page>
+        <gutsys-indication-page [page]="'13'" [date]="customer?.refDate"></gutsys-indication-page>
+    }@else if(customer?.type == 3) {
+        <gutsys-parasite-page [page]="'11'" ></gutsys-parasite-page>
+        <gutsys-aroma-page [page]="'12'"></gutsys-aroma-page>
+        <gutsys-fungus-page [page]="'13'" ></gutsys-fungus-page>
+        <gutsys-indication-page [page]="'14'" [date]="customer?.refDate"></gutsys-indication-page>
+
+    }@else if(customer?.type == 4) {
+        <gutsys-aroma-page [page]="'11'"></gutsys-aroma-page>
+        <gutsys-fungus-page [page]="'12'" ></gutsys-fungus-page>
+        <gutsys-indication-page [page]="'13'" [date]="customer?.refDate"></gutsys-indication-page>
+
+    }@else if(customer?.type == 5) {
+        <gutsys-parasite-page [page]="'11'" ></gutsys-parasite-page>
+        <gutsys-indication-page [page]="'12'" [date]="customer?.refDate"></gutsys-indication-page>
+
+    }@else if(customer?.type == 6) {
+        <gutsys-indication-page [page]="'11'" [date]="customer?.refDate"></gutsys-indication-page>
+    }
 }
+
 
 @if(fileType === fileTypeEnum.VLSCFA) {
     <presentation-page></presentation-page>
@@ -180,6 +202,17 @@
     <urogen-aroma-page [page]="'12'"></urogen-aroma-page>
     <urogen-ending-page [page]="'13'"></urogen-ending-page>
     <gutsys-indication-page [page]="'14'" [date]="customer?.refDate"></gutsys-indication-page>
+}
+
+@if(fileType === fileTypeEnum.INTLUC ) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer" ></index-page>
+    <intluc-intro-page [page]="'03'"></intluc-intro-page>
+    <intluc-table-page [page]="'04'" [customer]="customer"></intluc-table-page>
+    <intluc-table-page-2 [page]="'04'" [customer]="customer"></intluc-table-page-2>
+    <intluc-ending-page-1  [page]="'05'" ></intluc-ending-page-1>
+    <intluc-ending-page-2  [page]="'06'" ></intluc-ending-page-2>
+    <intluc-ending-page-3  [page]="'07'" ></intluc-ending-page-3>
 }
 
 </div>

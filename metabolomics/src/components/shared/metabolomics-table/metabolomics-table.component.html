@@ -20,8 +20,7 @@
     </div>
     <div class="table-body w-100 flex col px-10px">
         @for(row of data.rows; track row.id){
-            @if (row.id !=43) {
-                 @if(row.note){
+            @if(row.note){
                 <div class="note-container flex align-center px-10px">
                     <h6 class="white note">{{row.note | translate}}</h6>
                 </div>
@@ -60,6 +59,11 @@
                         <div class="w-15">
                             <h5 class="small">{{'pdfpages.metabolomicstable.measure'| translate}}</h5>
                         </div>
+                    }@else if(row.id == 43){
+                        <div class="w-15">
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_alt_3'| translate}}</h5>
+                            <h5 class="small">{{'pdfpages.metabolomicstable.creatine_cre'| translate}}</h5>
+                        </div>
                     }@else if(row.id == 18){
                         <div class="w-15">
                             <h5 class="small"></h5>
@@ -78,7 +82,6 @@
                 </div>
             </div>
             <hr class="w-100">
-            }         
-        }
+        }         
     </div>
 </div>

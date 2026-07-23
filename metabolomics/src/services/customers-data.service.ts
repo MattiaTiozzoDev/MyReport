@@ -10,6 +10,8 @@ import { VLSCFA_LIMITS } from '../configs/vlascfa-limits';
 import { IGGINT_NAMES } from '../configs/iggint-names';
 import { IGGINT_TABLES } from '../configs/iggint-tables';
 import { UROGEN_DESC, UROGEN_NAMES } from '../configs/urogen-names';
+import { INTLUC_NAMES } from '../configs/intluc-names';
+import { INTLUC_LIMITS } from '../configs/intluc-limits';
 
 const CUSTOMER_COLUMNS = [
   'DATA_ACCETTAZIONE',
@@ -55,7 +57,7 @@ export class CustomersDataService {
     const filteredData = data.filter(
       (el) =>
         el['VARIABILE_POPOLAZIONE'] &&
-        [1, 2, 3, 4].includes(Number(el['VARIABILE_POPOLAZIONE'])),
+        [1, 2, 3, 4, 5, 6].includes(Number(el['VARIABILE_POPOLAZIONE'])),
     );
     if (fileType === 'METABO') {
       this.customersData = filteredData.map((element: any) =>
@@ -81,6 +83,10 @@ export class CustomersDataService {
       this.customersData = filteredData.map((element: any) =>
         this.mapUrogenData(element),
       );
+    } else if (fileType === 'INTLUC') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapIntlucData(element),
+      );
     }
     this.customerDataSubject.next(this.customersData[this.customerIndex]);
   }
@@ -104,7 +110,7 @@ export class CustomersDataService {
   private mapValues(data, type): MappedValue[] {
     let values = [];
     Object.keys(data).forEach((key) => {
-      if (!CUSTOMER_COLUMNS.includes(key) && key != '43') {
+      if (!CUSTOMER_COLUMNS.includes(key)) {
         if (key == 'VARIABILE_POPOLAZIONE') data[key] = Number(data[key]);
         var limit = this.getLimits(key, type);
         values.push({
@@ -177,7 +183,7 @@ export class CustomersDataService {
     values.forEach((el) => {
       if (el.id == 10 && el.value > el.inf) {
         hight.push(el.id);
-      } else {
+      } else if (el.id != 10) {
         if (el.value < el.inf) {
           low.push(el.id);
         }
@@ -357,6 +363,39 @@ export class CustomersDataService {
           value: data[key],
           name: UROGEN_NAMES[key] ? UROGEN_NAMES[key] : '',
           desc: UROGEN_DESC[key] ? UROGEN_DESC[key] : null,
+        });
+      }
+    });
+    return values;
+  }
+
+  mapIntlucData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
+      },
+      values: this.mapIntlucValues(data),
+    };
+  }
+
+  private mapIntlucValues(data) {
+    let values = [];
+    Object.keys(data).forEach((key) => {
+      if (!CUSTOMER_COLUMNS.includes(key)) {
+        if (key == 'VARIABILE_POPOLAZIONE') data[key] = Number(data[key]);
+        values.push({
+          id: key,
+          value: data[key],
+          name: INTLUC_NAMES[key] ? INTLUC_NAMES[key] : '',
+          sup: INTLUC_LIMITS[key]?.sup,
+          inf: 0,
         });
       }
     });
