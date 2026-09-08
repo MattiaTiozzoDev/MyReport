@@ -15,6 +15,7 @@ import { TenantService } from '../../../services/tenant.service';
 import { FileTypeService } from '../../../services/file-type.service';
 import { FileType } from '../../../enums/file-type.enum';
 import { VLSCFA_EXPLANATIONS } from '../../../configs/vlscfa-explanations';
+import { AMMINO_EXPLANATIONS } from '../../../configs/ammino-explanations';
 
 @Component({
   selector: 'metabolomics-explanation-page',
@@ -72,10 +73,17 @@ export class ExplanationPageComponent implements OnChanges, OnInit {
       });
     });
     metabolites.sort((m1, m2) => m1.id - m2.id);
+    let explanationGroups: any = VLSCFA_EXPLANATIONS;
+    switch (this.fileType) {
+      case FileType.METABO:
+        explanationGroups = METABOLOMICS_EXPLANATIONS;
+        break;
+      case FileType.AMMINO:
+        explanationGroups = AMMINO_EXPLANATIONS;
+        break;
+    }
     this.explanations = this.groupMetabolitesByExplanation(
-      this.fileType == 'METABO'
-        ? METABOLOMICS_EXPLANATIONS
-        : VLSCFA_EXPLANATIONS,
+      explanationGroups,
       metabolites,
     ).filter((el) => el);
     this.pages = this.explanationService.paginate(this.explanations);

@@ -15,7 +15,7 @@
         <div class="flex justify-between mt-20px">
             <div class="metabolites-table flex col align-center" [ngClass]="{'long': hideHeaders }">
                 <div class="table-header flex justify-center align-center mb-20px">
-                    <h6 class="white bold">{{"pdfpages.profilepage.hight" | translate}}</h6>
+                    <h6 class="white bold">{{"pdfpages.amminoprofilepage.hight" | translate}}</h6>
                 </div>
                 @for(hight of profile?.hight; track hight.id){
                     <h6 class="bold mb-5px" [ngClass]="{'small-text mb-2px': smallText, 'mini-text': hideHeaders }">
@@ -25,7 +25,7 @@
             </div>
             <div class="metabolites-table flex col align-center" [ngClass]="{'long': hideHeaders}">
                 <div class="table-header flex justify-center align-center mb-20px">
-                    <h6 class="white bold">{{"pdfpages.profilepage.low" | translate}}</h6>
+                    <h6 class="white bold">{{"pdfpages.amminoprofilepage.low" | translate}}</h6>
                 </div>
                 @for(low of profile?.low; track low.id){
                     <h6 class="bold mb-5px" [ngClass]="{'small-text': smallText, 'mini-text': hideHeaders  }">

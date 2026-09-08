@@ -421,15 +421,15 @@ export const METABO_ELEMENTS_EXP = [
   },
   {
     id: 56,
-    name: 'exp.uracile.name',
-    base: 'exp.uracile.base',
-    hight: 'exp.uracile.hight',
-  },
-  {
-    id: 57,
     name: 'exp.timina.name',
     base: 'exp.timina.base',
     hight: 'exp.timina.hight',
+  },
+  {
+    id: 57,
+    name: 'exp.uracile.name',
+    base: 'exp.uracile.base',
+    hight: 'exp.uracile.hight',
   },
   {
     id: 58,

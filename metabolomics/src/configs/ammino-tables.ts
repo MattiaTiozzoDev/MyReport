@@ -46,6 +46,6 @@ export const AMMINO_TABLES = [
     pageId: 4,
     sectionTitle: 'Amminoacidi legati al ciclo dell’urea',
     title: 'Amminoacidi legati al ciclo dell’urea',
-    metaIds: [13, 10, 14, 15, 16, 24, 25, 26, 12, 20],
+    metaIds: [13, 10, 14, 15, 16, 24, 25, 26],
   },
 ];

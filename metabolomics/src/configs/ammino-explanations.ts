@@ -1,3 +1,24 @@
+export const AMMINO_EXPLANATIONS = [
+  {
+    id: 0,
+    title: null,
+    general: null,
+    metaIds: '1-11',
+  },
+  {
+    id: 1,
+    title: null,
+    general: null,
+    metaIds: '12-21',
+  },
+  {
+    id: 2,
+    title: null,
+    general: null,
+    metaIds: '22-26',
+  },
+];
+
 export const AMMINO_ELEMENTS_EXP = [
   {
     id: 1,

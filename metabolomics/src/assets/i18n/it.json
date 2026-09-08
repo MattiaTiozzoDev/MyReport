@@ -259,6 +259,10 @@
       "hight": "Metaboliti in eccesso",
       "low": "Metaboliti in difetto"
     },
+    "amminoprofilepage": {
+      "hight": "Amminoacidi in eccesso",
+      "low": "Amminoacidi in difetto"
+    },
     "istfecintroductionpage": {
       "title": "Istamina fecale",
       "subtitle": "Ruolo biologico e significato clinico",
