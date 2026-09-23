@@ -23,9 +23,9 @@ export class GutsysCaracteristicPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.sub = this.customerService.$customerData.subscribe((data) => {
-      this.ph = data.values.find((el) => el.id === '80')?.value;
-      this.cons = data.values.find((el) => el.id === '81')?.value;
-      this.color = data.values.find((el) => el.id === '82')?.value;
+      this.ph = data.values.find((el) => el.id === '81')?.value;
+      this.cons = data.values.find((el) => el.id === '82')?.value;
+      this.color = data.values.find((el) => el.id === '83')?.value;
     });
   }
 
