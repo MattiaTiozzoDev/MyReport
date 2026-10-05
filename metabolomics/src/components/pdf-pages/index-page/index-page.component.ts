@@ -17,6 +17,9 @@ import { FileType } from '../../../enums/file-type.enum';
 import {
   METABO_INDEXES_ARRAY,
   ISTAMINA_INDEXES_ARRAY,
+  ZONFEC_INDEXES_ARRAY,
+  IGAFEC_INDEXES_ARRAY,
+  CORTIS_INDEXES_ARRAY,
   GUTSYS_INDEXES_ARRAY_3,
   GUTSYS_INDEXES_ARRAY_2,
   GUTSYS_INDEXES_ARRAY_1,
@@ -60,6 +63,15 @@ export class IndexPageComponent implements OnInit, OnChanges {
         break;
       case FileType.ISTFEC:
         this.indexesArray = ISTAMINA_INDEXES_ARRAY;
+        break;
+      case FileType.ZONFEC:
+        this.indexesArray = ZONFEC_INDEXES_ARRAY;
+        break;
+      case FileType.IGAFEC:
+        this.indexesArray = IGAFEC_INDEXES_ARRAY;
+        break;
+      case FileType.CORTIS:
+        this.indexesArray = CORTIS_INDEXES_ARRAY;
         break;
       case FileType.VLSCFA:
         this.indexesArray = VLSCFA_INDEXES_ARRAY;

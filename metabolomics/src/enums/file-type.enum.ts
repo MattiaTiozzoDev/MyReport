@@ -1,6 +1,9 @@
 export enum FileType {
   METABO = 'METABO',
   ISTFEC = 'ISTFEC',
+  ZONFEC = 'ZONFEC',
+  IGAFEC = 'IGAFEC',
+  CORTIS = 'CORTIS',
   GUTSYS = 'GUTSYS',
   VLSCFA = 'VLSCFA',
   IGGINT = 'IGGINT',

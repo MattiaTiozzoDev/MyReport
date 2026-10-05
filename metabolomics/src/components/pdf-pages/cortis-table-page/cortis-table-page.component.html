@@ -1,0 +1,79 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{'pdfpages.cortistablepage.title' | translate}}</h2>
+        <h4 class=" mt-3px light-blue subtitle">{{'pdfpages.cortistablepage.subtitle' | translate}}</h4>
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.cortistablepage.sectiontitle1' | translate}}</h4>
+            </div>
+        </div>
+        <p class="my-15px">
+            {{'pdfpages.cortistablepage.text1' | translate}}
+        </p>
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.cortistablepage.sectiontitle2' | translate}}</h4>
+            </div>
+        </div>
+        <div class="table-header flex align-center justify-between px-15px mt-25px" >
+            <h5 class="w-25 white">{{'pdfpages.cortistablepage.table.time' | translate}}</h5>
+            <h5 class="w-25 white">{{'pdfpages.cortistablepage.table.result' | translate}}</h5>
+            <h5 class="w-25 white">{{'pdfpages.cortistablepage.table.unit' | translate}}</h5>
+            <h5 class="w-25 white">{{'pdfpages.cortistablepage.table.reference' | translate}}</h5>
+        </div>
+        @for(row of rows; track row.name) {
+            <div class="flex align-center justify-between px-15px mt-5px" >
+                <h5 class="w-25 black bold">{{row.name}}</h5>
+                <div class="w-25 black">
+                    <div class="result flex justify-center align-center px-20px"
+                    [ngClass]="{
+                        'orange-bg': row.status === 'low',
+                        'green-bg': row.status === 'normal',
+                        'red-bg': row.status === 'high'}">
+                        {{row.value | roundedValue}}
+                    </div>
+                </div>
+                <p class="w-25">nmol/L</p>
+                <p class="w-25">{{row.range}}</p>
+            </div>
+            <hr>
+        }
+        @if(chart) {
+            <h4 class="light-blue bold mt-20px">{{'pdfpages.cortistablepage.chart.title' | translate}}</h4>
+            <svg class="chart mt-10px" viewBox="0 0 460 150" width="460" height="150">
+                @for(t of chart.ticks; track t.label) {
+                    <line class="grid" x1="40" [attr.y1]="t.y" x2="450" [attr.y2]="t.y"></line>
+                    <text class="tick" x="34" [attr.y]="t.y + 2.5" text-anchor="end">{{t.label}}</text>
+                }
+                <line class="axis" x1="40" y1="12" x2="40" y2="120"></line>
+                <text class="axis-title" transform="translate(9 66) rotate(-90)" text-anchor="middle">{{'pdfpages.cortistablepage.chart.yaxis' | translate}}</text>
+                <polygon class="band" [attr.points]="chart.band"></polygon>
+                <polyline class="avg-line" [attr.points]="chart.avgLine"></polyline>
+                @for(p of chart.avgDots; track $index) {
+                    <circle class="avg-dot" [attr.cx]="p.x" [attr.cy]="p.y" r="1.8"></circle>
+                }
+                <polyline class="patient-line" [attr.points]="chart.patientLine"></polyline>
+                @for(p of chart.patientDots; track $index) {
+                    <circle class="patient-dot" [attr.cx]="p.x" [attr.cy]="p.y" r="2"></circle>
+                }
+                @for(l of chart.xLabels; track l.label) {
+                    <text class="tick" [attr.x]="l.x" y="136" text-anchor="middle">{{l.label}}</text>
+                }
+                <rect class="band" x="300" y="14" width="14" height="6"></rect>
+                <text class="tick" x="318" y="20">{{'pdfpages.cortistablepage.chart.range' | translate}}</text>
+                <line class="patient-line" x1="300" y1="31" x2="314" y2="31"></line>
+                <text class="tick" x="318" y="33.5">{{'pdfpages.cortistablepage.chart.patient' | translate}}</text>
+                <line class="avg-line" x1="300" y1="43" x2="314" y2="43"></line>
+                <text class="tick" x="318" y="45.5">{{'pdfpages.cortistablepage.chart.expected' | translate}}</text>
+            </svg>
+        }
+        <p class="small-text my-5px">
+            Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche
+        </p>
+        <p class="small-text">
+            Firmato digitalmente dal dott Alberto Santini il: {{ refDate | dateTransform}}
+        </p>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

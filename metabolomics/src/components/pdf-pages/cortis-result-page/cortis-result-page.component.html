@@ -1,0 +1,50 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{'pdfpages.cortisresultpage.title' | translate}}</h2>
+        <h4 class=" mt-3px light-blue subtitle">{{'pdfpages.cortisresultpage.subtitle' | translate}}</h4>
+        @for(row of rows; track row.name) {
+            <div class="pt-20px">
+                <div class="section-header flex justify-end align-center px-40px">
+                    <h4 class="white" >{{row.name}}</h4>
+                </div>
+            </div>
+            @switch(row.status) {
+                @case('normal') {
+                    <p class="my-10px">
+                        {{'pdfpages.cortisresultpage.results.common.text1' | translate}}
+                        <span class="green bold">{{'pdfpages.cortisresultpage.results.common.text1b' | translate}}</span>
+                        {{'pdfpages.cortisresultpage.results.common.text2' | translate}}
+                        <span class="green bold">{{'pdfpages.cortisresultpage.results.normal.bold' | translate}}</span>
+                        {{'pdfpages.cortisresultpage.results.normal.text3' | translate}}
+                        <br>
+                        {{'pdfpages.cortisresultpage.results.normal.text' | translate}}
+                    </p>
+                }
+                @case('low') {
+                    <p class="my-10px">
+                        {{'pdfpages.cortisresultpage.results.common.text1' | translate}}
+                        <span class="orange bold">{{'pdfpages.cortisresultpage.results.common.text1b' | translate}}</span>
+                        {{'pdfpages.cortisresultpage.results.common.text2' | translate}}
+                        <span class="orange bold">{{'pdfpages.cortisresultpage.results.low.bold' | translate}}</span>
+                        {{'pdfpages.cortisresultpage.results.low.text3' | translate}}
+                        <br>
+                        {{'pdfpages.cortisresultpage.results.low.text' | translate}}
+                    </p>
+                }
+                @case('high') {
+                    <p class="my-10px">
+                        {{'pdfpages.cortisresultpage.results.common.text1' | translate}}
+                        <span class="red bold">{{'pdfpages.cortisresultpage.results.common.text1b' | translate}}</span>
+                        {{'pdfpages.cortisresultpage.results.common.text2' | translate}}
+                        <span class="red bold">{{'pdfpages.cortisresultpage.results.high.bold' | translate}}</span>
+                        {{'pdfpages.cortisresultpage.results.high.text3' | translate}}
+                        <br>
+                        {{'pdfpages.cortisresultpage.results.high.text' | translate}}
+                    </p>
+                }
+            }
+        }
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

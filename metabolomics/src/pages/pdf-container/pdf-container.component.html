@@ -66,6 +66,34 @@
     <istfec-result-page [page]="'06'"></istfec-result-page>
 }
 
+@if(fileType === fileTypeEnum.ZONFEC) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer"></index-page>
+    <zonfec-introduction-page [page]="'03'"></zonfec-introduction-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Dinamica della Zonulina intestinale'" [page]="'04'">
+        <img class="image-container px-60px py-30px" src="{{'assets/img/dinamica_zonulina_intestinale.svg'}}" alt="">
+    </metabolomics-image-page>
+    <zonfec-result-page [page]="'05'"></zonfec-result-page>
+}
+
+@if(fileType === fileTypeEnum.IGAFEC) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer"></index-page>
+    <igafec-introduction-page [page]="'03'"></igafec-introduction-page>
+    <metabolomics-image-page [customer]="customer" [title]="'Ruolo delle IgA secretorie nella mucosa intestinale'" [page]="'04'">
+        <img class="image-container px-60px py-30px" src="{{'assets/img/ruolo_iga_secretorie_mucosa_intestinale.svg'}}" alt="">
+    </metabolomics-image-page>
+    <igafec-result-page [page]="'05'"></igafec-result-page>
+}
+
+@if(fileType === fileTypeEnum.CORTIS) {
+    <presentation-page></presentation-page>
+    <index-page [customer]="customer"></index-page>
+    <cortis-introduction-page [page]="'03'" ></cortis-introduction-page>
+    <cortis-table-page [page]="'04'"></cortis-table-page>
+    <cortis-result-page [page]="'05'"></cortis-result-page>
+}
+
 @if(fileType === fileTypeEnum.GUTSYS && customer?.type == 1) {
     <presentation-page></presentation-page>
     <index-page [customer]="customer" [type]="customer?.type"></index-page>

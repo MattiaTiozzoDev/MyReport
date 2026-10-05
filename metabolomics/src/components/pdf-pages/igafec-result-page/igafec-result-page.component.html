@@ -1,0 +1,99 @@
+<div class="page-container" >
+    <metabolomics-page-header ></metabolomics-page-header>
+    <div class="page-content">
+        <h2 class=" mt-20px dark-blue">{{'pdfpages.igafecresultpage.title' | translate}}</h2>
+        <h4 class=" mt-3px light-blue subtitle">{{'pdfpages.igafecresultpage.subtitle' | translate}}</h4>
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.igafecresultpage.sectiontitle1' | translate}}</h4>
+            </div>
+        </div>
+        <p class="my-15px">
+            {{'pdfpages.igafecresultpage.text1' | translate}}
+        </p>
+        <div class="pt-20px">
+            <div class="section-header flex justify-end align-center px-40px">
+                <h4 class="white" >{{'pdfpages.igafecresultpage.sectiontitle2' | translate}}</h4>
+            </div>
+        </div>
+        <div class="table-header flex align-center justify-between px-15px mt-25px" >
+            <h5 class="w-20 white">{{'pdfpages.igafecresultpage.table.exam' | translate}}</h5>
+            <h5 class="w-20 white">{{'pdfpages.igafecresultpage.table.result' | translate}}</h5>
+            <h5 class="w-20 white">{{'pdfpages.igafecresultpage.table.unit' | translate}}</h5>
+            <h5 class="w-20 white">{{'pdfpages.igafecresultpage.table.reference' | translate}}</h5>
+        </div>
+        <div class="flex align-center justify-between px-15px mt-5px" >
+            <h5 class="w-20 black">{{'pdfpages.igafecresultpage.table.iga' | translate}}</h5>
+            <div class="w-20 black">
+                <div class="result flex justify-center align-center px-20px"
+                [ngClass]="{
+                    'orange-bg': result < 51,
+                    'green-bg': result >= 51 && result <= 204,
+                    'red-bg': result > 204}">
+                    {{result | roundedValue}}
+                </div>
+            </div>
+            <h5 class="w-20 black">mg/dL</h5>
+            <h5 class="w-20 black">51,00 - 204,00</h5>
+        </div>
+        <hr>
+        <div class="h-200px">
+            @if(result < 51){
+                <h4 class="light-blue bold pt-30px">
+                    {{'pdfpages.igafecresultpage.results.low.title' | translate}}
+                </h4>
+                <p class="pt-15px">
+                    {{'pdfpages.igafecresultpage.results.common.text1' | translate}}
+                    <span class="orange bold">{{'pdfpages.igafecresultpage.results.common.text1b' | translate}}</span>
+                    {{'pdfpages.igafecresultpage.results.common.text2' | translate}}
+                    <span class="orange bold">{{'pdfpages.igafecresultpage.results.low.bold' | translate}}</span>
+                    {{'pdfpages.igafecresultpage.results.low.text3' | translate}}
+                </p>
+                <br>
+                <p>
+                    {{'pdfpages.igafecresultpage.results.low.text' | translate}}
+                </p>
+            }
+            @if(result >= 51 && result <= 204){
+                <h4 class="light-blue bold pt-30px">
+                    {{'pdfpages.igafecresultpage.results.normal.title' | translate}}
+                </h4>
+                <p class="pt-15px">
+                    {{'pdfpages.igafecresultpage.results.common.text1' | translate}}
+                    <span class="green bold">{{'pdfpages.igafecresultpage.results.common.text1b' | translate}}</span>
+                    {{'pdfpages.igafecresultpage.results.common.text2' | translate}}
+                    <span class="green bold">{{'pdfpages.igafecresultpage.results.normal.bold' | translate}}</span>
+                    {{'pdfpages.igafecresultpage.results.normal.text3' | translate}}
+                </p>
+                <br>
+                <p>
+                    {{'pdfpages.igafecresultpage.results.normal.text' | translate}}
+                </p>
+            }
+            @if(result > 204){
+                <h4 class="light-blue bold pt-30px">
+                    {{'pdfpages.igafecresultpage.results.high.title' | translate}}
+                </h4>
+                <p class="pt-15px">
+                    {{'pdfpages.igafecresultpage.results.common.text1' | translate}}
+                    <span class="red bold">{{'pdfpages.igafecresultpage.results.common.text1b' | translate}}</span>
+                    {{'pdfpages.igafecresultpage.results.common.text2' | translate}}
+                    <span class="red bold">{{'pdfpages.igafecresultpage.results.high.bold' | translate}}</span>
+                    {{'pdfpages.igafecresultpage.results.high.text3' | translate}}
+                </p>
+                <br>
+                <p>
+                    {{'pdfpages.igafecresultpage.results.high.text' | translate}}
+                </p>
+            }
+        </div>
+        <h5 class="small-text">
+            Referto sottoscritto con firma digitale ai sensi degli artt. 20,21 n.2, 23 e 24 del d.Lgs. N. 82 del 7 marzo 2005 e successive modifiche
+        </h5>
+        <br>
+        <h5 class="small-text">
+            Firmato digitalmente dal dott Alberto Santini il: {{ refDate | dateTransform}}
+        </h5>
+    </div>
+    <metabolomics-page-footer [page]="page"></metabolomics-page-footer>
+</div>

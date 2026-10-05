@@ -34,6 +34,12 @@
       "METABO_SUBTITLE": "Analisi metabolomica urinaria per la valutazione dei pathway biochimici cellulari",
       "ISTFEC": "Istamina Fecale",
       "ISTFEC_SUBTITLE": "Misurazione dell'attività istaminergica intestinale per la valutazione del grado di disbiosi e infiammazione mucosale",
+      "ZONFEC": "Zonulina Fecale",
+      "ZONFEC_SUBTITLE": "Diagnostica di precisione per la modulazione personalizzata dell'infiammazione",
+      "IGAFEC": "IgA Secretorie Fecali",
+      "IGAFEC_SUBTITLE": "Diagnostica di precisione per la modulazione personalizzata dell'infiammazione",
+      "CORTIS": "Cortisolo Salivare",
+      "CORTIS_SUBTITLE": "Diagnostica di precisione per la modulazione personalizzata dell'infiammazione",
       "GUTSYS": "Gut Screening®",
       "GUTSYS_SUBTITLE": "Analisi completa e integrata del microbiota intestinale attraverso metodologie molecolari e colturali sinergiche",
       "VLSCFA": "Metaboliti del microbiota",
@@ -78,6 +84,36 @@
         "index5": "Effetti biologici dell’istamina e recettori coinvolti",
         "index6": "Come interpretare il test",
         "index7": "Livello di istamina fecale rilevato"
+      },
+      "zonfec": {
+        "subtitle1": "Ruolo biologico e significato clinico",
+        "subtitle2": "Guida grafica al funzionamento",
+        "subtitle3": "Valutazione del risultato analitico",
+        "index1": "Cos'è la zonulina",
+        "index2": "Connessione con la permeabilità intestinale",
+        "index3": "Dinamica della Zonulina intestinale",
+        "index4": "Come interpretare il test",
+        "index5": "Livello rilevato"
+      },
+      "igafec": {
+        "subtitle1": "Ruolo biologico e significato clinico",
+        "subtitle2": "Guida grafica al funzionamento",
+        "subtitle3": "Valutazione del risultato analitico",
+        "index1": "Cosa sono le IgA secretorie",
+        "index2": "Connessione con l'equilibrio immunitario mucosale",
+        "index3": "Ruolo delle IgA secretorie nella mucosa intestinale",
+        "index4": "Come interpretare il test",
+        "index5": "Livello rilevato"
+      },
+      "cortis": {
+        "subtitle1": "Ruolo biologico e significato clinico",
+        "subtitle2": "Valutazione del risultato analitico",
+        "subtitle3": "Guida all’interpretazione dei risultati",
+        "index1": "Cos’è il cortisolo salivare e il Cortisol Awakening Response",
+        "index2": "Fattori che influenzano i livelli",
+        "index3": "Implicazioni di un profilo alterato",
+        "index4": "Come interpretare il test",
+        "index5": "Livelli rilevati"
       },
       "gutsys": {
         "subtitle1": "Diagnostica completa del Microbiota intestinale",
@@ -292,6 +328,86 @@
       "text11": "L’istamina esercita i propri effetti attraverso l’attivazione di specifici recettori istaminergici, distribuiti a livello gastrointestinale, cutaneo, cardiovascolare, respiratorio e nervoso.",
       "text12": "Valori elevati di istamina intestinale possono contribuire a disturbi gastrointestinali funzionali, reazioni pseudo-allergiche, alterazioni della risposta immunitaria e sintomi correlati all’asse intestino–cervello, quali cefalea, disturbi del sonno e alterazioni dell’umore."
     },
+    "zonfecintroductionpage": {
+      "title": "Zonulina Fecale",
+      "subtitle": "Ruolo biologico e significato clinico",
+      "sectiontitle1": "Cos'è la zonulina",
+      "text1": "La zonulina è una proteina che regola l'apertura e la chiusura delle giunzioni strette (tight junctions) tra le cellule dell'epitelio intestinale, controllando il passaggio selettivo di molecole tra il lume intestinale e la circolazione sistemica. La sua determinazione nelle feci consente di valutare in modo indiretto l'integrità della barriera intestinale e il grado di permeabilità mucosale.",
+      "sectiontitle2": "Connessione con la permeabilità intestinale",
+      "text2": "Un aumento della zonulina è associato a un'alterazione delle giunzioni strette, con conseguente incremento della permeabilità intestinale (la cosiddetta \"leaky gut\"). Questa condizione può favorire il passaggio di antigeni alimentari, tossine e frammenti batterici nel torrente circolatorio, con possibile attivazione della risposta immunitaria e infiammatoria sistemica.",
+      "fact1": "Fattori che influenzano i livelli",
+      "text3": "I livelli di zonulina fecale possono essere influenzati da: dieta (in particolare consumo di glutine e alimenti processati), squilibri del microbiota intestinale (disbiosi), stress cronico, uso di farmaci (es. FANS), infezioni gastrointestinali e attività fisica intensa nei giorni precedenti la raccolta.",
+      "fact2": "Implicazioni di un livello alterato",
+      "text4": "Valori elevati di zonulina fecale sono stati associati a celiachia, sindrome dell'intestino irritabile, malattie infiammatorie croniche intestinali, patologie autoimmuni e disturbi metabolici, e meritano un'integrazione con il quadro clinico e con altri marker funzionali della barriera intestinale."
+    },
+    "igafecintroductionpage": {
+      "title": "IgA Secretorie Fecali",
+      "subtitle": "Ruolo biologico e significato clinico",
+      "sectiontitle1": "Cosa sono le IgA secretorie",
+      "text1": "Le immunoglobuline A secretorie (IgA-S) rappresentano la principale classe anticorpale presente a livello della mucosa intestinale, prodotte dalle plasmacellule della lamina propria. Costituiscono la prima linea di difesa immunitaria locale, legando antigeni, tossine e microrganismi patogeni per limitarne l'adesione e la penetrazione attraverso l'epitelio intestinale.",
+      "sectiontitle2": "Connessione con l'equilibrio immunitario mucosale",
+      "text2": "Le IgA-S contribuiscono a modulare la composizione del microbiota intestinale e a mantenere l'omeostasi immunitaria locale, esercitando un'azione di esclusione immunitaria senza innescare una risposta infiammatoria. Il loro dosaggio fornisce quindi un'indicazione sullo stato di attivazione del sistema immunitario associato alla mucosa intestinale.",
+      "fact1": "Fattori che influenzano i livelli",
+      "text3": "I livelli di IgA secretorie fecali possono essere influenzati da: composizione e stato del microbiota intestinale, infezioni gastrointestinali in atto o recenti, stress cronico, carenze nutrizionali e uso prolungato di farmaci immunosoppressori o corticosteroidei.",
+      "fact2": "Implicazioni di un livello alterato",
+      "text4": "Valori elevati possono riflettere un'attivazione della risposta immunitaria mucosale in corso, associata a infezioni, disbiosi o intolleranze alimentari. Valori ridotti sono invece associati a un deficit della difesa immunitaria mucosale, con aumentata suscettibilità a infezioni intestinali e possibile correlazione con condizioni di stress cronico."
+    },
+    "cortisintroductionpage": {
+      "title": "Cortisolo Salivare",
+      "subtitle": "Ruolo biologico e significato clinico",
+      "sectiontitle1": "Cos'è il cortisolo salivare e il Cortisol Awakening Response",
+      "text1": "Il cortisolo è l'ormone glucocorticoide prodotto dalla corteccia surrenalica sotto il controllo dell'asse ipotalamo-ipofisi-surrene (asse HPA), coinvolto nella risposta allo stress, nel metabolismo energetico e nel ritmo circadiano. Il dosaggio salivare misura la quota libera e biologicamente attiva dell'ormone. La determinazione su 5 campioni nell'arco della giornata (al risveglio, dopo 30 e 60 minuti, nel pomeriggio e in notturna) consente di ricostruire l'intera curva circadiana e di valutare in particolare il Cortisol Awakening Response (CAR), il picco fisiologico che si verifica nella prima ora dopo il risveglio.",
+      "sectiontitle2": "Fattori che influenzano i livelli",
+      "text2": "I livelli di cortisolo salivare possono essere influenzati da: stress cronico, qualità e durata del sonno, orario reale del risveglio e della raccolta dei campioni, attività fisica, assunzione di caffeina e uso di farmaci corticosteroidei.",
+      "sectiontitle3": "Implicazioni di un profilo alterato",
+      "text3": "Un CAR esagerato o una curva complessivamente elevata sono stati associati a stress cronico, ansia, disturbi del sonno e alterazioni metaboliche. Una curva appiattita, con basso picco al risveglio, può invece riflettere un affaticamento funzionale della risposta surrenalica. In entrambi i casi il dato va sempre integrato con il quadro clinico."
+    },
+    "cortistablepage": {
+      "title": "Cortisolo Salivare",
+      "subtitle": "Valutazione del risultato analitico",
+      "sectiontitle1": "Come interpretare il test",
+      "text1": "Ogni valore va confrontato con il range di normalità specifico del proprio punto di raccolta, poiché la secrezione di cortisolo segue un preciso ritmo circadiano. Un andamento fisiologico prevede un picco entro 30-60 minuti dal risveglio seguito da una progressiva discesa nel corso della giornata, fino al valore minimo notturno. Valori superiori al range nelle prime fasi della curva indicano un’iperattivazione della risposta surrenalica al risveglio; valori inferiori al range, specialmente nelle fasi diurne, possono indicare una ridotta capacità di risposta.",
+      "sectiontitle2": "Livelli rilevati",
+      "table": {
+        "time": "Tempo",
+        "result": "Valore Paziente",
+        "unit": "Unità di Misura",
+        "reference": "Range di normalità"
+      },
+      "chart": {
+        "title": "Curva del cortisolo salivare nelle 24 ore",
+        "yaxis": "Cortisolo salivare (nmol/L)",
+        "range": "Range di normalità",
+        "patient": "Valore paziente",
+        "expected": "Andamento fisiologico atteso"
+      }
+    },
+    "cortisresultpage": {
+      "title": "Cortisolo Salivare",
+      "subtitle": "Guida all’interpretazione dei risultati",
+      "results": {
+        "common": {
+          "text1": "Il valore di",
+          "text1b": "cortisolo salivare",
+          "text2": "rilevato risulta"
+        },
+        "normal": {
+          "bold": "compreso",
+          "text3": "nell’intervallo di riferimento.",
+          "text": "Tale dato è coerente con i valori attesi per il momento della giornata considerato e deve essere interpretato nel contesto dell’andamento complessivo della curva circadiana."
+        },
+        "low": {
+          "bold": "inferiore",
+          "text3": "all’intervallo di riferimento.",
+          "text": "Tale dato indica una concentrazione di cortisolo inferiore a quella attesa per il momento della giornata considerato e deve essere interpretato nel contesto dell’andamento complessivo della curva circadiana e del quadro clinico."
+        },
+        "high": {
+          "bold": "superiore",
+          "text3": "all’intervallo di riferimento.",
+          "text": "Tale dato indica una concentrazione di cortisolo superiore a quella attesa per il momento della giornata considerato e deve essere interpretato nel contesto dell’andamento complessivo della curva circadiana e del quadro clinico."
+        }
+      }
+    },
     "istfecresultpage": {
       "title": "Istamina fecale",
       "subtitle": "Valutazione del risultato analitico",
@@ -327,6 +443,78 @@
           "title": "Valore marcatamente elevato",
           "bold": "significativamente superiore",
           "text": "Questo risultato è compatibile con una marcata alterazione della dinamica intestinale dell’istamina e richiede un’attenta valutazione clinica per definirne le possibili cause e implicazioni."
+        }
+      }
+    },
+    "zonfecresultpage": {
+      "title": "Zonulina Fecale",
+      "subtitle": "Valutazione del risultato analitico",
+      "sectiontitle1": "Come interpretare il test",
+      "text1": "Il valore di zonulina fecale fornisce un'indicazione sul grado di integrità delle giunzioni strette dell'epitelio intestinale. Un risultato compreso nell'intervallo di riferimento suggerisce una normale funzionalità della barriera intestinale. Un valore superiore al range di riferimento può riflettere un aumento della permeabilità intestinale, con possibile passaggio di sostanze normalmente trattenute dalla mucosa e conseguente stimolazione della risposta immunitaria locale e sistemica.",
+      "sectiontitle2": "Livello rilevato",
+      "table": {
+        "exam": "Tempo",
+        "result": "Valore Paziente",
+        "unit": "Unità di Misura",
+        "reference": "Range di normalità",
+        "zonulina": "Zonulina fecale"
+      },
+      "results": {
+        "common": {
+          "text1": "Il valore di",
+          "text1b": "Zonulina fecale",
+          "text2": "rilevato risulta"
+        },
+        "normal": {
+          "title": "Valore in range",
+          "bold": "compreso",
+          "text3": "nell'intervallo di riferimento.",
+          "text": "Tale condizione è compatibile con una normale funzionalità della barriera intestinale e non suggerisce, sulla base di questo parametro, un aumento della permeabilità intestinale."
+        },
+        "high": {
+          "title": "Valore elevato",
+          "bold": "superiore",
+          "text3": "all'intervallo di riferimento.",
+          "text": "Tale condizione può essere indicativa di un aumento della permeabilità intestinale e merita un'integrazione con la valutazione clinica e con altri marker funzionali (es. calprotectina, IgA secretorie fecali)."
+        }
+      }
+    },
+    "igafecresultpage": {
+      "title": "IgA Secretorie Fecali",
+      "subtitle": "Valutazione del risultato analitico",
+      "sectiontitle1": "Come interpretare il test",
+      "text1": "Il valore di IgA secretorie fecali fornisce un'indicazione sullo stato funzionale del sistema immunitario associato alla mucosa intestinale. Un risultato compreso nell'intervallo di riferimento suggerisce un'adeguata capacità di difesa immunitaria locale. Un valore inferiore al range di riferimento può riflettere una ridotta produzione di anticorpi mucosali, con conseguente minore protezione della barriera intestinale nei confronti di patogeni e antigeni.",
+      "sectiontitle2": "Livello rilevato",
+      "table": {
+        "exam": "Tempo",
+        "result": "Valore Paziente",
+        "unit": "Unità di Misura",
+        "reference": "Range di normalità",
+        "iga": "IgA secretorie fecali"
+      },
+      "results": {
+        "common": {
+          "text1": "Il valore di",
+          "text1b": "IgA secretorie fecali",
+          "text2": "rilevato risulta"
+        },
+        "normal": {
+          "title": "Valore in range",
+          "bold": "compreso",
+          "text3": "nell'intervallo di riferimento.",
+          "text": "Tale condizione è compatibile con un'adeguata capacità di difesa immunitaria a livello della mucosa intestinale e con un normale equilibrio della risposta immunitaria locale."
+        },
+        "low": {
+          "title": "Valore ridotto",
+          "bold": "inferiore",
+          "text3": "all'intervallo di riferimento.",
+          "text": "Tale condizione può essere indicativa di una ridotta capacità di difesa immunitaria a livello della mucosa intestinale e merita un'integrazione con la valutazione clinica e con altri marker funzionali dello stato della barriera intestinale."
+        },
+        "high": {
+          "title": "Valore elevato",
+          "bold": "superiore",
+          "text3": "all'intervallo di riferimento.",
+          "text": "Tale condizione può essere indicativa di un'aumentata attivazione della risposta immunitaria a livello della mucosa intestinale e merita un'integrazione con la valutazione clinica e con altri marker funzionali dello stato della barriera intestinale."
         }
       }
     },

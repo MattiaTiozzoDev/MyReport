@@ -14,6 +14,7 @@ import { INTLUC_NAMES } from '../configs/intluc-names';
 import { INTLUC_LIMITS } from '../configs/intluc-limits';
 import { AMMINO_NAMES } from '../configs/ammino-names';
 import { AMMINO_LIMITS } from '../configs/ammino-limits';
+import { CORTIS_NAMES } from '../configs/cortis-names';
 
 const CUSTOMER_COLUMNS = [
   'DATA_ACCETTAZIONE',
@@ -68,6 +69,18 @@ export class CustomersDataService {
     } else if (fileType === 'ISTFEC') {
       this.customersData = filteredData.map((element: any) =>
         this.mapIstaminaData(element),
+      );
+    } else if (fileType === 'ZONFEC') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapZonfecData(element),
+      );
+    } else if (fileType === 'IGAFEC') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapIgafecData(element),
+      );
+    } else if (fileType === 'CORTIS') {
+      this.customersData = filteredData.map((element: any) =>
+        this.mapCortisData(element),
       );
     } else if (fileType === 'GUTSYS') {
       this.customersData = filteredData.map((element: any) =>
@@ -214,6 +227,58 @@ export class CustomersDataService {
         refDate: data['DATA_REFERTAZIONE'],
       },
       result: this.parseDecimal(data['1']),
+    };
+  }
+
+  private mapZonfecData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
+      },
+      result: this.parseDecimal(data['1']),
+    };
+  }
+
+  private mapIgafecData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
+      },
+      result: this.parseDecimal(data['1']),
+    };
+  }
+
+  private mapCortisData(data): CustomerData {
+    return {
+      customer: {
+        accDate: data['DATA_ACCETTAZIONE'],
+        orderId: data['CODICE_ORDINE'],
+        fiscalCode: data['CODICE_FISCALE'],
+        type: Number(data['VARIABILE_POPOLAZIONE']),
+        available: data['DISPONIBILE'],
+        name: data['NOME'],
+        accNumber: data['NUMERO_ACCETTAZIONE'],
+        refDate: data['DATA_REFERTAZIONE'],
+      },
+      values: Object.keys(CORTIS_NAMES).map((key) => ({
+        id: key,
+        name: CORTIS_NAMES[key],
+        value: this.parseDecimal(data[key]),
+      })),
     };
   }
 

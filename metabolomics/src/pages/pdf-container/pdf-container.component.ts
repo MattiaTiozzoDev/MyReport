@@ -14,6 +14,13 @@ import { FileType } from '../../enums/file-type.enum';
 import { IstfecIntroductionPageComponent } from '../../components/pdf-pages/istfec-introduction-page/istfec-introduction-page.component';
 import { IstfecExplanationPageComponent } from '../../components/pdf-pages/istfec-explanation-page/istfec-explanation-page.component';
 import { IstfecResultPageComponent } from '../../components/pdf-pages/istfec-result-page.component/istfec-result-page.component';
+import { ZonfecIntroductionPageComponent } from '../../components/pdf-pages/zonfec-introduction-page/zonfec-introduction-page.component';
+import { IgafecIntroductionPageComponent } from '../../components/pdf-pages/igafec-introduction-page/igafec-introduction-page.component';
+import { CortisIntroductionPageComponent } from '../../components/pdf-pages/cortis-introduction-page/cortis-introduction-page.component';
+import { ZonfecResultPageComponent } from '../../components/pdf-pages/zonfec-result-page/zonfec-result-page.component';
+import { CortisResultPageComponent } from '../../components/pdf-pages/cortis-result-page/cortis-result-page.component';
+import { CortisTablePageComponent } from '../../components/pdf-pages/cortis-table-page/cortis-table-page.component';
+import { IgafecResultPageComponent } from '../../components/pdf-pages/igafec-result-page/igafec-result-page.component';
 import { GutsysIntroductionPageComponent } from '../../components/pdf-pages/gutsys-introduction-page/gutsys-introduction-page.component';
 import { GutsysCaracteristicPageComponent } from '../../components/pdf-pages/gutsys-caracteristic-page/gutsys-caracteristic-page.component';
 import { GutsysTablePageComponent } from '../../components/pdf-pages/gutsys-table-page/gutsys-table-page.component';
@@ -63,6 +70,13 @@ import { AMMINO_ELEMENTS_EXP } from '../../configs/ammino-explanations';
     IstfecIntroductionPageComponent,
     IstfecExplanationPageComponent,
     IstfecResultPageComponent,
+    ZonfecIntroductionPageComponent,
+    IgafecIntroductionPageComponent,
+    CortisIntroductionPageComponent,
+    CortisResultPageComponent,
+    CortisTablePageComponent,
+    ZonfecResultPageComponent,
+    IgafecResultPageComponent,
     GutsysIntroductionPageComponent,
     GutsysCaracteristicPageComponent,
     GutsysTablePageComponent,

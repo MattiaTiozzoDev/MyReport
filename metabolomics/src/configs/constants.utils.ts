@@ -5,6 +5,9 @@ export const HOMICA_FILENAME = ['HO_METABO', 'HO_UROGEN', 'HO_AMMINO'];
 export const VALSAMBRO_FILENAME = [
   'METABO',
   'ISTFEC',
+  'ZONFEC',
+  'IGAFEC',
+  'CORTIS',
   'GUTSYS',
   'VLSCFA',
   'IGGINT',
@@ -23,6 +26,21 @@ export const REPORTS = {
     title: 'pdfpages.presentation.ISTFEC',
     subtitle: 'pdfpages.presentation.ISTFEC_SUBTITLE',
     color: '#E62138',
+  },
+  ZONFEC: {
+    title: 'pdfpages.presentation.ZONFEC',
+    subtitle: 'pdfpages.presentation.ZONFEC_SUBTITLE',
+    color: '#A45C7C',
+  },
+  IGAFEC: {
+    title: 'pdfpages.presentation.IGAFEC',
+    subtitle: 'pdfpages.presentation.IGAFEC_SUBTITLE',
+    color: '#C94E4E',
+  },
+  CORTIS: {
+    title: 'pdfpages.presentation.CORTIS',
+    subtitle: 'pdfpages.presentation.CORTIS_SUBTITLE',
+    color: '#171D57',
   },
   GUTSYS: {
     title: 'pdfpages.presentation.GUTSYS',

@@ -18,7 +18,6 @@ export class PageHeader implements OnInit {
   public tenant: TenantType;
   public TenantType = TenantType;
   public name: string;
-  public surname: string;
 
   public customer: Customer;
 
@@ -31,12 +30,7 @@ export class PageHeader implements OnInit {
     this.customerService.$customerData.subscribe((data) => {
       this.tenant = this.tenantService.tenant;
       this.customer = data.customer;
-      this.name = data.customer?.name
-        ? data.customer.name.split(' ')[1]
-        : data.customer.name;
-      this.surname = data.customer?.name
-        ? data.customer.name.split(' ')[0]
-        : data.customer.name;
+      this.name = data.customer?.name ?? '';
     });
   }
 }
