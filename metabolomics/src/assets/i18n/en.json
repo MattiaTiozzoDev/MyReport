@@ -150,6 +150,7 @@
         "pop": "Statistical population"
       },
       "child": "under 13 years of age",
+      "infant": "Under 1 year",
       "man": "males over 13 years of age",
       "woman": "females over 13 years of age",
       "mesure": "mg/L",

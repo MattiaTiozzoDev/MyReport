@@ -16,7 +16,12 @@
     "cSign": "-",
     "cYellSup": 5.44,
     "cGrInf": 1.64,
-    "cGrSup": 4.17
+    "cGrSup": 4.17,
+    "iYellInf": 0.19,
+    "iSign": "-",
+    "iYellSup": 9.56,
+    "iGrInf": 2.53,
+    "iGrSup": 7.22
   },
   {
     "id": 2,
@@ -35,7 +40,12 @@
     "cSign": "-",
     "cYellSup": 14.28,
     "cGrInf": 3.99,
-    "cGrSup": 10.85
+    "cGrSup": 10.85,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 158.62,
+    "iGrInf": 0,
+    "iGrSup": 115.09
   },
   {
     "id": 3,
@@ -54,7 +64,12 @@
     "cSign": "≤",
     "cYellSup": 0.21,
     "cGrInf": 0.03,
-    "cGrSup": 0.15
+    "cGrSup": 0.15,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 1.1,
+    "iGrInf": 0,
+    "iGrSup": 0.85
   },
   {
     "id": 4,
@@ -73,7 +88,12 @@
     "cSign": "≤",
     "cYellSup": 4.4,
     "cGrInf": 1.69,
-    "cGrSup": 3.49
+    "cGrSup": 3.49,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 6.02,
+    "iGrInf": 0,
+    "iGrSup": 5.04
   },
   {
     "id": 5,
@@ -92,7 +112,12 @@
     "cSign": "≤",
     "cYellSup": 1.73,
     "cGrInf": 0.47,
-    "cGrSup": 1.31
+    "cGrSup": 1.31,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 3.63,
+    "iGrInf": 0,
+    "iGrSup": 3.05
   },
   {
     "id": 6,
@@ -111,7 +136,12 @@
     "cSign": "≤",
     "cYellSup": 5.87,
     "cGrInf": 2.49,
-    "cGrSup": 4.74
+    "cGrSup": 4.74,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 13.08,
+    "iGrInf": 0,
+    "iGrSup": 11.15
   },
   {
     "id": 7,
@@ -130,7 +160,12 @@
     "cSign": "≤",
     "cYellSup": 1.47,
     "cGrInf": 0.16,
-    "cGrSup": 1.03
+    "cGrSup": 1.03,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 1.83,
+    "iGrInf": 0,
+    "iGrSup": 1.44
   },
   {
     "id": 8,
@@ -143,13 +178,18 @@
     "wYellInf": 92.65,
     "wSign": "-",
     "wYellSup": 638.04,
-    "wGrInf": 229.0,
+    "wGrInf": 229,
     "wGrSup": 501.69,
     "cYellInf": 71.47,
     "cSign": "-",
     "cYellSup": 548.32,
     "cGrInf": 190.68,
-    "cGrSup": 429.1
+    "cGrSup": 429.1,
+    "iYellInf": 491.93,
+    "iSign": "-",
+    "iYellSup": 1616.92,
+    "iGrInf": 773.18,
+    "iGrSup": 1335.67
   },
   {
     "id": 9,
@@ -168,7 +208,12 @@
     "cSign": "-",
     "cYellSup": 89.55,
     "cGrInf": 35.24,
-    "cGrSup": 71.44
+    "cGrSup": 71.44,
+    "iYellInf": 44.91,
+    "iSign": "-",
+    "iYellSup": 145.46,
+    "iGrInf": 70.05,
+    "iGrSup": 120.32
   },
   {
     "id": 10,
@@ -187,7 +232,12 @@
     "cSign": "-",
     "cYellSup": 85.48,
     "cGrInf": 35.24,
-    "cGrSup": 68.73
+    "cGrSup": 68.73,
+    "iYellInf": 52.6,
+    "iSign": "-",
+    "iYellSup": 136.49,
+    "iGrInf": 73.57,
+    "iGrSup": 115.51
   },
   {
     "id": 11,
@@ -206,7 +256,12 @@
     "cSign": "-",
     "cYellSup": 29.34,
     "cGrInf": 9.1,
-    "cGrSup": 22.59
+    "cGrSup": 22.59,
+    "iYellInf": 13.02,
+    "iSign": "-",
+    "iYellSup": 121.1,
+    "iGrInf": 40.04,
+    "iGrSup": 94.08
   },
   {
     "id": 12,
@@ -225,7 +280,12 @@
     "cSign": "≤",
     "cYellSup": 17.26,
     "cGrInf": 3.89,
-    "cGrSup": 12.81
+    "cGrSup": 12.81,
+    "iYellInf": 4.73,
+    "iSign": "-",
+    "iYellSup": 55.28,
+    "iGrInf": 17.37,
+    "iGrSup": 42.64
   },
   {
     "id": 13,
@@ -244,7 +304,12 @@
     "cSign": "≤",
     "cYellSup": 0.99,
     "cGrInf": 0.05,
-    "cGrSup": 0.68
+    "cGrSup": 0.68,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 3.2,
+    "iGrInf": 0,
+    "iGrSup": 2.58
   },
   {
     "id": 14,
@@ -263,7 +328,12 @@
     "cSign": "-",
     "cYellSup": 1.96,
     "cGrInf": 0.67,
-    "cGrSup": 1.53
+    "cGrSup": 1.53,
+    "iYellInf": 1.21,
+    "iSign": "-",
+    "iYellSup": 6.98,
+    "iGrInf": 2.65,
+    "iGrSup": 5.54
   },
   {
     "id": 15,
@@ -283,6 +353,11 @@
     "cYellSup": 11.32,
     "cGrInf": 4.77,
     "cGrSup": 9.14,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 37.21,
+    "iGrInf": 0,
+    "iGrSup": 30.48,
     "note": "exp.acido2idrossiglutarato.note"
   },
   {
@@ -302,7 +377,12 @@
     "cSign": "-",
     "cYellSup": 4.3,
     "cGrInf": 1.61,
-    "cGrSup": 3.4
+    "cGrSup": 3.4,
+    "iYellInf": 1.26,
+    "iSign": "-",
+    "iYellSup": 8.86,
+    "iGrInf": 3.16,
+    "iGrSup": 6.96
   },
   {
     "id": 17,
@@ -321,7 +401,12 @@
     "cSign": "-",
     "cYellSup": 3.19,
     "cGrInf": 1.23,
-    "cGrSup": 2.54
+    "cGrSup": 2.54,
+    "iYellInf": 2.46,
+    "iSign": "-",
+    "iYellSup": 6.94,
+    "iGrInf": 3.58,
+    "iGrSup": 5.82
   },
   {
     "id": 18,
@@ -340,7 +425,12 @@
     "cSign": "-",
     "cYellSup": 2.33,
     "cGrInf": 0.89,
-    "cGrSup": 1.85
+    "cGrSup": 1.85,
+    "iYellInf": 0.48,
+    "iSign": "-",
+    "iYellSup": 2.11,
+    "iGrInf": 0.88,
+    "iGrSup": 1.7
   },
   {
     "id": 19,
@@ -359,7 +449,12 @@
     "cSign": "≤",
     "cYellSup": 0.31,
     "cGrInf": 0.05,
-    "cGrSup": 0.22
+    "cGrSup": 0.22,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.6,
+    "iGrInf": 0,
+    "iGrSup": 0.51
   },
   {
     "id": 20,
@@ -378,7 +473,12 @@
     "cSign": "-",
     "cYellSup": 7.4,
     "cGrInf": 1.6,
-    "cGrSup": 5.2
+    "cGrSup": 5.2,
+    "iYellInf": 3.02,
+    "iSign": "-",
+    "iYellSup": 12.6,
+    "iGrInf": 5.42,
+    "iGrSup": 10.21
   },
   {
     "id": 21,
@@ -387,17 +487,22 @@
     "mSign": "≤",
     "mYellSup": 2.9,
     "mGrInf": 0.2,
-    "mGrSup": 2.0,
+    "mGrSup": 2,
     "wYellInf": 0,
     "wSign": "≤",
     "wYellSup": 2.9,
     "wGrInf": 0.2,
-    "wGrSup": 2.0,
+    "wGrSup": 2,
     "cYellInf": 0,
     "cSign": "≤",
     "cYellSup": 2.9,
     "cGrInf": 0.2,
-    "cGrSup": 2.0
+    "cGrSup": 2,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.85,
+    "iGrInf": 0,
+    "iGrSup": 0.59
   },
   {
     "id": 22,
@@ -416,7 +521,12 @@
     "cSign": "-",
     "cYellSup": 119.6,
     "cGrInf": 34.7,
-    "cGrSup": 91.3
+    "cGrSup": 91.3,
+    "iYellInf": 89.93,
+    "iSign": "-",
+    "iYellSup": 312.74,
+    "iGrInf": 145.63,
+    "iGrSup": 257.04
   },
   {
     "id": 23,
@@ -435,7 +545,12 @@
     "cSign": "≤",
     "cYellSup": 2.2,
     "cGrInf": 0.1,
-    "cGrSup": 1.5
+    "cGrSup": 1.5,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.19,
+    "iGrInf": 0,
+    "iGrSup": 0.15
   },
   {
     "id": 24,
@@ -454,7 +569,12 @@
     "cSign": "-",
     "cYellSup": 3.92,
     "cGrInf": 1.57,
-    "cGrSup": 3.14
+    "cGrSup": 3.14,
+    "iYellInf": 3.08,
+    "iSign": "-",
+    "iYellSup": 7.23,
+    "iGrInf": 4.11,
+    "iGrSup": 6.19
   },
   {
     "id": 25,
@@ -473,7 +593,12 @@
     "cSign": "-",
     "cYellSup": 0.7,
     "cGrInf": 0.12,
-    "cGrSup": 0.5
+    "cGrSup": 0.5,
+    "iYellInf": 0.29,
+    "iSign": "-",
+    "iYellSup": 1.23,
+    "iGrInf": 0.52,
+    "iGrSup": 0.99
   },
   {
     "id": 26,
@@ -492,7 +617,12 @@
     "cSign": "≤",
     "cYellSup": 2.45,
     "cGrInf": 1.04,
-    "cGrSup": 1.98
+    "cGrSup": 1.98,
+    "iYellInf": 1.32,
+    "iSign": "-",
+    "iYellSup": 3.36,
+    "iGrInf": 1.83,
+    "iGrSup": 2.85
   },
   {
     "id": 27,
@@ -510,8 +640,13 @@
     "cYellInf": 0,
     "cSign": "≤",
     "cYellSup": 6.71,
-    "cGrInf": 3.0,
-    "cGrSup": 5.47
+    "cGrInf": 3,
+    "cGrSup": 5.47,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 27.45,
+    "iGrInf": 0,
+    "iGrSup": 23.31
   },
   {
     "id": 28,
@@ -520,17 +655,22 @@
     "mSign": "-",
     "mYellSup": 60.3,
     "mGrInf": 11.4,
-    "mGrSup": 44.0,
+    "mGrSup": 44,
     "wYellInf": 6.4,
     "wSign": "-",
     "wYellSup": 60.3,
     "wGrInf": 11.4,
-    "wGrSup": 44.0,
+    "wGrSup": 44,
     "cYellInf": 6.4,
     "cSign": "-",
     "cYellSup": 60.3,
     "cGrInf": 11.4,
-    "cGrSup": 44.0
+    "cGrSup": 44,
+    "iYellInf": 22.26,
+    "iSign": "-",
+    "iYellSup": 77.79,
+    "iGrInf": 36.14,
+    "iGrSup": 63.91
   },
   {
     "id": 29,
@@ -549,7 +689,12 @@
     "cSign": "≤",
     "cYellSup": 4.04,
     "cGrInf": 1.65,
-    "cGrSup": 3.25
+    "cGrSup": 3.25,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 9.15,
+    "iGrInf": 0,
+    "iGrSup": 7.79
   },
   {
     "id": 30,
@@ -568,7 +713,12 @@
     "cSign": "≤",
     "cYellSup": 2.02,
     "cGrInf": 0.1,
-    "cGrSup": 1.38
+    "cGrSup": 1.38,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 1.96,
+    "iGrInf": 0,
+    "iGrSup": 1.55
   },
   {
     "id": 31,
@@ -587,7 +737,12 @@
     "cSign": "≤",
     "cYellSup": 28.58,
     "cGrInf": 8.17,
-    "cGrSup": 21.78
+    "cGrSup": 21.78,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 138.53,
+    "iGrInf": 0,
+    "iGrSup": 107.7
   },
   {
     "id": 32,
@@ -606,7 +761,12 @@
     "cSign": "≤",
     "cYellSup": 1.79,
     "cGrInf": 0.43,
-    "cGrSup": 1.34
+    "cGrSup": 1.34,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 2.56,
+    "iGrInf": 0,
+    "iGrSup": 2.12
   },
   {
     "id": 33,
@@ -625,7 +785,12 @@
     "cSign": "≤",
     "cYellSup": 0.47,
     "cGrInf": 0.12,
-    "cGrSup": 0.35
+    "cGrSup": 0.35,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.41,
+    "iGrInf": 0,
+    "iGrSup": 0.31
   },
   {
     "id": 34,
@@ -644,7 +809,12 @@
     "cSign": "≤",
     "cYellSup": 58.46,
     "cGrInf": 20.39,
-    "cGrSup": 45.77
+    "cGrSup": 45.77,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 63.23,
+    "iGrInf": 0,
+    "iGrSup": 51.68
   },
   {
     "id": 35,
@@ -663,7 +833,12 @@
     "cSign": "≤",
     "cYellSup": 29.75,
     "cGrInf": 13.38,
-    "cGrSup": 24.3
+    "cGrSup": 24.3,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 46.47,
+    "iGrInf": 0,
+    "iGrSup": 37.17
   },
   {
     "id": 36,
@@ -682,7 +857,12 @@
     "cSign": "≤",
     "cYellSup": 3.31,
     "cGrInf": 0,
-    "cGrSup": 2.21
+    "cGrSup": 2.21,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.62,
+    "iGrInf": 0,
+    "iGrSup": 0.45
   },
   {
     "id": 37,
@@ -701,7 +881,12 @@
     "cSign": "≤",
     "cYellSup": 8.99,
     "cGrInf": 2.96,
-    "cGrSup": 6.98
+    "cGrSup": 6.98,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 10.39,
+    "iGrInf": 0,
+    "iGrSup": 8.66
   },
   {
     "id": 38,
@@ -710,7 +895,7 @@
     "mSign": "≤",
     "mYellSup": 173.5,
     "mGrInf": 33.98,
-    "mGrSup": 127.0,
+    "mGrSup": 127,
     "wYellInf": 0,
     "wSign": "≤",
     "wYellSup": 240.14,
@@ -720,7 +905,12 @@
     "cSign": "≤",
     "cYellSup": 170.42,
     "cGrInf": 19.88,
-    "cGrSup": 120.24
+    "cGrSup": 120.24,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 24.75,
+    "iGrInf": 0,
+    "iGrSup": 16.61
   },
   {
     "id": 39,
@@ -739,26 +929,36 @@
     "cSign": "≤",
     "cYellSup": 4.22,
     "cGrInf": 0.44,
-    "cGrSup": 2.67
+    "cGrSup": 2.67,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 13.1,
+    "iGrInf": 0,
+    "iGrSup": 9.51
   },
   {
     "id": 40,
     "desc": "exp.indacano.tname",
     "mYellInf": 0,
     "mSign": "≤",
-    "mYellSup": 20.0,
-    "mGrInf": 8.0,
-    "mGrSup": 12.0,
+    "mYellSup": 20,
+    "mGrInf": 8,
+    "mGrSup": 12,
     "wYellInf": 0,
     "wSign": "≤",
-    "wYellSup": 20.0,
-    "wGrInf": 8.0,
-    "wGrSup": 12.0,
+    "wYellSup": 20,
+    "wGrInf": 8,
+    "wGrSup": 12,
     "cYellInf": 0,
     "cSign": "≤",
-    "cYellSup": 20.0,
+    "cYellSup": 20,
     "cGrInf": 5.14,
-    "cGrSup": 17.98
+    "cGrSup": 17.98,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 20,
+    "iGrInf": 0,
+    "iGrSup": 20
   },
   {
     "id": 41,
@@ -777,7 +977,12 @@
     "cSign": "-",
     "cYellSup": 14.61,
     "cGrInf": 5.3,
-    "cGrSup": 11.5
+    "cGrSup": 11.5,
+    "iYellInf": 0.84,
+    "iSign": "-",
+    "iYellSup": 16.6,
+    "iGrInf": 4.78,
+    "iGrSup": 12.66
   },
   {
     "id": 42,
@@ -796,7 +1001,12 @@
     "cSign": "≤",
     "cYellSup": 3.69,
     "cGrInf": 1.22,
-    "cGrSup": 2.86
+    "cGrSup": 2.86,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 6.29,
+    "iGrInf": 0,
+    "iGrSup": 4.88
   },
   {
     "id": 43,
@@ -815,7 +1025,12 @@
     "cSign": "≤",
     "cYellSup": 0.6,
     "cGrInf": 0.26,
-    "cGrSup": 0.56
+    "cGrSup": 0.56,
+    "iYellInf": 0,
+    "iSign": "-",
+    "iYellSup": 0,
+    "iGrInf": null,
+    "iGrSup": null
   },
   {
     "id": 44,
@@ -834,7 +1049,12 @@
     "cSign": "-",
     "cYellSup": 3.24,
     "cGrInf": 0.62,
-    "cGrSup": 2.3
+    "cGrSup": 2.3,
+    "iYellInf": 0.19,
+    "iSign": "-",
+    "iYellSup": 4.9,
+    "iGrInf": 1.37,
+    "iGrSup": 3.72
   },
   {
     "id": 45,
@@ -853,7 +1073,12 @@
     "cSign": "≤",
     "cYellSup": 8.46,
     "cGrInf": 1.05,
-    "cGrSup": 5.99
+    "cGrSup": 5.99,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.53,
+    "iGrInf": 0,
+    "iGrSup": 0.37
   },
   {
     "id": 46,
@@ -872,7 +1097,12 @@
     "cSign": "-",
     "cYellSup": 62.32,
     "cGrInf": 24.43,
-    "cGrSup": 49.69
+    "cGrSup": 49.69,
+    "iYellInf": 1.42,
+    "iSign": "-",
+    "iYellSup": 35.88,
+    "iGrInf": 10.04,
+    "iGrSup": 27.27
   },
   {
     "id": 47,
@@ -891,7 +1121,12 @@
     "cSign": "-",
     "cYellSup": 2.33,
     "cGrInf": 0.84,
-    "cGrSup": 1.83
+    "cGrSup": 1.83,
+    "iYellInf": 1.19,
+    "iSign": "-",
+    "iYellSup": 7.15,
+    "iGrInf": 2.68,
+    "iGrSup": 5.66
   },
   {
     "id": 48,
@@ -899,18 +1134,23 @@
     "mYellInf": 1.1,
     "mSign": "-",
     "mYellSup": 33.3,
-    "mGrInf": 9.0,
-    "mGrSup": 15.0,
+    "mGrInf": 9,
+    "mGrSup": 15,
     "wYellInf": 1.1,
     "wSign": "-",
     "wYellSup": 33.3,
-    "wGrInf": 3.0,
-    "wGrSup": 19.0,
+    "wGrInf": 3,
+    "wGrSup": 19,
     "cYellInf": 1.1,
     "cSign": "-",
     "cYellSup": 33.3,
     "cGrInf": 12.11,
-    "cGrSup": 26.37
+    "cGrSup": 26.37,
+    "iYellInf": 79.66,
+    "iSign": "-",
+    "iYellSup": 288.73,
+    "iGrInf": 131.93,
+    "iGrSup": 236.47
   },
   {
     "id": 49,
@@ -929,7 +1169,12 @@
     "cSign": "≤",
     "cYellSup": 1.92,
     "cGrInf": 0.59,
-    "cGrSup": 1.48
+    "cGrSup": 1.48,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 13.46,
+    "iGrInf": 0,
+    "iGrSup": 10.99
   },
   {
     "id": 50,
@@ -948,14 +1193,19 @@
     "cSign": "≤",
     "cYellSup": 0.68,
     "cGrInf": 0.16,
-    "cGrSup": 0.51
+    "cGrSup": 0.51,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 1.19,
+    "iGrInf": 0,
+    "iGrSup": 0.95
   },
   {
     "id": 51,
     "desc": "exp.acidometilmalonico.tname",
     "mYellInf": 0,
     "mSign": "≤",
-    "mYellSup": 2.0,
+    "mYellSup": 2,
     "mGrInf": 0.1,
     "mGrSup": 1.6,
     "wYellInf": 0,
@@ -967,7 +1217,12 @@
     "cSign": "≤",
     "cYellSup": 2.3,
     "cGrInf": 0.2,
-    "cGrSup": 1.6
+    "cGrSup": 1.6,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 13.59,
+    "iGrInf": 0,
+    "iGrSup": 10.71
   },
   {
     "id": 52,
@@ -986,7 +1241,12 @@
     "cSign": "≤",
     "cYellSup": 0.24,
     "cGrInf": 0.08,
-    "cGrSup": 0.18
+    "cGrSup": 0.18,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.77,
+    "iGrInf": 0,
+    "iGrSup": 0.58
   },
   {
     "id": 53,
@@ -1005,7 +1265,12 @@
     "cSign": "-",
     "cYellSup": 33.42,
     "cGrInf": 7.46,
-    "cGrSup": 24.77
+    "cGrSup": 24.77,
+    "iYellInf": 3.7,
+    "iSign": "-",
+    "iYellSup": 209.85,
+    "iGrInf": 55.24,
+    "iGrSup": 158.31
   },
   {
     "id": 54,
@@ -1024,7 +1289,12 @@
     "cSign": "-",
     "cYellSup": 1.38,
     "cGrInf": 0.3,
-    "cGrSup": 0.95
+    "cGrSup": 0.95,
+    "iYellInf": 0.15,
+    "iSign": "-",
+    "iYellSup": 0.71,
+    "iGrInf": 0.14,
+    "iGrSup": 0.52
   },
   {
     "id": 55,
@@ -1043,7 +1313,12 @@
     "cSign": "-",
     "cYellSup": 5.35,
     "cGrInf": 1.9,
-    "cGrSup": 4.2
+    "cGrSup": 4.2,
+    "iYellInf": 5.82,
+    "iSign": "-",
+    "iYellSup": 13.75,
+    "iGrInf": 7.8,
+    "iGrSup": 11.77
   },
   {
     "id": 56,
@@ -1062,7 +1337,12 @@
     "cSign": "≤",
     "cYellSup": 0.26,
     "cGrInf": 0.11,
-    "cGrSup": 0.21
+    "cGrSup": 0.21,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 22.28,
+    "iGrInf": 0,
+    "iGrSup": 14.88
   },
   {
     "id": 57,
@@ -1081,7 +1361,12 @@
     "cSign": "≤",
     "cYellSup": 2.47,
     "cGrInf": 0.22,
-    "cGrSup": 1.72
+    "cGrSup": 1.72,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 2.38,
+    "iGrInf": 0,
+    "iGrSup": 1.62
   },
   {
     "id": 58,
@@ -1101,6 +1386,11 @@
     "cYellSup": 12.4,
     "cGrInf": 1.6,
     "cGrSup": 8.8,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 3.63,
+    "iGrInf": 0,
+    "iGrSup": 2.9,
     "note": "exp.2idrossiippurico.note"
   },
   {
@@ -1121,6 +1411,11 @@
     "cYellSup": 0.38,
     "cGrInf": 0.16,
     "cGrSup": 0.31,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.63,
+    "iGrInf": 0,
+    "iGrSup": 0.52,
     "note": "exp.acidoorotico.note"
   },
   {
@@ -1141,6 +1436,11 @@
     "cYellSup": 34.13,
     "cGrInf": 11.89,
     "cGrSup": 26.71,
+    "iYellInf": 8.9,
+    "iSign": "-",
+    "iYellSup": 28.71,
+    "iGrInf": 13.85,
+    "iGrSup": 23.76,
     "note": "exp.acidopiroglutammico.note"
   },
   {
@@ -1160,7 +1460,12 @@
     "cSign": "≤",
     "cYellSup": 0.71,
     "cGrInf": 0.17,
-    "cGrSup": 0.53
+    "cGrSup": 0.53,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.74,
+    "iGrInf": 0,
+    "iGrSup": 0.57
   },
   {
     "id": 62,
@@ -1179,7 +1484,12 @@
     "cSign": "≤",
     "cYellSup": 0.1,
     "cGrInf": 0.02,
-    "cGrSup": 0.07
+    "cGrSup": 0.07,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.25,
+    "iGrInf": 0,
+    "iGrSup": 0.19
   },
   {
     "id": 63,
@@ -1198,7 +1508,12 @@
     "cSign": "≤",
     "cYellSup": 0.43,
     "cGrInf": 0.1,
-    "cGrSup": 0.32
+    "cGrSup": 0.32,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 1.91,
+    "iGrInf": 0,
+    "iGrSup": 1.46
   },
   {
     "id": 64,
@@ -1217,7 +1532,12 @@
     "cSign": "≤",
     "cYellSup": 0.21,
     "cGrInf": 0.04,
-    "cGrSup": 0.16
+    "cGrSup": 0.16,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.17,
+    "iGrInf": 0,
+    "iGrSup": 0.14
   },
   {
     "id": 65,
@@ -1236,7 +1556,12 @@
     "cSign": "≤",
     "cYellSup": 0.14,
     "cGrInf": 0.01,
-    "cGrSup": 0.09
+    "cGrSup": 0.09,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.65,
+    "iGrInf": 0,
+    "iGrSup": 0.5
   },
   {
     "id": 66,
@@ -1255,7 +1580,12 @@
     "cSign": "≤",
     "cYellSup": 7.5,
     "cGrInf": 2.56,
-    "cGrSup": 5.86
+    "cGrSup": 5.86,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 12.09,
+    "iGrInf": 0,
+    "iGrSup": 9.5
   },
   {
     "id": 67,
@@ -1274,7 +1604,12 @@
     "cSign": "≤",
     "cYellSup": 0.69,
     "cGrInf": 0.31,
-    "cGrSup": 0.56
+    "cGrSup": 0.56,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 2.21,
+    "iGrInf": 0,
+    "iGrSup": 1.84
   },
   {
     "id": 68,
@@ -1293,7 +1628,12 @@
     "cSign": "≤",
     "cYellSup": 0.63,
     "cGrInf": 0.24,
-    "cGrSup": 0.5
+    "cGrSup": 0.5,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 2.21,
+    "iGrInf": 0,
+    "iGrSup": 1.73
   },
   {
     "id": 69,
@@ -1312,25 +1652,35 @@
     "cSign": "≤",
     "cYellSup": 0.21,
     "cGrInf": 0.04,
-    "cGrSup": 0.16
+    "cGrSup": 0.16,
+    "iYellInf": 0,
+    "iSign": "≤",
+    "iYellSup": 0.67,
+    "iGrInf": 0,
+    "iGrSup": 0.52
   },
   {
     "id": 70,
     "desc": "exp.creatinina.tname",
-    "mYellInf": 40.0,
+    "mYellInf": 40,
     "mSign": "-",
-    "mYellSup": 278.0,
-    "mGrInf": 93.0,
-    "mGrSup": 161.0,
-    "wYellInf": 29.0,
+    "mYellSup": 278,
+    "mGrInf": 93,
+    "mGrSup": 161,
+    "wYellInf": 29,
     "wSign": "-",
-    "wYellSup": 226.0,
-    "wGrInf": 94.0,
-    "wGrSup": 160.0,
-    "cYellInf": 40.0,
+    "wYellSup": 226,
+    "wGrInf": 94,
+    "wGrSup": 160,
+    "cYellInf": 40,
     "cSign": "-",
-    "cYellSup": 278.0,
-    "cGrInf": 93.0,
-    "cGrSup": 161.0
+    "cYellSup": 278,
+    "cGrInf": 93,
+    "cGrSup": 161,
+    "iYellInf": 4.56,
+    "iSign": "-",
+    "iYellSup": 41.39,
+    "iGrInf": 13.77,
+    "iGrSup": 32.18
   }
 ]

@@ -217,6 +217,7 @@
         "pop": "Popolazione statistica"
       },
       "child": "minore di 13 anni",
+      "infant": "Minori di 1 anno",
       "man": "uomo maggiore di 13 anni",
       "woman": "donna maggiore di 13 anni",
       "measure": "mg/L",

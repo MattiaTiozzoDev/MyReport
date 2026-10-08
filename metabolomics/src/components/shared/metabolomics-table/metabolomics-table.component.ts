@@ -43,6 +43,9 @@ export class MetabolomicsTableComponent implements OnChanges, OnInit {
       case this.customerType.WOMAN:
         this.typeText = 'pdfpages.metabolomicstable.woman';
         break;
+      case this.customerType.INFANT:
+        this.typeText = 'pdfpages.metabolomicstable.infant';
+        break;
     }
   }
 }

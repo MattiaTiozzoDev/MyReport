@@ -16,5 +16,10 @@ export type Limit = {
   cYellSup: number;
   cGrInf: number;
   cGrSup: number;
+  iYellInf?: number;
+  iSign?: string;
+  iYellSup?: number;
+  iGrInf?: number;
+  iGrSup?: number;
   note?: string;
 };

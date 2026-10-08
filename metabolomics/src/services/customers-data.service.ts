@@ -60,7 +60,7 @@ export class CustomersDataService {
     const filteredData = data.filter(
       (el) =>
         el['VARIABILE_POPOLAZIONE'] &&
-        [1, 2, 3, 4, 5, 6].includes(Number(el['VARIABILE_POPOLAZIONE'])),
+        [1, 2, 3, 4, 5, 6, 7, 8].includes(Number(el['VARIABILE_POPOLAZIONE'])),
     );
     if (fileType === 'METABO') {
       this.customersData = filteredData.map((element: any) =>
@@ -175,6 +175,16 @@ export class CustomersDataService {
           grInf: limit ? limit.mGrInf : null,
           grSup: limit ? limit.mGrSup : null,
           sign: limit ? limit.mSign : null,
+          note: limit && limit.note ? limit.note : null,
+        };
+      case CustomerType.INFANT:
+        return {
+          desc: limit ? limit.desc : null,
+          yellInf: limit ? limit.iYellInf : null,
+          yellSup: limit ? limit.iYellSup : null,
+          grInf: limit ? limit.iGrInf : null,
+          grSup: limit ? limit.iGrSup : null,
+          sign: limit ? limit.iSign : null,
           note: limit && limit.note ? limit.note : null,
         };
       default:
